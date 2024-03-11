@@ -8,6 +8,7 @@ public class Sight
 {
     [Key]
     public int Id { get; set; }
+    public int Time { get; set; }
     [StringLength(20)]
     public string Name { get; set; }
     [StringLength(2000)]
@@ -19,13 +20,5 @@ public class Sight
     {
         Name = "";
         Preview = "";
-    }
-
-    public Sight(string name = "", string? preview = "", List<Question>? questions = null)
-    {
-        Name = name;
-        Preview = preview;
-        CreatedAt = DateTime.Now;
-        Questions = questions;
     }
 }
