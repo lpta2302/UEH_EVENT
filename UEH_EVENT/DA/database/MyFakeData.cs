@@ -48,7 +48,8 @@
         {
             Name = "Bài trắc nghiệm",
             Preview = "đây là bài trắc nghiệm nhân phẩm",
-            Questions = new List<Question>() { q1, q2 }
+            Questions = new List<Question>() { q1, q2 },
+            Time = 1200
         };
         Database.Insert(s);
     }
