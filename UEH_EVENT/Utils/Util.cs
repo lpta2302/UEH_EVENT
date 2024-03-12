@@ -1,5 +1,4 @@
-﻿using System;
-using System.Reflection;
+﻿using System.Reflection;
 
 class Util
 {
@@ -11,7 +10,6 @@ class Util
         if (propertyInfo != null)
         {
             object? value = propertyInfo.GetValue(obj);
-
 
             if (value != null)
             {

@@ -1,5 +1,4 @@
-﻿using System.Collections.Generic;
-using static Database;
+﻿using static Database;
 class Query
 {
     public static List<Student> GetAllStudent()
@@ -10,7 +9,6 @@ class Query
     {
         return Query<Account>();
     }
-
     public static Student? GetStudentById(string id)
     {
         return Query<Student>(id);

@@ -1,6 +1,4 @@
-﻿
-
-public class Constants
+﻿public class Constants
 {
     public static string connectionString = @"
         Data Source=LAPTOP-HUYTQ\SQLEXPRESS;
