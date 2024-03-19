@@ -9,13 +9,14 @@ class Query
     {
         return Query<Account>();
     }
+
     public static Student? GetStudentById(string id)
     {
-        return Query<Student>(id);
+        return QueryByKey<Student>(id);
     }
     public static Account? SignIn(string username, string password)
     {
-        var acc = Query<Account>(username, "Username");
+        var acc = Query<Account>(new string[] { username, password }, new string[] { "Username", "Password" });
         if (acc == null) return null;
         return acc;
     }
@@ -25,11 +26,11 @@ class Query
     }
     public static Sight? GetSpecificSight(int sightId)
     {
-        return Query<Sight>(sightId);
+        return QueryByKey<Sight>(sightId);
     }
     public static Question? GetQuestion(int questionId)
     {
-        return Query<Question>(questionId);
+        return QueryByKey<Question>(questionId);
     }
     public static List<Game> GetAllGame()
     {
