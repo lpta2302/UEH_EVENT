@@ -1,7 +1,7 @@
 ﻿public class Constants
 {
     public static string connectionString = @"
-        Data Source=LAPTOP-HUYTQ\SQLEXPRESS;
+        Data Source=(localdb)\MSSQLLocalDB;
         Initial Catalog= test;
         Integrated Security=True;
         TrustServerCertificate=True;

@@ -5,17 +5,16 @@
     {
         return Query.GetAllSight().Count;
     }
-    public static int CountSightHisById(int sightId)
-    {
-        return Query.GetAllSightHis()
-            .Where(sh => sh.SightId == sightId).Count();
-    }
     public static int CountSightHisByPoint(int threshold)
     {
         return Query.GetAllSightHis()
             .Where(sh => sh.Point >= threshold).Count();
     }
     // Thống kê điểm rèn luyện
+    public static int CountAllStudents()
+    {
+        return Query.GetAllStudent().Count;
+    }
     public static int CountStudentsByTPoints(int threshold)
     {
         return Query.GetAllStudent()
