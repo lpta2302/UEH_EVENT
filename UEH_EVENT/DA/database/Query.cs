@@ -1,4 +1,6 @@
 ﻿using static Database;
+
+using static Filterer;
 class Query
 {
     public static List<Student> GetAllStudent()
@@ -16,9 +18,14 @@ class Query
     }
     public static Account? SignIn(string username, string password)
     {
-        var acc = Query<Account>(new string[] { username, password }, new string[] { "Username", "Password" });
+        var acc = Query<Account>(
+            new Filterer(
+                new[] { "Username", "Password" },
+                new[] { username, password },
+                new[] { FilterType.Equal, FilterType.Equal })
+        );
         if (acc == null) return null;
-        return acc;
+        return acc[0];
     }
     public static List<Sight> GetAllSight()
     {
@@ -47,5 +54,15 @@ class Query
     public static List<TPointHis> GetAllTPointHis()
     {
         return Query<TPointHis>(true);
+    }
+    public static List<Student>? FilterByTPoint(object value, FilterType filterType)
+    {
+        return Query<Student>(
+            new Filterer(
+                "TPoint",
+                value,
+                filterType
+            )
+        );
     }
 }

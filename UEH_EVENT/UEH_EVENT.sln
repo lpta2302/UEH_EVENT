@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.5.002.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "UEH_EVENT", "UEH_EVENT.csproj", "{C897B0D5-B974-41DE-B730-9E7819A17152}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{C897B0D5-B974-41DE-B730-9E7819A17152}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C897B0D5-B974-41DE-B730-9E7819A17152}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C897B0D5-B974-41DE-B730-9E7819A17152}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C897B0D5-B974-41DE-B730-9E7819A17152}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {D632CAFE-78F3-4CB9-A89B-C8347CF8E8B9}
+	EndGlobalSection
+EndGlobal
