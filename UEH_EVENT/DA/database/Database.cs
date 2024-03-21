@@ -1,5 +1,11 @@
-﻿using Microsoft.EntityFrameworkCore;
-using System.Linq.Expressions;
+﻿using System.Linq.Expressions;
+using System.Reflection;
+using System.Security.AccessControl;
+using System.Security.Cryptography.X509Certificates;
+using Microsoft.EntityFrameworkCore;
+using Microsoft.EntityFrameworkCore.ChangeTracking;
+using Microsoft.Extensions.Logging;
+using Microsoft.Identity.Client;
 
 public class Database
 {
@@ -10,116 +16,172 @@ public class Database
     }
     public static void CreateDatabase()
     {
-        using var dbcontext = new UehEventContext();
-        string dbname = dbcontext.Database.GetDbConnection().Database;
+        using (var dbcontext = new UehEventContext())
+        {
+            string dbname = dbcontext.Database.GetDbConnection().Database;
 
-        var kq = dbcontext.Database.EnsureCreated();
-        if (kq)
-        {
-            Console.WriteLine($"created {dbname}");
-        }
-        else
-        {
-            Console.WriteLine("created fail");
+            var kq = dbcontext.Database.EnsureCreated();
+            if (kq)
+            {
+                Console.WriteLine($"created {dbname}");
+            }
+            else
+            {
+                Console.WriteLine("created fail");
+            }
         }
     }
     public static void DropDatabase()
     {
-        using var dbcontext = new UehEventContext();
-        string dbname = dbcontext.Database.GetDbConnection().Database;
+        using (var dbcontext = new UehEventContext())
+        {
+            string dbname = dbcontext.Database.GetDbConnection().Database;
 
-        var kq = dbcontext.Database.EnsureDeleted();
-        if (kq)
-        {
-            Console.WriteLine($"dropped {dbname}");
-        }
-        else
-        {
-            Console.WriteLine($"drop {dbname} fail");
+            var kq = dbcontext.Database.EnsureDeleted();
+            if (kq)
+            {
+                Console.WriteLine($"dropped {dbname}");
+            }
+            else
+            {
+                Console.WriteLine($"drop {dbname} fail");
+            }
         }
     }
     public static List<T> Query<T>(bool isLoadNav = false) where T : class
     {
-        using var dbcontext = new UehEventContext();
-        var dbset = Util.GetProp<DbSet<T>>(dbcontext, typeof(T).ToString());
-
-        if (dbset == null) return new List<T>();
-
-        if (!isLoadNav) return dbset.ToList();
-
-        var navigationProps = dbcontext.Model.FindEntityType(typeof(T))?.GetNavigations();
-
-        if (navigationProps == null) return dbset.ToList();
-
-        var query = dbset.AsQueryable();
-        foreach (var navigationProp in navigationProps)
+        using (var dbcontext = new UehEventContext())
         {
-            query = query.Include(navigationProp.Name);
-        }
+            var dbset = Util.GetProp<DbSet<T>>(dbcontext, typeof(T).ToString());
 
-        var resultList = query.ToList();
+            if (dbset == null) return new List<T>();
 
-        return resultList;
-    }
-    public static T? Query<T>(object key) where T : class
-    {
-        using var dbcontext = new UehEventContext();
-        var entityType = dbcontext.Model.FindEntityType(typeof(T));
-        if (entityType == null) { return null; }
+            if (!isLoadNav) return dbset.ToList();
 
-        var pkName = entityType.FindPrimaryKey()?.Properties?[0]?.Name;
-        if (pkName == null) { return null; }
+            var navigationProps = dbcontext.Model.FindEntityType(typeof(T))?.GetNavigations();
 
-        var parameter = Expression.Parameter(typeof(T), "x");
-        var property = Expression.Property(parameter, pkName);
-        var constant = Expression.Constant(key);
-        var equals = Expression.Equal(property, constant);
-        var lambda = Expression.Lambda<Func<T, bool>>(equals, parameter);
+            if (navigationProps == null) return dbset.ToList();
 
-        var navigationProps = entityType?.GetNavigations();
-        var query = dbcontext.Set<T>().AsQueryable();
-
-        var result = query.SingleOrDefault(lambda);
-
-        if (result != null && navigationProps != null)
-        {
-            foreach (var item in navigationProps)
+            var query = dbset.AsQueryable();
+            foreach (var navigationProp in navigationProps)
             {
-                dbcontext.Entry(result).Navigation(item.Name).Load();
+                query = query.Include(navigationProp.Name);
             }
-        }
 
-        return result ?? default;
+            var resultList = query.ToList();
+
+            return resultList;
+        }
     }
-    public static T? Query<T>(string filterer, string type, bool isLoadNav = false) where T : class
+    public static T? QueryByKey<T>(object key) where T : class
     {
-        using var dbcontext = new UehEventContext();
-        var entityType = dbcontext.Model.FindEntityType(typeof(T));
-        if (entityType == null) { return null; }
-
-        var pkName = entityType.FindPrimaryKey()?.Properties?[0]?.Name;
-        if (pkName == null) { return null; }
-
-        var parameter = Expression.Parameter(typeof(T), "x");
-        var property = Expression.Property(parameter, type);
-        var constant = Expression.Constant(filterer);
-        var equals = Expression.Equal(property, constant);
-        var lambda = Expression.Lambda<Func<T, bool>>(equals, parameter);
-
-        var navigationProps = entityType?.GetNavigations();
-        var query = dbcontext.Set<T>().AsQueryable();
-
-        var result = query.SingleOrDefault(lambda);
-
-        if (result != null && navigationProps != null)
+        using (var dbcontext = new UehEventContext())
         {
-            foreach (var item in navigationProps)
-            {
-                dbcontext.Entry(result).Navigation(item.Name).Load();
-            }
-        }
+            var entityType = dbcontext.Model.FindEntityType(typeof(T));
+            if (entityType == null) { return null; }
 
-        return result ?? default;
+            var pkName = entityType.FindPrimaryKey()?.Properties?.FirstOrDefault()?.Name;
+            if (pkName == null) { return null; }
+
+            //Create Expresion Lamda
+            var parameter = Expression.Parameter(typeof(T), "x");
+            var property = Expression.Property(parameter, pkName);
+            var constant = Expression.Constant(key);
+            var equals = Expression.Equal(property, constant);
+            var lambda = Expression.Lambda<Func<T, bool>>(equals, parameter);
+
+            var navigationProps = entityType?.GetNavigations();
+            var query = dbcontext.Set<T>().AsQueryable();
+
+            var result = query.SingleOrDefault(lambda);
+
+            if (result != null && navigationProps != null)
+            {
+                foreach (var item in navigationProps)
+                {
+                    dbcontext.Entry(result).Navigation(item.Name).Load();
+                }
+            }
+
+            return result == null ? default : result;
+        }
+    }
+    public static T? Query<T>(string filterer, string prop, bool isLoadNav = false) where T : class
+    {
+        using (var dbcontext = new UehEventContext())
+        {
+            var entityType = dbcontext.Model.FindEntityType(typeof(T));
+            if (entityType == null) { return null; }
+
+            var pkName = entityType.FindPrimaryKey()?.Properties?.FirstOrDefault()?.Name;
+            if (pkName == null) { return null; }
+
+            var parameter = Expression.Parameter(typeof(T), "x");
+            var property = Expression.Property(parameter, prop);
+            var constant = Expression.Constant(filterer);
+            var equals = Expression.Equal(property, constant);
+            var lambda = Expression.Lambda<Func<T, bool>>(equals, parameter);
+
+            var navigationProps = entityType?.GetNavigations();
+            var query = dbcontext.Set<T>().AsQueryable();
+
+            var result = query.SingleOrDefault(lambda);
+
+            if (result != null && navigationProps != null)
+            {
+                foreach (var item in navigationProps)
+                {
+                    dbcontext.Entry(result).Navigation(item.Name).Load();
+                }
+            }
+
+            return result == null ? default : result;
+        }
+    }
+    public static T? Query<T>(string[] filterers, string[] props, bool isLoadNav = false) where T : class
+    {
+        using (var dbcontext = new UehEventContext())
+        {
+            var entityType = dbcontext.Model.FindEntityType(typeof(T));
+            if (entityType == null) { return null; }
+
+            Expression conditions = null;
+            var parameter = Expression.Parameter(typeof(T), "x");
+            //(x)=>
+            for (int i = 0; i < filterers.Length; i++)
+            {
+                var property = Expression.Property(parameter, props[i]);
+                //(x)=> x.type[i]  filterer
+                var constant = Expression.Constant(filterers[i]);
+                //(x)=> x.type[i] == filterer
+                var equals = Expression.Equal(property, constant);
+                if (conditions == null)
+                {
+                    conditions = equals;
+                }
+                else
+                {
+                    conditions = Expression.AndAlso(conditions, equals);
+                }
+            }
+            if (conditions == null) return null;
+            var lambda = Expression.Lambda<Func<T, bool>>(conditions, parameter);
+
+            var navigationProps = entityType?.GetNavigations();
+            var query = dbcontext.Set<T>().AsQueryable();
+
+            var result = query.SingleOrDefault(lambda);
+
+            if (result != null && navigationProps != null && !isLoadNav)
+            {
+                foreach (var item in navigationProps)
+                {
+                    dbcontext.Entry(result).Navigation(item.Name).Load();
+                }
+            }
+
+            return result == null ? default : result;
+        }
     }
     public static void Insert<T>(T item) where T : class
     {
@@ -131,47 +193,66 @@ public class Database
     }
     private static void InsertInternal<T>(List<T> items) where T : class
     {
-        using var dbcontext = new UehEventContext();
-        var dbset = Util.GetProp<DbSet<T>>(dbcontext, typeof(T).ToString());
-        if (dbset == null) return;
-
-        dbset.AddRange(items);
-        dbcontext.SaveChanges();
-    }
-    public static void InsertAccount(List<Account> accounts)
-    {
-        using var dbcontext = new UehEventContext();
-        var dbset = dbcontext.Accounts;
-        if (dbset == null) return;
-
-        dbset.AddRange(accounts);
-        foreach (var item in accounts)
+        using (var dbcontext = new UehEventContext())
         {
-            if (item.Student != null)
-                dbcontext.Students.Add(item.Student);
+            var dbset = Util.GetProp<DbSet<T>>(dbcontext, typeof(T).ToString());
+            if (dbset == null) return;
+
+            dbset.AddRange(items);
+            dbcontext.SaveChanges();
         }
-        dbcontext.SaveChanges();
     }
-    public static void Delete<T>(int itemId) where T : class
+    public static void Delete<T>(object itemId) where T : class
     {
-        using var dbcontext = new UehEventContext();
-        var dbset = Util.GetProp<DbSet<T>>(dbcontext, typeof(T).ToString());
-        if (dbset == null) return;
+        using (var dbcontext = new UehEventContext())
+        {
+            var dbset = Util.GetProp<DbSet<T>>(dbcontext, typeof(T).ToString());
+            if (dbset == null) return;
 
-        var item = dbset.Find(itemId);
+            var item = dbset.Find(itemId);
 
-        if (item == null) return;
+            if (item == null) return;
 
-        dbset.Remove(item);
-        dbcontext.SaveChanges();
+            dbset.Remove(item);
+            dbcontext.SaveChanges();
+        }
     }
     public static void Delete<T>(T item) where T : class
     {
-        using var dbcontext = new UehEventContext();
-        var dbset = Util.GetProp<DbSet<T>>(dbcontext, typeof(T).ToString());
-        if (dbset == null) return;
+        using (var dbcontext = new UehEventContext())
+        {
+            var dbset = Util.GetProp<DbSet<T>>(dbcontext, typeof(T).ToString());
+            if (dbset == null) return;
 
-        dbset.Remove(item);
-        dbcontext.SaveChanges();
+            dbset.Remove(item);
+            dbcontext.SaveChanges();
+        }
+    }
+    public static void Update<T>(object key, T item) where T : class
+    {
+        using (var dbcontext = new UehEventContext())
+        {
+            var entityType = dbcontext.Model.FindEntityType(typeof(T));
+            if (entityType == null) { return; }
+
+            var pkName = entityType.FindPrimaryKey()?.Properties?.FirstOrDefault()?.Name;
+            if (pkName == null) { return; }
+
+            //Create Expresion Lamda
+            var parameter = Expression.Parameter(typeof(T), "x");
+            var property = Expression.Property(parameter, pkName);
+            var constant = Expression.Constant(key);
+            var equals = Expression.Equal(property, constant);
+            var lambda = Expression.Lambda<Func<T, bool>>(equals, parameter);
+
+            var query = dbcontext.Set<T>().AsQueryable();
+
+            var result = query.SingleOrDefault(lambda);
+            if (result == null) return;
+
+            Util.CoppyData<T>(item,result);
+            dbcontext.Update(result);
+            dbcontext.SaveChanges();
+        }
     }
 }

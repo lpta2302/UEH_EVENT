@@ -2,16 +2,14 @@
 {
     private static void FakeStudentData()
     {
-        List<Student> students = new()
-        {
-            new Student("31221020084", "Thiên Ân", "K48", "SE001", "KTPM", 92),
-            new Student("31221020027", "Thien An", "K47", "KPM06", "HTTTQL", 59)
-        };
+        List<Student> students = new List<Student>();
+        students.Add(new Student("31221020084", "Thiên Ân", "K48", "SE001", "KTPM", 92));
+        students.Add(new Student("31221020027", "Thien An", "K47", "KPM06", "HTTTQL", 59));
         Database.Insert(students);
     }
     private static void FakeAccountData()
     {
-        List<Account> accounts = new();
+        List<Account> accounts = new List<Account>();
         var st = Query.GetStudentById("31221020084");
         if (st == null) return;
         accounts.Add(new Account(st.Mssv, "password1", "TK01", Constants.STUDENT_ACC, st.Mssv));
@@ -25,11 +23,11 @@
     }
     private static void FakeSight()
     {
-        Answer a1 = new() { Content = "Đây là đáp án 1(đúng)", IsKeyAnswer = true };
-        Answer a2 = new() { Content = "Đây là đáp án 2(sai)" };
-        Answer a3 = new() { Content = "Đây là đáp án 3(sai)" };
-        Answer a4 = new() { Content = "Đây là đáp án 4(sai)" };
-        Question q1 = new()
+        Answer a1 = new Answer() { Content = "Đây là đáp án 1(đúng)", IsKeyAnswer = true };
+        Answer a2 = new Answer() { Content = "Đây là đáp án 2(sai)" };
+        Answer a3 = new Answer() { Content = "Đây là đáp án 3(sai)" };
+        Answer a4 = new Answer() { Content = "Đây là đáp án 4(sai)" };
+        Question q1 = new Question()
         {
             Content = "Đây là câu hỏi 1",
             Answers = new List<Answer>() { a1, a2, a3, a4 },
@@ -38,14 +36,15 @@
         a2 = new Answer() { Content = "Đây là đáp án 2(đúng)", IsKeyAnswer = true };
         a3 = new Answer() { Content = "Đây là đáp án 3(sai)" };
         a4 = new Answer() { Content = "Đây là đáp án 4(sai)" };
-        Question q2 = new()
+        Question q2 = new Question()
         {
             Content = "Đây là câu hỏi 1",
             Answers = new List<Answer>() { a1, a2, a3, a4 },
         };
 
-        Sight s = new()
+        Sight s = new Sight()
         {
+            Time = 1200,
             Name = "Bài trắc nghiệm",
             Preview = "đây là bài trắc nghiệm nhân phẩm",
             Questions = new List<Question>() { q1, q2 }
@@ -56,12 +55,12 @@
     {
         var st = Query.GetStudentById("31221020084");
         var s = Query.GetSpecificSight(1);
-        SightHis sightHis = new(st!.Mssv, s!.Id, 100);
+        SightHis sightHis = new SightHis(st.Mssv, s.Id, 100);
         Database.Insert(sightHis);
     }
     private static void FakeGame()
     {
-        List<Game> games = new(){
+        List<Game> games = new List<Game>(){
             new Game("game 1"),
             new Game("game 2")
         };
@@ -69,12 +68,12 @@
     }
     private static void FakePlayGameHis()
     {
-        PlayHis playHis = new("31221020084", 1, 98);
+        PlayHis playHis = new PlayHis("31221020084", 1, 98);
         Database.Insert(playHis);
     }
     private static void FakeTPointHis()
     {
-        TPointHis pointHis = new("31221020027", 2, "test đây là một đoạn test dày vài chục trăm kí tự");
+        TPointHis pointHis = new TPointHis("31221020027", 2, "test đây là một đoạn test dày vài chục trăm kí tự");
         Database.Insert(pointHis);
     }
     public static void Init()

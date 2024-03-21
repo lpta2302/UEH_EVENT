@@ -3,28 +3,36 @@
   "WorkspaceRootPath": "C:\\Users\\ADMIN\\source\\repos\\UEH_EVENT\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{CA4306DF-48F0-472C-8563-184959448279}|UEH_EVENT\\UEH_EVENT.csproj|C:\\Users\\ADMIN\\source\\repos\\UEH_EVENT\\ueh_event\\da\\database\\database.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CA4306DF-48F0-472C-8563-184959448279}|UEH_EVENT\\UEH_EVENT.csproj|solutionrelative:ueh_event\\da\\database\\database.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CA4306DF-48F0-472C-8563-184959448279}|UEH_EVENT\\UEH_EVENT.csproj|c:\\users\\admin\\source\\repos\\ueh_event\\ueh_event\\da\\models\\playhis.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CA4306DF-48F0-472C-8563-184959448279}|UEH_EVENT\\UEH_EVENT.csproj|solutionrelative:ueh_event\\da\\models\\playhis.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CA4306DF-48F0-472C-8563-184959448279}|UEH_EVENT\\UEH_EVENT.csproj|c:\\users\\admin\\source\\repos\\ueh_event\\ueh_event\\da\\models\\student.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CA4306DF-48F0-472C-8563-184959448279}|UEH_EVENT\\UEH_EVENT.csproj|solutionrelative:ueh_event\\da\\models\\student.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CA4306DF-48F0-472C-8563-184959448279}|UEH_EVENT\\UEH_EVENT.csproj|c:\\users\\admin\\source\\repos\\ueh_event\\ueh_event\\da\\models\\game.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CA4306DF-48F0-472C-8563-184959448279}|UEH_EVENT\\UEH_EVENT.csproj|solutionrelative:ueh_event\\da\\models\\game.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{CA4306DF-48F0-472C-8563-184959448279}|UEH_EVENT\\UEH_EVENT.csproj|c:\\users\\admin\\source\\repos\\ueh_event\\ueh_event\\utils\\constants.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{CA4306DF-48F0-472C-8563-184959448279}|UEH_EVENT\\UEH_EVENT.csproj|solutionrelative:ueh_event\\utils\\constants.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{CA4306DF-48F0-472C-8563-184959448279}|UEH_EVENT\\UEH_EVENT.csproj|C:\\Users\\ADMIN\\source\\repos\\UEH_EVENT\\ueh_event\\da\\models\\account.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{CA4306DF-48F0-472C-8563-184959448279}|UEH_EVENT\\UEH_EVENT.csproj|solutionrelative:ueh_event\\da\\models\\account.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{CA4306DF-48F0-472C-8563-184959448279}|UEH_EVENT\\UEH_EVENT.csproj|C:\\Users\\ADMIN\\source\\repos\\UEH_EVENT\\ueh_event\\da\\database\\query.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CA4306DF-48F0-472C-8563-184959448279}|UEH_EVENT\\UEH_EVENT.csproj|solutionrelative:ueh_event\\da\\database\\query.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{CA4306DF-48F0-472C-8563-184959448279}|UEH_EVENT\\UEH_EVENT.csproj|C:\\Users\\ADMIN\\source\\repos\\UEH_EVENT\\ueh_event\\utils\\util.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{CA4306DF-48F0-472C-8563-184959448279}|UEH_EVENT\\UEH_EVENT.csproj|solutionrelative:ueh_event\\utils\\util.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{CA4306DF-48F0-472C-8563-184959448279}|UEH_EVENT\\UEH_EVENT.csproj|C:\\Users\\ADMIN\\source\\repos\\UEH_EVENT\\ueh_event\\da\\database\\database.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{CA4306DF-48F0-472C-8563-184959448279}|UEH_EVENT\\UEH_EVENT.csproj|solutionrelative:ueh_event\\da\\database\\database.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{CA4306DF-48F0-472C-8563-184959448279}|UEH_EVENT\\UEH_EVENT.csproj|C:\\Users\\ADMIN\\source\\repos\\UEH_EVENT\\ueh_event\\da\\database\\myfakedata.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{CA4306DF-48F0-472C-8563-184959448279}|UEH_EVENT\\UEH_EVENT.csproj|solutionrelative:ueh_event\\da\\database\\myfakedata.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{CA4306DF-48F0-472C-8563-184959448279}|UEH_EVENT\\UEH_EVENT.csproj|C:\\Users\\ADMIN\\source\\repos\\UEH_EVENT\\ueh_event\\da\\database\\query.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{CA4306DF-48F0-472C-8563-184959448279}|UEH_EVENT\\UEH_EVENT.csproj|solutionrelative:ueh_event\\da\\database\\query.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -34,45 +42,75 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 7,
           "Children": [
             {
               "$type": "Document",
               "DocumentIndex": 2,
+              "Title": "Student.cs",
+              "DocumentMoniker": "C:\\Users\\ADMIN\\source\\repos\\UEH_EVENT\\UEH_EVENT\\DA\\models\\Student.cs",
+              "RelativeDocumentMoniker": "UEH_EVENT\\DA\\models\\Student.cs",
+              "ToolTip": "C:\\Users\\ADMIN\\source\\repos\\UEH_EVENT\\UEH_EVENT\\DA\\models\\Student.cs",
+              "RelativeToolTip": "UEH_EVENT\\DA\\models\\Student.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-12T04:57:08.343Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "PlayHis.cs",
+              "DocumentMoniker": "C:\\Users\\ADMIN\\source\\repos\\UEH_EVENT\\UEH_EVENT\\DA\\models\\PlayHis.cs",
+              "RelativeDocumentMoniker": "UEH_EVENT\\DA\\models\\PlayHis.cs",
+              "ToolTip": "C:\\Users\\ADMIN\\source\\repos\\UEH_EVENT\\UEH_EVENT\\DA\\models\\PlayHis.cs",
+              "RelativeToolTip": "UEH_EVENT\\DA\\models\\PlayHis.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAoAAAAPAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-12T04:38:22.506Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Game.cs",
+              "DocumentMoniker": "C:\\Users\\ADMIN\\source\\repos\\UEH_EVENT\\UEH_EVENT\\DA\\models\\Game.cs",
+              "RelativeDocumentMoniker": "UEH_EVENT\\DA\\models\\Game.cs",
+              "ToolTip": "C:\\Users\\ADMIN\\source\\repos\\UEH_EVENT\\UEH_EVENT\\DA\\models\\Game.cs",
+              "RelativeToolTip": "UEH_EVENT\\DA\\models\\Game.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-12T04:38:17.928Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
               "Title": "Util.cs",
               "DocumentMoniker": "C:\\Users\\ADMIN\\source\\repos\\UEH_EVENT\\UEH_EVENT\\Utils\\Util.cs",
               "RelativeDocumentMoniker": "UEH_EVENT\\Utils\\Util.cs",
               "ToolTip": "C:\\Users\\ADMIN\\source\\repos\\UEH_EVENT\\UEH_EVENT\\Utils\\Util.cs",
               "RelativeToolTip": "UEH_EVENT\\Utils\\Util.cs",
-              "ViewState": "AQIAAA0AAAAAAAAAAAAgwAsAAAA3AAAA",
+              "ViewState": "AQIAAAcAAAAAAAAAAAAgwAwAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-03-11T04:19:37.829Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 4,
               "Title": "Constants.cs",
               "DocumentMoniker": "C:\\Users\\ADMIN\\source\\repos\\UEH_EVENT\\UEH_EVENT\\Utils\\Constants.cs",
               "RelativeDocumentMoniker": "UEH_EVENT\\Utils\\Constants.cs",
               "ToolTip": "C:\\Users\\ADMIN\\source\\repos\\UEH_EVENT\\UEH_EVENT\\Utils\\Constants.cs",
               "RelativeToolTip": "UEH_EVENT\\Utils\\Constants.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAqwAMAAAAqAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAUAAAAhAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-03-11T04:19:25.758Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "Account.cs",
-              "DocumentMoniker": "C:\\Users\\ADMIN\\source\\repos\\UEH_EVENT\\UEH_EVENT\\DA\\models\\Account.cs",
-              "RelativeDocumentMoniker": "UEH_EVENT\\DA\\models\\Account.cs",
-              "ToolTip": "C:\\Users\\ADMIN\\source\\repos\\UEH_EVENT\\UEH_EVENT\\DA\\models\\Account.cs",
-              "RelativeToolTip": "UEH_EVENT\\DA\\models\\Account.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-03-11T04:19:21.663Z",
               "EditorCaption": ""
             },
             {
@@ -83,33 +121,35 @@
               "RelativeDocumentMoniker": "UEH_EVENT\\DA\\database\\Query.cs",
               "ToolTip": "C:\\Users\\ADMIN\\source\\repos\\UEH_EVENT\\UEH_EVENT\\DA\\database\\Query.cs",
               "RelativeToolTip": "UEH_EVENT\\DA\\database\\Query.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAoAAAAFAAAA",
+              "ViewState": "AQIAACAAAAAAAAAAAAAuwAoAAAAFAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-03-11T04:19:00.444Z"
+              "WhenOpened": "2024-03-11T04:19:00.444Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "MyFakeData.cs",
-              "DocumentMoniker": "C:\\Users\\ADMIN\\source\\repos\\UEH_EVENT\\UEH_EVENT\\DA\\database\\MyFakeData.cs",
-              "RelativeDocumentMoniker": "UEH_EVENT\\DA\\database\\MyFakeData.cs",
-              "ToolTip": "C:\\Users\\ADMIN\\source\\repos\\UEH_EVENT\\UEH_EVENT\\DA\\database\\MyFakeData.cs",
-              "RelativeToolTip": "UEH_EVENT\\DA\\database\\MyFakeData.cs",
-              "ViewState": "AQIAAAQAAAAAAAAAAAAgwE4AAAAFAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-03-11T04:16:23.784Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 0,
               "Title": "Database.cs",
               "DocumentMoniker": "C:\\Users\\ADMIN\\source\\repos\\UEH_EVENT\\UEH_EVENT\\DA\\database\\Database.cs",
               "RelativeDocumentMoniker": "UEH_EVENT\\DA\\database\\Database.cs",
               "ToolTip": "C:\\Users\\ADMIN\\source\\repos\\UEH_EVENT\\UEH_EVENT\\DA\\database\\Database.cs",
               "RelativeToolTip": "UEH_EVENT\\DA\\database\\Database.cs",
-              "ViewState": "AQIAAAUAAAAAAAAAAAAxwAEAAAAeAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAQAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-03-10T07:53:32.169Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "MyFakeData.cs",
+              "DocumentMoniker": "C:\\Users\\ADMIN\\source\\repos\\UEH_EVENT\\UEH_EVENT\\DA\\database\\MyFakeData.cs",
+              "RelativeDocumentMoniker": "UEH_EVENT\\DA\\database\\MyFakeData.cs",
+              "ToolTip": "C:\\Users\\ADMIN\\source\\repos\\UEH_EVENT\\UEH_EVENT\\DA\\database\\MyFakeData.cs",
+              "RelativeToolTip": "UEH_EVENT\\DA\\database\\MyFakeData.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAE8AAAAFAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-11T04:16:23.784Z",
               "EditorCaption": ""
             }
           ]
