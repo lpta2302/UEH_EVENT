@@ -19,6 +19,7 @@ public class Sight
     {
         Name = "";
         Preview = "";
+        Questions = new List<Question>();
     }
 
     public Sight(string name = "", string? preview = "", List<Question>? questions = null)

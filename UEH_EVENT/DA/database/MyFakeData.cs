@@ -25,31 +25,29 @@ class MyFakeData
     }
     private static void FakeSight()
     {
-        Answer a1 = new Answer() { Content = "Đây là đáp án 1(đúng)", IsKeyAnswer = true };
-        Answer a2 = new Answer() { Content = "Đây là đáp án 2(sai)" };
-        Answer a3 = new Answer() { Content = "Đây là đáp án 3(sai)" };
-        Answer a4 = new Answer() { Content = "Đây là đáp án 4(sai)" };
-        Question q1 = new Question()
+        List<Question> questions = new List<Question>();
+        Random r = new Random();
+        for (int i = 0; i < 2; i++)
         {
-            Content = "Đây là câu hỏi 1",
-            Answers = new List<Answer>() { a1, a2, a3, a4 },
-        };
-        a1 = new Answer() { Content = "Đây là đáp án 1(sai)" };
-        a2 = new Answer() { Content = "Đây là đáp án 2(đúng)", IsKeyAnswer = true };
-        a3 = new Answer() { Content = "Đây là đáp án 3(sai)" };
-        a4 = new Answer() { Content = "Đây là đáp án 4(sai)" };
-        Question q2 = new Question()
-        {
-            Content = "Đây là câu hỏi 1",
-            Answers = new List<Answer>() { a1, a2, a3, a4 },
-        };
+            int x = r.Next(1, 5);
+            Answer a1 = new Answer() { Content = $"Đây là đáp án 1{x == 1}", IsKeyAnswer = x == 1 };
+            Answer a2 = new Answer() { Content = $"Đây là đáp án 2{x == 2}", IsKeyAnswer = x == 2 };
+            Answer a3 = new Answer() { Content = $"Đây là đáp án 3{x == 3}", IsKeyAnswer = x == 3 };
+            Answer a4 = new Answer() { Content = $"Đây là đáp án 4{x == 4}", IsKeyAnswer = x == 4 };
+            Question q1 = new Question()
+            {
+                Content = "Đây là câu hỏi 1",
+                Answers = new List<Answer>() { a1, a2, a3, a4 },
+            };
+            questions.Add(q1);
+        }
 
-        Sight s = new Sight()
-        {
-            Name = "Bài trắc nghiệm",
-            Preview = "đây là bài trắc nghiệm nhân phẩm",
-            Questions = new List<Question>() { q1, q2 }
-        };
+            Sight s = new Sight()
+            {
+                Name = "Bài trắc nghiệm",
+                Preview = "đây là bài trắc nghiệm nhân phẩm",
+                Questions = questions
+            };
         Database.Insert(s);
     }
     private static void FakeSightHis()
