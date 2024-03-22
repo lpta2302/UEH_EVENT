@@ -1,5 +1,5 @@
-﻿
-using Microsoft.EntityFrameworkCore;
+﻿using Microsoft.EntityFrameworkCore;
+using Microsoft.EntityFrameworkCore.Metadata.Internal;
 using Microsoft.Extensions.Logging;
 
 public class UehEventContext : DbContext
@@ -15,6 +15,13 @@ public class UehEventContext : DbContext
     public DbSet<TPointHis> TPointHises { get; set; }
 
     private string connectionString = Constants.connectionString;
+    private ILoggerFactory loggerFactory = LoggerFactory.Create(builder =>
+    {
+        builder
+            // .AddFilter(DbLoggerCategory.Database.Command.Name, LogLevel.Information)
+            // .AddFilter(DbLoggerCategory.Query.Name, LogLevel.Information)
+            .AddConsole();
+    });
     protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
     {
         base.OnConfiguring(optionsBuilder);
@@ -41,7 +48,7 @@ public class UehEventContext : DbContext
             .HasOne(s => s.Student)
             .WithMany()
             .HasForeignKey(s => s.StudentId)
-            .OnDelete(DeleteBehavior.Cascade);
+            .OnDelete(DeleteBehavior.NoAction);
 
         modelBuilder.Entity<SightHis>()
             .HasOne(s => s.Sight)
