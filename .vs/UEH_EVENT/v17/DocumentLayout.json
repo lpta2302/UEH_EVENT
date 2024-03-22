@@ -1,0 +1,320 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "D:\\C#\\Develop Desktop Applications\\UEH_EVENT\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{CA4306DF-48F0-472C-8563-184959448279}|UEH_EVENT\\UEH_EVENT.csproj|d:\\c#\\develop desktop applications\\ueh_event\\ueh_event\\gui\\formupdatetpoint.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CA4306DF-48F0-472C-8563-184959448279}|UEH_EVENT\\UEH_EVENT.csproj|solutionrelative:ueh_event\\gui\\formupdatetpoint.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CA4306DF-48F0-472C-8563-184959448279}|UEH_EVENT\\UEH_EVENT.csproj|d:\\c#\\develop desktop applications\\ueh_event\\ueh_event\\gui\\formupdatetpoint.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{CA4306DF-48F0-472C-8563-184959448279}|UEH_EVENT\\UEH_EVENT.csproj|solutionrelative:ueh_event\\gui\\formupdatetpoint.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CA4306DF-48F0-472C-8563-184959448279}|UEH_EVENT\\UEH_EVENT.csproj|d:\\c#\\develop desktop applications\\ueh_event\\ueh_event\\gui\\formupdatetpoint.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CA4306DF-48F0-472C-8563-184959448279}|UEH_EVENT\\UEH_EVENT.csproj|solutionrelative:ueh_event\\gui\\formupdatetpoint.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CA4306DF-48F0-472C-8563-184959448279}|UEH_EVENT\\UEH_EVENT.csproj|d:\\c#\\develop desktop applications\\ueh_event\\ueh_event\\utils\\globaldata.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CA4306DF-48F0-472C-8563-184959448279}|UEH_EVENT\\UEH_EVENT.csproj|solutionrelative:ueh_event\\utils\\globaldata.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CA4306DF-48F0-472C-8563-184959448279}|UEH_EVENT\\UEH_EVENT.csproj|D:\\C#\\Develop Desktop Applications\\UEH_EVENT\\ueh_event\\gui\\formtrainingpoint.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{CA4306DF-48F0-472C-8563-184959448279}|UEH_EVENT\\UEH_EVENT.csproj|solutionrelative:ueh_event\\gui\\formtrainingpoint.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CA4306DF-48F0-472C-8563-184959448279}|UEH_EVENT\\UEH_EVENT.csproj|D:\\C#\\Develop Desktop Applications\\UEH_EVENT\\ueh_event\\utils\\constants.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CA4306DF-48F0-472C-8563-184959448279}|UEH_EVENT\\UEH_EVENT.csproj|solutionrelative:ueh_event\\utils\\constants.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CA4306DF-48F0-472C-8563-184959448279}|UEH_EVENT\\UEH_EVENT.csproj|d:\\c#\\develop desktop applications\\ueh_event\\ueh_event\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CA4306DF-48F0-472C-8563-184959448279}|UEH_EVENT\\UEH_EVENT.csproj|solutionrelative:ueh_event\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CA4306DF-48F0-472C-8563-184959448279}|UEH_EVENT\\UEH_EVENT.csproj|d:\\c#\\develop desktop applications\\ueh_event\\ueh_event\\gui\\formhomepage.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CA4306DF-48F0-472C-8563-184959448279}|UEH_EVENT\\UEH_EVENT.csproj|solutionrelative:ueh_event\\gui\\formhomepage.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CA4306DF-48F0-472C-8563-184959448279}|UEH_EVENT\\UEH_EVENT.csproj|D:\\C#\\Develop Desktop Applications\\UEH_EVENT\\ueh_event\\gui\\formhomepage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{CA4306DF-48F0-472C-8563-184959448279}|UEH_EVENT\\UEH_EVENT.csproj|solutionrelative:ueh_event\\gui\\formhomepage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CA4306DF-48F0-472C-8563-184959448279}|UEH_EVENT\\UEH_EVENT.csproj|D:\\C#\\Develop Desktop Applications\\UEH_EVENT\\ueh_event\\gui\\formgame.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{CA4306DF-48F0-472C-8563-184959448279}|UEH_EVENT\\UEH_EVENT.csproj|solutionrelative:ueh_event\\gui\\formgame.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CA4306DF-48F0-472C-8563-184959448279}|UEH_EVENT\\UEH_EVENT.csproj|D:\\C#\\Develop Desktop Applications\\UEH_EVENT\\ueh_event\\properties\\resources.resx||{FF4D6ACA-9352-4A5F-821E-F4D6EBDCAB11}",
+      "RelativeMoniker": "D:0:0:{CA4306DF-48F0-472C-8563-184959448279}|UEH_EVENT\\UEH_EVENT.csproj|solutionrelative:ueh_event\\properties\\resources.resx||{FF4D6ACA-9352-4A5F-821E-F4D6EBDCAB11}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CA4306DF-48F0-472C-8563-184959448279}|UEH_EVENT\\UEH_EVENT.csproj|D:\\C#\\Develop Desktop Applications\\UEH_EVENT\\ueh_event\\gui\\formgame.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CA4306DF-48F0-472C-8563-184959448279}|UEH_EVENT\\UEH_EVENT.csproj|solutionrelative:ueh_event\\gui\\formgame.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CA4306DF-48F0-472C-8563-184959448279}|UEH_EVENT\\UEH_EVENT.csproj|D:\\C#\\Develop Desktop Applications\\UEH_EVENT\\ueh_event\\gui\\formupdatetpoint.resx||{FF4D6ACA-9352-4A5F-821E-F4D6EBDCAB11}",
+      "RelativeMoniker": "D:0:0:{CA4306DF-48F0-472C-8563-184959448279}|UEH_EVENT\\UEH_EVENT.csproj|solutionrelative:ueh_event\\gui\\formupdatetpoint.resx||{FF4D6ACA-9352-4A5F-821E-F4D6EBDCAB11}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CA4306DF-48F0-472C-8563-184959448279}|UEH_EVENT\\UEH_EVENT.csproj|D:\\C#\\Develop Desktop Applications\\UEH_EVENT\\ueh_event\\gui\\loginform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{CA4306DF-48F0-472C-8563-184959448279}|UEH_EVENT\\UEH_EVENT.csproj|solutionrelative:ueh_event\\gui\\loginform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CA4306DF-48F0-472C-8563-184959448279}|UEH_EVENT\\UEH_EVENT.csproj|D:\\C#\\Develop Desktop Applications\\UEH_EVENT\\ueh_event\\properties\\resources.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CA4306DF-48F0-472C-8563-184959448279}|UEH_EVENT\\UEH_EVENT.csproj|solutionrelative:ueh_event\\properties\\resources.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CA4306DF-48F0-472C-8563-184959448279}|UEH_EVENT\\UEH_EVENT.csproj|D:\\C#\\Develop Desktop Applications\\UEH_EVENT\\ueh_event\\ueh_event.csproj||{04B8AB82-A572-4FEF-95CE-5222444B6B64}|",
+      "RelativeMoniker": "D:0:0:{CA4306DF-48F0-472C-8563-184959448279}|UEH_EVENT\\UEH_EVENT.csproj|solutionrelative:ueh_event\\ueh_event.csproj||{04B8AB82-A572-4FEF-95CE-5222444B6B64}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CA4306DF-48F0-472C-8563-184959448279}|UEH_EVENT\\UEH_EVENT.csproj|D:\\C#\\Develop Desktop Applications\\UEH_EVENT\\ueh_event\\gui\\formgame.resx||{FF4D6ACA-9352-4A5F-821E-F4D6EBDCAB11}",
+      "RelativeMoniker": "D:0:0:{CA4306DF-48F0-472C-8563-184959448279}|UEH_EVENT\\UEH_EVENT.csproj|solutionrelative:ueh_event\\gui\\formgame.resx||{FF4D6ACA-9352-4A5F-821E-F4D6EBDCAB11}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CA4306DF-48F0-472C-8563-184959448279}|UEH_EVENT\\UEH_EVENT.csproj|D:\\C#\\Develop Desktop Applications\\UEH_EVENT\\ueh_event\\gui\\formhomepage.resx||{FF4D6ACA-9352-4A5F-821E-F4D6EBDCAB11}",
+      "RelativeMoniker": "D:0:0:{CA4306DF-48F0-472C-8563-184959448279}|UEH_EVENT\\UEH_EVENT.csproj|solutionrelative:ueh_event\\gui\\formhomepage.resx||{FF4D6ACA-9352-4A5F-821E-F4D6EBDCAB11}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 3,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{b1e99781-ab81-11d0-b683-00aa00a3ee26}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{eefa5220-e298-11d0-8f78-00a0c9110057}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "formUpdateTPoint.cs [Design]",
+              "DocumentMoniker": "D:\\C#\\Develop Desktop Applications\\UEH_EVENT\\UEH_EVENT\\GUI\\formUpdateTPoint.cs",
+              "RelativeDocumentMoniker": "UEH_EVENT\\GUI\\formUpdateTPoint.cs",
+              "ToolTip": "D:\\C#\\Develop Desktop Applications\\UEH_EVENT\\UEH_EVENT\\GUI\\formUpdateTPoint.cs [Design]",
+              "RelativeToolTip": "UEH_EVENT\\GUI\\formUpdateTPoint.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-22T03:29:53.791Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "formUpdateTPoint.Designer.cs",
+              "DocumentMoniker": "D:\\C#\\Develop Desktop Applications\\UEH_EVENT\\UEH_EVENT\\GUI\\formUpdateTPoint.Designer.cs",
+              "RelativeDocumentMoniker": "UEH_EVENT\\GUI\\formUpdateTPoint.Designer.cs",
+              "ToolTip": "D:\\C#\\Develop Desktop Applications\\UEH_EVENT\\UEH_EVENT\\GUI\\formUpdateTPoint.Designer.cs",
+              "RelativeToolTip": "UEH_EVENT\\GUI\\formUpdateTPoint.Designer.cs",
+              "ViewState": "AQIAALsAAAAAAAAAAAAawL8AAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-22T03:28:57.799Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "formUpdateTPoint.cs",
+              "DocumentMoniker": "D:\\C#\\Develop Desktop Applications\\UEH_EVENT\\UEH_EVENT\\GUI\\formUpdateTPoint.cs",
+              "RelativeDocumentMoniker": "UEH_EVENT\\GUI\\formUpdateTPoint.cs",
+              "ToolTip": "D:\\C#\\Develop Desktop Applications\\UEH_EVENT\\UEH_EVENT\\GUI\\formUpdateTPoint.cs",
+              "RelativeToolTip": "UEH_EVENT\\GUI\\formUpdateTPoint.cs",
+              "ViewState": "AQIAAC4AAAAAAAAAAAAgwD8AAAAJAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-22T00:57:23.015Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "GlobalData.cs",
+              "DocumentMoniker": "D:\\C#\\Develop Desktop Applications\\UEH_EVENT\\UEH_EVENT\\Utils\\GlobalData.cs",
+              "RelativeDocumentMoniker": "UEH_EVENT\\Utils\\GlobalData.cs",
+              "ToolTip": "D:\\C#\\Develop Desktop Applications\\UEH_EVENT\\UEH_EVENT\\Utils\\GlobalData.cs",
+              "RelativeToolTip": "UEH_EVENT\\Utils\\GlobalData.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABMAAAArAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-22T01:10:29.148Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "Constants.cs",
+              "DocumentMoniker": "D:\\C#\\Develop Desktop Applications\\UEH_EVENT\\UEH_EVENT\\Utils\\Constants.cs",
+              "RelativeDocumentMoniker": "UEH_EVENT\\Utils\\Constants.cs",
+              "ToolTip": "D:\\C#\\Develop Desktop Applications\\UEH_EVENT\\UEH_EVENT\\Utils\\Constants.cs",
+              "RelativeToolTip": "UEH_EVENT\\Utils\\Constants.cs",
+              "ViewState": "AQIAAHEAAAAAAAAAAIA5wIcAAAA1AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-20T07:02:50.499Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "formGame.cs [Design]",
+              "DocumentMoniker": "D:\\C#\\Develop Desktop Applications\\UEH_EVENT\\UEH_EVENT\\GUI\\formGame.cs",
+              "RelativeDocumentMoniker": "UEH_EVENT\\GUI\\formGame.cs",
+              "ToolTip": "D:\\C#\\Develop Desktop Applications\\UEH_EVENT\\UEH_EVENT\\GUI\\formGame.cs [Design]",
+              "RelativeToolTip": "UEH_EVENT\\GUI\\formGame.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-20T09:07:05.873Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "formTrainingPoint.cs [Design]",
+              "DocumentMoniker": "D:\\C#\\Develop Desktop Applications\\UEH_EVENT\\UEH_EVENT\\GUI\\formTrainingPoint.cs",
+              "RelativeDocumentMoniker": "UEH_EVENT\\GUI\\formTrainingPoint.cs",
+              "ToolTip": "D:\\C#\\Develop Desktop Applications\\UEH_EVENT\\UEH_EVENT\\GUI\\formTrainingPoint.cs [Design]",
+              "RelativeToolTip": "UEH_EVENT\\GUI\\formTrainingPoint.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-20T10:59:10.885Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "Program.cs",
+              "DocumentMoniker": "D:\\C#\\Develop Desktop Applications\\UEH_EVENT\\UEH_EVENT\\Program.cs",
+              "RelativeDocumentMoniker": "UEH_EVENT\\Program.cs",
+              "ToolTip": "D:\\C#\\Develop Desktop Applications\\UEH_EVENT\\UEH_EVENT\\Program.cs",
+              "RelativeToolTip": "UEH_EVENT\\Program.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABEAAAApAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-22T01:01:52.124Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "formHomepage.Designer.cs",
+              "DocumentMoniker": "D:\\C#\\Develop Desktop Applications\\UEH_EVENT\\UEH_EVENT\\GUI\\formHomepage.Designer.cs",
+              "RelativeDocumentMoniker": "UEH_EVENT\\GUI\\formHomepage.Designer.cs",
+              "ToolTip": "D:\\C#\\Develop Desktop Applications\\UEH_EVENT\\UEH_EVENT\\GUI\\formHomepage.Designer.cs",
+              "RelativeToolTip": "UEH_EVENT\\GUI\\formHomepage.Designer.cs",
+              "ViewState": "AQIAACAAAAAAAAAAAAAqwDoAAAAgAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-22T01:02:22.805Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "formHomepage.cs [Design]",
+              "DocumentMoniker": "D:\\C#\\Develop Desktop Applications\\UEH_EVENT\\UEH_EVENT\\GUI\\formHomepage.cs",
+              "RelativeDocumentMoniker": "UEH_EVENT\\GUI\\formHomepage.cs",
+              "ToolTip": "D:\\C#\\Develop Desktop Applications\\UEH_EVENT\\UEH_EVENT\\GUI\\formHomepage.cs [Design]",
+              "RelativeToolTip": "UEH_EVENT\\GUI\\formHomepage.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-20T10:29:35.739Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "Resources.resx",
+              "DocumentMoniker": "D:\\C#\\Develop Desktop Applications\\UEH_EVENT\\UEH_EVENT\\Properties\\Resources.resx",
+              "RelativeDocumentMoniker": "UEH_EVENT\\Properties\\Resources.resx",
+              "ToolTip": "D:\\C#\\Develop Desktop Applications\\UEH_EVENT\\UEH_EVENT\\Properties\\Resources.resx",
+              "RelativeToolTip": "UEH_EVENT\\Properties\\Resources.resx",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001005|",
+              "WhenOpened": "2024-03-20T11:09:13.004Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "formGame.Designer.cs",
+              "DocumentMoniker": "D:\\C#\\Develop Desktop Applications\\UEH_EVENT\\UEH_EVENT\\GUI\\formGame.Designer.cs",
+              "RelativeDocumentMoniker": "UEH_EVENT\\GUI\\formGame.Designer.cs",
+              "ToolTip": "D:\\C#\\Develop Desktop Applications\\UEH_EVENT\\UEH_EVENT\\GUI\\formGame.Designer.cs",
+              "RelativeToolTip": "UEH_EVENT\\GUI\\formGame.Designer.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-20T10:58:45.562Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "formUpdateTPoint.resx",
+              "DocumentMoniker": "D:\\C#\\Develop Desktop Applications\\UEH_EVENT\\UEH_EVENT\\GUI\\formUpdateTPoint.resx",
+              "RelativeDocumentMoniker": "UEH_EVENT\\GUI\\formUpdateTPoint.resx",
+              "ToolTip": "D:\\C#\\Develop Desktop Applications\\UEH_EVENT\\UEH_EVENT\\GUI\\formUpdateTPoint.resx",
+              "RelativeToolTip": "UEH_EVENT\\GUI\\formUpdateTPoint.resx",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001005|",
+              "WhenOpened": "2024-03-20T12:26:26.87Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "LoginForm.cs [Design]",
+              "DocumentMoniker": "D:\\C#\\Develop Desktop Applications\\UEH_EVENT\\UEH_EVENT\\GUI\\LoginForm.cs",
+              "RelativeDocumentMoniker": "UEH_EVENT\\GUI\\LoginForm.cs",
+              "ToolTip": "D:\\C#\\Develop Desktop Applications\\UEH_EVENT\\UEH_EVENT\\GUI\\LoginForm.cs [Design]",
+              "RelativeToolTip": "UEH_EVENT\\GUI\\LoginForm.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-20T11:00:54.317Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "Resources.Designer.cs",
+              "DocumentMoniker": "D:\\C#\\Develop Desktop Applications\\UEH_EVENT\\UEH_EVENT\\Properties\\Resources.Designer.cs",
+              "RelativeDocumentMoniker": "UEH_EVENT\\Properties\\Resources.Designer.cs",
+              "ToolTip": "D:\\C#\\Develop Desktop Applications\\UEH_EVENT\\UEH_EVENT\\Properties\\Resources.Designer.cs",
+              "RelativeToolTip": "UEH_EVENT\\Properties\\Resources.Designer.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-20T12:25:57.968Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "UEH_EVENT",
+              "DocumentMoniker": "D:\\C#\\Develop Desktop Applications\\UEH_EVENT\\UEH_EVENT\\UEH_EVENT.csproj",
+              "RelativeDocumentMoniker": "UEH_EVENT\\UEH_EVENT.csproj",
+              "ToolTip": "D:\\C#\\Develop Desktop Applications\\UEH_EVENT\\UEH_EVENT\\UEH_EVENT.csproj",
+              "RelativeToolTip": "UEH_EVENT\\UEH_EVENT.csproj",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2024-03-20T11:52:16.162Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "formGame.resx",
+              "DocumentMoniker": "D:\\C#\\Develop Desktop Applications\\UEH_EVENT\\UEH_EVENT\\GUI\\formGame.resx",
+              "RelativeDocumentMoniker": "UEH_EVENT\\GUI\\formGame.resx",
+              "ToolTip": "D:\\C#\\Develop Desktop Applications\\UEH_EVENT\\UEH_EVENT\\GUI\\formGame.resx",
+              "RelativeToolTip": "UEH_EVENT\\GUI\\formGame.resx",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001005|",
+              "WhenOpened": "2024-03-20T10:58:49.112Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
+              "Title": "formHomepage.resx",
+              "DocumentMoniker": "D:\\C#\\Develop Desktop Applications\\UEH_EVENT\\UEH_EVENT\\GUI\\formHomepage.resx",
+              "RelativeDocumentMoniker": "UEH_EVENT\\GUI\\formHomepage.resx",
+              "ToolTip": "D:\\C#\\Develop Desktop Applications\\UEH_EVENT\\UEH_EVENT\\GUI\\formHomepage.resx",
+              "RelativeToolTip": "UEH_EVENT\\GUI\\formHomepage.resx",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001005|",
+              "WhenOpened": "2024-03-20T10:58:53.892Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -57,6 +57,8 @@ namespace UEH_EVENT.GUI
             Navbar.Name = "Navbar";
             Navbar.Size = new Size(400, 980);
             Navbar.TabIndex = 0;
+
+            Constants.INavbar.CreateNavbar(this,resources);
             // 
             // pictureBoxHome
             // 
@@ -71,57 +73,14 @@ namespace UEH_EVENT.GUI
             // 
             // pictureBox1
             // 
+            pictureBox1.BackgroundImage = Properties.Resources.Logo_396x163;
             pictureBox1.Enabled = false;
-            pictureBox1.Image = Properties.Resources.LOGO_UEH;
             pictureBox1.Location = new Point(0, 3);
             pictureBox1.Name = "pictureBox1";
             pictureBox1.Size = new Size(396, 163);
             pictureBox1.TabIndex = 12;
             pictureBox1.TabStop = false;
             // 
-            //Navbar Creaetor
-            INavbar navbar = GetNavbar(GlobalData.CurrentAccount.AccType);
-            for (int i = 0; i < navbar.Name.Length; i++)
-            {
-                // Home
-                // 
-                Panel panel = new Panel();
-                Button btn = new Button();
-
-                panel.Controls.Add(btn);
-                panel.Location = new Point(0, 93 + 75 * (i+1));
-                panel.Name = "panel"+navbar.Name[i];
-                panel.Size = new Size(400, 75);
-                panel.TabIndex = 7;
-                // 
-                // btnHomee
-                // 
-                btn.BackColor = Color.FromArgb(34, 34, 34);
-                btn.BackgroundImageLayout = ImageLayout.None;
-                btn.FlatStyle = FlatStyle.Flat;
-                btn.Font = new Font("Helvetica", 12F, FontStyle.Bold, GraphicsUnit.Point);
-                btn.ForeColor = Color.White;
-                btn.Image = (Image)resources.GetObject($"btn{navbar.Name}.Image");
-                btn.ImageAlign = ContentAlignment.MiddleLeft;
-                btn.Location = new Point(0, -9);
-                btn.Name = "btn" + navbar.Name[i];
-                btn.Padding = new Padding(20, 0, 0, 0);
-                btn.Size = new Size(419, 92);
-                btn.TabIndex = 10;
-                btn.Text = "  " + navbar.Name[i];
-                btn.TextAlign = ContentAlignment.MiddleLeft;
-                btn.TextImageRelation = TextImageRelation.ImageBeforeText;
-                btn.UseVisualStyleBackColor = false;
-                btn.Image = navbar.Icons[i];
-                btn.Click += (object sender, EventArgs e) => {
-                    int index = Array.FindIndex(navbar.Name,item=>item.Equals(((Control)sender).Text.Trim()));
-                    navbar.Forms[index].Show();
-                    Close();
-                };
-
-                Controls.Add(panel);
-            }
-            //End Navbar Creator
             // Home
             // 
             Home.Controls.Add(btnHomee);

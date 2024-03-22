@@ -133,6 +133,16 @@ namespace UEH_EVENT.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap iconSearch {
+            get {
+                object obj = ResourceManager.GetObject("iconSearch", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap iconSetting {
             get {
                 object obj = ResourceManager.GetObject("iconSetting", resourceCulture);
@@ -153,9 +163,9 @@ namespace UEH_EVENT.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap LOGO_UEH {
+        internal static System.Drawing.Bitmap Logo_396x163 {
             get {
-                object obj = ResourceManager.GetObject("LOGO_UEH", resourceCulture);
+                object obj = ResourceManager.GetObject("Logo_396x163", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -166,6 +176,16 @@ namespace UEH_EVENT.Properties {
         internal static System.Drawing.Bitmap Training_point {
             get {
                 object obj = ResourceManager.GetObject("Training point", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap UEH {
+            get {
+                object obj = ResourceManager.GetObject("UEH", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

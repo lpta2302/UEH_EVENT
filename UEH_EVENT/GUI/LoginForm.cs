@@ -37,8 +37,10 @@ namespace UEH_EVENT.GUI
             }
 
             GlobalData.CurrentAccount = currentAccount;
+            GlobalData.InitNavbar();
+
             Hide();
-            new formHomepage().Show();
+            new formHomepage().ShowDialog();
             Close();
         }
     }
