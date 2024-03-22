@@ -12,12 +12,13 @@
         List<Account> accounts = new List<Account>();
         var st = Query.GetStudentById("31221020084");
         if (st == null) return;
-        accounts.Add(new Account(st.Mssv, "password1", "TK01", Constants.STUDENT_ACC, st.Mssv));
+        accounts.Add(new Account(st.Mssv, "password", "TK01", Constants.STUDENT_ACC, st.Mssv));
         st = Query.GetStudentById("31221020027");
         if (st == null) return;
-        accounts.Add(new Account(st.Mssv, "password2", "TK02", Constants.STUDENT_ACC, st.Mssv));
+        accounts.Add(new Account(st.Mssv, "password", "TK02", Constants.STUDENT_ACC, st.Mssv));
 
-        accounts.Add(new Account("lpta2302", "password2", "Thien An", Constants.ADMIN_ACC));
+        accounts.Add(new Account("lpta2302", "password", "Thien An", Constants.ADMIN_ACC));
+        accounts.Add(new Account("lpta2324", "password", "Thien An CLB", Constants.CLB_ACC));
 
         Database.Insert(accounts);
     }
@@ -47,7 +48,8 @@
             Time = 1200,
             Name = "Bài trắc nghiệm",
             Preview = "đây là bài trắc nghiệm nhân phẩm",
-            Questions = new List<Question>() { q1, q2 }
+            Questions = new List<Question>() { q1, q2 },
+            CreatedById = 4
         };
         Database.Insert(s);
     }
