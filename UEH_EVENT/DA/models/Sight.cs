@@ -18,6 +18,7 @@ public class Sight
     {
         Name = "";
         Preview = "";
+        CreatedAt = DateTime.Now;
     }
 
     public Sight(string name = "", string? preview = "", int time = 0, List<Question>? questions = null)
