@@ -15,10 +15,10 @@ namespace UEH_EVENT
             dataGridView1.DataSource = Query.GetAllAccount();
         }
 
-        private void btnStats_Click(object sender, EventArgs e)
+        private void btnSearch_Click(object sender, EventArgs e)
         {
-            FormStats stats = new();
-            stats.Show();
+            FormSearch search = new();
+            search.Show();
         }
     }
 }

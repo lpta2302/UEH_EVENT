@@ -139,7 +139,7 @@ public class Database
             var entityType = dbcontext.Model.FindEntityType(typeof(T));
             if (entityType == null) { return null; }
 
-            Expression conditions = null;
+            Expression conditions = null!;
             var parameter = Expression.Parameter(typeof(T), "x");
             //(x)=>
             for (int i = 0; i < filterer.Count(); i++)
@@ -148,7 +148,7 @@ public class Database
                 //(x)=> x.type[i]  filterer
                 var constant = Expression.Constant(filterer.GetValue(i));
                 //(x)=> x.type[i] == filterer
-                Expression condition = null;
+                Expression condition = null!;
                 switch (filterer.GetFilterType(i))
                 {
                     case Filterer.FilterType.Equal:
@@ -176,7 +176,6 @@ public class Database
 
             var navigationProps = entityType?.GetNavigations();
             var query = dbcontext.Set<T>().AsQueryable();
-
 
             var result = query.Where(lambda).ToList();
             if (result != null && navigationProps != null && !isLoadNav)
