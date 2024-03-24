@@ -78,3 +78,5 @@ D:\Subject\Desktop Application Development\Project2\UEH_EVENT\UEH_EVENT\obj\Debu
 D:\Subject\Desktop Application Development\Project2\UEH_EVENT\UEH_EVENT\obj\Debug\net7.0-windows\UEH_EVENT.pdb
 D:\Subject\Desktop Application Development\Project2\UEH_EVENT\UEH_EVENT\obj\Debug\net7.0-windows\UEH_EVENT.genruntimeconfig.cache
 D:\Subject\Desktop Application Development\Project2\UEH_EVENT\UEH_EVENT\obj\Debug\net7.0-windows\ref\UEH_EVENT.dll
+D:\Subject\Desktop Application Development\Project2\UEH_EVENT\UEH_EVENT\obj\Debug\net7.0-windows\UEH_EVENT.GUI.Mario.Form1.resources
+D:\Subject\Desktop Application Development\Project2\UEH_EVENT\UEH_EVENT\obj\Debug\net7.0-windows\UEH_EVENT.Properties.Resources.resources

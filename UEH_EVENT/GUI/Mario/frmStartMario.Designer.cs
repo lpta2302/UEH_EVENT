@@ -48,6 +48,7 @@
             // 
             picButtonStart.BackColor = Color.Transparent;
             picButtonStart.BackgroundImageLayout = ImageLayout.Stretch;
+            picButtonStart.Image = Properties.Resources.startButtonfixed;
             picButtonStart.Location = new Point(335, 335);
             picButtonStart.Name = "picButtonStart";
             picButtonStart.Size = new Size(150, 75);
@@ -59,6 +60,7 @@
             // 
             picButtonInstall.BackColor = Color.Transparent;
             picButtonInstall.BackgroundImageLayout = ImageLayout.Stretch;
+            picButtonInstall.Image = Properties.Resources.buttoncaidatl;
             picButtonInstall.Location = new Point(247, 358);
             picButtonInstall.Name = "picButtonInstall";
             picButtonInstall.Size = new Size(70, 52);
@@ -70,6 +72,7 @@
             // 
             picButtonDiscription.BackColor = Color.Transparent;
             picButtonDiscription.BackgroundImageLayout = ImageLayout.Stretch;
+            picButtonDiscription.Image = Properties.Resources.button3gach;
             picButtonDiscription.Location = new Point(500, 358);
             picButtonDiscription.Name = "picButtonDiscription";
             picButtonDiscription.Size = new Size(70, 52);
@@ -88,6 +91,7 @@
             // 
             picMarioGif.BackColor = Color.Transparent;
             picMarioGif.BackgroundImageLayout = ImageLayout.Stretch;
+            picMarioGif.Image = Properties.Resources.miniMario;
             picMarioGif.Location = new Point(74, 302);
             picMarioGif.Name = "picMarioGif";
             picMarioGif.Size = new Size(112, 120);
@@ -99,6 +103,7 @@
             // 
             picButtonCancel.BackColor = Color.Transparent;
             picButtonCancel.BackgroundImageLayout = ImageLayout.Stretch;
+            picButtonCancel.Image = Properties.Resources.buttonCancel;
             picButtonCancel.Location = new Point(723, 403);
             picButtonCancel.Name = "picButtonCancel";
             picButtonCancel.Size = new Size(44, 35);
@@ -111,6 +116,7 @@
             // 
             picSuperMario.BackColor = Color.Transparent;
             picSuperMario.BackgroundImageLayout = ImageLayout.Stretch;
+            picSuperMario.Image = Properties.Resources.supermario;
             picSuperMario.Location = new Point(310, 3);
             picSuperMario.Name = "picSuperMario";
             picSuperMario.Size = new Size(186, 109);
@@ -122,6 +128,7 @@
             // 
             AutoScaleDimensions = new SizeF(10F, 25F);
             AutoScaleMode = AutoScaleMode.Font;
+            BackgroundImage = Properties.Resources.BatDauBackGround;
             BackgroundImageLayout = ImageLayout.Stretch;
             ClientSize = new Size(800, 450);
             Controls.Add(picSuperMario);
@@ -136,7 +143,7 @@
             MinimizeBox = false;
             Name = "frmStartMario";
             StartPosition = FormStartPosition.CenterScreen;
-            Text = "S";
+            Text = "MARIO ";
             ((System.ComponentModel.ISupportInitialize)picButtonStart).EndInit();
             ((System.ComponentModel.ISupportInitialize)picButtonInstall).EndInit();
             ((System.ComponentModel.ISupportInitialize)picButtonDiscription).EndInit();
