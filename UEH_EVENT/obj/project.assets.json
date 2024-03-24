@@ -3009,11 +3009,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\Subject\\Desktop Application Development\\Project2\\UEH_EVENT\\UEH_EVENT\\UEH_EVENT.csproj",
+      "projectUniqueName": "D:\\Subject\\Desktop Application Development\\Project\\UEH_EVENT\\UEH_EVENT\\UEH_EVENT.csproj",
       "projectName": "UEH_EVENT",
-      "projectPath": "D:\\Subject\\Desktop Application Development\\Project2\\UEH_EVENT\\UEH_EVENT\\UEH_EVENT.csproj",
+      "projectPath": "D:\\Subject\\Desktop Application Development\\Project\\UEH_EVENT\\UEH_EVENT\\UEH_EVENT.csproj",
       "packagesPath": "C:\\Users\\LENOVO\\.nuget\\packages\\",
-      "outputPath": "D:\\Subject\\Desktop Application Development\\Project2\\UEH_EVENT\\UEH_EVENT\\obj\\",
+      "outputPath": "D:\\Subject\\Desktop Application Development\\Project\\UEH_EVENT\\UEH_EVENT\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\LENOVO\\AppData\\Roaming\\NuGet\\NuGet.Config",

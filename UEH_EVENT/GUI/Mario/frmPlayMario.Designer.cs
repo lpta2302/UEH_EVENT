@@ -28,12 +28,40 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Text = "frmPlayMario";
+            picPlayer = new PictureBox();
+            ((System.ComponentModel.ISupportInitialize)picPlayer).BeginInit();
+            SuspendLayout();
+            // 
+            // picPlayer
+            // 
+            picPlayer.BackColor = Color.Transparent;
+            picPlayer.BackgroundImageLayout = ImageLayout.Stretch;
+            picPlayer.Image = Properties.Resources.MarioPlay;
+            picPlayer.Location = new Point(23, 459);
+            picPlayer.Name = "picPlayer";
+            picPlayer.Size = new Size(36, 65);
+            picPlayer.SizeMode = PictureBoxSizeMode.StretchImage;
+            picPlayer.TabIndex = 0;
+            picPlayer.TabStop = false;
+            // 
+            // frmPlayMario
+            // 
+            AutoScaleDimensions = new SizeF(10F, 25F);
+            AutoScaleMode = AutoScaleMode.Font;
+            BackgroundImage = Properties.Resources.ForestBackground;
+            BackgroundImageLayout = ImageLayout.Stretch;
+            ClientSize = new Size(956, 575);
+            Controls.Add(picPlayer);
+            DoubleBuffered = true;
+            Name = "frmPlayMario";
+            StartPosition = FormStartPosition.CenterScreen;
+            Text = "MARIO";
+            ((System.ComponentModel.ISupportInitialize)picPlayer).EndInit();
+            ResumeLayout(false);
         }
 
         #endregion
+
+        private PictureBox picPlayer;
     }
 }
