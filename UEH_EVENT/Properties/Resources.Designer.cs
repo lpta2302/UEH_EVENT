@@ -93,6 +93,26 @@ namespace UEH_EVENT.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap brickFlatform {
+            get {
+                object obj = ResourceManager.GetObject("brickFlatform", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap brickFlatShort {
+            get {
+                object obj = ResourceManager.GetObject("brickFlatShort", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap button3gach {
             get {
                 object obj = ResourceManager.GetObject("button3gach", resourceCulture);
@@ -213,6 +233,16 @@ namespace UEH_EVENT.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap HeartPlayGame {
+            get {
+                object obj = ResourceManager.GetObject("HeartPlayGame", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap IconWatch {
             get {
                 object obj = ResourceManager.GetObject("IconWatch", resourceCulture);
@@ -236,6 +266,16 @@ namespace UEH_EVENT.Properties {
         internal static System.Drawing.Bitmap lock2 {
             get {
                 object obj = ResourceManager.GetObject("lock2", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap LockPlayGame {
+            get {
+                object obj = ResourceManager.GetObject("LockPlayGame", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -306,6 +346,26 @@ namespace UEH_EVENT.Properties {
         internal static System.Drawing.Bitmap Viruss {
             get {
                 object obj = ResourceManager.GetObject("Viruss", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap VirussplayGame {
+            get {
+                object obj = ResourceManager.GetObject("VirussplayGame", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap VirussplayGame1 {
+            get {
+                object obj = ResourceManager.GetObject("VirussplayGame1", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
