@@ -63,6 +63,36 @@ namespace UEH_EVENT.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap _953211_200 {
+            get {
+                object obj = ResourceManager.GetObject("953211-200", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap add_icon_free_vector {
+            get {
+                object obj = ResourceManager.GetObject("add-icon-free-vector", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap istockphoto_688550958_612x612 {
+            get {
+                object obj = ResourceManager.GetObject("istockphoto-688550958-612x612", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap ueh_new_campus {
             get {
                 object obj = ResourceManager.GetObject("ueh-new-campus", resourceCulture);
