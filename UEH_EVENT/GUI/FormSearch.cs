@@ -2,6 +2,14 @@
 {
     public partial class FormSearch : Form
     {
+        public string? SelectedClassValue { get; set; }
+        public string? SelectedPropertyValue { get; set; }
+        public string? SearchKeyword { get; set; }
+        public string? ThresholdFilter { get; set; }
+        public int Threshold { get; set; }
+        public int IntLowerBound { get; set; }
+        public int IntUpperBound { get; set; }
+        
         private void ToggleNumericSearch(bool isOn)
         {
             rdoSearchThreshold.Enabled = cboFilter.Enabled = txtThreshold.Enabled = isOn;
@@ -13,6 +21,18 @@
             txtSearchKeyword.Enabled = isOn;
         }
 
+        private void ToggleStatsButton()
+        {
+            if (cboSearch.SelectedIndex == 0 || cboProperties.SelectedIndex == 0)
+            {
+                btnStats.Enabled = false;
+            }
+            else
+            {
+                btnStats.Enabled = true;
+            }
+        }
+
         public FormSearch()
         {
             InitializeComponent();
@@ -22,11 +42,42 @@
         {
             cboSearch.Items.AddRange(SearchUtil.GetDisplayClassNames());
             cboSearch.SelectedIndex = 0;
+            ToggleStatsButton();
         }
 
         private void btnStats_Click(object sender, EventArgs e)
         {
-            FormStats stats = new();
+            SelectedClassValue = SearchUtil.GetClassNameFromDisplay(cboSearch.SelectedItem.ToString()!);
+            SelectedPropertyValue = cboProperties.SelectedItem.ToString();
+            if (txtSearchKeyword.Enabled)
+            {
+                SearchKeyword = txtSearchKeyword.Text;
+            }
+            else
+            {
+                SearchKeyword = null;
+            }
+            if (rdoSearchThreshold.Enabled && rdoSearchThreshold.Checked)
+            {
+                ThresholdFilter = cboFilter.SelectedIndex != 0 ? cboFilter.SelectedItem.ToString() : null;
+                Threshold = int.TryParse(txtThreshold.Text, out int threshold) ? threshold : int.MinValue;
+            }
+            else
+            {
+                ThresholdFilter = null;
+                Threshold = int.MinValue;
+            }
+            if (rdoSearchRange.Enabled && rdoSearchRange.Checked)
+            {
+                IntLowerBound = int.TryParse(txtLowerBound.Text, out int lowerBound) ? lowerBound : int.MinValue;
+                IntUpperBound = int.TryParse(txtUpperBound.Text, out int upperBound) ? upperBound : int.MaxValue;
+            }
+            else
+            {
+                IntLowerBound = int.MinValue;
+                IntUpperBound = int.MaxValue;
+            }
+            FormStats stats = new(this);
             stats.Show();
         }
 
@@ -45,6 +96,7 @@
                 dgvSearchResults.DataSource = Search.QueryAll(selectedClass);
             }
             cboProperties.SelectedIndex = 0;
+            ToggleStatsButton();
         }
 
         private void cboProperties_SelectedIndexChanged(object sender, EventArgs e)
@@ -73,6 +125,7 @@
                 ToggleNumericSearch(false);
                 ToggleTextSearch(false);
             }
+            ToggleStatsButton();
         }
 
         private void btnSearch_Click(object sender, EventArgs e)
@@ -107,6 +160,7 @@
                         else
                         {
                             MessageBox.Show("Số đã nhập không hợp lệ.", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                            txtThreshold.Text = string.Empty;
                         }
                     }
                     if (rdoSearchRange.Checked)
@@ -118,6 +172,7 @@
                         else
                         {
                             MessageBox.Show("Số đã nhập không hợp lệ.", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                            txtLowerBound.Text = txtUpperBound.Text = string.Empty;
                         }
                     }
                 }

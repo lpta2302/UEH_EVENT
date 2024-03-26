@@ -18,7 +18,7 @@ class SearchUtil
                 }
             }
         }
-        return true;
+        return GetHashCode(a) == GetHashCode(b);
     }
     public static int GetHashCode(object? x)
     {
@@ -104,11 +104,15 @@ class SearchUtil
         PropertyInfo? prop = GetValueFromKey(properties, propName);
         return prop != null ? prop.PropertyType : default;
     }
-    public static object? StaticCallGenericVarType(string exeClassName, string typeName, string methodName, Type[] paramTypes, object[] parameters)
+    public static object? StaticCallGenericVarType(string exeClassName, string typeName, string methodName, Type[]? paramTypes, object[]? parameters)
     {
         Type? exeType = Type.GetType(exeClassName);
         Type? varType = Type.GetType(typeName);
-        MethodInfo? method = exeType != null && varType != null ? exeType.GetMethod(methodName, paramTypes)?.MakeGenericMethod(varType) : default;
+        MethodInfo? method = (exeType != null && varType != null)
+            ? (paramTypes != null 
+                ? exeType.GetMethod(methodName, paramTypes)?.MakeGenericMethod(varType) 
+                : exeType.GetMethod(methodName)?.MakeGenericMethod(varType))
+            : default;
         return method?.Invoke(null, parameters);
     }
 }

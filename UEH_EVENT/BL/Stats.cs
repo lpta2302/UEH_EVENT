@@ -1,5 +1,47 @@
 ﻿class Stats
 {
+    public static int CountAll<T>() where T : class
+    {
+        if (nameof(T).EndsWith("His"))
+        {
+            return Database.Query<T>(true).Count;
+        }
+        else
+        {
+            return Database.Query<T>().Count;
+        }
+    }
+    public static int CountFilterString<T>(string propName, string value) where T : class
+    {
+        return Database.Query<T>(new Filterer(propName, value, Filterer.FilterType.Equal))!.Count;
+    }
+    public static int CountFilterInt<T>(string propName, char filter, int threshold) where T : class
+    {
+        Dictionary<char, Func<Filterer>> filterCases = new()
+        {
+            { '>', () => new Filterer(propName, threshold, Filterer.FilterType.GreaterThan) },
+            { '=', () => new Filterer(propName, threshold, Filterer.FilterType.Equal) },
+            { '<', () => new Filterer(propName, threshold, Filterer.FilterType.LessThan) }
+        };
+        return Database.Query<T>(filterCases[filter].Invoke())!.Count;
+    }
+    public static int CountFilterInt<T>(string propName, string equalFilter, int threshold) where T : class
+    {
+        int result = CountFilterInt<T>(propName, '=', threshold);
+        if (equalFilter == ">=")
+        {
+            result += CountFilterInt<T>(propName, '>', threshold);
+        }
+        if (equalFilter == "<=")
+        {
+            result += CountFilterInt<T>(propName, '<', threshold);
+        }
+        return result;
+    }
+    public static int CountFilterInt(string className, string propName, int lowerBound, int upperBound)
+    {
+        return Search.SearchInt(className, propName, lowerBound, upperBound).Count;
+    }
     // Thống kê bài trắc nghiệm
     public static int CountAllSights()
     {

@@ -27,30 +27,40 @@ class Search
     }
     public static object? SearchInt(string className, string propName, string equalFilterStr, int threshold)
     {
-        dynamic results = SearchInt(className, propName, '=', threshold)!;
+        ArrayList results = new();
+        dynamic? equalResults = SearchInt(className, propName, '=', threshold);
+        if (equalResults != null)
+        {
+            results.AddRange(equalResults);
+        }
         if (equalFilterStr == ">=")
         {
-            dynamic greaterResults = SearchInt(className, propName, '>', threshold)!;
-            results.AddRange(greaterResults);
+            dynamic? greaterResults = SearchInt(className, propName, '>', threshold);
+            if (greaterResults != null)
+            {
+                results.AddRange(greaterResults);
+            }
         }
         if (equalFilterStr == "<=")
         {
-            dynamic lesserResults = SearchInt(className, propName, '<', threshold)!;
-            results.AddRange(lesserResults);
+            dynamic? lesserResults = SearchInt(className, propName, '<', threshold);
+            if (lesserResults != null)
+            {
+                results.AddRange(lesserResults);
+            }
         }
         return results;
     }
-    public static object? SearchInt(string className, string propName, int lowerBound, int upperBound)
+    public static ArrayList SearchInt(string className, string propName, int lowerBound, int upperBound)
     {
-        dynamic fromLower = SearchInt(className, propName, ">=", lowerBound)!;
-        dynamic toUpper = SearchInt(className, propName, "<=", upperBound)!;
+        dynamic? fromLower = SearchInt(className, propName, ">=", lowerBound);
+        dynamic? toUpper = SearchInt(className, propName, "<=", upperBound);
         ArrayList results = new();
-        for (int i = 0; i < fromLower.Count; i++)
+        for (int i = 0; i < fromLower?.Count; i++)
         {
-            for (int j = 0; j < toUpper.Count; j++)
+            for (int j = 0; j < toUpper?.Count; j++)
             {
-                if (SearchUtil.Equals(fromLower[i], toUpper[j])
-                    && SearchUtil.GetHashCode(fromLower[i]) == SearchUtil.GetHashCode(toUpper[j]))
+                if (SearchUtil.Equals(fromLower[i], toUpper[j]))
                 {
                     results.Add(fromLower[i]);
                     break;
