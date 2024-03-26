@@ -66,7 +66,8 @@ public class Constants
                 btn.TextImageRelation = TextImageRelation.ImageBeforeText;
                 btn.UseVisualStyleBackColor = false;
                 btn.Image = navbar.Icons[i];
-                btn.Click += (object sender, EventArgs e) => {
+                btn.Click += (object sender, EventArgs e) =>
+                {
                     int index = Array.FindIndex(navbar.Name, item => item.Equals(((Control)sender).Text.Trim()));
                     form.Hide();
                     ((Form)Activator.CreateInstance(navbar.Forms[index])).ShowDialog();
@@ -86,7 +87,7 @@ public class Constants
             "Game",
             "Thống kê"
         };
-        public Type[] Forms { get; } = new Type[] { 
+        public Type[] Forms { get; } = new Type[] {
             typeof(formSight),
             typeof(formGame),
             typeof(formStatistic),
