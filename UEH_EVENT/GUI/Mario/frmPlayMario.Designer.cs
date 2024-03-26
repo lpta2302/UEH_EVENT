@@ -78,6 +78,7 @@
             pictureBox30 = new PictureBox();
             pictureBox29 = new PictureBox();
             tmGameLoad = new System.Windows.Forms.Timer(components);
+            groupBox1 = new GroupBox();
             ((System.ComponentModel.ISupportInitialize)picPlayer).BeginInit();
             ((System.ComponentModel.ISupportInitialize)picTime).BeginInit();
             ((System.ComponentModel.ISupportInitialize)picHeart1).BeginInit();
@@ -126,6 +127,7 @@
             ((System.ComponentModel.ISupportInitialize)pictureBox28).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox30).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox29).BeginInit();
+            groupBox1.SuspendLayout();
             SuspendLayout();
             // 
             // picPlayer
@@ -133,12 +135,13 @@
             picPlayer.BackColor = Color.Transparent;
             picPlayer.BackgroundImageLayout = ImageLayout.Stretch;
             picPlayer.Image = Properties.Resources.MarioPlay;
-            picPlayer.Location = new Point(3, 459);
+            picPlayer.Location = new Point(25, 392);
             picPlayer.Name = "picPlayer";
             picPlayer.Size = new Size(36, 65);
             picPlayer.SizeMode = PictureBoxSizeMode.StretchImage;
             picPlayer.TabIndex = 0;
             picPlayer.TabStop = false;
+            picPlayer.Tag = "player";
             // 
             // picTime
             // 
@@ -361,7 +364,7 @@
             pictureBox1.Image = Properties.Resources.brickFlatform;
             pictureBox1.Location = new Point(3, 300);
             pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new Size(132, 37);
+            pictureBox1.Size = new Size(141, 37);
             pictureBox1.SizeMode = PictureBoxSizeMode.StretchImage;
             pictureBox1.TabIndex = 5;
             pictureBox1.TabStop = false;
@@ -373,7 +376,7 @@
             pictureBox2.BackgroundImageLayout = ImageLayout.Stretch;
             pictureBox2.BorderStyle = BorderStyle.FixedSingle;
             pictureBox2.Image = Properties.Resources.brickFlatform;
-            pictureBox2.Location = new Point(129, 265);
+            pictureBox2.Location = new Point(0, 0);
             pictureBox2.Name = "pictureBox2";
             pictureBox2.Size = new Size(150, 37);
             pictureBox2.SizeMode = PictureBoxSizeMode.StretchImage;
@@ -401,9 +404,9 @@
             pictureBox3.BackgroundImageLayout = ImageLayout.Stretch;
             pictureBox3.BorderStyle = BorderStyle.FixedSingle;
             pictureBox3.Image = Properties.Resources.brickFlatform;
-            pictureBox3.Location = new Point(138, 66);
+            pictureBox3.Location = new Point(143, 66);
             pictureBox3.Name = "pictureBox3";
-            pictureBox3.Size = new Size(141, 37);
+            pictureBox3.Size = new Size(150, 37);
             pictureBox3.SizeMode = PictureBoxSizeMode.StretchImage;
             pictureBox3.TabIndex = 5;
             pictureBox3.TabStop = false;
@@ -455,7 +458,7 @@
             pictureBox8.BackgroundImageLayout = ImageLayout.Stretch;
             pictureBox8.BorderStyle = BorderStyle.FixedSingle;
             pictureBox8.Image = Properties.Resources.brickFlatform;
-            pictureBox8.Location = new Point(276, 66);
+            pictureBox8.Location = new Point(289, 66);
             pictureBox8.Name = "pictureBox8";
             pictureBox8.Size = new Size(150, 37);
             pictureBox8.SizeMode = PictureBoxSizeMode.StretchImage;
@@ -469,7 +472,7 @@
             pictureBox9.BackgroundImageLayout = ImageLayout.Stretch;
             pictureBox9.BorderStyle = BorderStyle.FixedSingle;
             pictureBox9.Image = Properties.Resources.brickFlatform;
-            pictureBox9.Location = new Point(372, 98);
+            pictureBox9.Location = new Point(370, 227);
             pictureBox9.Name = "pictureBox9";
             pictureBox9.Size = new Size(150, 41);
             pictureBox9.SizeMode = PictureBoxSizeMode.StretchImage;
@@ -482,9 +485,9 @@
             pictureBox10.BackColor = Color.Transparent;
             pictureBox10.BackgroundImageLayout = ImageLayout.Stretch;
             pictureBox10.Image = Properties.Resources.brickFlatShort;
-            pictureBox10.Location = new Point(285, 1);
+            pictureBox10.Location = new Point(292, 1);
             pictureBox10.Name = "pictureBox10";
-            pictureBox10.Size = new Size(40, 70);
+            pictureBox10.Size = new Size(40, 68);
             pictureBox10.SizeMode = PictureBoxSizeMode.StretchImage;
             pictureBox10.TabIndex = 6;
             pictureBox10.TabStop = false;
@@ -509,7 +512,7 @@
             pictureBox12.BackColor = Color.Transparent;
             pictureBox12.BackgroundImageLayout = ImageLayout.Stretch;
             pictureBox12.Image = Properties.Resources.brickFlatShort;
-            pictureBox12.Location = new Point(129, 202);
+            pictureBox12.Location = new Point(138, 198);
             pictureBox12.Name = "pictureBox12";
             pictureBox12.Size = new Size(40, 70);
             pictureBox12.SizeMode = PictureBoxSizeMode.StretchImage;
@@ -536,13 +539,14 @@
             pictureBox4.BackgroundImageLayout = ImageLayout.Stretch;
             pictureBox4.BorderStyle = BorderStyle.FixedSingle;
             pictureBox4.Image = Properties.Resources.brickFlatform;
-            pictureBox4.Location = new Point(276, 265);
+            pictureBox4.Location = new Point(144, 0);
             pictureBox4.Name = "pictureBox4";
             pictureBox4.Size = new Size(150, 37);
             pictureBox4.SizeMode = PictureBoxSizeMode.StretchImage;
             pictureBox4.TabIndex = 5;
             pictureBox4.TabStop = false;
             pictureBox4.Tag = "flatform";
+            pictureBox4.Click += pictureBox4_Click;
             // 
             // pictureBox13
             // 
@@ -604,7 +608,7 @@
             pictureBox17.BackColor = Color.Transparent;
             pictureBox17.BackgroundImageLayout = ImageLayout.Stretch;
             pictureBox17.Image = Properties.Resources.doorPlayGame;
-            pictureBox17.Location = new Point(316, -1);
+            pictureBox17.Location = new Point(338, -3);
             pictureBox17.Name = "pictureBox17";
             pictureBox17.Size = new Size(62, 72);
             pictureBox17.SizeMode = PictureBoxSizeMode.StretchImage;
@@ -770,13 +774,25 @@
             tmGameLoad.Interval = 20;
             tmGameLoad.Tick += tmGameLoad_Tick;
             // 
+            // groupBox1
+            // 
+            groupBox1.Controls.Add(pictureBox2);
+            groupBox1.Controls.Add(pictureBox4);
+            groupBox1.Location = new Point(138, 265);
+            groupBox1.Name = "groupBox1";
+            groupBox1.Size = new Size(296, 37);
+            groupBox1.TabIndex = 18;
+            groupBox1.TabStop = false;
+            groupBox1.Tag = "flatform";
+            // 
             // frmPlayMario
             // 
             AutoScaleDimensions = new SizeF(10F, 25F);
             AutoScaleMode = AutoScaleMode.Font;
             BackgroundImage = Properties.Resources.ForestBackground;
             BackgroundImageLayout = ImageLayout.Stretch;
-            ClientSize = new Size(956, 575);
+            ClientSize = new Size(956, 568);
+            Controls.Add(groupBox1);
             Controls.Add(pictureBox30);
             Controls.Add(pictureBox29);
             Controls.Add(pictureBox27);
@@ -790,8 +806,6 @@
             Controls.Add(pictureBox17);
             Controls.Add(pictureBox1);
             Controls.Add(pictureBox14);
-            Controls.Add(pictureBox4);
-            Controls.Add(pictureBox2);
             Controls.Add(pictureBox7);
             Controls.Add(pictureBox13);
             Controls.Add(pictureBox5);
@@ -881,6 +895,7 @@
             ((System.ComponentModel.ISupportInitialize)pictureBox28).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox30).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox29).EndInit();
+            groupBox1.ResumeLayout(false);
             ResumeLayout(false);
         }
 
@@ -935,5 +950,6 @@
         private PictureBox pictureBox30;
         private PictureBox pictureBox29;
         private System.Windows.Forms.Timer tmGameLoad;
+        private GroupBox groupBox1;
     }
 }

@@ -101,7 +101,11 @@ namespace UEH_EVENT.GUI.Mario
                         picPlayer.Top = x.Top - picPlayer.Height;
                         jumpSpeed = 0;
                     }
-                    //x.BringToFront();
+
+                }
+                if (x is PictureBox && (string)x.Tag == "player")
+                {
+                    x.BringToFront();
                 }
                 if (x is PictureBox && (string)x.Tag == "coin")
                 {
@@ -146,6 +150,11 @@ namespace UEH_EVENT.GUI.Mario
             {
                 jumping = false;
             }
+        }
+
+        private void pictureBox4_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
