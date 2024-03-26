@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            components = new System.ComponentModel.Container();
             picPlayer = new PictureBox();
             picTime = new PictureBox();
             picHeart1 = new PictureBox();
@@ -60,7 +61,7 @@
             pictureBox14 = new PictureBox();
             pictureBox4 = new PictureBox();
             pictureBox13 = new PictureBox();
-            pictureBox15 = new PictureBox();
+            picViruss2 = new PictureBox();
             pictureBox21 = new PictureBox();
             pictureBox16 = new PictureBox();
             pictureBox17 = new PictureBox();
@@ -75,6 +76,8 @@
             pictureBox27 = new PictureBox();
             pictureBox28 = new PictureBox();
             pictureBox30 = new PictureBox();
+            pictureBox29 = new PictureBox();
+            tmGameLoad = new System.Windows.Forms.Timer(components);
             ((System.ComponentModel.ISupportInitialize)picPlayer).BeginInit();
             ((System.ComponentModel.ISupportInitialize)picTime).BeginInit();
             ((System.ComponentModel.ISupportInitialize)picHeart1).BeginInit();
@@ -107,7 +110,7 @@
             ((System.ComponentModel.ISupportInitialize)pictureBox14).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox4).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox13).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox15).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)picViruss2).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox21).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox16).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox17).BeginInit();
@@ -122,6 +125,7 @@
             ((System.ComponentModel.ISupportInitialize)pictureBox27).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox28).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox30).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox29).BeginInit();
             SuspendLayout();
             // 
             // picPlayer
@@ -196,6 +200,7 @@
             picFlatform1.SizeMode = PictureBoxSizeMode.StretchImage;
             picFlatform1.TabIndex = 5;
             picFlatform1.TabStop = false;
+            picFlatform1.Tag = "flatform";
             // 
             // picFlatform2
             // 
@@ -209,6 +214,7 @@
             picFlatform2.SizeMode = PictureBoxSizeMode.StretchImage;
             picFlatform2.TabIndex = 5;
             picFlatform2.TabStop = false;
+            picFlatform2.Tag = "flatform";
             // 
             // picFlatform3
             // 
@@ -222,6 +228,7 @@
             picFlatform3.SizeMode = PictureBoxSizeMode.StretchImage;
             picFlatform3.TabIndex = 5;
             picFlatform3.TabStop = false;
+            picFlatform3.Tag = "flatform";
             // 
             // picFlatform4
             // 
@@ -235,6 +242,7 @@
             picFlatform4.SizeMode = PictureBoxSizeMode.StretchImage;
             picFlatform4.TabIndex = 5;
             picFlatform4.TabStop = false;
+            picFlatform4.Tag = "flatform";
             // 
             // picFlatform5
             // 
@@ -248,6 +256,7 @@
             picFlatform5.SizeMode = PictureBoxSizeMode.StretchImage;
             picFlatform5.TabIndex = 5;
             picFlatform5.TabStop = false;
+            picFlatform5.Tag = "flatform";
             // 
             // picFlatform6
             // 
@@ -261,6 +270,7 @@
             picFlatform6.SizeMode = PictureBoxSizeMode.StretchImage;
             picFlatform6.TabIndex = 5;
             picFlatform6.TabStop = false;
+            picFlatform6.Tag = "flatform";
             // 
             // picFlatform7
             // 
@@ -274,6 +284,7 @@
             picFlatform7.SizeMode = PictureBoxSizeMode.StretchImage;
             picFlatform7.TabIndex = 5;
             picFlatform7.TabStop = false;
+            picFlatform7.Tag = "flatform";
             // 
             // picWallUpShort1
             // 
@@ -286,6 +297,7 @@
             picWallUpShort1.SizeMode = PictureBoxSizeMode.StretchImage;
             picWallUpShort1.TabIndex = 6;
             picWallUpShort1.TabStop = false;
+            picWallUpShort1.Tag = "flatform";
             // 
             // picWallUpShort2
             // 
@@ -298,6 +310,7 @@
             picWallUpShort2.SizeMode = PictureBoxSizeMode.StretchImage;
             picWallUpShort2.TabIndex = 6;
             picWallUpShort2.TabStop = false;
+            picWallUpShort2.Tag = "flatform";
             // 
             // picViruss
             // 
@@ -310,6 +323,7 @@
             picViruss.SizeMode = PictureBoxSizeMode.StretchImage;
             picViruss.TabIndex = 7;
             picViruss.TabStop = false;
+            picViruss.Tag = "viruss";
             // 
             // picFlatform9
             // 
@@ -323,6 +337,7 @@
             picFlatform9.SizeMode = PictureBoxSizeMode.StretchImage;
             picFlatform9.TabIndex = 5;
             picFlatform9.TabStop = false;
+            picFlatform9.Tag = "flatform";
             // 
             // picFlatform10
             // 
@@ -336,6 +351,7 @@
             picFlatform10.SizeMode = PictureBoxSizeMode.StretchImage;
             picFlatform10.TabIndex = 5;
             picFlatform10.TabStop = false;
+            picFlatform10.Tag = "flatform";
             // 
             // pictureBox1
             // 
@@ -349,6 +365,7 @@
             pictureBox1.SizeMode = PictureBoxSizeMode.StretchImage;
             pictureBox1.TabIndex = 5;
             pictureBox1.TabStop = false;
+            pictureBox1.Tag = "flatform";
             // 
             // pictureBox2
             // 
@@ -362,6 +379,7 @@
             pictureBox2.SizeMode = PictureBoxSizeMode.StretchImage;
             pictureBox2.TabIndex = 5;
             pictureBox2.TabStop = false;
+            pictureBox2.Tag = "flatform";
             // 
             // pictureBox5
             // 
@@ -375,6 +393,7 @@
             pictureBox5.SizeMode = PictureBoxSizeMode.StretchImage;
             pictureBox5.TabIndex = 5;
             pictureBox5.TabStop = false;
+            pictureBox5.Tag = "flatform";
             // 
             // pictureBox3
             // 
@@ -388,6 +407,7 @@
             pictureBox3.SizeMode = PictureBoxSizeMode.StretchImage;
             pictureBox3.TabIndex = 5;
             pictureBox3.TabStop = false;
+            pictureBox3.Tag = "flatform";
             // 
             // picHole
             // 
@@ -413,6 +433,7 @@
             pictureBox6.SizeMode = PictureBoxSizeMode.StretchImage;
             pictureBox6.TabIndex = 5;
             pictureBox6.TabStop = false;
+            pictureBox6.Tag = "flatform";
             // 
             // pictureBox7
             // 
@@ -426,6 +447,7 @@
             pictureBox7.SizeMode = PictureBoxSizeMode.StretchImage;
             pictureBox7.TabIndex = 5;
             pictureBox7.TabStop = false;
+            pictureBox7.Tag = "flatform";
             // 
             // pictureBox8
             // 
@@ -439,6 +461,7 @@
             pictureBox8.SizeMode = PictureBoxSizeMode.StretchImage;
             pictureBox8.TabIndex = 5;
             pictureBox8.TabStop = false;
+            pictureBox8.Tag = "flatform";
             // 
             // pictureBox9
             // 
@@ -452,6 +475,7 @@
             pictureBox9.SizeMode = PictureBoxSizeMode.StretchImage;
             pictureBox9.TabIndex = 5;
             pictureBox9.TabStop = false;
+            pictureBox9.Tag = "flatform";
             // 
             // pictureBox10
             // 
@@ -464,6 +488,7 @@
             pictureBox10.SizeMode = PictureBoxSizeMode.StretchImage;
             pictureBox10.TabIndex = 6;
             pictureBox10.TabStop = false;
+            pictureBox10.Tag = "flatform";
             // 
             // pictureBox11
             // 
@@ -477,6 +502,7 @@
             pictureBox11.SizeMode = PictureBoxSizeMode.StretchImage;
             pictureBox11.TabIndex = 5;
             pictureBox11.TabStop = false;
+            pictureBox11.Tag = "flatform";
             // 
             // pictureBox12
             // 
@@ -489,6 +515,7 @@
             pictureBox12.SizeMode = PictureBoxSizeMode.StretchImage;
             pictureBox12.TabIndex = 6;
             pictureBox12.TabStop = false;
+            pictureBox12.Tag = "flatform";
             // 
             // pictureBox14
             // 
@@ -501,6 +528,7 @@
             pictureBox14.SizeMode = PictureBoxSizeMode.StretchImage;
             pictureBox14.TabIndex = 11;
             pictureBox14.TabStop = false;
+            pictureBox14.Tag = "flatform";
             // 
             // pictureBox4
             // 
@@ -514,6 +542,7 @@
             pictureBox4.SizeMode = PictureBoxSizeMode.StretchImage;
             pictureBox4.TabIndex = 5;
             pictureBox4.TabStop = false;
+            pictureBox4.Tag = "flatform";
             // 
             // pictureBox13
             // 
@@ -527,18 +556,20 @@
             pictureBox13.SizeMode = PictureBoxSizeMode.StretchImage;
             pictureBox13.TabIndex = 5;
             pictureBox13.TabStop = false;
+            pictureBox13.Tag = "flatform";
             // 
-            // pictureBox15
+            // picViruss2
             // 
-            pictureBox15.BackColor = Color.Transparent;
-            pictureBox15.BackgroundImageLayout = ImageLayout.Stretch;
-            pictureBox15.Image = Properties.Resources.VirussplayGame1;
-            pictureBox15.Location = new Point(80, 253);
-            pictureBox15.Name = "pictureBox15";
-            pictureBox15.Size = new Size(43, 41);
-            pictureBox15.SizeMode = PictureBoxSizeMode.StretchImage;
-            pictureBox15.TabIndex = 7;
-            pictureBox15.TabStop = false;
+            picViruss2.BackColor = Color.Transparent;
+            picViruss2.BackgroundImageLayout = ImageLayout.Stretch;
+            picViruss2.Image = Properties.Resources.VirussplayGame1;
+            picViruss2.Location = new Point(80, 253);
+            picViruss2.Name = "picViruss2";
+            picViruss2.Size = new Size(43, 41);
+            picViruss2.SizeMode = PictureBoxSizeMode.StretchImage;
+            picViruss2.TabIndex = 7;
+            picViruss2.TabStop = false;
+            picViruss2.Tag = "viruss";
             // 
             // pictureBox21
             // 
@@ -552,6 +583,7 @@
             pictureBox21.SizeMode = PictureBoxSizeMode.StretchImage;
             pictureBox21.TabIndex = 5;
             pictureBox21.TabStop = false;
+            pictureBox21.Tag = "flatform";
             // 
             // pictureBox16
             // 
@@ -565,6 +597,7 @@
             pictureBox16.SizeMode = PictureBoxSizeMode.StretchImage;
             pictureBox16.TabIndex = 5;
             pictureBox16.TabStop = false;
+            pictureBox16.Tag = "flatform";
             // 
             // pictureBox17
             // 
@@ -589,6 +622,7 @@
             pictureBox18.SizeMode = PictureBoxSizeMode.StretchImage;
             pictureBox18.TabIndex = 13;
             pictureBox18.TabStop = false;
+            pictureBox18.Tag = "coin";
             // 
             // pictureBox19
             // 
@@ -601,6 +635,7 @@
             pictureBox19.SizeMode = PictureBoxSizeMode.StretchImage;
             pictureBox19.TabIndex = 13;
             pictureBox19.TabStop = false;
+            pictureBox19.Tag = "coin";
             // 
             // pictureBox20
             // 
@@ -613,6 +648,7 @@
             pictureBox20.SizeMode = PictureBoxSizeMode.StretchImage;
             pictureBox20.TabIndex = 13;
             pictureBox20.TabStop = false;
+            pictureBox20.Tag = "coin";
             // 
             // pictureBox22
             // 
@@ -625,6 +661,7 @@
             pictureBox22.SizeMode = PictureBoxSizeMode.StretchImage;
             pictureBox22.TabIndex = 13;
             pictureBox22.TabStop = false;
+            pictureBox22.Tag = "coin";
             // 
             // pictureBox23
             // 
@@ -637,6 +674,7 @@
             pictureBox23.SizeMode = PictureBoxSizeMode.StretchImage;
             pictureBox23.TabIndex = 13;
             pictureBox23.TabStop = false;
+            pictureBox23.Tag = "coin";
             // 
             // pictureBox24
             // 
@@ -649,6 +687,7 @@
             pictureBox24.SizeMode = PictureBoxSizeMode.StretchImage;
             pictureBox24.TabIndex = 13;
             pictureBox24.TabStop = false;
+            pictureBox24.Tag = "coin";
             // 
             // pictureBox25
             // 
@@ -673,6 +712,7 @@
             pictureBox26.SizeMode = PictureBoxSizeMode.StretchImage;
             pictureBox26.TabIndex = 6;
             pictureBox26.TabStop = false;
+            pictureBox26.Tag = "flatform";
             // 
             // pictureBox27
             // 
@@ -698,6 +738,7 @@
             pictureBox28.SizeMode = PictureBoxSizeMode.StretchImage;
             pictureBox28.TabIndex = 5;
             pictureBox28.TabStop = false;
+            pictureBox28.Tag = "flatform";
             // 
             // pictureBox30
             // 
@@ -711,6 +752,24 @@
             pictureBox30.TabIndex = 17;
             pictureBox30.TabStop = false;
             // 
+            // pictureBox29
+            // 
+            pictureBox29.BackColor = Color.Transparent;
+            pictureBox29.BackgroundImageLayout = ImageLayout.Stretch;
+            pictureBox29.Image = Properties.Resources.firePlayGame;
+            pictureBox29.Location = new Point(571, 155);
+            pictureBox29.Name = "pictureBox29";
+            pictureBox29.Size = new Size(50, 49);
+            pictureBox29.SizeMode = PictureBoxSizeMode.StretchImage;
+            pictureBox29.TabIndex = 15;
+            pictureBox29.TabStop = false;
+            // 
+            // tmGameLoad
+            // 
+            tmGameLoad.Enabled = true;
+            tmGameLoad.Interval = 20;
+            tmGameLoad.Tick += tmGameLoad_Tick;
+            // 
             // frmPlayMario
             // 
             AutoScaleDimensions = new SizeF(10F, 25F);
@@ -719,6 +778,7 @@
             BackgroundImageLayout = ImageLayout.Stretch;
             ClientSize = new Size(956, 575);
             Controls.Add(pictureBox30);
+            Controls.Add(pictureBox29);
             Controls.Add(pictureBox27);
             Controls.Add(pictureBox25);
             Controls.Add(pictureBox19);
@@ -743,7 +803,7 @@
             Controls.Add(pictureBox3);
             Controls.Add(pictureBox6);
             Controls.Add(picHole);
-            Controls.Add(pictureBox15);
+            Controls.Add(picViruss2);
             Controls.Add(picViruss);
             Controls.Add(pictureBox10);
             Controls.Add(pictureBox26);
@@ -768,7 +828,9 @@
             DoubleBuffered = true;
             Name = "frmPlayMario";
             StartPosition = FormStartPosition.CenterScreen;
+            Tag = "";
             Text = "MARIO";
+            Load += frmPlayMario_Load;
             ((System.ComponentModel.ISupportInitialize)picPlayer).EndInit();
             ((System.ComponentModel.ISupportInitialize)picTime).EndInit();
             ((System.ComponentModel.ISupportInitialize)picHeart1).EndInit();
@@ -801,7 +863,7 @@
             ((System.ComponentModel.ISupportInitialize)pictureBox14).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox4).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox13).EndInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox15).EndInit();
+            ((System.ComponentModel.ISupportInitialize)picViruss2).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox21).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox16).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox17).EndInit();
@@ -816,6 +878,7 @@
             ((System.ComponentModel.ISupportInitialize)pictureBox27).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox28).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox30).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox29).EndInit();
             ResumeLayout(false);
         }
 
@@ -853,7 +916,7 @@
         private PictureBox pictureBox14;
         private PictureBox pictureBox4;
         private PictureBox pictureBox13;
-        private PictureBox pictureBox15;
+        private PictureBox picViruss2;
         private PictureBox pictureBox21;
         private PictureBox pictureBox16;
         private PictureBox pictureBox17;
@@ -868,5 +931,7 @@
         private PictureBox pictureBox27;
         private PictureBox pictureBox28;
         private PictureBox pictureBox30;
+        private PictureBox pictureBox29;
+        private System.Windows.Forms.Timer tmGameLoad;
     }
 }
