@@ -16,5 +16,10 @@ namespace UEH_EVENT.GUI
         {
             InitializeComponent();
         }
+
+        private void Navbar_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }

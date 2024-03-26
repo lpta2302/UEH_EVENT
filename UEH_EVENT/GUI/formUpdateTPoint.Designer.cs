@@ -46,8 +46,6 @@
             lblPoint = new Label();
             lblMSSV = new Label();
             panelFrame2 = new Panel();
-            listMSSV = new ListBox();
-            listSV = new ListBox();
             label2 = new Label();
             comboBoxReason = new ComboBox();
             label4 = new Label();
@@ -79,6 +77,7 @@
             Navbar.Size = new Size(400, 980);
             Navbar.TabIndex = 1;
             // 
+            Constants.INavbar.CreateNavbar(this, resources);
             // panelTitle
             // 
             panelTitle.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Right;
@@ -90,7 +89,7 @@
             // 
             // pictureBoxLogo
             // 
-            pictureBoxLogo.Image = Properties.Resources.Brand_330x122;
+            pictureBoxLogo.Image = Properties.Resources.Logo_396x163;
             pictureBoxLogo.Location = new Point(0, 0);
             pictureBoxLogo.Name = "pictureBoxLogo";
             pictureBoxLogo.Size = new Size(400, 159);
@@ -199,7 +198,7 @@
             panelFrame.Controls.Add(lblName);
             panelFrame.Controls.Add(lblPoint);
             panelFrame.Controls.Add(lblMSSV);
-            panelFrame.Location = new Point(446, 386);
+            panelFrame.Location = new Point(446, 316);
             panelFrame.Name = "panelFrame";
             panelFrame.Size = new Size(1234, 50);
             panelFrame.TabIndex = 7;
@@ -250,35 +249,11 @@
             // 
             panelFrame2.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
             panelFrame2.BackColor = Color.White;
-            panelFrame2.Controls.Add(listMSSV);
-            panelFrame2.Controls.Add(listSV);
             panelFrame2.Controls.Add(label2);
-            panelFrame2.Location = new Point(446, 442);
+            panelFrame2.Location = new Point(446, 372);
             panelFrame2.Name = "panelFrame2";
             panelFrame2.Size = new Size(1234, 63);
             panelFrame2.TabIndex = 12;
-            // 
-            // listMSSV
-            // 
-            listMSSV.BorderStyle = BorderStyle.None;
-            listMSSV.Font = new Font("Helvetica", 9.857143F, FontStyle.Regular, GraphicsUnit.Point);
-            listMSSV.FormattingEnabled = true;
-            listMSSV.ItemHeight = 27;
-            listMSSV.Location = new Point(380, 8);
-            listMSSV.Name = "listMSSV";
-            listMSSV.Size = new Size(258, 54);
-            listMSSV.TabIndex = 15;
-            // 
-            // listSV
-            // 
-            listSV.BorderStyle = BorderStyle.None;
-            listSV.Font = new Font("Helvetica", 9.857143F, FontStyle.Regular, GraphicsUnit.Point);
-            listSV.FormattingEnabled = true;
-            listSV.ItemHeight = 27;
-            listSV.Location = new Point(19, 7);
-            listSV.Name = "listSV";
-            listSV.Size = new Size(258, 54);
-            listSV.TabIndex = 14;
             // 
             // label2
             // 
@@ -328,9 +303,9 @@
             pictureBox1.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             pictureBox1.BackgroundImage = Properties.Resources.UEH;
             pictureBox1.BackgroundImageLayout = ImageLayout.Center;
-            pictureBox1.Location = new Point(446, 386);
+            pictureBox1.Location = new Point(446, 461);
             pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new Size(1234, 568);
+            pictureBox1.Size = new Size(1234, 489);
             pictureBox1.TabIndex = 14;
             pictureBox1.TabStop = false;
             // 
@@ -416,8 +391,6 @@
         private ComboBox comboBoxReason;
         private TextBox txtEnter;
         private Button btnUpdate;
-        private ListBox listSV;
-        private ListBox listMSSV;
         private PictureBox pictureBox1;
         private Panel panel8;
         private TextBox textBox8;

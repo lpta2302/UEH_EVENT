@@ -60,7 +60,7 @@ namespace UEH_EVENT.GUI
 
         private void btnUpdate_Click(object sender, EventArgs e)
         {
-            listSV.DataSource = Query.GetAllStudent()[0];
+            //listSV.DataSource = Query.GetAllStudent()[0];
         }
 
        

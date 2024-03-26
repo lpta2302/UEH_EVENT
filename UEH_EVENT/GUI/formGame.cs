@@ -45,5 +45,15 @@ namespace UEH_EVENT.GUI
         {
 
         }
+
+        private void Navbar_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void panelGame_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }
