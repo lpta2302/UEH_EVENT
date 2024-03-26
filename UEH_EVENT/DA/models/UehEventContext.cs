@@ -28,8 +28,8 @@ public class UehEventContext : DbContext
         optionsBuilder
             // .UseLoggerFactory(loggerFactory)
             // .UseLazyLoadingProxies()
-            //.UseSqlServer(connectionString);
-            .UseSqlite ("Data Source = database.db");
+            .UseSqlServer(connectionString);
+            //.UseSqlite ("Data Source = database.db");
     }
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
