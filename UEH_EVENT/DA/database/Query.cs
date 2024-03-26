@@ -11,6 +11,14 @@ class Query
     {
         return Query<Account>();
     }
+    public static List<Account>? GetAccountByName(string s)
+    {
+        return Query<Account>(new Filterer("Name", s, Filterer.FilterType.Equal));
+    }
+    public static List<Account>? GetAccountsByType(string s)
+    {
+        return Query<Account>(new Filterer("AccType", s, Filterer.FilterType.Equal));
+    }
 
     public static Student? GetStudentById(string id)
     {
@@ -24,7 +32,7 @@ class Query
                 new[] { username, password },
                 new[] { FilterType.Equal, FilterType.Equal })
         );
-        if (acc == null) return null;
+        if (acc.Count == 0) return null;
         return acc[0];
     }
     public static List<Sight> GetAllSight()
@@ -35,6 +43,14 @@ class Query
     public static Sight? GetSpecificSight(int sightId)
     {
         return QueryByKey<Sight>(sightId);
+    }
+    public static List<Sight>? GetSightsByName(string s)
+    {
+        return Query<Sight>(new Filterer("Name", s, Filterer.FilterType.Equal));
+    }
+    public static List<Sight>? GetSightsByCreatedById(object key)
+    {
+        return Query<Sight>(new Filterer("CreatedById", key, Filterer.FilterType.Equal));
     }
     public static Question? GetQuestion(int questionId)
     {

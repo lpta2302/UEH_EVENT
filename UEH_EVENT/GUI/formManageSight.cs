@@ -4,6 +4,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Reflection.Metadata;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -12,10 +13,12 @@ namespace UEH_EVENT.GUI
 {
     public partial class formManageSight : Form
     {
-        List<Sight> sights;
+        List<Sight>? sights;
         private void LoadSightsListView()
         {
             int stt = 1;
+            if (sights == null) return;
+
             foreach (var sight in sights)
             {
                 ListViewItem item = new ListViewItem(stt.ToString());
@@ -33,6 +36,11 @@ namespace UEH_EVENT.GUI
             InitializeComponent();
         }
 
+        private void gotFocus(object sender, EventArgs e)
+        {
+            ((TextBox)sender).SelectAll();
+        }
+
         private void lstAccount_SelectedIndexChanged(object sender, EventArgs e)
         {
 
@@ -40,31 +48,17 @@ namespace UEH_EVENT.GUI
 
         private void cbbCLB_SelectedIndexChanged(object sender, EventArgs e)
         {
-
+            if (((ComboBox)sender).SelectedIndex != -1)
+                search(sender);
         }
 
         private void lblto_Click(object sender, EventArgs e)
         {
 
         }
-        private void Form1_Load(object sender, EventArgs e)
-        {
-            // Lặp qua tất cả các nút trong Controls của Form
-            foreach (Control control in this.Controls)
-            {
-                if (control is Button)
-                {
-                    Button button = (Button)control;
-                    button.BackColor = Color.FromArgb(34, 34, 34); // Background màu 34,34,34
-                    button.ForeColor = Color.White; // Foreground màu trắng
-                    button.FlatStyle = FlatStyle.Flat; // Loại bỏ border
-                    button.FlatAppearance.BorderSize = 0; // Đặt kích thước đường viền là 0
-                }
-            }
-        }
         private void formManageSight_Load(object sender, EventArgs e)
         {
-            sights = Query.GetAllSight();
+            cbbCLB.Items.AddRange(Query.GetAccountsByType(Constants.CLB_ACC)?.Select<Account, string>(x => x.Name).ToArray());
             LoadSightsListView();
         }
 
@@ -72,10 +66,50 @@ namespace UEH_EVENT.GUI
         {
 
         }
-
-        private void btnUpdate_Click(object sender, EventArgs e)
+        private void search(object sender)
         {
+            if (sender is TextBox)
+            {
+                sights = Query.GetSightsByName(((TextBox)sender).Text);
+            }
+            else if (sender is ComboBox)
+            {
+                ComboBox comboBox = (ComboBox)sender;
+                sights = Query.GetSightsByCreatedById(
+                    Query.GetAccountByName((string)comboBox.SelectedItem)[0].Id
+                );
+            }
+            if (sights != null)
+            {
+                LoadSightsListView();
+            }
+        }
 
+        private void txtName_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                search(sender);
+            }
+        }
+
+        private void cbbCLB_SelectedValueChanged(object sender, EventArgs e)
+        {
+            if (((ComboBox)sender).SelectedValue != null)
+                search(sender);
+        }
+
+        private void btnDelete_Click(object sender, EventArgs e)
+        {
+            if (lstSight.SelectedItems.Count == 0)
+            {
+                MessageBox.Show("Hãy chọn ít nhất một Sight để thực hiện xoá");
+                return;
+            }
+
+            sights.RemoveAt(lstSight.SelectedIndices[0]);
+            LoadSightsListView();
+            Database.Delete<Sight>(sights[lstSight.SelectedIndices[0]].Id);
         }
     }
 }

@@ -261,7 +261,7 @@ namespace UEH_EVENT.GUI
             label2.AutoSize = true;
             label2.Location = new Point(824, 248);
             label2.Name = "label2";
-            label2.Size = new Size(0, 25);
+            label2.Size = new Size(0, 15);
             label2.TabIndex = 19;
             // 
             // btnDelete
@@ -293,7 +293,7 @@ namespace UEH_EVENT.GUI
             comboBox1.FormattingEnabled = true;
             comboBox1.Location = new Point(1430, 164);
             comboBox1.Name = "comboBox1";
-            comboBox1.Size = new Size(163, 33);
+            comboBox1.Size = new Size(163, 23);
             comboBox1.TabIndex = 27;
             comboBox1.SelectedIndexChanged += comboBox1_SelectedIndexChanged;
             // 
@@ -338,6 +338,7 @@ namespace UEH_EVENT.GUI
             Name = "formManageAccount";
             StartPosition = FormStartPosition.CenterParent;
             Text = "Homepage";
+            WindowState = FormWindowState.Maximized;
             Load += formManagement_Load;
             Navbar.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)pictureBoxHome).EndInit();
