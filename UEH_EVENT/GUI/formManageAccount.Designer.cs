@@ -54,9 +54,11 @@ namespace UEH_EVENT.GUI
             label2 = new Label();
             btnDelete = new Button();
             btnUpdate = new Button();
-            comboBox1 = new ComboBox();
+            cbbAccType = new ComboBox();
             btnCreate = new Button();
             lblAccountType = new Label();
+            label1 = new Label();
+            label3 = new Label();
             Navbar.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBoxHome).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
@@ -149,14 +151,16 @@ namespace UEH_EVENT.GUI
             // 
             // lstAccount
             // 
+            lstAccount.BorderStyle = BorderStyle.FixedSingle;
             lstAccount.Columns.AddRange(new ColumnHeader[] { clnSTT, clnUsername, clnPassword, clnName, clnAccType });
+            lstAccount.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            lstAccount.FullRowSelect = true;
             lstAccount.Location = new Point(313, 334);
             lstAccount.Name = "lstAccount";
-            lstAccount.Size = new Size(1052, 383);
+            lstAccount.Size = new Size(1006, 383);
             lstAccount.TabIndex = 22;
             lstAccount.UseCompatibleStateImageBehavior = false;
             lstAccount.View = View.Details;
-            lstAccount.SelectedIndexChanged += lstAccount_SelectedIndexChanged;
             // 
             // clnSTT
             // 
@@ -166,21 +170,25 @@ namespace UEH_EVENT.GUI
             // clnUsername
             // 
             clnUsername.Text = "Username";
+            clnUsername.TextAlign = HorizontalAlignment.Center;
             clnUsername.Width = 200;
             // 
             // clnPassword
             // 
             clnPassword.Text = "Password";
+            clnPassword.TextAlign = HorizontalAlignment.Center;
             clnPassword.Width = 200;
             // 
             // clnName
             // 
             clnName.Text = "Name";
+            clnName.TextAlign = HorizontalAlignment.Center;
             clnName.Width = 200;
             // 
             // clnAccType
             // 
-            clnAccType.Text = "AccType";
+            clnAccType.Text = "Account Type";
+            clnAccType.TextAlign = HorizontalAlignment.Center;
             clnAccType.Width = 200;
             // 
             // panel3
@@ -190,31 +198,33 @@ namespace UEH_EVENT.GUI
             panel3.BorderStyle = BorderStyle.FixedSingle;
             panel3.Controls.Add(txtName);
             panel3.Controls.Add(pictureBox2);
-            panel3.Location = new Point(366, 179);
+            panel3.Location = new Point(310, 267);
             panel3.Margin = new Padding(3, 2, 3, 2);
             panel3.Name = "panel3";
-            panel3.Size = new Size(774, 50);
+            panel3.Size = new Size(251, 34);
             panel3.TabIndex = 21;
             // 
             // txtName
             // 
             txtName.BorderStyle = BorderStyle.None;
-            txtName.Location = new Point(51, 11);
+            txtName.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
+            txtName.Location = new Point(28, 9);
             txtName.Margin = new Padding(3, 2, 3, 2);
-            txtName.Multiline = true;
             txtName.Name = "txtName";
-            txtName.Size = new Size(315, 27);
+            txtName.Size = new Size(211, 16);
             txtName.TabIndex = 13;
-            txtName.Text = "Nhập name";
+            txtName.Text = "Tìm kiếm theo tên";
+            txtName.GotFocus += gotFocus;
+            txtName.KeyDown += enterTrigger;
             // 
             // pictureBox2
             // 
             pictureBox2.Image = Properties.Resources.iconSearch;
             pictureBox2.InitialImage = null;
-            pictureBox2.Location = new Point(16, 11);
+            pictureBox2.Location = new Point(3, 6);
             pictureBox2.Margin = new Padding(3, 2, 3, 2);
             pictureBox2.Name = "pictureBox2";
-            pictureBox2.Size = new Size(29, 27);
+            pictureBox2.Size = new Size(19, 19);
             pictureBox2.SizeMode = PictureBoxSizeMode.Zoom;
             pictureBox2.TabIndex = 5;
             pictureBox2.TabStop = false;
@@ -226,32 +236,34 @@ namespace UEH_EVENT.GUI
             panel2.BorderStyle = BorderStyle.FixedSingle;
             panel2.Controls.Add(txtUsername);
             panel2.Controls.Add(pictureBoxiconSearch);
-            panel2.Location = new Point(366, 86);
+            panel2.Location = new Point(310, 183);
             panel2.Margin = new Padding(3, 2, 3, 2);
             panel2.Name = "panel2";
-            panel2.Size = new Size(774, 50);
+            panel2.Size = new Size(251, 35);
             panel2.TabIndex = 20;
             // 
             // txtUsername
             // 
+            txtUsername.BackColor = Color.White;
             txtUsername.BorderStyle = BorderStyle.None;
-            txtUsername.Location = new Point(51, 11);
+            txtUsername.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
+            txtUsername.Location = new Point(28, 9);
             txtUsername.Margin = new Padding(3, 2, 3, 2);
-            txtUsername.Multiline = true;
             txtUsername.Name = "txtUsername";
-            txtUsername.Size = new Size(315, 27);
+            txtUsername.Size = new Size(211, 16);
             txtUsername.TabIndex = 13;
-            txtUsername.Text = "Nhập username";
-            txtUsername.TextChanged += txtUsername_TextChanged;
+            txtUsername.Text = "Tìm kiếm theo username";
+            txtUsername.GotFocus += gotFocus;
+            txtUsername.KeyDown += enterTrigger;
             // 
             // pictureBoxiconSearch
             // 
             pictureBoxiconSearch.Image = Properties.Resources.iconSearch;
             pictureBoxiconSearch.InitialImage = null;
-            pictureBoxiconSearch.Location = new Point(16, 11);
+            pictureBoxiconSearch.Location = new Point(3, 6);
             pictureBoxiconSearch.Margin = new Padding(3, 2, 3, 2);
             pictureBoxiconSearch.Name = "pictureBoxiconSearch";
-            pictureBoxiconSearch.Size = new Size(29, 27);
+            pictureBoxiconSearch.Size = new Size(19, 19);
             pictureBoxiconSearch.SizeMode = PictureBoxSizeMode.Zoom;
             pictureBoxiconSearch.TabIndex = 5;
             pictureBoxiconSearch.TabStop = false;
@@ -259,19 +271,20 @@ namespace UEH_EVENT.GUI
             // label2
             // 
             label2.AutoSize = true;
-            label2.Location = new Point(824, 248);
+            label2.Location = new Point(803, 322);
             label2.Name = "label2";
             label2.Size = new Size(0, 15);
             label2.TabIndex = 19;
             // 
             // btnDelete
             // 
-            btnDelete.BackColor = Color.FromArgb(34, 34, 34);
+            btnDelete.BackColor = Color.FromArgb(190, 0, 0);
             btnDelete.FlatStyle = FlatStyle.Flat;
+            btnDelete.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point);
             btnDelete.ForeColor = Color.White;
-            btnDelete.Location = new Point(1431, 214);
+            btnDelete.Location = new Point(1211, 266);
             btnDelete.Name = "btnDelete";
-            btnDelete.Size = new Size(162, 59);
+            btnDelete.Size = new Size(108, 36);
             btnDelete.TabIndex = 15;
             btnDelete.Text = "XÓA";
             btnDelete.UseVisualStyleBackColor = false;
@@ -280,31 +293,34 @@ namespace UEH_EVENT.GUI
             // 
             btnUpdate.BackColor = Color.FromArgb(34, 34, 34);
             btnUpdate.FlatStyle = FlatStyle.Flat;
+            btnUpdate.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point);
             btnUpdate.ForeColor = Color.White;
-            btnUpdate.Location = new Point(1612, 214);
+            btnUpdate.Location = new Point(1046, 266);
             btnUpdate.Name = "btnUpdate";
-            btnUpdate.Size = new Size(162, 59);
+            btnUpdate.Size = new Size(108, 36);
             btnUpdate.TabIndex = 16;
             btnUpdate.Text = "CẬP NHẬT";
             btnUpdate.UseVisualStyleBackColor = false;
+            btnUpdate.Click += btnUpdate_Click;
             // 
-            // comboBox1
+            // cbbAccType
             // 
-            comboBox1.FormattingEnabled = true;
-            comboBox1.Location = new Point(1430, 164);
-            comboBox1.Name = "comboBox1";
-            comboBox1.Size = new Size(163, 23);
-            comboBox1.TabIndex = 27;
-            comboBox1.SelectedIndexChanged += comboBox1_SelectedIndexChanged;
+            cbbAccType.FormattingEnabled = true;
+            cbbAccType.Location = new Point(724, 266);
+            cbbAccType.Name = "cbbAccType";
+            cbbAccType.Size = new Size(108, 23);
+            cbbAccType.TabIndex = 27;
+            cbbAccType.SelectedIndexChanged += cbbAccType_SelectedIndexChanged;
             // 
             // btnCreate
             // 
             btnCreate.BackColor = Color.FromArgb(34, 34, 34);
             btnCreate.FlatStyle = FlatStyle.Flat;
+            btnCreate.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point);
             btnCreate.ForeColor = Color.White;
-            btnCreate.Location = new Point(1262, 214);
+            btnCreate.Location = new Point(881, 266);
             btnCreate.Name = "btnCreate";
-            btnCreate.Size = new Size(162, 59);
+            btnCreate.Size = new Size(108, 36);
             btnCreate.TabIndex = 28;
             btnCreate.Text = "TẠO";
             btnCreate.UseVisualStyleBackColor = false;
@@ -312,21 +328,44 @@ namespace UEH_EVENT.GUI
             // lblAccountType
             // 
             lblAccountType.AutoSize = true;
-            lblAccountType.Font = new Font("Segoe UI", 16F, FontStyle.Regular, GraphicsUnit.Point);
-            lblAccountType.Location = new Point(1431, 115);
+            lblAccountType.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            lblAccountType.Location = new Point(724, 239);
             lblAccountType.Name = "lblAccountType";
-            lblAccountType.Size = new Size(146, 30);
+            lblAccountType.Size = new Size(107, 21);
             lblAccountType.TabIndex = 29;
             lblAccountType.Text = "Loại tài khoản";
+            // 
+            // label1
+            // 
+            label1.AutoSize = true;
+            label1.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            label1.Location = new Point(313, 156);
+            label1.Name = "label1";
+            label1.Size = new Size(81, 21);
+            label1.TabIndex = 30;
+            label1.Text = "Username";
+            // 
+            // label3
+            // 
+            label3.AutoSize = true;
+            label3.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            label3.Location = new Point(310, 240);
+            label3.Name = "label3";
+            label3.Size = new Size(101, 21);
+            label3.TabIndex = 31;
+            label3.Text = "Tên tài khoản";
             // 
             // formManageAccount
             // 
             AutoScaleDimensions = new SizeF(96F, 96F);
             AutoScaleMode = AutoScaleMode.Dpi;
+            BackColor = Color.White;
             ClientSize = new Size(1799, 792);
+            Controls.Add(label3);
+            Controls.Add(label1);
             Controls.Add(lblAccountType);
             Controls.Add(btnCreate);
-            Controls.Add(comboBox1);
+            Controls.Add(cbbAccType);
             Controls.Add(lstAccount);
             Controls.Add(panel3);
             Controls.Add(panel2);
@@ -334,6 +373,7 @@ namespace UEH_EVENT.GUI
             Controls.Add(btnDelete);
             Controls.Add(btnUpdate);
             Controls.Add(Navbar);
+            Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point);
             Margin = new Padding(2);
             Name = "formManageAccount";
             StartPosition = FormStartPosition.CenterParent;
@@ -381,9 +421,11 @@ namespace UEH_EVENT.GUI
         private Button btnUpdate;
         private Button btnCreate;
         private DateTimePicker dateTimePicker1;
-        private ComboBox comboBox1;
+        private ComboBox cbbAccType;
         private Button button1;
         private Label lblAccountType;
         private ColumnHeader clnAccType;
+        private Label label1;
+        private Label label3;
     }
 }

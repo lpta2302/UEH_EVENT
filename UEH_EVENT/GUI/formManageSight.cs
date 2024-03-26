@@ -13,7 +13,7 @@ namespace UEH_EVENT.GUI
 {
     public partial class formManageSight : Form
     {
-        List<Sight>? sights;
+        private List<Sight>? sights;
         private void LoadSightsListView()
         {
             int stt = 1;
@@ -51,20 +51,10 @@ namespace UEH_EVENT.GUI
             if (((ComboBox)sender).SelectedIndex != -1)
                 search(sender);
         }
-
-        private void lblto_Click(object sender, EventArgs e)
-        {
-
-        }
         private void formManageSight_Load(object sender, EventArgs e)
         {
             cbbCLB.Items.AddRange(Query.GetAccountsByType(Constants.CLB_ACC)?.Select<Account, string>(x => x.Name).ToArray());
             LoadSightsListView();
-        }
-
-        private void lblfrom_Click(object sender, EventArgs e)
-        {
-
         }
         private void search(object sender)
         {

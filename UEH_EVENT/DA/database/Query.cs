@@ -15,6 +15,10 @@ class Query
     {
         return Query<Account>(new Filterer("Name", s, Filterer.FilterType.Equal));
     }
+    public static List<Account>? GetAccountByUsername(string s)
+    {
+        return Query<Account>(new Filterer("Username", s, Filterer.FilterType.Equal));
+    }
     public static List<Account>? GetAccountsByType(string s)
     {
         return Query<Account>(new Filterer("AccType", s, Filterer.FilterType.Equal));

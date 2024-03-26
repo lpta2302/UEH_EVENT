@@ -61,7 +61,7 @@
             // cbbCLB
             // 
             cbbCLB.FormattingEnabled = true;
-            cbbCLB.Location = new Point(536, 139);
+            cbbCLB.Location = new Point(691, 225);
             cbbCLB.Margin = new Padding(2);
             cbbCLB.Name = "cbbCLB";
             cbbCLB.Size = new Size(105, 23);
@@ -71,8 +71,11 @@
             // 
             // lstSight
             // 
+            lstSight.BorderStyle = BorderStyle.FixedSingle;
             lstSight.Columns.AddRange(new ColumnHeader[] { clnSTT, clnName, clnCreatedBy, clnCreatedAt, clnNumberOfQuestion });
-            lstSight.Location = new Point(190, 226);
+            lstSight.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            lstSight.FullRowSelect = true;
+            lstSight.Location = new Point(345, 312);
             lstSight.Margin = new Padding(2);
             lstSight.MultiSelect = false;
             lstSight.Name = "lstSight";
@@ -90,21 +93,25 @@
             // clnName
             // 
             clnName.Text = "Tên Bài TN";
+            clnName.TextAlign = HorizontalAlignment.Center;
             clnName.Width = 200;
             // 
             // clnCreatedBy
             // 
             clnCreatedBy.Text = "Tạo Bởi";
+            clnCreatedBy.TextAlign = HorizontalAlignment.Center;
             clnCreatedBy.Width = 200;
             // 
             // clnCreatedAt
             // 
             clnCreatedAt.Text = "Ngày Tạo";
+            clnCreatedAt.TextAlign = HorizontalAlignment.Center;
             clnCreatedAt.Width = 200;
             // 
             // clnNumberOfQuestion
             // 
             clnNumberOfQuestion.Text = "Số Câu hỏi";
+            clnNumberOfQuestion.TextAlign = HorizontalAlignment.Center;
             clnNumberOfQuestion.Width = 200;
             // 
             // panel3
@@ -114,7 +121,7 @@
             panel3.BorderStyle = BorderStyle.FixedSingle;
             panel3.Controls.Add(txtName);
             panel3.Controls.Add(pictureBox2);
-            panel3.Location = new Point(190, 140);
+            panel3.Location = new Point(345, 226);
             panel3.Margin = new Padding(2, 1, 2, 1);
             panel3.Name = "panel3";
             panel3.Size = new Size(245, 31);
@@ -149,7 +156,7 @@
             // label2
             // 
             label2.AutoSize = true;
-            label2.Location = new Point(481, 142);
+            label2.Location = new Point(636, 228);
             label2.Margin = new Padding(2, 0, 2, 0);
             label2.Name = "label2";
             label2.Size = new Size(0, 15);
@@ -161,7 +168,7 @@
             btnDelete.FlatStyle = FlatStyle.Flat;
             btnDelete.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point);
             btnDelete.ForeColor = Color.White;
-            btnDelete.Location = new Point(1012, 174);
+            btnDelete.Location = new Point(1167, 260);
             btnDelete.Margin = new Padding(2);
             btnDelete.Name = "btnDelete";
             btnDelete.Size = new Size(83, 35);
@@ -247,7 +254,7 @@
             // 
             lblClb.AutoSize = true;
             lblClb.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            lblClb.Location = new Point(536, 112);
+            lblClb.Location = new Point(691, 198);
             lblClb.Margin = new Padding(2, 0, 2, 0);
             lblClb.Name = "lblClb";
             lblClb.Size = new Size(37, 21);
@@ -260,7 +267,7 @@
             btnTest.FlatStyle = FlatStyle.Flat;
             btnTest.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point);
             btnTest.ForeColor = Color.White;
-            btnTest.Location = new Point(900, 174);
+            btnTest.Location = new Point(1055, 260);
             btnTest.Margin = new Padding(2);
             btnTest.Name = "btnTest";
             btnTest.Size = new Size(83, 35);
@@ -274,7 +281,7 @@
             btnPreview.FlatStyle = FlatStyle.Flat;
             btnPreview.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point);
             btnPreview.ForeColor = Color.White;
-            btnPreview.Location = new Point(788, 174);
+            btnPreview.Location = new Point(943, 260);
             btnPreview.Margin = new Padding(2);
             btnPreview.Name = "btnPreview";
             btnPreview.Size = new Size(83, 35);
@@ -286,7 +293,7 @@
             // 
             label1.AutoSize = true;
             label1.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            label1.Location = new Point(190, 112);
+            label1.Location = new Point(345, 198);
             label1.Margin = new Padding(2, 0, 2, 0);
             label1.Name = "label1";
             label1.Size = new Size(150, 21);

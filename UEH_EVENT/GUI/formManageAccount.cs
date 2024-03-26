@@ -7,14 +7,15 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace UEH_EVENT.GUI
 {
     public partial class formManageAccount : Form
     {
-        private void loadListView(List<Account> accounts)
+        List<Account> accounts;
+        private void loadListView()
         {
+            lstAccount.Items.Clear();
             int stt = 1;
             foreach (var account in accounts)
             {
@@ -22,6 +23,7 @@ namespace UEH_EVENT.GUI
                 item.SubItems.Add(account.Username);
                 item.SubItems.Add(account.Password);
                 item.SubItems.Add(account.Name);
+                item.SubItems.Add(account.AccType);
                 lstAccount.Items.Add(item);
                 stt++;
             }
@@ -34,37 +36,49 @@ namespace UEH_EVENT.GUI
 
         private void formManagement_Load(object sender, EventArgs e)
         {
-            loadListView(Query.GetAllAccount());
+            cbbAccType.Items.AddRange(new string[] { Constants.STUDENT_ACC, Constants.CLB_ACC, Constants.ADMIN_ACC });
+        }
+        private void gotFocus(object sender, EventArgs e)
+        {
+            ((TextBox)sender).SelectAll();
+        }
+        private void search(object sender)
+        {
+            if (sender is TextBox)
+            {
+                TextBox textbox = (TextBox)sender;
+                if (textbox.Name == "txtName")
+                    accounts = Query.GetAccountByName(((TextBox)sender).Text);
+                else
+                    accounts = Query.GetAccountByUsername(((TextBox)sender).Text);
+            }
+            else if (sender is ComboBox)
+            {
+                ComboBox comboBox = (ComboBox)sender;
+                accounts = Query.GetAccountsByType((string)comboBox.SelectedItem);
+            }
+            loadListView();
         }
 
-        private void btntao_Click(object sender, EventArgs e)
+        private void cbbAccType_SelectedIndexChanged(object sender, EventArgs e)
         {
-
+            if (((ComboBox)sender).SelectedIndex != -1)
+                search(sender);
         }
 
-        private void txtUsername_TextChanged(object sender, EventArgs e)
+        private void enterTrigger(object sender, KeyEventArgs e)
         {
-
+            if (e.KeyCode == Keys.Enter)
+            {
+                search(sender);
+            }
         }
 
-        private void dateTimePicker1_ValueChanged(object sender, EventArgs e)
+        private void btnUpdate_Click(object sender, EventArgs e)
         {
-
-        }
-
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void lstAccount_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
+            Hide();
+            new formUpdateProfile(accounts[lstAccount.SelectedIndices[0]]).ShowDialog();
+            Close();
         }
     }
 }

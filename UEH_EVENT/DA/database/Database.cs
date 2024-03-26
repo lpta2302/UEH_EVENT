@@ -241,26 +241,17 @@ public class Database
     {
         using (var dbcontext = new UehEventContext())
         {
-            var entityType = dbcontext.Model.FindEntityType(typeof(T));
+            /*var entityType = dbcontext.Model.FindEntityType(typeof(T));
             if (entityType == null) { return; }
 
             var pkName = entityType.FindPrimaryKey()?.Properties?.FirstOrDefault()?.Name;
             if (pkName == null) { return; }
 
-            //Create Expresion Lamda
-            var parameter = Expression.Parameter(typeof(T), "x");
-            var property = Expression.Property(parameter, pkName);
-            var constant = Expression.Constant(key);
-            var equals = Expression.Equal(property, constant);
-            var lambda = Expression.Lambda<Func<T, bool>>(equals, parameter);
-
-            var query = dbcontext.Set<T>().AsQueryable();
-
-            var result = query.SingleOrDefault(lambda);
+            var result = dbcontext.Set<T>().Find(key);
             if (result == null) return;
 
-            Util.CoppyData<T>(item, result);
-            dbcontext.Update(result);
+            Util.CoppyData<T>(item, result);*/
+            dbcontext.Update(item);
             dbcontext.SaveChanges();
         }
     }
