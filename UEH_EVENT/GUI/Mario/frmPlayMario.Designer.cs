@@ -133,7 +133,7 @@
             picPlayer.BackColor = Color.Transparent;
             picPlayer.BackgroundImageLayout = ImageLayout.Stretch;
             picPlayer.Image = Properties.Resources.MarioPlay;
-            picPlayer.Location = new Point(3, 464);
+            picPlayer.Location = new Point(3, 459);
             picPlayer.Name = "picPlayer";
             picPlayer.Size = new Size(36, 65);
             picPlayer.SizeMode = PictureBoxSizeMode.StretchImage;
@@ -304,9 +304,9 @@
             picWallUpShort2.BackColor = Color.Transparent;
             picWallUpShort2.BackgroundImageLayout = ImageLayout.Stretch;
             picWallUpShort2.Image = Properties.Resources.brickFlatShort;
-            picWallUpShort2.Location = new Point(338, 459);
+            picWallUpShort2.Location = new Point(338, 442);
             picWallUpShort2.Name = "picWallUpShort2";
-            picWallUpShort2.Size = new Size(40, 70);
+            picWallUpShort2.Size = new Size(40, 87);
             picWallUpShort2.SizeMode = PictureBoxSizeMode.StretchImage;
             picWallUpShort2.TabIndex = 6;
             picWallUpShort2.TabStop = false;
@@ -331,7 +331,7 @@
             picFlatform9.BackgroundImageLayout = ImageLayout.Stretch;
             picFlatform9.BorderStyle = BorderStyle.FixedSingle;
             picFlatform9.Image = Properties.Resources.brickFlatform;
-            picFlatform9.Location = new Point(442, 394);
+            picFlatform9.Location = new Point(442, 378);
             picFlatform9.Name = "picFlatform9";
             picFlatform9.Size = new Size(107, 37);
             picFlatform9.SizeMode = PictureBoxSizeMode.StretchImage;
@@ -732,7 +732,7 @@
             pictureBox28.BackgroundImageLayout = ImageLayout.Stretch;
             pictureBox28.BorderStyle = BorderStyle.FixedSingle;
             pictureBox28.Image = Properties.Resources.brickFlatform;
-            pictureBox28.Location = new Point(338, 426);
+            pictureBox28.Location = new Point(338, 409);
             pictureBox28.Name = "pictureBox28";
             pictureBox28.Size = new Size(107, 37);
             pictureBox28.SizeMode = PictureBoxSizeMode.StretchImage;
@@ -831,6 +831,8 @@
             Tag = "";
             Text = "MARIO";
             Load += frmPlayMario_Load;
+            KeyDown += frmPlayMario_KeyDown;
+            KeyUp += frmPlayMario_KeyUp;
             ((System.ComponentModel.ISupportInitialize)picPlayer).EndInit();
             ((System.ComponentModel.ISupportInitialize)picTime).EndInit();
             ((System.ComponentModel.ISupportInitialize)picHeart1).EndInit();
