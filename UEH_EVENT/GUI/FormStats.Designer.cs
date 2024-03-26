@@ -901,8 +901,6 @@
         private Label lblTPointTier3;
         private Label lblTPointTier4Count;
         private Label lblTPointTier4;
-        private Label lblPlayHisOver50Count;
-        private Label lblPlayHisOver50;
         private Label lblPlayHisCount;
         private Label lblPlayHis;
         private Label lblStudentAccountsCount;
