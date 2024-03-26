@@ -113,6 +113,16 @@ namespace UEH_EVENT.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap brickFlatformUp {
+            get {
+                object obj = ResourceManager.GetObject("brickFlatformUp", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap brickFlatShort {
             get {
                 object obj = ResourceManager.GetObject("brickFlatShort", resourceCulture);
@@ -203,9 +213,29 @@ namespace UEH_EVENT.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap coinPlayGame {
+            get {
+                object obj = ResourceManager.GetObject("coinPlayGame", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap congchua {
             get {
                 object obj = ResourceManager.GetObject("congchua", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap doorPlayGame {
+            get {
+                object obj = ResourceManager.GetObject("doorPlayGame", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -266,6 +296,16 @@ namespace UEH_EVENT.Properties {
         internal static System.Drawing.Bitmap installBackground {
             get {
                 object obj = ResourceManager.GetObject("installBackground", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap KeyPlayGame {
+            get {
+                object obj = ResourceManager.GetObject("KeyPlayGame", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

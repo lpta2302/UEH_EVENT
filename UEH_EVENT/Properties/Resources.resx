@@ -145,8 +145,8 @@
   <data name="buttonturnonVolume" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\buttonturnonVolume.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="startButtonfixed" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\startButtonfixed.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="blackHolePlayGame" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\blackHolePlayGame.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="supermario" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\supermario.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -181,14 +181,17 @@
   <data name="brickFlatform" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\brickFlatform.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="GameOver" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\GameOver.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="startButtonfixed" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\startButtonfixed.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="buttonTurnoffMusic" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\buttonTurnoffMusic.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="BatDauBackGround" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\BatDauBackGround.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="GameOver" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\GameOver.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="playBackground" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\playBackground.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -199,6 +202,9 @@
   <data name="marioshy" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\marioshy.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="KeyPlayGame" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\KeyPlayGame.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="blackHole" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\blackHole.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -208,10 +214,16 @@
   <data name="congchua" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\congchua.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="brickFlatformUp" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\brickFlatformUp.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="VirussplayGame" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\VirussplayGame.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="blackHolePlayGame" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\blackHolePlayGame.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="coinPlayGame" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\coinPlayGame.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="doorPlayGame" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\doorPlayGame.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>
