@@ -20,6 +20,11 @@ namespace UEH_EVENT.GUI
         {
             InitializeComponent();
         }
+        public formCreateSight(Sight CurrentSight)
+        {
+            InitializeComponent();
+            this.CurrentSight = CurrentSight;
+        }
 
         private void btnThem_Click(object sender, EventArgs e)
         {
@@ -42,24 +47,24 @@ namespace UEH_EVENT.GUI
         private void btnSua_Click(object sender, EventArgs e)
         {
 
-            Hide();
             if (listView1.SelectedIndices.Count != 0)
             {
                 new formCreateQuestion(listView1.SelectedIndices[0]).ShowDialog();
                 return;
             }
-            Close();
+
         }
 
         private void listView1_SelectedIndexChanged(object sender, EventArgs e)
         {
-            if (listView1.SelectedIndices.Count == 0)
+           /* if (listView1.SelectedIndices.Count == 0)
             {
                 return;
             }
 
             new formCreateQuestion(listView1.SelectedIndices[0]).ShowDialog();
             Close();
+           */
         }
 
         private void btnTao_Click(object sender, EventArgs e)
@@ -69,6 +74,7 @@ namespace UEH_EVENT.GUI
                 CurrentSight.Name = txtTenTN.Text;
                 CurrentSight.Preview = txtMoTa.Text;
                 Database.Insert<Sight>(CurrentSight);
+                MessageBox.Show("Thêm thành công", "Thông báo");
             }
         }
 
@@ -89,7 +95,10 @@ namespace UEH_EVENT.GUI
 
         private void btnThoat_Click(object sender, EventArgs e)
         {
-
+            Hide();
+            Form form = new formLobbySight();
+            Close();
+            form.ShowDialog();
         }
     }
 }

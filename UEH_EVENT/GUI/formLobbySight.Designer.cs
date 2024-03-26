@@ -1,6 +1,6 @@
 ﻿namespace UEH_EVENT.GUI
 {
-    partial class formSight
+    partial class formLobbySight
     {
         /// <summary>
         /// Required designer variable.
@@ -28,32 +28,21 @@
         /// </summary>
         private void InitializeComponent()
         {
-            panel1 = new Panel();
             label1 = new Label();
             label2 = new Label();
             label3 = new Label();
             btnAdd = new Button();
             lblThoiGian = new Label();
+            flowLayoutPanel1 = new FlowLayoutPanel();
             SuspendLayout();
-            // 
-            // panel1
-            // 
-            panel1.Location = new Point(474, 409);
-            panel1.Name = "panel1";
-            panel1.Size = new Size(1175, 531);
-            panel1.TabIndex = 1;
-            // 
-            // button2
-            // 
-
             // 
             // label1
             // 
             label1.AutoSize = true;
-            label1.Font = new Font("Segoe UI", 28.2F, FontStyle.Bold, GraphicsUnit.Point);
-            label1.Location = new Point(474, 124);
+            label1.Font = new Font("Segoe UI", 25.8000011F, FontStyle.Bold, GraphicsUnit.Point);
+            label1.Location = new Point(474, 116);
             label1.Name = "label1";
-            label1.Size = new Size(553, 62);
+            label1.Size = new Size(516, 60);
             label1.TabIndex = 2;
             label1.Text = "TẠO BÀI TRẮC NGHIỆM";
             label1.TextAlign = ContentAlignment.MiddleCenter;
@@ -72,7 +61,7 @@
             // 
             label3.AutoSize = true;
             label3.Font = new Font("Segoe UI", 16.2F, FontStyle.Bold, GraphicsUnit.Point);
-            label3.Location = new Point(474, 329);
+            label3.Location = new Point(474, 325);
             label3.Name = "label3";
             label3.Size = new Size(322, 38);
             label3.TabIndex = 4;
@@ -80,16 +69,14 @@
             // 
             // btnAdd
             // 
-            btnAdd.BackgroundImage = Properties.Resources._953211_200;
+            btnAdd.BackgroundImage = Properties.Resources.add_outline_icon;
             btnAdd.BackgroundImageLayout = ImageLayout.Stretch;
-            btnAdd.Location = new Point(1582, 111);
+            btnAdd.Location = new Point(1589, 110);
             btnAdd.Name = "btnAdd";
-            btnAdd.Size = new Size(117, 89);
+            btnAdd.Size = new Size(79, 75);
             btnAdd.TabIndex = 5;
             btnAdd.UseVisualStyleBackColor = true;
-            // 
-            // lblTenBai
-            // 
+            btnAdd.Click += btnAdd_Click;
             // 
             // lblThoiGian
             // 
@@ -98,16 +85,23 @@
             lblThoiGian.Size = new Size(100, 23);
             lblThoiGian.TabIndex = 0;
             // 
+            // flowLayoutPanel1
+            // 
+            flowLayoutPanel1.Location = new Point(484, 414);
+            flowLayoutPanel1.Name = "flowLayoutPanel1";
+            flowLayoutPanel1.Size = new Size(1154, 547);
+            flowLayoutPanel1.TabIndex = 100;
+            // 
             // formSight
             // 
             AutoScaleDimensions = new SizeF(9F, 23F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(1924, 961);
+            Controls.Add(flowLayoutPanel1);
             Controls.Add(btnAdd);
             Controls.Add(label3);
             Controls.Add(label2);
             Controls.Add(label1);
-            Controls.Add(panel1);
             Font = new Font("Segoe UI", 10.2F, FontStyle.Regular, GraphicsUnit.Point);
             Name = "formSight";
             StartPosition = FormStartPosition.CenterScreen;
@@ -120,11 +114,11 @@
         }
 
         #endregion
-        private Panel panel1;
         private Label label1;
         private Label label2;
         private Label label3;
         private Button btnAdd;
         private Label lblThoiGian;
+        private FlowLayoutPanel flowLayoutPanel1;
     }
 }

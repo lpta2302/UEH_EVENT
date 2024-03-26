@@ -10,10 +10,10 @@
     <Compile Update="GUI\formDoingSightcs.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="GUI\formScore.cs">
+    <Compile Update="GUI\formLobbySight.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="GUI\formSight.cs">
+    <Compile Update="GUI\formScore.cs">
       <SubType>Form</SubType>
     </Compile>
   </ItemGroup>

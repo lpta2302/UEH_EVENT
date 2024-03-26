@@ -83,6 +83,16 @@ namespace UEH_EVENT.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap add_outline_icon {
+            get {
+                object obj = ResourceManager.GetObject("add-outline-icon", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap istockphoto_688550958_612x612 {
             get {
                 object obj = ResourceManager.GetObject("istockphoto-688550958-612x612", resourceCulture);
