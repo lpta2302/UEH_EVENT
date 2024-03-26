@@ -15,13 +15,13 @@ public class UehEventContext : DbContext
     public DbSet<TPointHis> TPointHises { get; set; }
 
     private string connectionString = Constants.connectionString;
-    private ILoggerFactory loggerFactory = LoggerFactory.Create(builder =>
+    /*private ILoggerFactory loggerFactory = LoggerFactory.Create(builder =>
     {
         builder
             // .AddFilter(DbLoggerCategory.Database.Command.Name, LogLevel.Information)
             // .AddFilter(DbLoggerCategory.Query.Name, LogLevel.Information)
             .AddConsole();
-    });
+    });*/
     protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
     {
         base.OnConfiguring(optionsBuilder);

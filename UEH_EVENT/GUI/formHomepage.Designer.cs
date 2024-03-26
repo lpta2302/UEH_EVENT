@@ -54,19 +54,19 @@ namespace UEH_EVENT.GUI
             Navbar.Controls.Add(Home);
             Navbar.Controls.Add(panel1);
             Navbar.Location = new Point(0, 1);
+            Navbar.Margin = new Padding(2);
             Navbar.Name = "Navbar";
-            Navbar.Size = new Size(400, 980);
+            Navbar.Size = new Size(229, 801);
             Navbar.TabIndex = 0;
-
-            Constants.INavbar.CreateNavbar(this,resources);
             // 
             // pictureBoxHome
             // 
             pictureBoxHome.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             pictureBoxHome.Image = Properties.Resources.Home;
-            pictureBoxHome.Location = new Point(297, -38);
+            pictureBoxHome.Location = new Point(170, -22);
+            pictureBoxHome.Margin = new Padding(2);
             pictureBoxHome.Name = "pictureBoxHome";
-            pictureBoxHome.Size = new Size(0, 930);
+            pictureBoxHome.Size = new Size(0, 772);
             pictureBoxHome.SizeMode = PictureBoxSizeMode.Zoom;
             pictureBoxHome.TabIndex = 1;
             pictureBoxHome.TabStop = false;
@@ -75,18 +75,20 @@ namespace UEH_EVENT.GUI
             // 
             pictureBox1.BackgroundImage = Properties.Resources.Logo_396x163;
             pictureBox1.Enabled = false;
-            pictureBox1.Location = new Point(0, 3);
+            pictureBox1.Location = new Point(0, 2);
+            pictureBox1.Margin = new Padding(2);
             pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new Size(396, 163);
+            pictureBox1.Size = new Size(226, 93);
             pictureBox1.TabIndex = 12;
             pictureBox1.TabStop = false;
             // 
             // Home
             // 
             Home.Controls.Add(btnHomee);
-            Home.Location = new Point(0, 168);
+            Home.Location = new Point(0, 96);
+            Home.Margin = new Padding(2);
             Home.Name = "Home";
-            Home.Size = new Size(400, 75);
+            Home.Size = new Size(229, 43);
             Home.TabIndex = 7;
             // 
             // btnHomee
@@ -94,14 +96,15 @@ namespace UEH_EVENT.GUI
             btnHomee.BackColor = Color.FromArgb(34, 34, 34);
             btnHomee.BackgroundImageLayout = ImageLayout.None;
             btnHomee.FlatStyle = FlatStyle.Flat;
-            btnHomee.Font = new Font("Helvetica", 9F, FontStyle.Bold, GraphicsUnit.Point);
+            btnHomee.Font = new Font("Arial", 9F, FontStyle.Bold, GraphicsUnit.Point);
             btnHomee.ForeColor = Color.White;
             btnHomee.Image = (Image)resources.GetObject("btnHomee.Image");
             btnHomee.ImageAlign = ContentAlignment.MiddleLeft;
-            btnHomee.Location = new Point(0, -9);
+            btnHomee.Location = new Point(0, -5);
+            btnHomee.Margin = new Padding(2);
             btnHomee.Name = "btnHomee";
-            btnHomee.Padding = new Padding(20, 0, 0, 0);
-            btnHomee.Size = new Size(419, 92);
+            btnHomee.Padding = new Padding(11, 0, 0, 0);
+            btnHomee.Size = new Size(239, 53);
             btnHomee.TabIndex = 10;
             btnHomee.Text = "  HOME";
             btnHomee.TextAlign = ContentAlignment.MiddleLeft;
@@ -111,8 +114,9 @@ namespace UEH_EVENT.GUI
             // panel1
             // 
             panel1.Location = new Point(0, 0);
+            panel1.Margin = new Padding(2);
             panel1.Name = "panel1";
-            panel1.Size = new Size(200, 100);
+            panel1.Size = new Size(114, 57);
             panel1.TabIndex = 13;
             // 
             // btnHome
@@ -124,13 +128,15 @@ namespace UEH_EVENT.GUI
             // 
             // formHomepage
             // 
-            AutoScaleDimensions = new SizeF(168F, 168F);
+            AutoScaleDimensions = new SizeF(96F, 96F);
             AutoScaleMode = AutoScaleMode.Dpi;
-            ClientSize = new Size(1718, 983);
+            ClientSize = new Size(1847, 803);
             Controls.Add(Navbar);
+            Margin = new Padding(2);
             Name = "formHomepage";
             StartPosition = FormStartPosition.CenterParent;
             Text = "Homepage";
+            WindowState = FormWindowState.Maximized;
             Load += Homepage_Load;
             Navbar.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)pictureBoxHome).EndInit();
@@ -143,11 +149,11 @@ namespace UEH_EVENT.GUI
 
         /*private List<Panel> navItems;
         private List<Button> navButtons ;*/
-        private System.Windows.Forms.Panel Navbar;
-        private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Button btnHome;
-        private System.Windows.Forms.Panel Home;
-        private System.Windows.Forms.PictureBox pictureBox1;
+        private Panel Navbar;
+        private Panel panel1;
+        private Button btnHome;
+        private Panel Home;
+        private PictureBox pictureBox1;
         private PictureBox pictureBoxHome;
         private Button btnHomee;
     }

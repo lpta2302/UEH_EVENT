@@ -29,7 +29,8 @@ class Query
     }
     public static List<Sight> GetAllSight()
     {
-        return Query<Sight>();
+        return Query<Sight>(true
+            );
     }
     public static Sight? GetSpecificSight(int sightId)
     {

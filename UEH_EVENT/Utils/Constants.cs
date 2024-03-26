@@ -12,7 +12,7 @@ using System.ComponentModel;
 public class Constants
 {
     public static string connectionString = @"
-        Data Source=LAPTOP-H28D0O8N\SQLEXPRESS;
+        Data Source=DESKTOP-96K45V2\DZVSDV;
         Initial Catalog= test;
         Integrated Security=True;
         TrustServerCertificate=True;
@@ -107,7 +107,8 @@ public class Constants
             "Thống kê"
         };
         public Type[] Forms { get; } = new Type[] {
-            typeof(formManagement),
+            typeof(formManageAccount
+            ),
             typeof(formGame),
             typeof(formStatistic),
         };
