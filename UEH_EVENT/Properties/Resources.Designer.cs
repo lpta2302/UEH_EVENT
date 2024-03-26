@@ -243,6 +243,16 @@ namespace UEH_EVENT.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap firePlayGame {
+            get {
+                object obj = ResourceManager.GetObject("firePlayGame", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap ForestBackground {
             get {
                 object obj = ResourceManager.GetObject("ForestBackground", resourceCulture);
@@ -416,6 +426,16 @@ namespace UEH_EVENT.Properties {
         internal static System.Drawing.Bitmap VirussplayGame1 {
             get {
                 object obj = ResourceManager.GetObject("VirussplayGame1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap xengPlayGame {
+            get {
+                object obj = ResourceManager.GetObject("xengPlayGame", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

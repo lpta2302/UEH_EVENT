@@ -63,6 +63,18 @@
             pictureBox15 = new PictureBox();
             pictureBox21 = new PictureBox();
             pictureBox16 = new PictureBox();
+            pictureBox17 = new PictureBox();
+            pictureBox18 = new PictureBox();
+            pictureBox19 = new PictureBox();
+            pictureBox20 = new PictureBox();
+            pictureBox22 = new PictureBox();
+            pictureBox23 = new PictureBox();
+            pictureBox24 = new PictureBox();
+            pictureBox25 = new PictureBox();
+            pictureBox26 = new PictureBox();
+            pictureBox27 = new PictureBox();
+            pictureBox28 = new PictureBox();
+            pictureBox30 = new PictureBox();
             ((System.ComponentModel.ISupportInitialize)picPlayer).BeginInit();
             ((System.ComponentModel.ISupportInitialize)picTime).BeginInit();
             ((System.ComponentModel.ISupportInitialize)picHeart1).BeginInit();
@@ -98,6 +110,18 @@
             ((System.ComponentModel.ISupportInitialize)pictureBox15).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox21).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox16).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox17).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox18).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox19).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox20).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox22).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox23).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox24).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox25).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox26).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox27).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox28).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox30).BeginInit();
             SuspendLayout();
             // 
             // picPlayer
@@ -280,7 +304,7 @@
             picViruss.BackColor = Color.Transparent;
             picViruss.BackgroundImageLayout = ImageLayout.Stretch;
             picViruss.Image = Properties.Resources.VirussplayGame1;
-            picViruss.Location = new Point(289, 488);
+            picViruss.Location = new Point(289, 479);
             picViruss.Name = "picViruss";
             picViruss.Size = new Size(43, 41);
             picViruss.SizeMode = PictureBoxSizeMode.StretchImage;
@@ -293,7 +317,7 @@
             picFlatform9.BackgroundImageLayout = ImageLayout.Stretch;
             picFlatform9.BorderStyle = BorderStyle.FixedSingle;
             picFlatform9.Image = Properties.Resources.brickFlatform;
-            picFlatform9.Location = new Point(443, 409);
+            picFlatform9.Location = new Point(442, 394);
             picFlatform9.Name = "picFlatform9";
             picFlatform9.Size = new Size(107, 37);
             picFlatform9.SizeMode = PictureBoxSizeMode.StretchImage;
@@ -370,7 +394,7 @@
             picHole.BackColor = Color.Transparent;
             picHole.BackgroundImageLayout = ImageLayout.Stretch;
             picHole.Image = Properties.Resources.blackHolePlayGame;
-            picHole.Location = new Point(566, 483);
+            picHole.Location = new Point(570, 474);
             picHole.Name = "picHole";
             picHole.Size = new Size(51, 46);
             picHole.SizeMode = PictureBoxSizeMode.StretchImage;
@@ -497,7 +521,7 @@
             pictureBox13.BackgroundImageLayout = ImageLayout.Stretch;
             pictureBox13.BorderStyle = BorderStyle.FixedSingle;
             pictureBox13.Image = Properties.Resources.brickFlatform;
-            pictureBox13.Location = new Point(400, 235);
+            pictureBox13.Location = new Point(516, 210);
             pictureBox13.Name = "pictureBox13";
             pictureBox13.Size = new Size(150, 37);
             pictureBox13.SizeMode = PictureBoxSizeMode.StretchImage;
@@ -542,6 +566,151 @@
             pictureBox16.TabIndex = 5;
             pictureBox16.TabStop = false;
             // 
+            // pictureBox17
+            // 
+            pictureBox17.BackColor = Color.Transparent;
+            pictureBox17.BackgroundImageLayout = ImageLayout.Stretch;
+            pictureBox17.Image = Properties.Resources.doorPlayGame;
+            pictureBox17.Location = new Point(316, -1);
+            pictureBox17.Name = "pictureBox17";
+            pictureBox17.Size = new Size(62, 72);
+            pictureBox17.SizeMode = PictureBoxSizeMode.StretchImage;
+            pictureBox17.TabIndex = 12;
+            pictureBox17.TabStop = false;
+            // 
+            // pictureBox18
+            // 
+            pictureBox18.BackColor = Color.Transparent;
+            pictureBox18.BackgroundImageLayout = ImageLayout.Stretch;
+            pictureBox18.Image = Properties.Resources.coinPlayGame;
+            pictureBox18.Location = new Point(194, 479);
+            pictureBox18.Name = "pictureBox18";
+            pictureBox18.Size = new Size(43, 41);
+            pictureBox18.SizeMode = PictureBoxSizeMode.StretchImage;
+            pictureBox18.TabIndex = 13;
+            pictureBox18.TabStop = false;
+            // 
+            // pictureBox19
+            // 
+            pictureBox19.BackColor = Color.Transparent;
+            pictureBox19.BackgroundImageLayout = ImageLayout.Stretch;
+            pictureBox19.Image = Properties.Resources.coinPlayGame;
+            pictureBox19.Location = new Point(383, 479);
+            pictureBox19.Name = "pictureBox19";
+            pictureBox19.Size = new Size(43, 41);
+            pictureBox19.SizeMode = PictureBoxSizeMode.StretchImage;
+            pictureBox19.TabIndex = 13;
+            pictureBox19.TabStop = false;
+            // 
+            // pictureBox20
+            // 
+            pictureBox20.BackColor = Color.Transparent;
+            pictureBox20.BackgroundImageLayout = ImageLayout.Stretch;
+            pictureBox20.Image = Properties.Resources.coinPlayGame;
+            pictureBox20.Location = new Point(3, 253);
+            pictureBox20.Name = "pictureBox20";
+            pictureBox20.Size = new Size(43, 41);
+            pictureBox20.SizeMode = PictureBoxSizeMode.StretchImage;
+            pictureBox20.TabIndex = 13;
+            pictureBox20.TabStop = false;
+            // 
+            // pictureBox22
+            // 
+            pictureBox22.BackColor = Color.Transparent;
+            pictureBox22.BackgroundImageLayout = ImageLayout.Stretch;
+            pictureBox22.Image = Properties.Resources.coinPlayGame;
+            pictureBox22.Location = new Point(901, 19);
+            pictureBox22.Name = "pictureBox22";
+            pictureBox22.Size = new Size(43, 41);
+            pictureBox22.SizeMode = PictureBoxSizeMode.StretchImage;
+            pictureBox22.TabIndex = 13;
+            pictureBox22.TabStop = false;
+            // 
+            // pictureBox23
+            // 
+            pictureBox23.BackColor = Color.Transparent;
+            pictureBox23.BackgroundImageLayout = ImageLayout.Stretch;
+            pictureBox23.Image = Properties.Resources.coinPlayGame;
+            pictureBox23.Location = new Point(901, 479);
+            pictureBox23.Name = "pictureBox23";
+            pictureBox23.Size = new Size(43, 41);
+            pictureBox23.SizeMode = PictureBoxSizeMode.StretchImage;
+            pictureBox23.TabIndex = 13;
+            pictureBox23.TabStop = false;
+            // 
+            // pictureBox24
+            // 
+            pictureBox24.BackColor = Color.Transparent;
+            pictureBox24.BackgroundImageLayout = ImageLayout.Stretch;
+            pictureBox24.Image = Properties.Resources.coinPlayGame;
+            pictureBox24.Location = new Point(785, 362);
+            pictureBox24.Name = "pictureBox24";
+            pictureBox24.Size = new Size(43, 41);
+            pictureBox24.SizeMode = PictureBoxSizeMode.StretchImage;
+            pictureBox24.TabIndex = 13;
+            pictureBox24.TabStop = false;
+            // 
+            // pictureBox25
+            // 
+            pictureBox25.BackColor = Color.Transparent;
+            pictureBox25.BackgroundImageLayout = ImageLayout.Stretch;
+            pictureBox25.Image = Properties.Resources.KeyPlayGame;
+            pictureBox25.Location = new Point(74, 483);
+            pictureBox25.Name = "pictureBox25";
+            pictureBox25.Size = new Size(70, 37);
+            pictureBox25.SizeMode = PictureBoxSizeMode.StretchImage;
+            pictureBox25.TabIndex = 14;
+            pictureBox25.TabStop = false;
+            // 
+            // pictureBox26
+            // 
+            pictureBox26.BackColor = Color.Transparent;
+            pictureBox26.BackgroundImageLayout = ImageLayout.Stretch;
+            pictureBox26.Image = Properties.Resources.brickFlatShort;
+            pictureBox26.Location = new Point(837, 442);
+            pictureBox26.Name = "pictureBox26";
+            pictureBox26.Size = new Size(40, 87);
+            pictureBox26.SizeMode = PictureBoxSizeMode.StretchImage;
+            pictureBox26.TabIndex = 6;
+            pictureBox26.TabStop = false;
+            // 
+            // pictureBox27
+            // 
+            pictureBox27.BackColor = Color.Transparent;
+            pictureBox27.BackgroundImageLayout = ImageLayout.Stretch;
+            pictureBox27.Image = Properties.Resources.firePlayGame;
+            pictureBox27.Location = new Point(243, 210);
+            pictureBox27.Name = "pictureBox27";
+            pictureBox27.Size = new Size(50, 49);
+            pictureBox27.SizeMode = PictureBoxSizeMode.StretchImage;
+            pictureBox27.TabIndex = 15;
+            pictureBox27.TabStop = false;
+            // 
+            // pictureBox28
+            // 
+            pictureBox28.BackColor = Color.Transparent;
+            pictureBox28.BackgroundImageLayout = ImageLayout.Stretch;
+            pictureBox28.BorderStyle = BorderStyle.FixedSingle;
+            pictureBox28.Image = Properties.Resources.brickFlatform;
+            pictureBox28.Location = new Point(338, 426);
+            pictureBox28.Name = "pictureBox28";
+            pictureBox28.Size = new Size(107, 37);
+            pictureBox28.SizeMode = PictureBoxSizeMode.StretchImage;
+            pictureBox28.TabIndex = 5;
+            pictureBox28.TabStop = false;
+            // 
+            // pictureBox30
+            // 
+            pictureBox30.BackColor = Color.Transparent;
+            pictureBox30.BackgroundImageLayout = ImageLayout.Stretch;
+            pictureBox30.Image = Properties.Resources.xengPlayGame;
+            pictureBox30.Location = new Point(778, 468);
+            pictureBox30.Name = "pictureBox30";
+            pictureBox30.Size = new Size(50, 52);
+            pictureBox30.SizeMode = PictureBoxSizeMode.StretchImage;
+            pictureBox30.TabIndex = 17;
+            pictureBox30.TabStop = false;
+            // 
             // frmPlayMario
             // 
             AutoScaleDimensions = new SizeF(10F, 25F);
@@ -549,6 +718,16 @@
             BackgroundImage = Properties.Resources.ForestBackground;
             BackgroundImageLayout = ImageLayout.Stretch;
             ClientSize = new Size(956, 575);
+            Controls.Add(pictureBox30);
+            Controls.Add(pictureBox27);
+            Controls.Add(pictureBox25);
+            Controls.Add(pictureBox19);
+            Controls.Add(pictureBox23);
+            Controls.Add(pictureBox24);
+            Controls.Add(pictureBox22);
+            Controls.Add(pictureBox20);
+            Controls.Add(pictureBox18);
+            Controls.Add(pictureBox17);
             Controls.Add(pictureBox1);
             Controls.Add(pictureBox14);
             Controls.Add(pictureBox4);
@@ -567,10 +746,12 @@
             Controls.Add(pictureBox15);
             Controls.Add(picViruss);
             Controls.Add(pictureBox10);
+            Controls.Add(pictureBox26);
             Controls.Add(picWallUpShort2);
             Controls.Add(pictureBox12);
             Controls.Add(picWallUpShort1);
             Controls.Add(picFlatform10);
+            Controls.Add(pictureBox28);
             Controls.Add(picFlatform9);
             Controls.Add(picFlatform7);
             Controls.Add(picFlatform6);
@@ -623,6 +804,18 @@
             ((System.ComponentModel.ISupportInitialize)pictureBox15).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox21).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox16).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox17).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox18).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox19).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox20).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox22).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox23).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox24).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox25).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox26).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox27).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox28).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox30).EndInit();
             ResumeLayout(false);
         }
 
@@ -663,5 +856,17 @@
         private PictureBox pictureBox15;
         private PictureBox pictureBox21;
         private PictureBox pictureBox16;
+        private PictureBox pictureBox17;
+        private PictureBox pictureBox18;
+        private PictureBox pictureBox19;
+        private PictureBox pictureBox20;
+        private PictureBox pictureBox22;
+        private PictureBox pictureBox23;
+        private PictureBox pictureBox24;
+        private PictureBox pictureBox25;
+        private PictureBox pictureBox26;
+        private PictureBox pictureBox27;
+        private PictureBox pictureBox28;
+        private PictureBox pictureBox30;
     }
 }
