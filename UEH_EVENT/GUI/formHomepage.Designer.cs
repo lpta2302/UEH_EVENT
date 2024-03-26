@@ -47,6 +47,7 @@ namespace UEH_EVENT.GUI
             // 
             // Navbar
             // 
+            Constants.INavbar.CreateNavbar(this, resources); 
             Navbar.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left;
             Navbar.BackColor = Color.FromArgb(34, 34, 34);
             Navbar.Controls.Add(pictureBoxHome);
@@ -57,8 +58,6 @@ namespace UEH_EVENT.GUI
             Navbar.Name = "Navbar";
             Navbar.Size = new Size(400, 980);
             Navbar.TabIndex = 0;
-
-            Constants.INavbar.CreateNavbar(this,resources);
             // 
             // pictureBoxHome
             // 

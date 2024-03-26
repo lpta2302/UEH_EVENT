@@ -17,7 +17,7 @@ namespace UEH_EVENT.Utils
         {
             if (CurrentAccount == null) return;
             //string type = CurrentAccount.AccType;
-            string type = Constants.CLB_ACC;
+            string type = Constants.STUDENT_ACC;
             if (type.Equals(STUDENT_ACC)) Navbar = new StudentNavbar();
             if (type.Equals(ADMIN_ACC)) Navbar = new AdminNavbar();
             if (type.Equals(CLB_ACC)) Navbar = new ClbNavbar();

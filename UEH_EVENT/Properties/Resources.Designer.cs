@@ -63,6 +63,36 @@ namespace UEH_EVENT.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Background_Game {
+            get {
+                object obj = ResourceManager.GetObject("Background_Game", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Background_Quiz {
+            get {
+                object obj = ResourceManager.GetObject("Background_Quiz", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Background_QuizUpdate {
+            get {
+                object obj = ResourceManager.GetObject("Background_QuizUpdate", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Brand_330x122 {
             get {
                 object obj = ResourceManager.GetObject("Brand 330x122", resourceCulture);
@@ -86,6 +116,16 @@ namespace UEH_EVENT.Properties {
         internal static System.Drawing.Bitmap Home {
             get {
                 object obj = ResourceManager.GetObject("Home", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap iconAdd {
+            get {
+                object obj = ResourceManager.GetObject("iconAdd", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

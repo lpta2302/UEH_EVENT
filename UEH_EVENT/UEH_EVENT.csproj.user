@@ -10,9 +10,6 @@
     <Compile Update="GUI\formHomepage.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="GUI\formManagement.cs">
-      <SubType>Form</SubType>
-    </Compile>
     <Compile Update="GUI\formSight.cs">
       <SubType>Form</SubType>
     </Compile>

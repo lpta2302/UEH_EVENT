@@ -107,7 +107,7 @@ public class Constants
             "Thống kê"
         };
         public Type[] Forms { get; } = new Type[] {
-            typeof(formManagement),
+            typeof(formSight),
             typeof(formGame),
             typeof(formStatistic),
         };
