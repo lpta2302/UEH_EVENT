@@ -16,9 +16,11 @@ namespace UEH_EVENT.GUI.Mario
         #region Item valuable
         bool virussGoLeft = false;
         bool virussGoRight = true;
+        bool hasShovel;
         #endregion
         #region Player valuable
         bool goLeft, goRight, hasKey, hasEnoughCoin, jumping;
+
         int jumpSpeed = 10;
         int force = 8;
         int playerSpeed = 10;
@@ -85,7 +87,21 @@ namespace UEH_EVENT.GUI.Mario
             }
             else
             {
-                jumpSpeed = 12;
+                foreach (Control x in this.Controls)
+                {
+                    if ((x is PictureBox) && (string)x.Tag == "flatform")
+                    {
+                        int distanceToFloor = x.Top - (picPlayer.Top + picPlayer.Height);
+                        if (jumpSpeed < distanceToFloor)
+                        {
+                            jumpSpeed = distanceToFloor;
+                        }
+                        else
+                        {
+                            jumpSpeed = 12;
+                        }
+                    }
+                }
             }
             if (jumping == true && force < 0)
             {
@@ -93,7 +109,7 @@ namespace UEH_EVENT.GUI.Mario
             }
             foreach (Control x in this.Controls)
             {
-                if (x is PictureBox && (string)x.Tag == "flatform")
+                if ((x is PictureBox) && (string)x.Tag == "flatform")
                 {
                     if (picPlayer.Bounds.IntersectsWith(x.Bounds) && jumping == false)
                     {
@@ -101,7 +117,6 @@ namespace UEH_EVENT.GUI.Mario
                         picPlayer.Top = x.Top - picPlayer.Height;
                         jumpSpeed = 0;
                     }
-
                 }
                 if (x is PictureBox && (string)x.Tag == "player")
                 {
@@ -119,7 +134,48 @@ namespace UEH_EVENT.GUI.Mario
                 {
                     hasEnoughCoin = true;
                 }
+                if (x is PictureBox && (string)x.Tag == "shovel")
+                {
+                    if (picPlayer.Bounds.IntersectsWith(x.Bounds) && x.Visible == true)
+                    {
+                        hasShovel = true;
+                        picShovel.Visible = false;
+                    }
+
+                }
+                if (x is PictureBox && (string)x.Tag == "hole")
+                {
+                    if (picPlayer.Bounds.IntersectsWith(x.Bounds) && x.Visible == true && hasShovel)
+                    {
+                        picHole.Visible = false;
+                    }
+                }
+                if (x is PictureBox && (string)x.Tag == "fire")
+                {
+                    if (picPlayer.Bounds.IntersectsWith(x.Bounds) && x.Visible == true && hasShovel)
+                    {
+                        x.Visible = false;
+                    }
+                }
+                if (x is PictureBox && (string)x.Tag == "key")
+                {
+                    if (picPlayer.Bounds.IntersectsWith(x.Bounds) && x.Visible == true && hasEnoughCoin)
+                    {
+                        x.Visible = false;
+                        hasKey = true;
+                    }
+                }
+                if (x is PictureBox && (string)x.Tag == "door")
+                {
+                    if (picPlayer.Bounds.IntersectsWith(x.Bounds) && x.Visible == true && hasKey)
+                    {
+                        x.Visible = false;
+                        MessageBox.Show("Win roi nha");
+                        this.Close();
+                    }
+                }
             }
+
         }
         private void frmPlayMario_KeyDown(object sender, KeyEventArgs e)
         {
@@ -151,7 +207,6 @@ namespace UEH_EVENT.GUI.Mario
                 jumping = false;
             }
         }
-
         private void pictureBox4_Click(object sender, EventArgs e)
         {
 
