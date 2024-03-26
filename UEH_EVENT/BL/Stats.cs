@@ -47,10 +47,34 @@
     {
         return Query.GetAllSight().Count;
     }
-    public static int CountSightHisByPoint(int threshold)
+    public static int CountAllSightHis(int sightId = 0)
+    {
+        if (sightId == 0)
+        {
+            return Query.GetAllSightHis().Count;
+        }
+        else
+        {
+            return Query.GetAllSightHis().Where(sh => sh.SightId == sightId).Count();
+        }
+    }
+    public static int CountSightHisByPoint(int lowerBound, int upperBound, int sightId = 0)
+    {
+        if (sightId == 0)
+        {
+            return Query.GetAllSightHis()
+                .Where(sh => sh.Point >= lowerBound && sh.Point <= upperBound).Count();
+        }
+        else
+        {
+            return Query.GetAllSightHis()
+                .Where(sh => sh.SightId == sightId && sh.Point >= lowerBound && sh.Point <= upperBound).Count();
+        }
+    }
+    public static int CountSightsByPlayTimes(int sightId)
     {
         return Query.GetAllSightHis()
-            .Where(sh => sh.Point >= threshold).Count();
+            .Where(sh => sh.SightId == sightId).Count();
     }
     // Thống kê điểm rèn luyện
     public static int CountAllStudents()
@@ -68,24 +92,29 @@
             .Where(st => st.TPoint >= minimum && st.TPoint <= maximum).Count();
     }
     // Thống kê game
-    public static int CountAllPlayHis()
+    public static int CountAllPlayHis(int gameId = 0)
     {
-        return Query.GetAllPlayHis().Count;
+        if (gameId == 0)
+        {
+            return Query.GetAllPlayHis().Count;
+        }
+        else
+        {
+            return Query.GetAllPlayHis().Where(ph => ph.GameId == gameId).Count();
+        }
     }
-    public static int CountPlayHisByGame(int gameId)
+    public static int CountPlayHisByPoint(int minimum, int maximum, int gameId = 0)
     {
-        return Query.GetAllPlayHis()
-            .Where(ph => ph.GameId == gameId).Count();
-    }
-    public static int CountPlayHisByPoint(int threshold)
-    {
-        return Query.GetAllPlayHis()
-            .Where(ph => ph.Point >= threshold).Count();
-    }
-    public static int CountPlayHisByPoint(int minimum, int maximum)
-    {
-        return Query.GetAllPlayHis()
-            .Where(ph => ph.Point >= minimum && ph.Point <= maximum).Count();
+        if (gameId == 0)
+        {
+            return Query.GetAllPlayHis()
+                .Where(ph => ph.Point >= minimum && ph.Point <= maximum).Count();
+        }
+        else
+        {
+            return Query.GetAllPlayHis()
+                .Where(ph => ph.GameId == gameId && ph.Point >= minimum && ph.Point <= maximum).Count();
+        }
     }
     // Thống kê người chơi
     public static int CountAllAccounts()
@@ -96,5 +125,14 @@
     {
         return Query.GetAllAccount()
             .Where(acc => acc.AccType == accType).Count();
+    }
+    // Thống kê lịch sử cộng điểm
+    public static int CountAllTPointHis()
+    {
+        return Query.GetAllTPointHis().Count;
+    }
+    public static int CountTPointHisFilter(int point)
+    {
+        return Query.GetAllTPointHis().Where(tph => tph.Point == point).Count();
     }
 }

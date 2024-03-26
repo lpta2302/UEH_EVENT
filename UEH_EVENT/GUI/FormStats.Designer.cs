@@ -28,16 +28,16 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea2 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend2 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series2 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            lblSights = new Label();
-            lblSightsCount = new Label();
-            lblSightsOver50 = new Label();
-            lblSightsOver50Count = new Label();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea3 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend3 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series3 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea4 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend4 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series4 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            lblSightHis = new Label();
+            lblSightHisCount = new Label();
+            lblSightHisTier1 = new Label();
+            lblSightHisTier1Count = new Label();
             lblStudentsCount = new Label();
             lblStudents = new Label();
             lblTPointOver50Count = new Label();
@@ -50,8 +50,6 @@
             lblTPointTier3 = new Label();
             lblTPointTier4Count = new Label();
             lblTPointTier4 = new Label();
-            lblPlayHisOver50Count = new Label();
-            lblPlayHisOver50 = new Label();
             lblPlayHisCount = new Label();
             lblPlayHis = new Label();
             lblStudentAccountsCount = new Label();
@@ -68,58 +66,87 @@
             lblMatch = new Label();
             lblTotal = new Label();
             lblTotalCount = new Label();
-            tabPageSearchOther = new TabPage();
+            tabPageStatsOther = new TabPage();
+            lblTPointHisCount = new Label();
+            lblTPointHis = new Label();
+            lblTPointPlusOneCount = new Label();
+            lblTPointPlusOne = new Label();
+            lblTPointPlusTwoCount = new Label();
+            lblTPointPlusTwo = new Label();
+            lblPlayHisTier5Count = new Label();
+            lblPlayHisTier5 = new Label();
+            lblPlayHisTier4Count = new Label();
+            lblPlayHisTier4 = new Label();
+            lblPlayHisTier3Count = new Label();
+            lblPlayHisTier3 = new Label();
+            lblPlayHisTier2Count = new Label();
+            lblPlayHisTier2 = new Label();
+            lblPlayHisTier1Count = new Label();
+            lblPlayHisTier1 = new Label();
+            lblSightHisTier5Count = new Label();
+            lblSightHisTier5 = new Label();
+            lblSightHisTier4Count = new Label();
+            lblSightHisTier4 = new Label();
+            lblSightHisTier3Count = new Label();
+            lblSightHisTier3 = new Label();
+            lblSightHisTier2Count = new Label();
+            lblSightHisTier2 = new Label();
+            lblSightHisCountClone = new Label();
+            lblSightHisClone = new Label();
+            lblSightCount = new Label();
+            lblSight = new Label();
             chartStatsOther = new System.Windows.Forms.DataVisualization.Charting.Chart();
+            cboSelect = new ComboBox();
             tabStats.SuspendLayout();
             tabPageStatsSearch.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)chartStatsSearch).BeginInit();
-            tabPageSearchOther.SuspendLayout();
+            tabPageStatsOther.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)chartStatsOther).BeginInit();
             SuspendLayout();
             // 
-            // lblSights
+            // lblSightHis
             // 
-            lblSights.AutoSize = true;
-            lblSights.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
-            lblSights.Location = new Point(39, 110);
-            lblSights.Name = "lblSights";
-            lblSights.Size = new Size(198, 21);
-            lblSights.TabIndex = 0;
-            lblSights.Text = "Tổng số bài trắc nghiệm:";
-            lblSights.TextAlign = ContentAlignment.MiddleRight;
+            lblSightHis.AutoSize = true;
+            lblSightHis.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            lblSightHis.Location = new Point(41, 50);
+            lblSightHis.Name = "lblSightHis";
+            lblSightHis.Size = new Size(171, 21);
+            lblSightHis.TabIndex = 0;
+            lblSightHis.Text = "Tổng số lượt làm bài:";
+            lblSightHis.TextAlign = ContentAlignment.MiddleRight;
             // 
-            // lblSightsCount
+            // lblSightHisCount
             // 
-            lblSightsCount.AutoSize = true;
-            lblSightsCount.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            lblSightsCount.Location = new Point(243, 110);
-            lblSightsCount.Name = "lblSightsCount";
-            lblSightsCount.Size = new Size(19, 21);
-            lblSightsCount.TabIndex = 1;
-            lblSightsCount.Text = "0";
-            lblSightsCount.TextAlign = ContentAlignment.MiddleLeft;
+            lblSightHisCount.AutoSize = true;
+            lblSightHisCount.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            lblSightHisCount.Location = new Point(243, 50);
+            lblSightHisCount.Name = "lblSightHisCount";
+            lblSightHisCount.Size = new Size(19, 21);
+            lblSightHisCount.TabIndex = 1;
+            lblSightHisCount.Text = "0";
+            lblSightHisCount.TextAlign = ContentAlignment.MiddleLeft;
             // 
-            // lblSightsOver50
+            // lblSightHisTier1
             // 
-            lblSightsOver50.AutoSize = true;
-            lblSightsOver50.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            lblSightsOver50.Location = new Point(39, 141);
-            lblSightsOver50.Name = "lblSightsOver50";
-            lblSightsOver50.Size = new Size(104, 21);
-            lblSightsOver50.TabIndex = 2;
-            lblSightsOver50.Text = "Trên 50 điểm:";
-            lblSightsOver50.TextAlign = ContentAlignment.MiddleRight;
+            lblSightHisTier1.AutoSize = true;
+            lblSightHisTier1.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            lblSightHisTier1.Location = new Point(41, 80);
+            lblSightHisTier1.Name = "lblSightHisTier1";
+            lblSightHisTier1.Size = new Size(111, 21);
+            lblSightHisTier1.TabIndex = 2;
+            lblSightHisTier1.Text = "81 - 100 điểm:";
+            lblSightHisTier1.TextAlign = ContentAlignment.MiddleRight;
             // 
-            // lblSightsOver50Count
+            // lblSightHisTier1Count
             // 
-            lblSightsOver50Count.AutoSize = true;
-            lblSightsOver50Count.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            lblSightsOver50Count.Location = new Point(243, 141);
-            lblSightsOver50Count.Name = "lblSightsOver50Count";
-            lblSightsOver50Count.Size = new Size(19, 21);
-            lblSightsOver50Count.TabIndex = 3;
-            lblSightsOver50Count.Text = "0";
-            lblSightsOver50Count.TextAlign = ContentAlignment.MiddleLeft;
+            lblSightHisTier1Count.AutoSize = true;
+            lblSightHisTier1Count.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            lblSightHisTier1Count.Location = new Point(243, 80);
+            lblSightHisTier1Count.Name = "lblSightHisTier1Count";
+            lblSightHisTier1Count.Size = new Size(19, 21);
+            lblSightHisTier1Count.TabIndex = 3;
+            lblSightHisTier1Count.Text = "0";
+            lblSightHisTier1Count.TextAlign = ContentAlignment.MiddleLeft;
             // 
             // lblStudentsCount
             // 
@@ -253,33 +280,11 @@
             lblTPointTier4.Text = "Loại Trung bình:";
             lblTPointTier4.TextAlign = ContentAlignment.MiddleRight;
             // 
-            // lblPlayHisOver50Count
-            // 
-            lblPlayHisOver50Count.AutoSize = true;
-            lblPlayHisOver50Count.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            lblPlayHisOver50Count.Location = new Point(243, 141);
-            lblPlayHisOver50Count.Name = "lblPlayHisOver50Count";
-            lblPlayHisOver50Count.Size = new Size(19, 21);
-            lblPlayHisOver50Count.TabIndex = 21;
-            lblPlayHisOver50Count.Text = "0";
-            lblPlayHisOver50Count.TextAlign = ContentAlignment.MiddleLeft;
-            // 
-            // lblPlayHisOver50
-            // 
-            lblPlayHisOver50.AutoSize = true;
-            lblPlayHisOver50.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            lblPlayHisOver50.Location = new Point(39, 141);
-            lblPlayHisOver50.Name = "lblPlayHisOver50";
-            lblPlayHisOver50.Size = new Size(104, 21);
-            lblPlayHisOver50.TabIndex = 20;
-            lblPlayHisOver50.Text = "Trên 50 điểm:";
-            lblPlayHisOver50.TextAlign = ContentAlignment.MiddleRight;
-            // 
             // lblPlayHisCount
             // 
             lblPlayHisCount.AutoSize = true;
             lblPlayHisCount.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            lblPlayHisCount.Location = new Point(243, 110);
+            lblPlayHisCount.Location = new Point(243, 50);
             lblPlayHisCount.Name = "lblPlayHisCount";
             lblPlayHisCount.Size = new Size(19, 21);
             lblPlayHisCount.TabIndex = 19;
@@ -290,7 +295,7 @@
             // 
             lblPlayHis.AutoSize = true;
             lblPlayHis.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
-            lblPlayHis.Location = new Point(39, 110);
+            lblPlayHis.Location = new Point(39, 50);
             lblPlayHis.Name = "lblPlayHis";
             lblPlayHis.Size = new Size(146, 21);
             lblPlayHis.TabIndex = 18;
@@ -376,7 +381,7 @@
             // tabStats
             // 
             tabStats.Controls.Add(tabPageStatsSearch);
-            tabStats.Controls.Add(tabPageSearchOther);
+            tabStats.Controls.Add(tabPageStatsOther);
             tabStats.Location = new Point(12, 12);
             tabStats.Name = "tabStats";
             tabStats.SelectedIndex = 0;
@@ -412,17 +417,17 @@
             // 
             // chartStatsSearch
             // 
-            chartArea1.Name = "StatsChartArea";
-            chartStatsSearch.ChartAreas.Add(chartArea1);
-            legend1.Name = "StatsChartLegend";
-            chartStatsSearch.Legends.Add(legend1);
+            chartArea3.Name = "StatsChartArea";
+            chartStatsSearch.ChartAreas.Add(chartArea3);
+            legend3.Name = "StatsChartLegend";
+            chartStatsSearch.Legends.Add(legend3);
             chartStatsSearch.Location = new Point(298, 6);
             chartStatsSearch.Name = "chartStatsSearch";
-            series1.ChartArea = "StatsChartArea";
-            series1.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Doughnut;
-            series1.Legend = "StatsChartLegend";
-            series1.Name = "StatsSeries";
-            chartStatsSearch.Series.Add(series1);
+            series3.ChartArea = "StatsChartArea";
+            series3.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Doughnut;
+            series3.Legend = "StatsChartLegend";
+            series3.Name = "StatsSeries";
+            chartStatsSearch.Series.Add(series3);
             chartStatsSearch.Size = new Size(330, 260);
             chartStatsSearch.TabIndex = 0;
             chartStatsSearch.Text = "Biểu đồ";
@@ -460,65 +465,409 @@
             lblTotalCount.Text = "0";
             lblTotalCount.TextAlign = ContentAlignment.MiddleLeft;
             // 
-            // tabPageSearchOther
+            // tabPageStatsOther
             // 
-            tabPageSearchOther.Controls.Add(chartStatsOther);
-            tabPageSearchOther.Controls.Add(lblSightsOver50Count);
-            tabPageSearchOther.Controls.Add(lblTPointTier4Count);
-            tabPageSearchOther.Controls.Add(lblClubAccountsCount);
-            tabPageSearchOther.Controls.Add(lblTPointTier3Count);
-            tabPageSearchOther.Controls.Add(lblTPointTier4);
-            tabPageSearchOther.Controls.Add(lblTPointTier2Count);
-            tabPageSearchOther.Controls.Add(lblSights);
-            tabPageSearchOther.Controls.Add(lblTPointTier1Count);
-            tabPageSearchOther.Controls.Add(lblTPointOver50Count);
-            tabPageSearchOther.Controls.Add(lblClubAccounts);
-            tabPageSearchOther.Controls.Add(lblStudentsCount);
-            tabPageSearchOther.Controls.Add(lblTPointTier3);
-            tabPageSearchOther.Controls.Add(lblSightsCount);
-            tabPageSearchOther.Controls.Add(lblStudentAccountsCount);
-            tabPageSearchOther.Controls.Add(lblTPointTier2);
-            tabPageSearchOther.Controls.Add(lblSightsOver50);
-            tabPageSearchOther.Controls.Add(lblStudentAccounts);
-            tabPageSearchOther.Controls.Add(lblTPointTier1);
-            tabPageSearchOther.Controls.Add(lblAccountsCount);
-            tabPageSearchOther.Controls.Add(lblPlayHis);
-            tabPageSearchOther.Controls.Add(lblTPointOver50);
-            tabPageSearchOther.Controls.Add(lblAccounts);
-            tabPageSearchOther.Controls.Add(lblPlayHisCount);
-            tabPageSearchOther.Controls.Add(lblStudents);
-            tabPageSearchOther.Controls.Add(lblPlayHisOver50);
-            tabPageSearchOther.Controls.Add(lblPlayHisOver50Count);
-            tabPageSearchOther.Location = new Point(4, 24);
-            tabPageSearchOther.Name = "tabPageSearchOther";
-            tabPageSearchOther.Padding = new Padding(3);
-            tabPageSearchOther.Size = new Size(635, 272);
-            tabPageSearchOther.TabIndex = 1;
-            tabPageSearchOther.Text = "Theo mức/ngưỡng";
-            tabPageSearchOther.UseVisualStyleBackColor = true;
+            tabPageStatsOther.Controls.Add(lblTPointHisCount);
+            tabPageStatsOther.Controls.Add(lblTPointHis);
+            tabPageStatsOther.Controls.Add(lblTPointPlusOneCount);
+            tabPageStatsOther.Controls.Add(lblTPointPlusOne);
+            tabPageStatsOther.Controls.Add(lblTPointPlusTwoCount);
+            tabPageStatsOther.Controls.Add(lblTPointPlusTwo);
+            tabPageStatsOther.Controls.Add(lblPlayHisCount);
+            tabPageStatsOther.Controls.Add(lblPlayHis);
+            tabPageStatsOther.Controls.Add(lblPlayHisTier5Count);
+            tabPageStatsOther.Controls.Add(lblPlayHisTier5);
+            tabPageStatsOther.Controls.Add(lblPlayHisTier4Count);
+            tabPageStatsOther.Controls.Add(lblPlayHisTier4);
+            tabPageStatsOther.Controls.Add(lblPlayHisTier3Count);
+            tabPageStatsOther.Controls.Add(lblPlayHisTier3);
+            tabPageStatsOther.Controls.Add(lblPlayHisTier2Count);
+            tabPageStatsOther.Controls.Add(lblPlayHisTier2);
+            tabPageStatsOther.Controls.Add(lblPlayHisTier1Count);
+            tabPageStatsOther.Controls.Add(lblPlayHisTier1);
+            tabPageStatsOther.Controls.Add(lblSightHisTier5Count);
+            tabPageStatsOther.Controls.Add(lblSightHisTier5);
+            tabPageStatsOther.Controls.Add(lblSightHisTier4Count);
+            tabPageStatsOther.Controls.Add(lblSightHisTier4);
+            tabPageStatsOther.Controls.Add(lblSightHisTier3Count);
+            tabPageStatsOther.Controls.Add(lblSightHisTier3);
+            tabPageStatsOther.Controls.Add(lblSightHisTier2Count);
+            tabPageStatsOther.Controls.Add(lblSightHisTier2);
+            tabPageStatsOther.Controls.Add(lblSightHisTier1Count);
+            tabPageStatsOther.Controls.Add(lblSightHisTier1);
+            tabPageStatsOther.Controls.Add(lblSightHisCount);
+            tabPageStatsOther.Controls.Add(lblSightHis);
+            tabPageStatsOther.Controls.Add(lblSightHisCountClone);
+            tabPageStatsOther.Controls.Add(lblSightHisClone);
+            tabPageStatsOther.Controls.Add(lblSightCount);
+            tabPageStatsOther.Controls.Add(lblSight);
+            tabPageStatsOther.Controls.Add(chartStatsOther);
+            tabPageStatsOther.Controls.Add(lblTPointTier4Count);
+            tabPageStatsOther.Controls.Add(lblClubAccountsCount);
+            tabPageStatsOther.Controls.Add(lblTPointTier3Count);
+            tabPageStatsOther.Controls.Add(lblTPointTier4);
+            tabPageStatsOther.Controls.Add(lblTPointTier2Count);
+            tabPageStatsOther.Controls.Add(lblTPointTier1Count);
+            tabPageStatsOther.Controls.Add(lblTPointOver50Count);
+            tabPageStatsOther.Controls.Add(lblClubAccounts);
+            tabPageStatsOther.Controls.Add(lblStudentsCount);
+            tabPageStatsOther.Controls.Add(lblTPointTier3);
+            tabPageStatsOther.Controls.Add(lblStudentAccountsCount);
+            tabPageStatsOther.Controls.Add(lblTPointTier2);
+            tabPageStatsOther.Controls.Add(lblStudentAccounts);
+            tabPageStatsOther.Controls.Add(lblTPointTier1);
+            tabPageStatsOther.Controls.Add(lblAccountsCount);
+            tabPageStatsOther.Controls.Add(lblTPointOver50);
+            tabPageStatsOther.Controls.Add(lblAccounts);
+            tabPageStatsOther.Controls.Add(lblStudents);
+            tabPageStatsOther.Location = new Point(4, 24);
+            tabPageStatsOther.Name = "tabPageStatsOther";
+            tabPageStatsOther.Padding = new Padding(3);
+            tabPageStatsOther.Size = new Size(635, 272);
+            tabPageStatsOther.TabIndex = 1;
+            tabPageStatsOther.Text = "Theo mức/ngưỡng";
+            tabPageStatsOther.UseVisualStyleBackColor = true;
+            // 
+            // lblTPointHisCount
+            // 
+            lblTPointHisCount.AutoSize = true;
+            lblTPointHisCount.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            lblTPointHisCount.Location = new Point(243, 96);
+            lblTPointHisCount.Name = "lblTPointHisCount";
+            lblTPointHisCount.Size = new Size(19, 21);
+            lblTPointHisCount.TabIndex = 53;
+            lblTPointHisCount.Text = "0";
+            lblTPointHisCount.TextAlign = ContentAlignment.MiddleLeft;
+            // 
+            // lblTPointHis
+            // 
+            lblTPointHis.AutoSize = true;
+            lblTPointHis.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            lblTPointHis.Location = new Point(39, 96);
+            lblTPointHis.Name = "lblTPointHis";
+            lblTPointHis.Size = new Size(194, 21);
+            lblTPointHis.TabIndex = 52;
+            lblTPointHis.Text = "Tổng số luợt cộng điểm:";
+            lblTPointHis.TextAlign = ContentAlignment.MiddleRight;
+            // 
+            // lblTPointPlusOneCount
+            // 
+            lblTPointPlusOneCount.AutoSize = true;
+            lblTPointPlusOneCount.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            lblTPointPlusOneCount.Location = new Point(243, 155);
+            lblTPointPlusOneCount.Name = "lblTPointPlusOneCount";
+            lblTPointPlusOneCount.Size = new Size(19, 21);
+            lblTPointPlusOneCount.TabIndex = 57;
+            lblTPointPlusOneCount.Text = "0";
+            lblTPointPlusOneCount.TextAlign = ContentAlignment.MiddleLeft;
+            // 
+            // lblTPointPlusOne
+            // 
+            lblTPointPlusOne.AutoSize = true;
+            lblTPointPlusOne.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            lblTPointPlusOne.Location = new Point(39, 155);
+            lblTPointPlusOne.Name = "lblTPointPlusOne";
+            lblTPointPlusOne.Size = new Size(72, 21);
+            lblTPointPlusOne.TabIndex = 56;
+            lblTPointPlusOne.Text = "+1 điểm:";
+            lblTPointPlusOne.TextAlign = ContentAlignment.MiddleRight;
+            // 
+            // lblTPointPlusTwoCount
+            // 
+            lblTPointPlusTwoCount.AutoSize = true;
+            lblTPointPlusTwoCount.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            lblTPointPlusTwoCount.Location = new Point(243, 125);
+            lblTPointPlusTwoCount.Name = "lblTPointPlusTwoCount";
+            lblTPointPlusTwoCount.Size = new Size(19, 21);
+            lblTPointPlusTwoCount.TabIndex = 55;
+            lblTPointPlusTwoCount.Text = "0";
+            lblTPointPlusTwoCount.TextAlign = ContentAlignment.MiddleLeft;
+            // 
+            // lblTPointPlusTwo
+            // 
+            lblTPointPlusTwo.AutoSize = true;
+            lblTPointPlusTwo.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            lblTPointPlusTwo.Location = new Point(39, 125);
+            lblTPointPlusTwo.Name = "lblTPointPlusTwo";
+            lblTPointPlusTwo.Size = new Size(72, 21);
+            lblTPointPlusTwo.TabIndex = 54;
+            lblTPointPlusTwo.Text = "+2 điểm:";
+            lblTPointPlusTwo.TextAlign = ContentAlignment.MiddleRight;
+            // 
+            // lblPlayHisTier5Count
+            // 
+            lblPlayHisTier5Count.AutoSize = true;
+            lblPlayHisTier5Count.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            lblPlayHisTier5Count.Location = new Point(243, 199);
+            lblPlayHisTier5Count.Name = "lblPlayHisTier5Count";
+            lblPlayHisTier5Count.Size = new Size(19, 21);
+            lblPlayHisTier5Count.TabIndex = 51;
+            lblPlayHisTier5Count.Text = "0";
+            lblPlayHisTier5Count.TextAlign = ContentAlignment.MiddleLeft;
+            // 
+            // lblPlayHisTier5
+            // 
+            lblPlayHisTier5.AutoSize = true;
+            lblPlayHisTier5.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            lblPlayHisTier5.Location = new Point(39, 199);
+            lblPlayHisTier5.Name = "lblPlayHisTier5";
+            lblPlayHisTier5.Size = new Size(93, 21);
+            lblPlayHisTier5.TabIndex = 50;
+            lblPlayHisTier5.Text = "0 - 19 điểm:";
+            lblPlayHisTier5.TextAlign = ContentAlignment.MiddleRight;
+            // 
+            // lblPlayHisTier4Count
+            // 
+            lblPlayHisTier4Count.AutoSize = true;
+            lblPlayHisTier4Count.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            lblPlayHisTier4Count.Location = new Point(243, 169);
+            lblPlayHisTier4Count.Name = "lblPlayHisTier4Count";
+            lblPlayHisTier4Count.Size = new Size(19, 21);
+            lblPlayHisTier4Count.TabIndex = 49;
+            lblPlayHisTier4Count.Text = "0";
+            lblPlayHisTier4Count.TextAlign = ContentAlignment.MiddleLeft;
+            // 
+            // lblPlayHisTier4
+            // 
+            lblPlayHisTier4.AutoSize = true;
+            lblPlayHisTier4.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            lblPlayHisTier4.Location = new Point(39, 169);
+            lblPlayHisTier4.Name = "lblPlayHisTier4";
+            lblPlayHisTier4.Size = new Size(102, 21);
+            lblPlayHisTier4.TabIndex = 48;
+            lblPlayHisTier4.Text = "20 - 39 điểm:";
+            lblPlayHisTier4.TextAlign = ContentAlignment.MiddleRight;
+            // 
+            // lblPlayHisTier3Count
+            // 
+            lblPlayHisTier3Count.AutoSize = true;
+            lblPlayHisTier3Count.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            lblPlayHisTier3Count.Location = new Point(243, 139);
+            lblPlayHisTier3Count.Name = "lblPlayHisTier3Count";
+            lblPlayHisTier3Count.Size = new Size(19, 21);
+            lblPlayHisTier3Count.TabIndex = 47;
+            lblPlayHisTier3Count.Text = "0";
+            lblPlayHisTier3Count.TextAlign = ContentAlignment.MiddleLeft;
+            // 
+            // lblPlayHisTier3
+            // 
+            lblPlayHisTier3.AutoSize = true;
+            lblPlayHisTier3.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            lblPlayHisTier3.Location = new Point(39, 139);
+            lblPlayHisTier3.Name = "lblPlayHisTier3";
+            lblPlayHisTier3.Size = new Size(102, 21);
+            lblPlayHisTier3.TabIndex = 46;
+            lblPlayHisTier3.Text = "40 - 60 điểm:";
+            lblPlayHisTier3.TextAlign = ContentAlignment.MiddleRight;
+            // 
+            // lblPlayHisTier2Count
+            // 
+            lblPlayHisTier2Count.AutoSize = true;
+            lblPlayHisTier2Count.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            lblPlayHisTier2Count.Location = new Point(243, 109);
+            lblPlayHisTier2Count.Name = "lblPlayHisTier2Count";
+            lblPlayHisTier2Count.Size = new Size(19, 21);
+            lblPlayHisTier2Count.TabIndex = 45;
+            lblPlayHisTier2Count.Text = "0";
+            lblPlayHisTier2Count.TextAlign = ContentAlignment.MiddleLeft;
+            // 
+            // lblPlayHisTier2
+            // 
+            lblPlayHisTier2.AutoSize = true;
+            lblPlayHisTier2.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            lblPlayHisTier2.Location = new Point(39, 109);
+            lblPlayHisTier2.Name = "lblPlayHisTier2";
+            lblPlayHisTier2.Size = new Size(102, 21);
+            lblPlayHisTier2.TabIndex = 44;
+            lblPlayHisTier2.Text = "61 - 80 điểm:";
+            lblPlayHisTier2.TextAlign = ContentAlignment.MiddleRight;
+            // 
+            // lblPlayHisTier1Count
+            // 
+            lblPlayHisTier1Count.AutoSize = true;
+            lblPlayHisTier1Count.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            lblPlayHisTier1Count.Location = new Point(243, 79);
+            lblPlayHisTier1Count.Name = "lblPlayHisTier1Count";
+            lblPlayHisTier1Count.Size = new Size(19, 21);
+            lblPlayHisTier1Count.TabIndex = 43;
+            lblPlayHisTier1Count.Text = "0";
+            lblPlayHisTier1Count.TextAlign = ContentAlignment.MiddleLeft;
+            // 
+            // lblPlayHisTier1
+            // 
+            lblPlayHisTier1.AutoSize = true;
+            lblPlayHisTier1.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            lblPlayHisTier1.Location = new Point(39, 79);
+            lblPlayHisTier1.Name = "lblPlayHisTier1";
+            lblPlayHisTier1.Size = new Size(111, 21);
+            lblPlayHisTier1.TabIndex = 42;
+            lblPlayHisTier1.Text = "81 - 100 điểm:";
+            lblPlayHisTier1.TextAlign = ContentAlignment.MiddleRight;
+            // 
+            // lblSightHisTier5Count
+            // 
+            lblSightHisTier5Count.AutoSize = true;
+            lblSightHisTier5Count.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            lblSightHisTier5Count.Location = new Point(243, 200);
+            lblSightHisTier5Count.Name = "lblSightHisTier5Count";
+            lblSightHisTier5Count.Size = new Size(19, 21);
+            lblSightHisTier5Count.TabIndex = 39;
+            lblSightHisTier5Count.Text = "0";
+            lblSightHisTier5Count.TextAlign = ContentAlignment.MiddleLeft;
+            // 
+            // lblSightHisTier5
+            // 
+            lblSightHisTier5.AutoSize = true;
+            lblSightHisTier5.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            lblSightHisTier5.Location = new Point(41, 200);
+            lblSightHisTier5.Name = "lblSightHisTier5";
+            lblSightHisTier5.Size = new Size(93, 21);
+            lblSightHisTier5.TabIndex = 38;
+            lblSightHisTier5.Text = "0 - 19 điểm:";
+            lblSightHisTier5.TextAlign = ContentAlignment.MiddleRight;
+            // 
+            // lblSightHisTier4Count
+            // 
+            lblSightHisTier4Count.AutoSize = true;
+            lblSightHisTier4Count.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            lblSightHisTier4Count.Location = new Point(243, 170);
+            lblSightHisTier4Count.Name = "lblSightHisTier4Count";
+            lblSightHisTier4Count.Size = new Size(19, 21);
+            lblSightHisTier4Count.TabIndex = 37;
+            lblSightHisTier4Count.Text = "0";
+            lblSightHisTier4Count.TextAlign = ContentAlignment.MiddleLeft;
+            // 
+            // lblSightHisTier4
+            // 
+            lblSightHisTier4.AutoSize = true;
+            lblSightHisTier4.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            lblSightHisTier4.Location = new Point(41, 170);
+            lblSightHisTier4.Name = "lblSightHisTier4";
+            lblSightHisTier4.Size = new Size(102, 21);
+            lblSightHisTier4.TabIndex = 36;
+            lblSightHisTier4.Text = "20 - 39 điểm:";
+            lblSightHisTier4.TextAlign = ContentAlignment.MiddleRight;
+            // 
+            // lblSightHisTier3Count
+            // 
+            lblSightHisTier3Count.AutoSize = true;
+            lblSightHisTier3Count.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            lblSightHisTier3Count.Location = new Point(243, 140);
+            lblSightHisTier3Count.Name = "lblSightHisTier3Count";
+            lblSightHisTier3Count.Size = new Size(19, 21);
+            lblSightHisTier3Count.TabIndex = 35;
+            lblSightHisTier3Count.Text = "0";
+            lblSightHisTier3Count.TextAlign = ContentAlignment.MiddleLeft;
+            // 
+            // lblSightHisTier3
+            // 
+            lblSightHisTier3.AutoSize = true;
+            lblSightHisTier3.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            lblSightHisTier3.Location = new Point(41, 140);
+            lblSightHisTier3.Name = "lblSightHisTier3";
+            lblSightHisTier3.Size = new Size(102, 21);
+            lblSightHisTier3.TabIndex = 34;
+            lblSightHisTier3.Text = "40 - 60 điểm:";
+            lblSightHisTier3.TextAlign = ContentAlignment.MiddleRight;
+            // 
+            // lblSightHisTier2Count
+            // 
+            lblSightHisTier2Count.AutoSize = true;
+            lblSightHisTier2Count.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            lblSightHisTier2Count.Location = new Point(243, 110);
+            lblSightHisTier2Count.Name = "lblSightHisTier2Count";
+            lblSightHisTier2Count.Size = new Size(19, 21);
+            lblSightHisTier2Count.TabIndex = 33;
+            lblSightHisTier2Count.Text = "0";
+            lblSightHisTier2Count.TextAlign = ContentAlignment.MiddleLeft;
+            // 
+            // lblSightHisTier2
+            // 
+            lblSightHisTier2.AutoSize = true;
+            lblSightHisTier2.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            lblSightHisTier2.Location = new Point(41, 110);
+            lblSightHisTier2.Name = "lblSightHisTier2";
+            lblSightHisTier2.Size = new Size(102, 21);
+            lblSightHisTier2.TabIndex = 32;
+            lblSightHisTier2.Text = "61 - 80 điểm:";
+            lblSightHisTier2.TextAlign = ContentAlignment.MiddleRight;
+            // 
+            // lblSightHisCountClone
+            // 
+            lblSightHisCountClone.AutoSize = true;
+            lblSightHisCountClone.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            lblSightHisCountClone.Location = new Point(243, 139);
+            lblSightHisCountClone.Name = "lblSightHisCountClone";
+            lblSightHisCountClone.Size = new Size(19, 21);
+            lblSightHisCountClone.TabIndex = 31;
+            lblSightHisCountClone.Text = "0";
+            lblSightHisCountClone.TextAlign = ContentAlignment.MiddleLeft;
+            // 
+            // lblSightHisClone
+            // 
+            lblSightHisClone.AutoSize = true;
+            lblSightHisClone.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            lblSightHisClone.Location = new Point(39, 139);
+            lblSightHisClone.Name = "lblSightHisClone";
+            lblSightHisClone.Size = new Size(171, 21);
+            lblSightHisClone.TabIndex = 30;
+            lblSightHisClone.Text = "Tổng số lượt làm bài:";
+            lblSightHisClone.TextAlign = ContentAlignment.MiddleRight;
+            // 
+            // lblSightCount
+            // 
+            lblSightCount.AutoSize = true;
+            lblSightCount.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            lblSightCount.Location = new Point(243, 109);
+            lblSightCount.Name = "lblSightCount";
+            lblSightCount.Size = new Size(19, 21);
+            lblSightCount.TabIndex = 29;
+            lblSightCount.Text = "0";
+            lblSightCount.TextAlign = ContentAlignment.MiddleLeft;
+            // 
+            // lblSight
+            // 
+            lblSight.AutoSize = true;
+            lblSight.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            lblSight.Location = new Point(39, 109);
+            lblSight.Name = "lblSight";
+            lblSight.Size = new Size(198, 21);
+            lblSight.TabIndex = 28;
+            lblSight.Text = "Tổng số bài trắc nghiệm:";
+            lblSight.TextAlign = ContentAlignment.MiddleRight;
             // 
             // chartStatsOther
             // 
-            chartArea2.Name = "StatsChartArea";
-            chartStatsOther.ChartAreas.Add(chartArea2);
-            legend2.Name = "StatsChartLegend";
-            chartStatsOther.Legends.Add(legend2);
+            chartArea4.Name = "StatsChartArea";
+            chartStatsOther.ChartAreas.Add(chartArea4);
+            legend4.Name = "StatsChartLegend";
+            chartStatsOther.Legends.Add(legend4);
             chartStatsOther.Location = new Point(298, 6);
             chartStatsOther.Name = "chartStatsOther";
-            series2.ChartArea = "StatsChartArea";
-            series2.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Doughnut;
-            series2.Legend = "StatsChartLegend";
-            series2.Name = "StatsSeries";
-            chartStatsOther.Series.Add(series2);
+            series4.ChartArea = "StatsChartArea";
+            series4.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Doughnut;
+            series4.Legend = "StatsChartLegend";
+            series4.Name = "StatsSeries";
+            chartStatsOther.Series.Add(series4);
             chartStatsOther.Size = new Size(330, 260);
             chartStatsOther.TabIndex = 1;
             chartStatsOther.Text = "Biểu đồ";
+            // 
+            // cboSelect
+            // 
+            cboSelect.FormattingEnabled = true;
+            cboSelect.Location = new Point(16, 318);
+            cboSelect.Name = "cboSelect";
+            cboSelect.Size = new Size(121, 23);
+            cboSelect.TabIndex = 30;
+            cboSelect.SelectedIndexChanged += cboSelect_SelectedIndexChanged;
             // 
             // FormStats
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(665, 352);
+            Controls.Add(cboSelect);
             Controls.Add(tabStats);
             Controls.Add(btnClose);
             Name = "FormStats";
@@ -528,18 +877,18 @@
             tabPageStatsSearch.ResumeLayout(false);
             tabPageStatsSearch.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)chartStatsSearch).EndInit();
-            tabPageSearchOther.ResumeLayout(false);
-            tabPageSearchOther.PerformLayout();
+            tabPageStatsOther.ResumeLayout(false);
+            tabPageStatsOther.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)chartStatsOther).EndInit();
             ResumeLayout(false);
         }
 
         #endregion
 
-        private Label lblSights;
-        private Label lblSightsCount;
-        private Label lblSightsOver50;
-        private Label lblSightsOver50Count;
+        private Label lblSightHis;
+        private Label lblSightHisCount;
+        private Label lblSightHisTier1;
+        private Label lblSightHisTier1Count;
         private Label lblStudentsCount;
         private Label lblStudents;
         private Label lblTPointOver50Count;
@@ -565,12 +914,41 @@
         private Button btnClose;
         private TabControl tabStats;
         private TabPage tabPageStatsSearch;
-        private TabPage tabPageSearchOther;
+        private TabPage tabPageStatsOther;
         private System.Windows.Forms.DataVisualization.Charting.Chart chartStatsSearch;
         private Label lblMatchCount;
         private Label lblMatch;
         private Label lblTotal;
         private Label lblTotalCount;
         private System.Windows.Forms.DataVisualization.Charting.Chart chartStatsOther;
+        private Label lblSightHisCountClone;
+        private Label lblSightHisClone;
+        private Label lblSightCount;
+        private Label lblSight;
+        private Label lblSightHisTier2Count;
+        private Label lblSightHisTier2;
+        private Label lblSightHisTier5Count;
+        private Label lblSightHisTier5;
+        private Label lblSightHisTier4Count;
+        private Label lblSightHisTier4;
+        private Label lblSightHisTier3Count;
+        private Label lblSightHisTier3;
+        private ComboBox cboSelect;
+        private Label lblPlayHisTier2;
+        private Label lblPlayHisTier3;
+        private Label lblPlayHisTier4;
+        private Label lblPlayHisTier5;
+        private Label lblPlayHisTier1Count;
+        private Label lblPlayHisTier2Count;
+        private Label lblPlayHisTier3Count;
+        private Label lblPlayHisTier4Count;
+        private Label lblPlayHisTier5Count;
+        private Label lblPlayHisTier1;
+        private Label lblTPointHisCount;
+        private Label lblTPointHis;
+        private Label lblTPointPlusOneCount;
+        private Label lblTPointPlusOne;
+        private Label lblTPointPlusTwoCount;
+        private Label lblTPointPlusTwo;
     }
 }
