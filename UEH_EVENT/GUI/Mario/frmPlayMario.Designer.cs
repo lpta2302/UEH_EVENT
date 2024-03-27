@@ -78,6 +78,8 @@
             picShovel = new PictureBox();
             picFire = new PictureBox();
             tmGameLoad = new System.Windows.Forms.Timer(components);
+            picGameOver = new PictureBox();
+            timer1 = new System.Windows.Forms.Timer(components);
             ((System.ComponentModel.ISupportInitialize)picPlayer).BeginInit();
             ((System.ComponentModel.ISupportInitialize)picTime).BeginInit();
             ((System.ComponentModel.ISupportInitialize)picHeart1).BeginInit();
@@ -126,6 +128,7 @@
             ((System.ComponentModel.ISupportInitialize)pictureBox28).BeginInit();
             ((System.ComponentModel.ISupportInitialize)picShovel).BeginInit();
             ((System.ComponentModel.ISupportInitialize)picFire).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)picGameOver).BeginInit();
             SuspendLayout();
             // 
             // picPlayer
@@ -133,7 +136,7 @@
             picPlayer.BackColor = Color.Transparent;
             picPlayer.BackgroundImageLayout = ImageLayout.Stretch;
             picPlayer.Image = Properties.Resources.MarioPlay;
-            picPlayer.Location = new Point(516, 122);
+            picPlayer.Location = new Point(516, 44);
             picPlayer.Name = "picPlayer";
             picPlayer.Size = new Size(33, 63);
             picPlayer.SizeMode = PictureBoxSizeMode.StretchImage;
@@ -164,6 +167,7 @@
             picHeart1.SizeMode = PictureBoxSizeMode.StretchImage;
             picHeart1.TabIndex = 2;
             picHeart1.TabStop = false;
+            picHeart1.Tag = "heart";
             // 
             // picHeart2
             // 
@@ -176,6 +180,7 @@
             picHeart2.SizeMode = PictureBoxSizeMode.StretchImage;
             picHeart2.TabIndex = 3;
             picHeart2.TabStop = false;
+            picHeart2.Tag = "heart";
             // 
             // picHeart3
             // 
@@ -188,6 +193,7 @@
             picHeart3.SizeMode = PictureBoxSizeMode.StretchImage;
             picHeart3.TabIndex = 4;
             picHeart3.TabStop = false;
+            picHeart3.Tag = "heart";
             // 
             // picFlatform1
             // 
@@ -778,6 +784,19 @@
             tmGameLoad.Interval = 20;
             tmGameLoad.Tick += tmGameLoad_Tick;
             // 
+            // picGameOver
+            // 
+            picGameOver.BackColor = Color.Transparent;
+            picGameOver.BackgroundImageLayout = ImageLayout.Stretch;
+            picGameOver.Image = Properties.Resources.GameOver;
+            picGameOver.Location = new Point(159, 137);
+            picGameOver.Name = "picGameOver";
+            picGameOver.Size = new Size(673, 290);
+            picGameOver.SizeMode = PictureBoxSizeMode.StretchImage;
+            picGameOver.TabIndex = 18;
+            picGameOver.TabStop = false;
+            picGameOver.Visible = false;
+            // 
             // frmPlayMario
             // 
             AutoScaleDimensions = new SizeF(10F, 25F);
@@ -785,6 +804,7 @@
             BackgroundImage = Properties.Resources.ForestBackground;
             BackgroundImageLayout = ImageLayout.Stretch;
             ClientSize = new Size(956, 568);
+            Controls.Add(picGameOver);
             Controls.Add(picFlatform1);
             Controls.Add(pictureBox4);
             Controls.Add(pictureBox2);
@@ -889,6 +909,7 @@
             ((System.ComponentModel.ISupportInitialize)pictureBox28).EndInit();
             ((System.ComponentModel.ISupportInitialize)picShovel).EndInit();
             ((System.ComponentModel.ISupportInitialize)picFire).EndInit();
+            ((System.ComponentModel.ISupportInitialize)picGameOver).EndInit();
             ResumeLayout(false);
         }
 
@@ -943,5 +964,7 @@
         private PictureBox picShovel;
         private PictureBox picFire;
         private System.Windows.Forms.Timer tmGameLoad;
+        private PictureBox picGameOver;
+        private System.Windows.Forms.Timer timer1;
     }
 }

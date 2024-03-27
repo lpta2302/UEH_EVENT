@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "BT7+d1IYu5vSfoCBmLoxkhTjDlKXkNDyKcIqJ/FUOv1QwpD5zQ7M1WalMXPNb2GDJsCFs3eRjjSkUM+rOiaCgg==",
+  "dgSpecHash": "hfgUnkAyn9axxXc94SI2K5XtJEHKD8j12LXnRRnGZ4Doo1nWMUlqySWB1kJmXeGAD2Bdkj2XWVYve/x904WwnA==",
   "success": true,
-  "projectFilePath": "D:\\Subject\\Desktop Application Development\\Project\\UEH_EVENT\\UEH_EVENT\\UEH_EVENT.csproj",
+  "projectFilePath": "D:\\Subject\\Desktop Application Development\\Project2\\UEH_EVENT\\UEH_EVENT\\UEH_EVENT.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\LENOVO\\.nuget\\packages\\azure.core\\1.35.0\\azure.core.1.35.0.nupkg.sha512",
     "C:\\Users\\LENOVO\\.nuget\\packages\\azure.identity\\1.10.3\\azure.identity.1.10.3.nupkg.sha512",

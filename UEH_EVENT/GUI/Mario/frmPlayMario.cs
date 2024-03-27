@@ -16,6 +16,7 @@ namespace UEH_EVENT.GUI.Mario
         #region Item valuable
         bool virussGoLeft = false;
         bool virussGoRight = true;
+        int numberHeart = 3;
         #endregion
         #region Player valuable
         bool goLeft, goRight, hasKey, hasEnoughCoin, jumping;
@@ -64,6 +65,21 @@ namespace UEH_EVENT.GUI.Mario
         public frmPlayMario()
         {
             InitializeComponent();
+        }
+        public void Reload()
+        {
+            picPlayer.Location = new System.Drawing.Point(12, 362);
+        }
+        public void HideHeart()
+        {
+            foreach (Control x in this.Controls)
+            {
+                if ((string)x.Tag == "heart" && x.Visible == true)
+                {
+                    x.Visible = false;
+                    break;
+                }
+            }
         }
         private void frmPlayMario_Load(object sender, EventArgs e)
         {
@@ -126,10 +142,10 @@ namespace UEH_EVENT.GUI.Mario
                         isOnGround = true;
                     }
                     //bug
-                    //if (!(picPlayer.Bounds.IntersectsWith(x.Bounds) && jumping == false))
-                    //{
-                    //    isOnGround = false;
-                    //}
+                    if (!(picPlayer.Bounds.IntersectsWith(x.Bounds) && jumping == false))
+                    {
+                        isOnGround = false;
+                    }
 
                 }
                 if (x is PictureBox && (string)x.Tag == "player")
@@ -163,12 +179,38 @@ namespace UEH_EVENT.GUI.Mario
                     {
                         picHole.Visible = false;
                     }
+                    if (picPlayer.Bounds.IntersectsWith(x.Bounds) && x.Visible == true && hasShovel == false)
+                    {
+                        Reload();
+                        numberHeart -= 1;
+                        HideHeart();
+                    }
+                }
+                if (x is PictureBox && (string)x.Tag == "viruss")
+                {
+                    if (picPlayer.Bounds.IntersectsWith(x.Bounds) && x.Visible == true)
+                    {
+                        picViruss.Visible = false;
+                    }
+                    if (picPlayer.Bounds.IntersectsWith(x.Bounds) && x.Visible == true && hasShovel == false)
+                    {
+                        Reload();
+                        numberHeart -= 1;
+                        HideHeart();
+                        picViruss.Visible = true;
+                    }
                 }
                 if (x is PictureBox && (string)x.Tag == "fire")
                 {
                     if (picPlayer.Bounds.IntersectsWith(x.Bounds) && x.Visible == true && hasShovel)
                     {
                         x.Visible = false;
+                    }
+                    else if (picPlayer.Bounds.IntersectsWith(x.Bounds) && x.Visible == true && hasShovel == false)
+                    {
+                        Reload();
+                        numberHeart -= 1;
+                        HideHeart();
                     }
                 }
                 if (x is PictureBox && (string)x.Tag == "key")
@@ -206,6 +248,10 @@ namespace UEH_EVENT.GUI.Mario
                         }
                     }
                 }
+            }
+            if (numberHeart == 0)
+            {
+                picGameOver.Visible = true;
             }
         }
         private void frmPlayMario_KeyDown(object sender, KeyEventArgs e)
