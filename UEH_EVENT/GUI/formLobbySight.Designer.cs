@@ -69,7 +69,6 @@
             // 
             // btnAdd
             // 
-            btnAdd.BackgroundImage = Properties.Resources.add_outline_icon;
             btnAdd.BackgroundImageLayout = ImageLayout.Stretch;
             btnAdd.Location = new Point(1441, 92);
             btnAdd.Name = "btnAdd";
