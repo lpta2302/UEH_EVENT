@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "wUvT1BVOKICYkUigXadIAe1HNFflLNGM95aVHsDrmJLHI1MHrhE1yqewlbWEeWW3fKZcUNOhXmOQThNI+iDd8Q==",
+  "dgSpecHash": "qLwa3vgnotaWF9NUCxHjfB/3U4u8dzWlcG9ahEzYEfJyctcH+++MFUWF5sS8+kgJYOhy5cFhqZ2+gSKM/pk+oA==",
   "success": true,
-  "projectFilePath": "D:\\Phát triển Dekstop\\hoanghuy\\UEH_EVENT\\UEH_EVENT\\UEH_EVENT.csproj",
+  "projectFilePath": "D:\\Phát triển Dekstop\\tét\\UEH_EVENT\\UEH_EVENT\\UEH_EVENT.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\ACER\\.nuget\\packages\\azure.core\\1.35.0\\azure.core.1.35.0.nupkg.sha512",
     "C:\\Users\\ACER\\.nuget\\packages\\azure.identity\\1.10.3\\azure.identity.1.10.3.nupkg.sha512",

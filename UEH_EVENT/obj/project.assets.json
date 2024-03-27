@@ -3009,11 +3009,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\Phát triển Dekstop\\hoanghuy\\UEH_EVENT\\UEH_EVENT\\UEH_EVENT.csproj",
+      "projectUniqueName": "D:\\Phát triển Dekstop\\tét\\UEH_EVENT\\UEH_EVENT\\UEH_EVENT.csproj",
       "projectName": "UEH_EVENT",
-      "projectPath": "D:\\Phát triển Dekstop\\hoanghuy\\UEH_EVENT\\UEH_EVENT\\UEH_EVENT.csproj",
+      "projectPath": "D:\\Phát triển Dekstop\\tét\\UEH_EVENT\\UEH_EVENT\\UEH_EVENT.csproj",
       "packagesPath": "C:\\Users\\ACER\\.nuget\\packages\\",
-      "outputPath": "D:\\Phát triển Dekstop\\hoanghuy\\UEH_EVENT\\UEH_EVENT\\obj\\",
+      "outputPath": "D:\\Phát triển Dekstop\\tét\\UEH_EVENT\\UEH_EVENT\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\ACER\\AppData\\Roaming\\NuGet\\NuGet.Config",

@@ -365,6 +365,7 @@ namespace UEH_EVENT.GUI.Mario
                 case Keys.Left:                 // On Left Keypress down
                     if (GameOn)
                     {
+                        picPlayer.Image = Properties.Resources.MarioPlayLeft;    //Players image changes to stand
                         LastDirRight = false;
                         Player_Left = true;     //Walk left
                     }
@@ -372,6 +373,7 @@ namespace UEH_EVENT.GUI.Mario
                 case Keys.Right:                // On Right Keypress down
                     if (GameOn)
                     {
+                        picPlayer.Image = Properties.Resources.MarioPlay;
                         LastDirRight = true;
                         Player_Right = true;
                     }
@@ -379,14 +381,6 @@ namespace UEH_EVENT.GUI.Mario
                 case Keys.Space:    // On Space Keypress down
                     if (!Player_Jump && !InAirNoCollision(picPlayer))
                     {
-                        if (LastDirRight)       //Checks direction, changes jump image
-                        {
-                            picPlayer.Image = Properties.Resources.MarioPlay;
-                        }
-                        else
-                        {
-                            picPlayer.Image = Properties.Resources.MarioPlayLeft;
-                        }
                         picPlayer.Top -= Speed_Jump;     //Player moves up a bit
                         Force = Gravity;        //Force to be moved up changes
                         Player_Jump = true;     //Sets a variable that player is jumping
@@ -400,10 +394,14 @@ namespace UEH_EVENT.GUI.Mario
             {
                 switch (e.KeyCode)
                 {
-                    case Keys.Left:                             //On Left Key press UP
+                    case Keys.Left:
+                        LastDirRight = false;
+                        //On Left Key press UP
                         Player_Left = false;                    //Doesnt move left anymore
                         break;
                     case Keys.Right:
+                        LastDirRight = true;
+
                         Player_Right = false;
                         break;
                 }
