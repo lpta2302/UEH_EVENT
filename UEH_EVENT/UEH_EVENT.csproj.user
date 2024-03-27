@@ -38,6 +38,19 @@
       <SubType>Form</SubType>
     </Compile>
     <Compile Update="GUI\FormStats.cs">
+    <Compile Update="GUI\formCreateQuestion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="GUI\formCreateSight.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="GUI\formDoingSight.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="GUI\formLobbySight.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="GUI\formScore.cs">
       <SubType>Form</SubType>
     </Compile>
   </ItemGroup>

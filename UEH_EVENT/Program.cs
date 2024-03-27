@@ -16,6 +16,7 @@ namespace UEH_EVENT
             //ApplicationConfiguration.Initialize();
             Application.Run(new LoginForm());
            // Application.Run(new formSight());
+
         }
     }
 }

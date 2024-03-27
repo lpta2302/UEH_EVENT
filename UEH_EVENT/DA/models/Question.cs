@@ -12,7 +12,9 @@ public class Question
     public List<Answer> Answers { get; set; }
     [Required]
     public Sight Sight { get; set; }
-    public Question() { }
+    public Question() {
+        Answers = new List<Answer>();
+    }
     public Question(string content, List<Answer> answers, Sight sight)
     {
         Content = content;

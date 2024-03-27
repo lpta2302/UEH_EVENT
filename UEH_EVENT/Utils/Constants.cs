@@ -12,7 +12,7 @@ using System.ComponentModel;
 public class Constants
 {
     public static readonly string connectionString = @"
-        Data Source=(localdb)MSSQLLocalDB;
+        Data Source=(localdb)\MSSQLLocalDB;
         Initial Catalog= test;
         Integrated Security=True;
         TrustServerCertificate=True;
