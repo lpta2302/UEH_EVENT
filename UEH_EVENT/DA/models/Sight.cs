@@ -20,6 +20,7 @@ public class Sight
         Name = "";
         Preview = "";
         Questions = new List<Question>();
+        CreatedAt = DateTime.Now;
     }
 
     public Sight(string name = "", string? preview = "", List<Question>? questions = null)

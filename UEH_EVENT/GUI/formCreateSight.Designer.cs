@@ -117,6 +117,7 @@
             txtMoTa.Name = "txtMoTa";
             txtMoTa.Size = new Size(763, 163);
             txtMoTa.TabIndex = 23;
+            txtMoTa.TextChanged += txtMoTa_TextChanged;
             // 
             // txtTenTN
             // 
@@ -126,6 +127,7 @@
             txtTenTN.Name = "txtTenTN";
             txtTenTN.Size = new Size(356, 41);
             txtTenTN.TabIndex = 22;
+            txtTenTN.TextChanged += txtTenTN_TextChanged;
             // 
             // label7
             // 

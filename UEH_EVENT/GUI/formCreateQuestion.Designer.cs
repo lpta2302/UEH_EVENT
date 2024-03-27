@@ -216,7 +216,7 @@
             Controls.Add(panel1);
             Name = "formCreateQuestion";
             StartPosition = FormStartPosition.CenterScreen;
-            Text = "Form2";
+            Text = "CreateQuestion";
             WindowState = FormWindowState.Maximized;
             Load += formCreateQuestion_Load;
             panel1.ResumeLayout(false);

@@ -1,6 +1,6 @@
 ﻿namespace UEH_EVENT.GUI
 {
-    partial class formDoingSightcs
+    partial class formDoingSight
     {
 
         /// <summary>
@@ -73,7 +73,7 @@
             // 
             // lstCauHoi
             // 
-            lstCauHoi.BackColor = Color.FromArgb(64, 64, 64);
+            lstCauHoi.BackColor = Color.White;
             lstCauHoi.Font = new Font("Microsoft Sans Serif", 15.75F, FontStyle.Regular, GraphicsUnit.Point);
             lstCauHoi.ForeColor = Color.White;
             lstCauHoi.FormattingEnabled = true;
@@ -235,7 +235,7 @@
             // 
             // lblThoiGian
             // 
-            lblThoiGian.BackColor = Color.FromArgb(64, 64, 64);
+            lblThoiGian.BackColor = Color.White;
             lblThoiGian.FlatStyle = FlatStyle.System;
             lblThoiGian.Font = new Font("Microsoft Sans Serif", 24F, FontStyle.Bold, GraphicsUnit.Point);
             lblThoiGian.ForeColor = Color.White;
@@ -259,11 +259,11 @@
             btnCauTruoc.UseVisualStyleBackColor = false;
             btnCauTruoc.Click += btnCauTruoc_Click;
             // 
-            // formDoingSightcs
+            // formDoingSight
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            BackColor = Color.FromArgb(34, 34, 34);
+            BackColor = Color.White;
             ClientSize = new Size(1824, 810);
             Controls.Add(btnCauTruoc);
             Controls.Add(btnCauSau);
@@ -273,7 +273,7 @@
             Controls.Add(lstCauHoi);
             Controls.Add(grpAnswers);
             ForeColor = Color.Red;
-            Name = "formDoingSightcs";
+            Name = "formDoingSight";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "ManHinhThi";
             WindowState = FormWindowState.Maximized;

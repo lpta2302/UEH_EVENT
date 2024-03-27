@@ -8,6 +8,7 @@ namespace UEH_EVENT.Utils
 {
     internal class GlobalData
     {
+        public static Account CurrentAccount { get; set; } = new Account();
         public static Sight CurrentSight {get;set;}
         static GlobalData()
         {

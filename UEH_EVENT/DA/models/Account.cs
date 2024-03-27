@@ -19,6 +19,8 @@ public class Account
     [StringLength(100)]
     public string Name { get; set; }
     public string AccType { get; set; }
+    public string? SightHis { get; set; }
+    public Account() { }
     public Account(string username, string password, string name, string accType)
     {
         Username = username;

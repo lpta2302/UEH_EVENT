@@ -27,7 +27,6 @@ namespace UEH_EVENT.GUI
             txtQuestion.Text = GlobalData.CurrentSight.Questions[i].Content;
             lblQuestionNum.Text = $"Câu hỏi {i+1}: ";
         }
-
         private void formCreateQuestion_Load(object sender, EventArgs e)
         {
                

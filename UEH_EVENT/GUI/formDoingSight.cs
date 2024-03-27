@@ -10,14 +10,14 @@ using System.Windows.Forms;
 
 namespace UEH_EVENT.GUI
 {
-    public partial class formDoingSightcs : Form
+    public partial class formDoingSight : Form
     {
         private Sight? sight;
         private List<Question>? questions;
         private int[] selectedAnswers;
         private int iCurrentQuestion;
         private int iGiay;
-        public formDoingSightcs()
+        public formDoingSight()
         {
             InitializeComponent();
         }
