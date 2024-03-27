@@ -16,15 +16,16 @@ namespace UEH_EVENT.GUI.Mario
         #region Item valuable
         bool virussGoLeft = false;
         bool virussGoRight = true;
-        bool hasShovel;
         #endregion
         #region Player valuable
         bool goLeft, goRight, hasKey, hasEnoughCoin, jumping;
-
-        int jumpSpeed = 10;
+        bool hasShovel;
+        bool isOnGround;
+        int jumpSpeed = 12;
         int force = 8;
         int playerSpeed = 10;
         int numberCoin = 0;
+        bool touchFlatformUpLeft, touchFlatformUpRight, touchFlatformAbove;
         #endregion
         public void VirussGo()
         {
@@ -71,21 +72,27 @@ namespace UEH_EVENT.GUI.Mario
         private void tmGameLoad_Tick(object sender, EventArgs e)
         {
             VirussGo();
-            picPlayer.Top += jumpSpeed;
-            if (goLeft == true && picPlayer.Left > 10)
+            if (isOnGround == false)
+            {
+                picPlayer.Top += jumpSpeed;
+            }
+            if (goLeft == true && picPlayer.Left > 10 && touchFlatformUpRight == false)
             {
                 picPlayer.Left -= playerSpeed;
+                touchFlatformUpLeft = false;
             }
-            if (goRight == true && picPlayer.Left + (picPlayer.Width + 10) < this.ClientSize.Width)
+            if (goRight == true && picPlayer.Left + (picPlayer.Width + 10) < this.ClientSize.Width && touchFlatformUpLeft == false)
             {
                 picPlayer.Left += playerSpeed;
+                touchFlatformUpRight = false;
             }
             if (jumping == true)
             {
                 jumpSpeed = -12;
                 force -= 1;
+                isOnGround = false;
             }
-            else
+            if (jumping == false && isOnGround == false)
             {
                 foreach (Control x in this.Controls)
                 {
@@ -116,7 +123,14 @@ namespace UEH_EVENT.GUI.Mario
                         force = 8;
                         picPlayer.Top = x.Top - picPlayer.Height;
                         jumpSpeed = 0;
+                        isOnGround = true;
                     }
+                    //bug
+                    //if (!(picPlayer.Bounds.IntersectsWith(x.Bounds) && jumping == false))
+                    //{
+                    //    isOnGround = false;
+                    //}
+
                 }
                 if (x is PictureBox && (string)x.Tag == "player")
                 {
@@ -174,8 +188,25 @@ namespace UEH_EVENT.GUI.Mario
                         this.Close();
                     }
                 }
-            }
 
+            }
+            foreach (Control x in this.Controls)
+            {
+                if (x is PictureBox && (string)x.Tag == "flatformUp")
+                {
+                    if (picPlayer.Bounds.IntersectsWith(x.Bounds))
+                    {
+                        if (picPlayer.Left + picPlayer.Width >= x.Left)
+                        {
+                            touchFlatformUpLeft = true;
+                        }
+                        else if (picPlayer.Left <= x.Left + x.Width)
+                        {
+                            touchFlatformUpRight = true;
+                        }
+                    }
+                }
+            }
         }
         private void frmPlayMario_KeyDown(object sender, KeyEventArgs e)
         {

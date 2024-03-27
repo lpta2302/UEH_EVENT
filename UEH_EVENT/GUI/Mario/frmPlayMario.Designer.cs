@@ -133,7 +133,7 @@
             picPlayer.BackColor = Color.Transparent;
             picPlayer.BackgroundImageLayout = ImageLayout.Stretch;
             picPlayer.Image = Properties.Resources.MarioPlay;
-            picPlayer.Location = new Point(25, 442);
+            picPlayer.Location = new Point(516, 122);
             picPlayer.Name = "picPlayer";
             picPlayer.Size = new Size(33, 63);
             picPlayer.SizeMode = PictureBoxSizeMode.StretchImage;
@@ -298,7 +298,7 @@
             picWallUpShort1.SizeMode = PictureBoxSizeMode.StretchImage;
             picWallUpShort1.TabIndex = 6;
             picWallUpShort1.TabStop = false;
-            picWallUpShort1.Tag = "flatform";
+            picWallUpShort1.Tag = "flatformUp";
             // 
             // picWallUpShort2
             // 
@@ -311,7 +311,7 @@
             picWallUpShort2.SizeMode = PictureBoxSizeMode.StretchImage;
             picWallUpShort2.TabIndex = 6;
             picWallUpShort2.TabStop = false;
-            picWallUpShort2.Tag = "flatform";
+            picWallUpShort2.Tag = "flatformUp";
             // 
             // picViruss
             // 
@@ -490,7 +490,7 @@
             pictureBox10.SizeMode = PictureBoxSizeMode.StretchImage;
             pictureBox10.TabIndex = 6;
             pictureBox10.TabStop = false;
-            pictureBox10.Tag = "flatform";
+            pictureBox10.Tag = "flatformUp";
             // 
             // pictureBox11
             // 
@@ -517,7 +517,7 @@
             pictureBox12.SizeMode = PictureBoxSizeMode.StretchImage;
             pictureBox12.TabIndex = 6;
             pictureBox12.TabStop = false;
-            pictureBox12.Tag = "flatform";
+            pictureBox12.Tag = "flatformUp";
             // 
             // pictureBox14
             // 
@@ -530,7 +530,7 @@
             pictureBox14.SizeMode = PictureBoxSizeMode.StretchImage;
             pictureBox14.TabIndex = 11;
             pictureBox14.TabStop = false;
-            pictureBox14.Tag = "flatform";
+            pictureBox14.Tag = "flatformUp";
             // 
             // pictureBox4
             // 
@@ -717,7 +717,7 @@
             pictureBox26.SizeMode = PictureBoxSizeMode.StretchImage;
             pictureBox26.TabIndex = 6;
             pictureBox26.TabStop = false;
-            pictureBox26.Tag = "flatform";
+            pictureBox26.Tag = "flatformUp";
             // 
             // picFire2
             // 
