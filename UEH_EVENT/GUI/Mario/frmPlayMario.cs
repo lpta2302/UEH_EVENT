@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Microsoft.Identity.Client.NativeInterop;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -8,27 +9,145 @@ using System.Numerics;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static System.Formats.Asn1.AsnWriter;
+using static System.Reflection.Metadata.BlobBuilder;
 
 namespace UEH_EVENT.GUI.Mario
 {
     public partial class frmPlayMario : Form
     {
+        #region var
+        public List<PictureBox> WorldObjects { get; set; } = new List<PictureBox>();
+        #endregion
         #region Item valuable
         bool virussGoLeft = false;
         bool virussGoRight = true;
         int numberHeart = 3;
         #endregion
+
+        #region Player movement
+        Boolean Player_Jump = false;    //Is the player jumping
+        Boolean Player_Left = false;    //.. moving to the left
+        Boolean Player_Right = false;   //.. moving to the right
+        Boolean LastDirRight = true;    // Whats the last dir facing
+        Boolean GameOn = true;         //Is the game on?
+        int Gravity = 10;
+        int Force = 0;
+        int Speed_Movement = 5;
+        int Speed_Jump = 5;
+        int Speed_Fall = 5;
+        #endregion
+
         #region Player valuable
-        bool goLeft, goRight, hasKey, hasEnoughCoin, jumping;
+        bool goLeft, goRight, hasKey, hasEnoughCoin;
         bool hasShovel;
-        bool isOnGround;
-        int jumpSpeed = 12;
-        int force = 8;
-        int playerSpeed = 10;
         int numberCoin = 0;
-        bool touchFlatformUpLeft, touchFlatformUpRight, touchFlatformAbove;
         int timeDownMinute = 1;
         int timeDownSecond = 60;
+        #endregion
+        #region Boolean Functions, "Check Collision"
+
+        public Boolean OutsideWorldFrame(PictureBox tar)
+        {
+            if (tar.Location.X < 0) //Is it outside of the left side?
+                return true;
+            if (tar.Location.X > WorldFrame.Width)  //... right side?
+                return true;
+            if (tar.Location.Y + tar.Height > WorldFrame.Height - 3)
+                return true;                        //Or above the WorldFrame?
+            foreach (PictureBox Obj in WorldObjects)
+            {
+                if (Obj != null)
+                {   //Or, intersecting with any world object
+                    if (tar.Bounds.IntersectsWith(Obj.Bounds))
+                        return true;
+                }
+            }
+            return false;
+        }
+        public Boolean InAirNoCollision(PictureBox tar)
+        {   //Checks if the target Picturebox is Outside of the frame
+            if (!OutsideWorldFrame(tar))
+            {
+                foreach (PictureBox Obj in WorldObjects)
+                {   //Or if it's not colliding with anything
+                    if (!tar.Bounds.IntersectsWith(Obj.Bounds))
+                    {
+                        if (tar.Location.Y < WorldFrame.Width)
+                        {   //And it's not under ground for some reason
+                            return true;
+                        }
+                    }
+                }
+            }
+            return false;
+        }
+        public Boolean Collision_Top(PictureBox tar)
+        {
+            foreach (PictureBox ob in WorldObjects)
+            {
+                if (ob != null)
+                {
+                    PictureBox temp1 = new PictureBox();    //Creates a single pixel above the target picturebox, asks if anything is colliding with it
+                    temp1.Bounds = ob.Bounds;
+                    //PaintBox(temp1.Location.X, temp1.Location.Y - 1, temp1.Width, 1, Color.Blue); //Super laggy doing this, troubleshooting only
+                    temp1.SetBounds(temp1.Location.X, temp1.Location.Y - 1, temp1.Width, 1);
+                    if (tar.Bounds.IntersectsWith(temp1.Bounds))
+                        return true;
+                }
+            }
+            return false;
+        }
+
+        public Boolean Collision_Bottom(PictureBox tar)
+        {
+            foreach (PictureBox ob in WorldObjects)
+            {
+                if (ob != null)
+                {
+                    PictureBox temp1 = new PictureBox();
+                    temp1.Bounds = ob.Bounds;
+                    //PaintBox(temp1.Location.X, temp1.Location.Y+temp1.Height, temp1.Width, 1, Color.Red); //Super laggy doing this, troubleshooting only
+                    temp1.SetBounds(temp1.Location.X, temp1.Location.Y + temp1.Height, temp1.Width, 1);
+                    if (tar.Bounds.IntersectsWith(temp1.Bounds))
+                        return true;
+                }
+            }
+            return false;
+        }
+
+        public Boolean Collision_Left(PictureBox tar)
+        {
+            foreach (PictureBox ob in WorldObjects)
+            {
+                if (ob != null)
+                {
+                    PictureBox temp1 = new PictureBox();
+                    temp1.Bounds = ob.Bounds;
+                    //PaintBox(temp1.Location.X - 1, temp1.Location.Y + 1, 1, temp1.Height - 1, Color.Green); //Super laggy doing this, troubleshooting only
+                    temp1.SetBounds(temp1.Location.X - 3, temp1.Location.Y, 1, temp1.Height - 1);
+                    if (tar.Bounds.IntersectsWith(temp1.Bounds))
+                        return true;
+                }
+            }
+            return false;
+        }
+        public Boolean Collision_Right(PictureBox tar)
+        {
+            foreach (PictureBox ob in WorldObjects)
+            {
+                if (ob != null)
+                {
+                    PictureBox temp2 = new PictureBox();
+                    temp2.Bounds = ob.Bounds;
+                    //PaintBox(temp2.Location.X + temp2.Width, temp2.Location.Y + 1, 1, temp2.Height - 1, Color.Yellow); //Super laggy doing this, troubleshooting only
+                    temp2.SetBounds(temp2.Location.X + temp2.Width, temp2.Location.Y + 1, 1, temp2.Height - 1);
+                    if (tar.Bounds.IntersectsWith(temp2.Bounds))
+                        return true;
+                }
+            }
+            return false;
+        }
         #endregion
         public void VirussGo()
         {
@@ -70,7 +189,7 @@ namespace UEH_EVENT.GUI.Mario
         }
         public void Reload()
         {
-            picPlayer.Location = new System.Drawing.Point(12, 362);
+            picPlayer.Location = new System.Drawing.Point(410, 35);
         }
         public void HideHeart()
         {
@@ -85,71 +204,71 @@ namespace UEH_EVENT.GUI.Mario
         }
         private void frmPlayMario_Load(object sender, EventArgs e)
         {
-
+            foreach (var control in this.Controls)
+            {
+                if (control is PictureBox)
+                {
+                    PictureBox pictureBox = (PictureBox)control;
+                    if (pictureBox.Tag != null && ((string)pictureBox.Tag).StartsWith("flatform"))
+                    {
+                        WorldObjects.Add(pictureBox);
+                    }
+                }
+            }
         }
-        private void tmGameLoad_Tick(object sender, EventArgs e)
+        private void timer_Jump_Tick(object sender, EventArgs e)
+        {
+            if (GameOn)
+            {
+                if (Player_Right && picPlayer.Right <= WorldFrame.Width - 3 && !Collision_Left(picPlayer))
+                { //Stops the player from moving out of screen
+                    picPlayer.Left += Speed_Movement; //Moves right
+                }
+                if (Player_Left && picPlayer.Location.X >= 3 && !Collision_Right(picPlayer))
+                { //Stops the player from moving out of screen
+                    picPlayer.Left -= Speed_Movement; //Moves left
+                }
+            }
+            else
+            {   //If game is not on, stops the player
+                Player_Right = false;
+                Player_Left = false;
+            }
+
+            if (Force > 0)
+            {   //If any force still exists
+                if (Collision_Bottom(picPlayer))
+                {   //Unless players head is banging in a wall
+                    Force = 0;
+                }
+                else
+                {   //Move player up, lower force each "move"
+                    Force--;
+                    picPlayer.Top -= Speed_Jump;
+                }
+            }
+            else
+            {   //If no force, player is not jumping.
+                Player_Jump = false;
+            }
+        }
+        private void timer_Gravity_Tick(object sender, EventArgs e)
+        {
+            if (!Player_Jump && picPlayer.Location.Y + picPlayer.Height < WorldFrame.Height - 2 && !Collision_Top(picPlayer))
+            {   //If Player doesnt jump, Location is above the floor or is standing on object
+                picPlayer.Top += Speed_Fall; //Player falls
+            }
+
+            if (!Player_Jump && picPlayer.Location.Y + picPlayer.Height > WorldFrame.Height - 1)
+            {   //If player would for some reason be under the floor, move him up
+                picPlayer.Top--;
+            }
+        }
+        private void tmrGameLoad_Tick(object sender, EventArgs e)
         {
             VirussGo();
-            if (isOnGround == false)
-            {
-                picPlayer.Top += jumpSpeed;
-            }
-            if (goLeft == true && picPlayer.Left > 10 && touchFlatformUpRight == false)
-            {
-                picPlayer.Left -= playerSpeed;
-                touchFlatformUpLeft = false;
-            }
-            if (goRight == true && picPlayer.Left + (picPlayer.Width + 10) < this.ClientSize.Width && touchFlatformUpLeft == false)
-            {
-                picPlayer.Left += playerSpeed;
-                touchFlatformUpRight = false;
-            }
-            if (jumping == true)
-            {
-                jumpSpeed = -12;
-                force -= 1;
-                isOnGround = false;
-            }
-            if (jumping == false && isOnGround == false)
-            {
-                foreach (Control x in this.Controls)
-                {
-                    if ((x is PictureBox) && (string)x.Tag == "flatform")
-                    {
-                        int distanceToFloor = x.Top - (picPlayer.Top + picPlayer.Height);
-                        if (jumpSpeed < distanceToFloor)
-                        {
-                            jumpSpeed = distanceToFloor;
-                        }
-                        else
-                        {
-                            jumpSpeed = 12;
-                        }
-                    }
-                }
-            }
-            if (jumping == true && force < 0)
-            {
-                jumping = false;
-            }
             foreach (Control x in this.Controls)
             {
-                if ((x is PictureBox) && (string)x.Tag == "flatform")
-                {
-                    if (picPlayer.Bounds.IntersectsWith(x.Bounds) && jumping == false)
-                    {
-                        force = 8;
-                        picPlayer.Top = x.Top - picPlayer.Height;
-                        jumpSpeed = 0;
-                        isOnGround = true;
-                    }
-                    //bug
-                    if (!(picPlayer.Bounds.IntersectsWith(x.Bounds) && jumping == false))
-                    {
-                        isOnGround = false;
-                    }
-
-                }
                 if (x is PictureBox && (string)x.Tag == "player")
                 {
                     x.BringToFront();
@@ -210,9 +329,9 @@ namespace UEH_EVENT.GUI.Mario
                     }
                     else if (picPlayer.Bounds.IntersectsWith(x.Bounds) && x.Visible == true && hasShovel == false)
                     {
-                        Reload();
+                        /*Reload();
                         numberHeart -= 1;
-                        HideHeart();
+                        HideHeart();*/
                     }
                 }
                 if (x is PictureBox && (string)x.Tag == "key")
@@ -234,23 +353,6 @@ namespace UEH_EVENT.GUI.Mario
                 }
 
             }
-            foreach (Control x in this.Controls)
-            {
-                if (x is PictureBox && (string)x.Tag == "flatformUp")
-                {
-                    if (picPlayer.Bounds.IntersectsWith(x.Bounds))
-                    {
-                        if (picPlayer.Left + picPlayer.Width >= x.Left)
-                        {
-                            touchFlatformUpLeft = true;
-                        }
-                        else if (picPlayer.Left <= x.Left + x.Width)
-                        {
-                            touchFlatformUpRight = true;
-                        }
-                    }
-                }
-            }
             if (numberHeart == 0)
             {
                 picGameOver.Visible = true;
@@ -258,32 +360,53 @@ namespace UEH_EVENT.GUI.Mario
         }
         private void frmPlayMario_KeyDown(object sender, KeyEventArgs e)
         {
-            if (e.KeyCode == Keys.Left)
+            switch (e.KeyCode)
             {
-                goLeft = true;
-            }
-            if (e.KeyCode == Keys.Right)
-            {
-                goRight = true;
-            }
-            if (e.KeyCode == Keys.Space && jumping == false)
-            {
-                jumping = true;
+                case Keys.Left:                 // On Left Keypress down
+                    if (GameOn)
+                    {
+                        LastDirRight = false;
+                        Player_Left = true;     //Walk left
+                    }
+                    break;
+                case Keys.Right:                // On Right Keypress down
+                    if (GameOn)
+                    {
+                        LastDirRight = true;
+                        Player_Right = true;
+                    }
+                    break;
+                case Keys.Space:    // On Space Keypress down
+                    if (!Player_Jump && !InAirNoCollision(picPlayer))
+                    {
+                        if (LastDirRight)       //Checks direction, changes jump image
+                        {
+                            picPlayer.Image = Properties.Resources.MarioPlay;
+                        }
+                        else
+                        {
+                            picPlayer.Image = Properties.Resources.MarioPlayLeft;
+                        }
+                        picPlayer.Top -= Speed_Jump;     //Player moves up a bit
+                        Force = Gravity;        //Force to be moved up changes
+                        Player_Jump = true;     //Sets a variable that player is jumping
+                    }
+                    break;
             }
         }
         private void frmPlayMario_KeyUp(object sender, KeyEventArgs e)
         {
-            if (e.KeyCode == Keys.Left)
+            if (GameOn)
             {
-                goLeft = false;
-            }
-            if (e.KeyCode == Keys.Right)
-            {
-                goRight = false;
-            }
-            if (jumping == true)
-            {
-                jumping = false;
+                switch (e.KeyCode)
+                {
+                    case Keys.Left:                             //On Left Key press UP
+                        Player_Left = false;                    //Doesnt move left anymore
+                        break;
+                    case Keys.Right:
+                        Player_Right = false;
+                        break;
+                }
             }
         }
         private void pictureBox4_Click(object sender, EventArgs e)

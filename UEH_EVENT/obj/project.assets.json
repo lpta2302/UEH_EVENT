@@ -3004,19 +3004,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\LENOVO\\.nuget\\packages\\": {}
+    "C:\\Users\\ACER\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\Subject\\Desktop Application Development\\Project2\\UEH_EVENT\\UEH_EVENT\\UEH_EVENT.csproj",
+      "projectUniqueName": "D:\\Phát triển Dekstop\\hoanghuy\\UEH_EVENT\\UEH_EVENT\\UEH_EVENT.csproj",
       "projectName": "UEH_EVENT",
-      "projectPath": "D:\\Subject\\Desktop Application Development\\Project2\\UEH_EVENT\\UEH_EVENT\\UEH_EVENT.csproj",
-      "packagesPath": "C:\\Users\\LENOVO\\.nuget\\packages\\",
-      "outputPath": "D:\\Subject\\Desktop Application Development\\Project2\\UEH_EVENT\\UEH_EVENT\\obj\\",
+      "projectPath": "D:\\Phát triển Dekstop\\hoanghuy\\UEH_EVENT\\UEH_EVENT\\UEH_EVENT.csproj",
+      "packagesPath": "C:\\Users\\ACER\\.nuget\\packages\\",
+      "outputPath": "D:\\Phát triển Dekstop\\hoanghuy\\UEH_EVENT\\UEH_EVENT\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\LENOVO\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\ACER\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -3084,7 +3084,7 @@
             "privateAssets": "none"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.306\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.100\\RuntimeIdentifierGraph.json"
       }
     }
   }
