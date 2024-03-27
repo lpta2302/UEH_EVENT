@@ -27,6 +27,8 @@ namespace UEH_EVENT.GUI.Mario
         int playerSpeed = 10;
         int numberCoin = 0;
         bool touchFlatformUpLeft, touchFlatformUpRight, touchFlatformAbove;
+        int timeDownMinute = 1;
+        int timeDownSecond = 60;
         #endregion
         public void VirussGo()
         {
@@ -287,6 +289,38 @@ namespace UEH_EVENT.GUI.Mario
         private void pictureBox4_Click(object sender, EventArgs e)
         {
 
+        }
+        private void SecondDown(int second)
+        {
+            second -= 1;
+        }
+        private void tmrLock_Tick(object sender, EventArgs e)
+        {
+            if (timeDownMinute >= 0)
+            {
+                if (timeDownSecond > 0)
+                {
+                    timeDownSecond -= 1;
+                }
+            }
+            if (timeDownSecond == 0 && timeDownMinute > 0)
+            {
+                timeDownMinute -= 1;
+                timeDownSecond = 59;
+            }
+            if (timeDownSecond == 0 && timeDownMinute == 0)
+            {
+                picGameOver.Visible = true;
+                tmrLock.Stop();
+            }
+            if (timeDownSecond < 10)
+            {
+                lblLock.Text = "0" + timeDownMinute.ToString() + " : " + "0" + timeDownSecond.ToString();
+            }
+            else
+            {
+                lblLock.Text = "0" + timeDownMinute.ToString() + " : " + timeDownSecond.ToString();
+            }
         }
     }
 }

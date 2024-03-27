@@ -79,7 +79,8 @@
             picFire = new PictureBox();
             tmGameLoad = new System.Windows.Forms.Timer(components);
             picGameOver = new PictureBox();
-            timer1 = new System.Windows.Forms.Timer(components);
+            tmrLock = new System.Windows.Forms.Timer(components);
+            lblLock = new Label();
             ((System.ComponentModel.ISupportInitialize)picPlayer).BeginInit();
             ((System.ComponentModel.ISupportInitialize)picTime).BeginInit();
             ((System.ComponentModel.ISupportInitialize)picHeart1).BeginInit();
@@ -151,7 +152,7 @@
             picTime.Image = Properties.Resources.LockPlayGame;
             picTime.Location = new Point(3, 1);
             picTime.Name = "picTime";
-            picTime.Size = new Size(150, 59);
+            picTime.Size = new Size(192, 59);
             picTime.SizeMode = PictureBoxSizeMode.StretchImage;
             picTime.TabIndex = 1;
             picTime.TabStop = false;
@@ -161,7 +162,7 @@
             picHeart1.BackColor = Color.Transparent;
             picHeart1.BackgroundImageLayout = ImageLayout.Stretch;
             picHeart1.Image = Properties.Resources.HeartPlayGame;
-            picHeart1.Location = new Point(159, 1);
+            picHeart1.Location = new Point(222, 37);
             picHeart1.Name = "picHeart1";
             picHeart1.Size = new Size(36, 30);
             picHeart1.SizeMode = PictureBoxSizeMode.StretchImage;
@@ -797,6 +798,22 @@
             picGameOver.TabStop = false;
             picGameOver.Visible = false;
             // 
+            // tmrLock
+            // 
+            tmrLock.Enabled = true;
+            tmrLock.Interval = 1000;
+            tmrLock.Tick += tmrLock_Tick;
+            // 
+            // lblLock
+            // 
+            lblLock.BackColor = Color.Transparent;
+            lblLock.Font = new Font("Showcard Gothic", 9F, FontStyle.Regular, GraphicsUnit.Point);
+            lblLock.Location = new Point(54, 9);
+            lblLock.Name = "lblLock";
+            lblLock.Size = new Size(90, 30);
+            lblLock.TabIndex = 19;
+            lblLock.TextAlign = ContentAlignment.MiddleCenter;
+            // 
             // frmPlayMario
             // 
             AutoScaleDimensions = new SizeF(10F, 25F);
@@ -804,6 +821,7 @@
             BackgroundImage = Properties.Resources.ForestBackground;
             BackgroundImageLayout = ImageLayout.Stretch;
             ClientSize = new Size(956, 568);
+            Controls.Add(lblLock);
             Controls.Add(picGameOver);
             Controls.Add(picFlatform1);
             Controls.Add(pictureBox4);
@@ -965,6 +983,7 @@
         private PictureBox picFire;
         private System.Windows.Forms.Timer tmGameLoad;
         private PictureBox picGameOver;
-        private System.Windows.Forms.Timer timer1;
+        private System.Windows.Forms.Timer tmrLock;
+        private Label lblLock;
     }
 }
