@@ -15,6 +15,10 @@
     {
         return Database.Query<T>(new Filterer(propName, value, Filterer.FilterType.Equal))!.Count;
     }
+    public static int CountFilterContainsString(string className, string propName, string value)
+    {
+        return Search.SearchString(className, propName, value, false)!.Count;
+    }
     public static int CountFilterInt<T>(string propName, char filter, int threshold) where T : class
     {
         Dictionary<char, Func<Filterer>> filterCases = new()

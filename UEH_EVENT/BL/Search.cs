@@ -1,4 +1,5 @@
 ﻿using System.Collections;
+using System.Reflection;
 
 class Search
 {
@@ -12,6 +13,47 @@ class Search
         Type[] paramTypes = { typeof(Filterer), typeof(bool), typeof(bool) };
         object[] parameters = { new Filterer(propName, keyword, Filterer.FilterType.Equal), false, false };
         return SearchUtil.StaticCallGenericVarType(nameof(Database), className, nameof(Database.Query), paramTypes, parameters);
+    }
+    public static ArrayList? SearchString(string className, string propName, string keyword, bool exactSearch)
+    {
+        ArrayList results = new();
+        if (exactSearch)
+        {
+            dynamic? matches = SearchString(className, propName, keyword);
+            if (matches != null)
+            {
+                foreach (var match in matches)
+                {
+                    results.Add(match);
+                }
+                return results;
+            }
+            else
+            {
+                return null;
+            }
+        }
+        else
+        {
+            dynamic? allRecords = QueryAll(className);
+            PropertyInfo prop = SearchUtil.GetPropertiesFromClass(className)[propName];
+            if (allRecords != null)
+            {
+                foreach (var record in allRecords)
+                {
+                    string strValue = prop.GetValue(record);
+                    if (strValue.ToLower().Contains(keyword.ToLower()))
+                    {
+                        results.Add(record);
+                    }
+                }
+                return results;
+            }
+            else
+            {
+                return null;
+            }
+        }
     }
     public static object? SearchInt(string className, string propName, char filterStr, int threshold)
     {
