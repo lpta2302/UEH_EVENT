@@ -28,86 +28,19 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(formSight));
-            btnHomee = new Button();
-            pictureBoxLogo = new PictureBox();
-            Navbar = new Panel();
-            panelTitle = new Panel();
-            Home = new Panel();
-            panel1 = new Panel();
             label1 = new Label();
             btnAdd = new Button();
-            ((System.ComponentModel.ISupportInitialize)pictureBoxLogo).BeginInit();
+            Navbar = new Panel();
+            pictureBoxLogo = new PictureBox();
+            panelTitle = new Panel();
+            panel1 = new Panel();
+            panelStart = new Panel();
+            btnPlay = new Button();
             Navbar.SuspendLayout();
-            Home.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)pictureBoxLogo).BeginInit();
             panel1.SuspendLayout();
+            panelStart.SuspendLayout();
             SuspendLayout();
-            // 
-            // btnHomee
-            // 
-            btnHomee.BackColor = Color.FromArgb(34, 34, 34);
-            btnHomee.BackgroundImageLayout = ImageLayout.None;
-            btnHomee.FlatStyle = FlatStyle.Flat;
-            btnHomee.Font = new Font("Helvetica", 9F, FontStyle.Bold, GraphicsUnit.Point);
-            btnHomee.ForeColor = Color.White;
-            btnHomee.Image = (Image)resources.GetObject("btnHomee.Image");
-            btnHomee.ImageAlign = ContentAlignment.MiddleLeft;
-            btnHomee.Location = new Point(0, -9);
-            btnHomee.Name = "btnHomee";
-            btnHomee.Padding = new Padding(20, 0, 0, 0);
-            btnHomee.Size = new Size(419, 92);
-            btnHomee.TabIndex = 10;
-            btnHomee.Text = "  HOME";
-            btnHomee.TextAlign = ContentAlignment.MiddleLeft;
-            btnHomee.TextImageRelation = TextImageRelation.ImageBeforeText;
-            btnHomee.UseVisualStyleBackColor = false;
-            // 
-            // pictureBoxLogo
-            // 
-            pictureBoxLogo.BackgroundImage = Properties.Resources.Logo_396x163;
-            pictureBoxLogo.Location = new Point(0, 0);
-            pictureBoxLogo.Name = "pictureBoxLogo";
-            pictureBoxLogo.Size = new Size(400, 159);
-            pictureBoxLogo.SizeMode = PictureBoxSizeMode.StretchImage;
-            pictureBoxLogo.TabIndex = 4;
-            pictureBoxLogo.TabStop = false;
-            // 
-            // Navbar
-            // 
-            Navbar.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left;
-            Navbar.BackColor = Color.FromArgb(34, 34, 34);
-            Navbar.Controls.Add(panelTitle);
-            Navbar.Controls.Add(Home);
-            Navbar.Controls.Add(panel1);
-            Navbar.Location = new Point(1, 0);
-            Navbar.Name = "Navbar";
-            Navbar.Size = new Size(400, 980);
-            Navbar.TabIndex = 2;
-            // 
-            // panelTitle
-            // 
-            panelTitle.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Right;
-            panelTitle.CausesValidation = false;
-            panelTitle.Location = new Point(602, 3);
-            panelTitle.Name = "panelTitle";
-            panelTitle.Size = new Size(1314, 1043);
-            panelTitle.TabIndex = 3;
-            // 
-            // Home
-            // 
-            Home.Controls.Add(btnHomee);
-            Home.Location = new Point(0, 168);
-            Home.Name = "Home";
-            Home.Size = new Size(400, 75);
-            Home.TabIndex = 7;
-            // 
-            // panel1
-            // 
-            panel1.Controls.Add(pictureBoxLogo);
-            panel1.Location = new Point(0, 0);
-            panel1.Name = "panel1";
-            panel1.Size = new Size(396, 162);
-            panel1.TabIndex = 13;
             // 
             // label1
             // 
@@ -132,35 +65,96 @@
             btnAdd.TabIndex = 4;
             btnAdd.UseVisualStyleBackColor = true;
             // 
+            // Navbar
+            // 
+            Navbar.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left;
+            Navbar.BackColor = Color.FromArgb(34, 34, 34);
+            Navbar.Controls.Add(pictureBoxLogo);
+            Navbar.Controls.Add(panelTitle);
+            Navbar.Location = new Point(2, 0);
+            Navbar.Name = "Navbar";
+            Navbar.Size = new Size(407, 979);
+            Navbar.TabIndex = 46;
+            // 
+            // pictureBoxLogo
+            // 
+            pictureBoxLogo.Image = Properties.Resources.Logo_Update_27_3;
+            pictureBoxLogo.Location = new Point(0, 4);
+            pictureBoxLogo.Name = "pictureBoxLogo";
+            pictureBoxLogo.Size = new Size(404, 158);
+            pictureBoxLogo.SizeMode = PictureBoxSizeMode.Zoom;
+            pictureBoxLogo.TabIndex = 4;
+            pictureBoxLogo.TabStop = false;
+            // 
+            // panelTitle
+            // 
+            panelTitle.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Right;
+            panelTitle.CausesValidation = false;
+            panelTitle.Location = new Point(1216, 3);
+            panelTitle.Name = "panelTitle";
+            panelTitle.Size = new Size(1314, 3679);
+            panelTitle.TabIndex = 3;
+            // 
+            // panel1
+            // 
+            panel1.BackgroundImage = Properties.Resources.Background_Guiz3;
+            panel1.Controls.Add(panelStart);
+            panel1.Location = new Point(412, 161);
+            panel1.Name = "panel1";
+            panel1.Size = new Size(1314, 818);
+            panel1.TabIndex = 47;
+            panel1.Paint += panel1_Paint;
+            // 
+            // panelStart
+            // 
+            panelStart.Anchor = AnchorStyles.Left;
+            panelStart.Controls.Add(btnPlay);
+            panelStart.Location = new Point(628, 648);
+            panelStart.Name = "panelStart";
+            panelStart.Size = new Size(237, 80);
+            panelStart.TabIndex = 2;
+            // 
+            // btnPlay
+            // 
+            btnPlay.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
+            btnPlay.FlatStyle = FlatStyle.Flat;
+            btnPlay.Font = new Font("Helvetica", 9.857143F, FontStyle.Bold, GraphicsUnit.Point);
+            btnPlay.Location = new Point(-58, -11);
+            btnPlay.Name = "btnPlay";
+            btnPlay.Size = new Size(350, 101);
+            btnPlay.TabIndex = 0;
+            btnPlay.Text = "Start";
+            btnPlay.UseVisualStyleBackColor = true;
+            // 
             // formSight
             // 
             AutoScaleDimensions = new SizeF(12F, 30F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.White;
             ClientSize = new Size(1718, 979);
+            Controls.Add(panel1);
+            Controls.Add(Navbar);
             Controls.Add(btnAdd);
             Controls.Add(label1);
-            Controls.Add(Navbar);
             Name = "formSight";
             Text = " ";
             WindowState = FormWindowState.Maximized;
-            ((System.ComponentModel.ISupportInitialize)pictureBoxLogo).EndInit();
             Navbar.ResumeLayout(false);
-            Home.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)pictureBoxLogo).EndInit();
             panel1.ResumeLayout(false);
+            panelStart.ResumeLayout(false);
             ResumeLayout(false);
             PerformLayout();
         }
 
         #endregion
-
-        private Button btnHomee;
-        private PictureBox pictureBoxLogo;
-        private Panel Navbar;
-        private Panel panelTitle;
-        private Panel Home;
-        private Panel panel1;
         private Label label1;
         private Button btnAdd;
+        private Panel Navbar;
+        private PictureBox pictureBoxLogo;
+        private Panel panelTitle;
+        private Panel panel1;
+        private Panel panelStart;
+        private Button btnPlay;
     }
 }

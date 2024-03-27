@@ -15,9 +15,15 @@ namespace UEH_EVENT.GUI
         public formStatistic()
         {
             InitializeComponent();
+            Constants.INavbar.CreateNavbar(this, Navbar);
         }
 
         private void Navbar_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void lblTo_Click(object sender, EventArgs e)
         {
 
         }

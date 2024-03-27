@@ -40,7 +40,7 @@ namespace UEH_EVENT.GUI
             GlobalData.InitNavbar();
 
             Hide();
-            new formHomepage().ShowDialog();
+            new formGame().ShowDialog();
             Close();
         }
     }
