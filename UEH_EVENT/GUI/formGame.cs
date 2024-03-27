@@ -17,6 +17,7 @@ namespace UEH_EVENT.GUI
         public formGame()
         {
             InitializeComponent();
+            Constants.INavbar.CreateNavbar(this, Navbar);
         }
 
         private void btnTrainingpoint_Click(object sender, EventArgs e)

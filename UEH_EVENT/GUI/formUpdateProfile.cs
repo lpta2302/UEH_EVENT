@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using UEH_EVENT.Utils;
+using static Constants;
 
 namespace UEH_EVENT.GUI
 {

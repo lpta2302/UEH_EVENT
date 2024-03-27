@@ -23,4 +23,8 @@ public class TPointHis
         Content = content;
         CreatedAt = DateTime.Now;
     }
+    public TPointHis()
+    {
+        CreatedAt = DateTime.Now;
+    }
 }

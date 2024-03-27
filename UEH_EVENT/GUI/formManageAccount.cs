@@ -32,6 +32,7 @@ namespace UEH_EVENT.GUI
         public formManageAccount()
         {
             InitializeComponent();
+            Constants.INavbar.CreateNavbar(this, Navbar);
         }
 
         private void formManagement_Load(object sender, EventArgs e)

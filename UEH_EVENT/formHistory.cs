@@ -8,19 +8,13 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace UEH_EVENT.GUI
+namespace UEH_EVENT
 {
-    public partial class formSight : Form
+    public partial class formHistory : Form
     {
-        public formSight()
+        public formHistory()
         {
             InitializeComponent();
-            Constants.INavbar.CreateNavbar(this, Navbar);
-        }
-
-        private void panel1_Paint(object sender, PaintEventArgs e)
-        {
-
         }
     }
 }

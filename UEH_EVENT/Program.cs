@@ -15,7 +15,7 @@ namespace UEH_EVENT
             // see https://aka.ms/applicationconfiguration.
             //ApplicationConfiguration.Initialize();
             Application.Run(new LoginForm());
-           // Application.Run(new formSight());
+           //Application.Run(new formManageAccount());
         }
     }
 }
