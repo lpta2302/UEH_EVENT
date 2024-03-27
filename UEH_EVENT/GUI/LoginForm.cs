@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Newtonsoft.Json;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -16,6 +17,7 @@ namespace UEH_EVENT.GUI
         public LoginForm()
         {
             InitializeComponent();
+            GlobalData.reset();
         }
 
         private void Form1_Load(object sender, EventArgs e)
@@ -38,6 +40,10 @@ namespace UEH_EVENT.GUI
 
             GlobalData.CurrentAccount = currentAccount;
             GlobalData.InitNavbar();
+            if (GlobalData.CurrentAccount?.SightSession != null)
+            {
+                GlobalData.CurrentSight = JsonConvert.DeserializeObject<Sight>(GlobalData.CurrentAccount?.SightSession);
+            }
 
             Hide();
             new formGame().ShowDialog();

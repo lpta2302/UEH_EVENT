@@ -19,6 +19,7 @@ namespace UEH_EVENT.GUI
         {
             InitializeComponent();
             currentAccount = GlobalData.CurrentAccount;
+            Constants.INavbar.CreateNavbar(this, Navbar);
         }
         public formUpdateProfile(Account account)
         {

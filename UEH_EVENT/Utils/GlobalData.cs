@@ -10,6 +10,7 @@ namespace UEH_EVENT.Utils
 {
     internal class GlobalData
     {
+      
         public static Sight CurrentSight { get; set; }
         public static Account CurrentAccount {  get; set; }
 
@@ -23,6 +24,11 @@ namespace UEH_EVENT.Utils
             if (type.Equals(STUDENT_ACC)) Navbar = new StudentNavbar();
             if (type.Equals(ADMIN_ACC)) Navbar = new AdminNavbar();
             if (type.Equals(CLB_ACC)) Navbar = new ClbNavbar();
+        }
+        public static void reset()
+        {
+            CurrentAccount = null;
+            CurrentSight = null;
         }
     }
 }

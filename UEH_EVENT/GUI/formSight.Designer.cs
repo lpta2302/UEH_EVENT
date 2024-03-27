@@ -33,20 +33,16 @@
             Navbar = new Panel();
             pictureBoxLogo = new PictureBox();
             panelTitle = new Panel();
-            panel1 = new Panel();
-            panelStart = new Panel();
-            btnPlay = new Button();
+            flowLayoutPanel1 = new FlowLayoutPanel();
             Navbar.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBoxLogo).BeginInit();
-            panel1.SuspendLayout();
-            panelStart.SuspendLayout();
             SuspendLayout();
             // 
             // label1
             // 
             label1.AutoSize = true;
             label1.Font = new Font("Helvetica", 15.8571434F, FontStyle.Bold, GraphicsUnit.Point);
-            label1.Location = new Point(445, 75);
+            label1.Location = new Point(445, 67);
             label1.Name = "label1";
             label1.Size = new Size(527, 45);
             label1.TabIndex = 3;
@@ -59,7 +55,7 @@
             btnAdd.FlatStyle = FlatStyle.Flat;
             btnAdd.ForeColor = Color.White;
             btnAdd.Image = Properties.Resources.iconAdd;
-            btnAdd.Location = new Point(1575, 67);
+            btnAdd.Location = new Point(1604, 59);
             btnAdd.Name = "btnAdd";
             btnAdd.Size = new Size(70, 70);
             btnAdd.TabIndex = 4;
@@ -95,36 +91,13 @@
             panelTitle.Size = new Size(1314, 3679);
             panelTitle.TabIndex = 3;
             // 
-            // panel1
+            // flowLayoutPanel1
             // 
-            panel1.BackgroundImage = Properties.Resources.Background_Guiz3;
-            panel1.Controls.Add(panelStart);
-            panel1.Location = new Point(412, 161);
-            panel1.Name = "panel1";
-            panel1.Size = new Size(1314, 818);
-            panel1.TabIndex = 47;
-            panel1.Paint += panel1_Paint;
-            // 
-            // panelStart
-            // 
-            panelStart.Anchor = AnchorStyles.Left;
-            panelStart.Controls.Add(btnPlay);
-            panelStart.Location = new Point(628, 648);
-            panelStart.Name = "panelStart";
-            panelStart.Size = new Size(237, 80);
-            panelStart.TabIndex = 2;
-            // 
-            // btnPlay
-            // 
-            btnPlay.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
-            btnPlay.FlatStyle = FlatStyle.Flat;
-            btnPlay.Font = new Font("Helvetica", 9.857143F, FontStyle.Bold, GraphicsUnit.Point);
-            btnPlay.Location = new Point(-58, -11);
-            btnPlay.Name = "btnPlay";
-            btnPlay.Size = new Size(350, 101);
-            btnPlay.TabIndex = 0;
-            btnPlay.Text = "Start";
-            btnPlay.UseVisualStyleBackColor = true;
+            flowLayoutPanel1.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
+            flowLayoutPanel1.Location = new Point(445, 159);
+            flowLayoutPanel1.Name = "flowLayoutPanel1";
+            flowLayoutPanel1.Size = new Size(2800, 463);
+            flowLayoutPanel1.TabIndex = 101;
             // 
             // formSight
             // 
@@ -132,7 +105,7 @@
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.White;
             ClientSize = new Size(1718, 979);
-            Controls.Add(panel1);
+            Controls.Add(flowLayoutPanel1);
             Controls.Add(Navbar);
             Controls.Add(btnAdd);
             Controls.Add(label1);
@@ -141,8 +114,6 @@
             WindowState = FormWindowState.Maximized;
             Navbar.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)pictureBoxLogo).EndInit();
-            panel1.ResumeLayout(false);
-            panelStart.ResumeLayout(false);
             ResumeLayout(false);
             PerformLayout();
         }
@@ -153,8 +124,6 @@
         private Panel Navbar;
         private PictureBox pictureBoxLogo;
         private Panel panelTitle;
-        private Panel panel1;
-        private Panel panelStart;
-        private Button btnPlay;
+        private FlowLayoutPanel flowLayoutPanel1;
     }
 }

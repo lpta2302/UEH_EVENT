@@ -89,18 +89,21 @@ public class Constants
         {
             "Sight",
             "Game",
-            "History"
+            "History",
+            "Log Out"
         };
         public Type[] Forms { get; } = new Type[] {
             typeof(formSight),
             typeof(formGame),
             typeof(formHistory),
+            typeof(LoginForm),  
         };
         public Image[] Icons { get; } = new Image[]
         {
             UEH_EVENT.Properties.Resources.iconSight,
             UEH_EVENT.Properties.Resources.iconGame,
-            UEH_EVENT.Properties.Resources.iconHistory
+            UEH_EVENT.Properties.Resources.iconHistory,
+            UEH_EVENT.Properties.Resources.iconLogOut
         };
     }
     public class AdminNavbar : INavbar
@@ -109,18 +112,21 @@ public class Constants
         {
             "Manage Account",
             "Manage Sight",
-            "Statistic"
+            "Statistic",
+            "Log Out"
         };
         public Type[] Forms { get; } = new Type[] {
             typeof(formManageAccount),
             typeof(formManageSight),
             typeof(formStatistic),
+            typeof(LoginForm)
         };
         public Image[] Icons { get; } = new Image[]
         {
             UEH_EVENT.Properties.Resources.iconManage,
             UEH_EVENT.Properties.Resources.iconUpdate,
-            UEH_EVENT.Properties.Resources.iconPoint
+            UEH_EVENT.Properties.Resources.iconPoint,
+            UEH_EVENT.Properties.Resources.iconLogOut
         };
     }
     public class ClbNavbar : INavbar
@@ -129,18 +135,21 @@ public class Constants
         {
             "Update points",
             "Create Sight",
-            "Statistic"
+            "Statistic",
+            "Log Out"
         };
         public Type[] Forms { get; } = new Type[] {
             typeof(formUpdateTPoint),
-            typeof(formSight),
+            typeof(formLobbySight),
             typeof(formStatistic),
+            typeof(LoginForm)
         };
         public Image[] Icons { get; } = new Image[]
         {
             UEH_EVENT.Properties.Resources.iconUpdate,
             UEH_EVENT.Properties.Resources.iconUpdateSight,
-            UEH_EVENT.Properties.Resources.iconPoint
+            UEH_EVENT.Properties.Resources.iconPoint,
+            UEH_EVENT.Properties.Resources.iconLogOut
         };
     }
 

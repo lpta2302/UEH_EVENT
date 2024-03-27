@@ -173,6 +173,16 @@ namespace UEH_EVENT.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap iconLogOut {
+            get {
+                object obj = ResourceManager.GetObject("iconLogOut", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap iconManage {
             get {
                 object obj = ResourceManager.GetObject("iconManage", resourceCulture);

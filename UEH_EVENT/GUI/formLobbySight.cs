@@ -19,6 +19,7 @@ namespace UEH_EVENT.GUI
             InitializeComponent();
             list = Query.GetAllSight();
             HienThiSight();
+            Constants.INavbar.CreateNavbar(this, Navbar);
         }
 
         private void formSight_Load(object sender, EventArgs e)
@@ -94,7 +95,7 @@ namespace UEH_EVENT.GUI
         {
             int index = (int)((Button)sender).Tag;
             flowLayoutPanel1.Controls.RemoveAt(index);
-            Database.Delete<Sight>(list[index].Id);                         
+            Database.Delete<Sight>(list[index].Id);
         }
         private void btnUpdate_Click(object sender, EventArgs e)
         {
@@ -102,10 +103,15 @@ namespace UEH_EVENT.GUI
             new formCreateSight(list[(int)((Button)sender).Tag]).ShowDialog();
             Close();
         }
-        private void btnAdd_Click(object sender, EventArgs e)
+
+        private void flowLayoutPanel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+        private void btnCreate_Click(object sender, EventArgs e)
         {
             this.Hide();
-            Form form=new formCreateSight();
+            Form form = new formCreateSight();
             form.ShowDialog();
             Close();
         }

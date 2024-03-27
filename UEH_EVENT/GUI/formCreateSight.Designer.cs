@@ -46,117 +46,135 @@
             // 
             // btnThem
             // 
-            btnThem.BackColor = Color.Black;
-            btnThem.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
-            btnThem.ForeColor = Color.White;
-            btnThem.Location = new Point(1640, 355);
+            btnThem.Anchor = AnchorStyles.Top | AnchorStyles.Right;
+            btnThem.BackColor = Color.Gainsboro;
+            btnThem.Font = new Font("Helvetica", 9.857143F, FontStyle.Bold, GraphicsUnit.Point);
+            btnThem.ForeColor = Color.Black;
+            btnThem.Location = new Point(1443, 237);
+            btnThem.Margin = new Padding(4);
             btnThem.Name = "btnThem";
-            btnThem.Size = new Size(161, 53);
+            btnThem.Size = new Size(217, 71);
             btnThem.TabIndex = 12;
-            btnThem.Text = "Thêm";
+            btnThem.Text = "THÊM";
             btnThem.UseVisualStyleBackColor = false;
             btnThem.Click += btnThem_Click;
             // 
             // btnSua
             // 
-            btnSua.BackColor = Color.Black;
-            btnSua.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
-            btnSua.ForeColor = Color.White;
-            btnSua.Location = new Point(1640, 436);
+            btnSua.Anchor = AnchorStyles.Top | AnchorStyles.Right;
+            btnSua.BackColor = Color.Gainsboro;
+            btnSua.Font = new Font("Helvetica", 9.857143F, FontStyle.Bold, GraphicsUnit.Point);
+            btnSua.ForeColor = Color.Black;
+            btnSua.Location = new Point(1212, 237);
+            btnSua.Margin = new Padding(4);
             btnSua.Name = "btnSua";
-            btnSua.Size = new Size(161, 53);
+            btnSua.Size = new Size(202, 71);
             btnSua.TabIndex = 15;
-            btnSua.Text = "Sửa";
+            btnSua.Text = "SỬA";
             btnSua.UseVisualStyleBackColor = false;
             btnSua.Click += btnSua_Click;
             // 
             // btnXoa
             // 
-            btnXoa.BackColor = Color.Black;
-            btnXoa.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
-            btnXoa.ForeColor = Color.White;
-            btnXoa.Location = new Point(1640, 512);
+            btnXoa.Anchor = AnchorStyles.Top | AnchorStyles.Right;
+            btnXoa.BackColor = Color.Gainsboro;
+            btnXoa.Font = new Font("Helvetica", 9.857143F, FontStyle.Bold, GraphicsUnit.Point);
+            btnXoa.ForeColor = Color.Black;
+            btnXoa.Location = new Point(966, 237);
+            btnXoa.Margin = new Padding(4);
             btnXoa.Name = "btnXoa";
-            btnXoa.Size = new Size(161, 53);
+            btnXoa.Size = new Size(225, 71);
             btnXoa.TabIndex = 16;
-            btnXoa.Text = "Xoá";
+            btnXoa.Text = "XÓA";
             btnXoa.UseVisualStyleBackColor = false;
             btnXoa.Click += btnXoa_Click;
             // 
             // btnTao
             // 
+            btnTao.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             btnTao.BackColor = Color.Black;
-            btnTao.Font = new Font("Segoe UI", 18F, FontStyle.Bold, GraphicsUnit.Point);
+            btnTao.FlatStyle = FlatStyle.Flat;
+            btnTao.Font = new Font("Helvetica", 9.857143F, FontStyle.Bold, GraphicsUnit.Point);
             btnTao.ForeColor = Color.White;
-            btnTao.Location = new Point(1397, 26);
+            btnTao.Location = new Point(1443, 56);
+            btnTao.Margin = new Padding(4);
             btnTao.Name = "btnTao";
-            btnTao.Size = new Size(245, 77);
+            btnTao.Size = new Size(217, 71);
             btnTao.TabIndex = 17;
-            btnTao.Text = "Tạo";
+            btnTao.Text = "TẠO";
             btnTao.UseVisualStyleBackColor = false;
             btnTao.Click += btnTao_Click;
             // 
             // btnThoat
             // 
-            btnThoat.BackColor = Color.Black;
+            btnThoat.Anchor = AnchorStyles.Top | AnchorStyles.Right;
+            btnThoat.BackColor = Color.White;
+            btnThoat.FlatStyle = FlatStyle.Flat;
             btnThoat.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
-            btnThoat.ForeColor = Color.White;
-            btnThoat.Location = new Point(57, 26);
+            btnThoat.ForeColor = Color.FromArgb(192, 0, 0);
+            btnThoat.Location = new Point(1239, 56);
+            btnThoat.Margin = new Padding(4);
             btnThoat.Name = "btnThoat";
-            btnThoat.Size = new Size(157, 57);
+            btnThoat.Size = new Size(191, 71);
             btnThoat.TabIndex = 18;
-            btnThoat.Text = "Thoát";
+            btnThoat.Text = "THOÁT";
             btnThoat.UseVisualStyleBackColor = false;
             btnThoat.Click += btnThoat_Click;
             // 
             // txtMoTa
             // 
             txtMoTa.Font = new Font("Segoe UI", 10.8F, FontStyle.Regular, GraphicsUnit.Point);
-            txtMoTa.Location = new Point(433, 125);
+            txtMoTa.Location = new Point(272, 117);
+            txtMoTa.Margin = new Padding(4);
             txtMoTa.Multiline = true;
             txtMoTa.Name = "txtMoTa";
-            txtMoTa.Size = new Size(763, 163);
+            txtMoTa.Size = new Size(824, 55);
             txtMoTa.TabIndex = 23;
             txtMoTa.TextChanged += txtMoTa_TextChanged;
             // 
             // txtTenTN
             // 
             txtTenTN.Font = new Font("Segoe UI", 10.8F, FontStyle.Regular, GraphicsUnit.Point);
-            txtTenTN.Location = new Point(433, 78);
+            txtTenTN.Location = new Point(272, 45);
+            txtTenTN.Margin = new Padding(4);
             txtTenTN.Multiline = true;
             txtTenTN.Name = "txtTenTN";
-            txtTenTN.Size = new Size(356, 41);
+            txtTenTN.Size = new Size(824, 60);
             txtTenTN.TabIndex = 22;
             txtTenTN.TextChanged += txtTenTN_TextChanged;
             // 
             // label7
             // 
             label7.AutoSize = true;
-            label7.Font = new Font("Segoe UI", 13.8F, FontStyle.Regular, GraphicsUnit.Point);
-            label7.Location = new Point(258, 122);
+            label7.Font = new Font("Helvetica", 14.1428576F, FontStyle.Regular, GraphicsUnit.Point);
+            label7.Location = new Point(51, 134);
+            label7.Margin = new Padding(4, 0, 4, 0);
             label7.Name = "label7";
-            label7.Size = new Size(74, 31);
+            label7.Size = new Size(120, 38);
             label7.TabIndex = 21;
-            label7.Text = "Mô tả";
+            label7.Text = "MÔ TẢ";
             // 
             // label8
             // 
             label8.AutoSize = true;
-            label8.Font = new Font("Segoe UI", 13.8F, FontStyle.Regular, GraphicsUnit.Point);
-            label8.Location = new Point(258, 76);
+            label8.Font = new Font("Helvetica", 14.1428576F, FontStyle.Regular, GraphicsUnit.Point);
+            label8.Location = new Point(51, 56);
+            label8.Margin = new Padding(4, 0, 4, 0);
             label8.Name = "label8";
-            label8.Size = new Size(121, 31);
+            label8.Size = new Size(197, 38);
             label8.TabIndex = 20;
-            label8.Text = "Tên Bài TN";
+            label8.Text = "TÊN BÀI TN";
             // 
             // listView1
             // 
+            listView1.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             listView1.Columns.AddRange(new ColumnHeader[] { clnSTT, clnQuestion });
             listView1.Font = new Font("Segoe UI", 10.2F, FontStyle.Bold, GraphicsUnit.Point);
             listView1.FullRowSelect = true;
-            listView1.Location = new Point(23, 30);
+            listView1.Location = new Point(34, 45);
+            listView1.Margin = new Padding(4);
             listView1.Name = "listView1";
-            listView1.Size = new Size(1526, 424);
+            listView1.Size = new Size(1529, 541);
             listView1.TabIndex = 24;
             listView1.UseCompatibleStateImageBehavior = false;
             listView1.View = View.Details;
@@ -173,23 +191,26 @@
             // 
             // groupBox1
             // 
+            groupBox1.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             groupBox1.BackColor = Color.Transparent;
             groupBox1.Controls.Add(listView1);
-            groupBox1.Font = new Font("Segoe UI", 10.8F, FontStyle.Bold, GraphicsUnit.Point);
-            groupBox1.Location = new Point(12, 325);
+            groupBox1.Font = new Font("Helvetica", 11.1428576F, FontStyle.Bold, GraphicsUnit.Point);
+            groupBox1.Location = new Point(64, 341);
+            groupBox1.Margin = new Padding(4);
             groupBox1.Name = "groupBox1";
-            groupBox1.Size = new Size(1569, 460);
+            groupBox1.Padding = new Padding(4);
+            groupBox1.Size = new Size(1596, 614);
             groupBox1.TabIndex = 25;
             groupBox1.TabStop = false;
             groupBox1.Text = "Thông tin chi tiết";
             // 
             // formCreateSight
             // 
-            AutoScaleDimensions = new SizeF(8F, 20F);
+            AutoScaleDimensions = new SizeF(12F, 30F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.White;
             BackgroundImageLayout = ImageLayout.Stretch;
-            ClientSize = new Size(1871, 797);
+            ClientSize = new Size(1718, 983);
             Controls.Add(groupBox1);
             Controls.Add(txtMoTa);
             Controls.Add(txtTenTN);
@@ -200,6 +221,7 @@
             Controls.Add(btnXoa);
             Controls.Add(btnSua);
             Controls.Add(btnThem);
+            Margin = new Padding(4);
             Name = "formCreateSight";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Form2";
