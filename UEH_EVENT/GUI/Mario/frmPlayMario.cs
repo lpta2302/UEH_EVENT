@@ -91,7 +91,7 @@ namespace UEH_EVENT.GUI.Mario
                     PictureBox temp1 = new PictureBox();    //Creates a single pixel above the target picturebox, asks if anything is colliding with it
                     temp1.Bounds = ob.Bounds;
                     //PaintBox(temp1.Location.X, temp1.Location.Y - 1, temp1.Width, 1, Color.Blue); //Super laggy doing this, troubleshooting only
-                    temp1.SetBounds(temp1.Location.X, temp1.Location.Y - 1, temp1.Width, 1);
+                    temp1.SetBounds(temp1.Location.X, temp1.Location.Y-2, temp1.Width, 1);
                     if (tar.Bounds.IntersectsWith(temp1.Bounds))
                         return true;
                 }
@@ -204,11 +204,22 @@ namespace UEH_EVENT.GUI.Mario
         }
         private void frmPlayMario_Load(object sender, EventArgs e)
         {
-            foreach (var control in this.Controls)
+            foreach (var control in this.WorldFrame.Controls)
             {
                 if (control is PictureBox)
                 {
                     PictureBox pictureBox = (PictureBox)control;
+                    if (pictureBox.Tag != null && ((string)pictureBox.Tag).StartsWith("flatform"))
+                    {
+                        WorldObjects.Add(pictureBox);
+                    }
+                }
+            }
+            foreach (var item in this.Controls)
+            {
+                if (item is PictureBox)
+                {
+                    PictureBox pictureBox = (PictureBox)item;
                     if (pictureBox.Tag != null && ((string)pictureBox.Tag).StartsWith("flatform"))
                     {
                         WorldObjects.Add(pictureBox);

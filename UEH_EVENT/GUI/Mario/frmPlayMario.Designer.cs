@@ -181,8 +181,8 @@
             picPlayer.BackColor = Color.Transparent;
             picPlayer.BackgroundImageLayout = ImageLayout.Stretch;
             picPlayer.Image = Properties.Resources.MarioPlay;
-            picPlayer.Location = new Point(436, 8);
-            picPlayer.Margin = new Padding(2);
+            picPlayer.Location = new Point(12, 632);
+            picPlayer.Margin = new Padding(0);
             picPlayer.Name = "picPlayer";
             picPlayer.Size = new Size(26, 50);
             picPlayer.SizeMode = PictureBoxSizeMode.StretchImage;
@@ -628,9 +628,11 @@
             // WorldFrame
             // 
             WorldFrame.BackgroundImageLayout = ImageLayout.Stretch;
+            WorldFrame.Controls.Add(picPlayer);
             WorldFrame.Controls.Add(pictureBox21);
             WorldFrame.Controls.Add(pictureBox16);
             WorldFrame.Controls.Add(pictureBox13);
+            WorldFrame.Controls.Add(pictureBox6);
             WorldFrame.Controls.Add(pictureBox12);
             WorldFrame.Controls.Add(pictureBox9);
             WorldFrame.Controls.Add(pictureBox5);
@@ -681,16 +683,15 @@
             WorldFrame.Controls.Add(pictureBox11);
             WorldFrame.Controls.Add(pictureBox7);
             WorldFrame.Controls.Add(pictureBox23);
-            WorldFrame.Controls.Add(picPlayer);
             WorldFrame.Controls.Add(picHole);
             WorldFrame.Controls.Add(picViruss2);
             WorldFrame.Controls.Add(pictureBox20);
             WorldFrame.Controls.Add(pictureBox28);
             WorldFrame.Controls.Add(pictureBox14);
             WorldFrame.Controls.Add(pictureBox26);
-            WorldFrame.Location = new Point(-1, -4);
+            WorldFrame.Location = new Point(-1, -2);
             WorldFrame.Name = "WorldFrame";
-            WorldFrame.Size = new Size(1404, 721);
+            WorldFrame.Size = new Size(1404, 714);
             WorldFrame.TabIndex = 20;
             WorldFrame.Paint += WorldFrame_Paint;
             // 
@@ -1293,7 +1294,6 @@
             Controls.Add(pictureBox17);
             Controls.Add(pictureBox8);
             Controls.Add(pictureBox3);
-            Controls.Add(pictureBox6);
             Controls.Add(pictureBox10);
             Controls.Add(picHeart3);
             Controls.Add(picHeart2);
