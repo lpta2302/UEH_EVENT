@@ -134,7 +134,7 @@ namespace UEH_EVENT.GUI
             txtName.Location = new Point(28, 9);
             txtName.Margin = new Padding(3, 2, 3, 2);
             txtName.Name = "txtName";
-            txtName.Size = new Size(211, 28);
+            txtName.Size = new Size(211, 20);
             txtName.TabIndex = 13;
             txtName.Text = "Tìm kiếm theo tên";
             txtName.GotFocus += gotFocus;
@@ -172,7 +172,7 @@ namespace UEH_EVENT.GUI
             txtUsername.Location = new Point(28, 9);
             txtUsername.Margin = new Padding(3, 2, 3, 2);
             txtUsername.Name = "txtUsername";
-            txtUsername.Size = new Size(211, 28);
+            txtUsername.Size = new Size(211, 20);
             txtUsername.TabIndex = 13;
             txtUsername.Text = "Tìm kiếm theo username";
             txtUsername.GotFocus += gotFocus;
@@ -195,7 +195,7 @@ namespace UEH_EVENT.GUI
             label2.AutoSize = true;
             label2.Location = new Point(943, 389);
             label2.Name = "label2";
-            label2.Size = new Size(0, 30);
+            label2.Size = new Size(0, 20);
             label2.TabIndex = 19;
             // 
             // btnDelete
@@ -211,6 +211,7 @@ namespace UEH_EVENT.GUI
             btnDelete.TabIndex = 15;
             btnDelete.Text = "XÓA";
             btnDelete.UseVisualStyleBackColor = false;
+            btnDelete.Click += btnDelete_Click;
             // 
             // btnUpdate
             // 
@@ -232,7 +233,7 @@ namespace UEH_EVENT.GUI
             cbbAccType.FormattingEnabled = true;
             cbbAccType.Location = new Point(864, 354);
             cbbAccType.Name = "cbbAccType";
-            cbbAccType.Size = new Size(189, 38);
+            cbbAccType.Size = new Size(189, 28);
             cbbAccType.TabIndex = 27;
             cbbAccType.SelectedIndexChanged += cbbAccType_SelectedIndexChanged;
             // 
@@ -256,7 +257,7 @@ namespace UEH_EVENT.GUI
             lblAccountType.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
             lblAccountType.Location = new Point(864, 306);
             lblAccountType.Name = "lblAccountType";
-            lblAccountType.Size = new Size(189, 38);
+            lblAccountType.Size = new Size(134, 28);
             lblAccountType.TabIndex = 29;
             lblAccountType.Text = "Loại tài khoản";
             // 
@@ -266,7 +267,7 @@ namespace UEH_EVENT.GUI
             label1.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
             label1.Location = new Point(450, 177);
             label1.Name = "label1";
-            label1.Size = new Size(142, 38);
+            label1.Size = new Size(99, 28);
             label1.TabIndex = 30;
             label1.Text = "Username";
             // 
@@ -276,7 +277,7 @@ namespace UEH_EVENT.GUI
             label3.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
             label3.Location = new Point(450, 298);
             label3.Name = "label3";
-            label3.Size = new Size(182, 38);
+            label3.Size = new Size(127, 28);
             label3.TabIndex = 31;
             label3.Text = "Tên tài khoản";
             // 
@@ -313,16 +314,16 @@ namespace UEH_EVENT.GUI
             // label4
             // 
             label4.AutoSize = true;
-            label4.Font = new Font("Helvetica", 20.1428585F, FontStyle.Bold, GraphicsUnit.Point);
+            label4.Font = new Font("Arial", 20.1428585F, FontStyle.Bold, GraphicsUnit.Point);
             label4.Location = new Point(450, 52);
             label4.Name = "label4";
-            label4.Size = new Size(481, 57);
+            label4.Size = new Size(344, 40);
             label4.TabIndex = 5;
             label4.Text = "MANAGE ACCOUNT";
             // 
             // formManageAccount
             // 
-            AutoScaleDimensions = new SizeF(168F, 168F);
+            AutoScaleDimensions = new SizeF(120F, 120F);
             AutoScaleMode = AutoScaleMode.Dpi;
             BackColor = Color.White;
             ClientSize = new Size(1718, 983);

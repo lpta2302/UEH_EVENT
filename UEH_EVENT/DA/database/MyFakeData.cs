@@ -26,7 +26,7 @@
     }
     private static void FakeSight()
     {
-<<<<<<< HEAD
+
         Answer a1 = new() { Content = "Đây là đáp án 1(đúng)", IsKeyAnswer = true };
         Answer a2 = new() { Content = "Đây là đáp án 2(sai)" };
         Answer a3 = new() { Content = "Đây là đáp án 3(sai)" };
@@ -79,7 +79,9 @@
     private static void FakeTPointHis()
     {
         TPointHis pointHis = new("31221020027", 2, "test đây là một đoạn test dày vài chục trăm kí tự");
+        TPointHis pointHis1 = new("31221020084", 1, "test đây là một đoạn test dày vài chục trăm kí tự");
         Database.Insert(pointHis);
+        Database.Insert(pointHis1);
     }
     public static void Init()
     {

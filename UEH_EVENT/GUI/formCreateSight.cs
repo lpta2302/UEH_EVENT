@@ -117,7 +117,7 @@ namespace UEH_EVENT.GUI
             if (MessageBox.Show("Bài trắc nghiệm chưa được lưu, bạn có muốn lưu phiên làm việc không?", "Thông báo", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
             {
                 string json = JsonConvert.SerializeObject(CurrentSight, Formatting.Indented);
-                GlobalData.CurrentAccount.SightHis = json;
+                GlobalData.CurrentAccount.SightSession = json;
             }
             else
             {
