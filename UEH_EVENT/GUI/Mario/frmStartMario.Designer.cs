@@ -155,7 +155,6 @@
             Name = "frmStartMario";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "MARIO ";
-            Load += frmStartMario_Load;
             ((System.ComponentModel.ISupportInitialize)picButtonStart).EndInit();
             ((System.ComponentModel.ISupportInitialize)picButtonInstall).EndInit();
             ((System.ComponentModel.ISupportInitialize)picButtonDiscription).EndInit();

@@ -10,7 +10,7 @@ namespace UEH_EVENT.GUI.Mario
 {
     public partial class frmStartMario : Form
     {
-        public SoundPlayer sPlayer = new SoundPlayer(@"D:\Subject\Desktop Application Development\project4\UEH_EVENT\sound\soundTrackStartGame.wav");
+        //public SoundPlayer sPlayer = new SoundPlayer(@"D:\Subject\Desktop Application Development\project4\UEH_EVENT\sound\soundTrackStartGame.wav");
         public frmStartMario()
         {
             InitializeComponent();
@@ -49,10 +49,11 @@ namespace UEH_EVENT.GUI.Mario
             }
             else
             {
-                frmPlayMario frmPlay = new frmPlayMario();
-                frmPlay.Show();
                 this.Hide();
-                sPlayer.Stop();
+                frmPlayMario frmPlay = new frmPlayMario();
+                frmPlay.ShowDialog();
+                Close();
+                //sPlayer.Stop();
             }
         }
 
@@ -74,11 +75,11 @@ namespace UEH_EVENT.GUI.Mario
         {
             this.Close();
         }
-        private void frmStartMario_Load(object sender, EventArgs e)
+        /*private void frmStartMario_Load(object sender, EventArgs e)
         {
 
             sPlayer.Play();
-        }
+        }*/
 
         private void frmStartMario_FormClosing(object sender, FormClosingEventArgs e)
         {

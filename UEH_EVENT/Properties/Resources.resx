@@ -130,8 +130,8 @@
   <data name="installBackground" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\installBackground.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="buttonCancel" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\buttonCancel.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="phone" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\phone.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="heart" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\heart.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -154,8 +154,8 @@
   <data name="supermario" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\supermario.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="buttonTurnoffVolume" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\buttonTurnoffVolume.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="playBackground" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\playBackground.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="VirussplayGame1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\VirussplayGame1.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -174,6 +174,9 @@
   </data>
   <data name="lock2" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\lock2.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="IconWatch" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\IconWatch.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="MarioPlay" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\MarioPlay.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -196,8 +199,8 @@
   <data name="GameOver" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\GameOver.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="playBackground" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\playBackground.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="buttonTurnoffVolume" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\buttonTurnoffVolume.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="HeartPlayGame" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\HeartPlayGame.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -214,8 +217,8 @@
   <data name="blackHole" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\blackHole.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="IconWatch" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\IconWatch.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="buttonCancel" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\buttonCancel.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="congchua" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\congchua.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -235,7 +238,7 @@
   <data name="coinPlayGame" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\coinPlayGame.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="backGroundPlayGame" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\backGroundPlayGame.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="backGroundPlaying" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\backGroundPlaying.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

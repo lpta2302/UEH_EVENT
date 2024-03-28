@@ -18,7 +18,10 @@ namespace UEH_EVENT.GUI.Mario
     public partial class frmPlayMario : Form
     {
         #region var
-        public List<PictureBox> WorldObjects { get; set; } = new List<PictureBox>();
+        public List<PictureBox> WorldBricks { get; set; } = new List<PictureBox>();
+        public List<PictureBox> WorldNotBrick { get; set; } = new List<PictureBox>();
+
+
         #endregion
         #region Item valuable
         bool virussGoLeft = false;
@@ -28,11 +31,11 @@ namespace UEH_EVENT.GUI.Mario
         #endregion
 
         #region Player movement
-        Boolean Player_Jump = false;    //Is the player jumping
-        Boolean Player_Left = false;    //.. moving to the left
-        Boolean Player_Right = false;   //.. moving to the right
-        Boolean LastDirRight = true;    // Whats the last dir facing
-        Boolean GameOn = true;         //Is the game on?
+        Boolean Player_Jump = false;    
+        Boolean Player_Left = false;    
+        Boolean Player_Right = false;   
+        Boolean LastDirRight = true;    
+        Boolean GameOn = true;        
         int Gravity = 20;
         int Force = 0;
         int Speed_Movement = 5;
@@ -57,7 +60,7 @@ namespace UEH_EVENT.GUI.Mario
                 return true;
             if (tar.Location.Y + tar.Height > WorldFrame.Height - 3)
                 return true;                        //Or above the WorldFrame?
-            foreach (PictureBox Obj in WorldObjects)
+            foreach (PictureBox Obj in WorldBricks)
             {
                 if (Obj != null)
                 {   //Or, intersecting with any world object
@@ -68,12 +71,13 @@ namespace UEH_EVENT.GUI.Mario
             return false;
         }
         public Boolean InAirNoCollision(PictureBox tar)
-        {   //Checks if the target Picturebox is Outside of the frame
+        {
             if (!OutsideWorldFrame(tar))
             {
-                foreach (PictureBox Obj in WorldObjects)
-                {   //Or if it's not colliding with anything
-                    if (!tar.Bounds.IntersectsWith(Obj.Bounds))
+                foreach (PictureBox Obj in WorldBricks)
+                {   
+                    //if (!tar.Bounds.IntersectsWith(Obj.Bounds))
+                    if(!Collision_Top(tar))
                     {
                         if (tar.Location.Y < WorldFrame.Width)
                         {   //And it's not under ground for some reason
@@ -86,14 +90,13 @@ namespace UEH_EVENT.GUI.Mario
         }
         public Boolean Collision_Top(PictureBox tar)
         {
-            foreach (PictureBox ob in WorldObjects)
+            foreach (PictureBox ob in WorldBricks)
             {
                 if (ob != null)
                 {
-                    PictureBox temp1 = new PictureBox();    //Creates a single pixel above the target picturebox, asks if anything is colliding with it
+                    PictureBox temp1 = new PictureBox();
                     temp1.Bounds = ob.Bounds;
-                    //PaintBox(temp1.Location.X, temp1.Location.Y - 1, temp1.Width, 1, Color.Blue); //Super laggy doing this, troubleshooting only
-                    temp1.SetBounds(temp1.Location.X, temp1.Location.Y-2, temp1.Width, 1);
+                    temp1.SetBounds(temp1.Location.X, temp1.Location.Y - 1 , temp1.Width, 1);
                     if (tar.Bounds.IntersectsWith(temp1.Bounds))
                         return true;
                 }
@@ -103,13 +106,12 @@ namespace UEH_EVENT.GUI.Mario
 
         public Boolean Collision_Bottom(PictureBox tar)
         {
-            foreach (PictureBox ob in WorldObjects)
+            foreach (PictureBox ob in WorldBricks)
             {
                 if (ob != null)
                 {
                     PictureBox temp1 = new PictureBox();
                     temp1.Bounds = ob.Bounds;
-                    //PaintBox(temp1.Location.X, temp1.Location.Y+temp1.Height, temp1.Width, 1, Color.Red); //Super laggy doing this, troubleshooting only
                     temp1.SetBounds(temp1.Location.X, temp1.Location.Y + temp1.Height, temp1.Width, 1);
                     if (tar.Bounds.IntersectsWith(temp1.Bounds))
                         return true;
@@ -120,14 +122,13 @@ namespace UEH_EVENT.GUI.Mario
 
         public Boolean Collision_Left(PictureBox tar)
         {
-            foreach (PictureBox ob in WorldObjects)
+            foreach (PictureBox ob in WorldBricks)
             {
                 if (ob != null)
                 {
                     PictureBox temp1 = new PictureBox();
                     temp1.Bounds = ob.Bounds;
-                    //PaintBox(temp1.Location.X - 1, temp1.Location.Y + 1, 1, temp1.Height - 1, Color.Green); //Super laggy doing this, troubleshooting only
-                    temp1.SetBounds(temp1.Location.X - 3, temp1.Location.Y, 1, temp1.Height - 1);
+                    temp1.SetBounds(temp1.Location.X - 1, temp1.Location.Y+1, 1, temp1.Height - 1);
                     if (tar.Bounds.IntersectsWith(temp1.Bounds))
                         return true;
                 }
@@ -136,13 +137,12 @@ namespace UEH_EVENT.GUI.Mario
         }
         public Boolean Collision_Right(PictureBox tar)
         {
-            foreach (PictureBox ob in WorldObjects)
+            foreach (PictureBox ob in WorldBricks)
             {
                 if (ob != null)
                 {
                     PictureBox temp2 = new PictureBox();
                     temp2.Bounds = ob.Bounds;
-                    //PaintBox(temp2.Location.X + temp2.Width, temp2.Location.Y + 1, 1, temp2.Height - 1, Color.Yellow); //Super laggy doing this, troubleshooting only
                     temp2.SetBounds(temp2.Location.X + temp2.Width, temp2.Location.Y + 1, 1, temp2.Height - 1);
                     if (tar.Bounds.IntersectsWith(temp2.Bounds))
                         return true;
@@ -178,7 +178,7 @@ namespace UEH_EVENT.GUI.Mario
         }
         public void Reload()
         {
-            picPlayer.Location = new System.Drawing.Point(22, 775);
+            picPlayer.Location = new System.Drawing.Point(67, 560);
         }
         public void HideHeart()
         {
@@ -193,28 +193,20 @@ namespace UEH_EVENT.GUI.Mario
         }
         private void frmPlayMario_Load(object sender, EventArgs e)
         {
-            SoundPlayer pl = new SoundPlayer(@"D:\Subject\Desktop Application Development\project4\UEH_EVENT\sound\soundTrackPlayGame.wav");
-            pl.Play();
+            //SoundPlayer pl = new SoundPlayer(@"D:\Subject\Desktop Application Development\project4\UEH_EVENT\sound\soundTrackPlayGame.wav");
+            //pl.Play();
             foreach (var control in this.WorldFrame.Controls)
             {
                 if (control is PictureBox)
                 {
                     PictureBox pictureBox = (PictureBox)control;
-                    if (pictureBox.Tag != null && ((string)pictureBox.Tag).StartsWith("flatform"))
+                    if (pictureBox.Tag == null) continue;
+                    if (((string)pictureBox.Tag).StartsWith("flatform"))
                     {
-                        WorldObjects.Add(pictureBox);
+                        WorldBricks.Add(pictureBox);
                     }
-                }
-            }
-            foreach (var item in this.Controls)
-            {
-                if (item is PictureBox)
-                {
-                    PictureBox pictureBox = (PictureBox)item;
-                    if (pictureBox.Tag != null && ((string)pictureBox.Tag).StartsWith("flatform"))
-                    {
-                        WorldObjects.Add(pictureBox);
-                    }
+                    else 
+                        WorldNotBrick.Add(pictureBox);
                 }
             }
         }
@@ -223,46 +215,46 @@ namespace UEH_EVENT.GUI.Mario
             if (GameOn)
             {
                 if (Player_Right && picPlayer.Right <= WorldFrame.Width - 3 && !Collision_Left(picPlayer))
-                { //Stops the player from moving out of screen
+                { 
                     picPlayer.Left += Speed_Movement; //Moves right
                 }
                 if (Player_Left && picPlayer.Location.X >= 3 && !Collision_Right(picPlayer))
-                { //Stops the player from moving out of screen
+                { 
                     picPlayer.Left -= Speed_Movement; //Moves left
                 }
             }
             else
-            {   //If game is not on, stops the player
+            {   
                 Player_Right = false;
                 Player_Left = false;
             }
 
             if (Force > 0)
-            {   //If any force still exists
+            {   
                 if (Collision_Bottom(picPlayer))
-                {   //Unless players head is banging in a wall
+                {   //ktr đập đầu
                     Force = 0;
                 }
                 else
-                {   //Move player up, lower force each "move"
+                {   //nhảy
                     Force--;
                     picPlayer.Top -= Speed_Jump;
                 }
             }
             else
-            {   //If no force, player is not jumping.
+            {   
                 Player_Jump = false;
             }
         }
         private void timer_Gravity_Tick(object sender, EventArgs e)
         {
             if (!Player_Jump && picPlayer.Location.Y + picPlayer.Height < WorldFrame.Height - 2 && !Collision_Top(picPlayer))
-            {   //If Player doesnt jump, Location is above the floor or is standing on object
+            { 
                 picPlayer.Top += Speed_Fall; //Player falls
             }
 
             if (!Player_Jump && picPlayer.Location.Y + picPlayer.Height > WorldFrame.Height - 1)
-            {   //If player would for some reason be under the floor, move him up
+            {
                 picPlayer.Top--;
             }
         }
@@ -270,23 +262,23 @@ namespace UEH_EVENT.GUI.Mario
         {
             VirussGo();
             lblScore.Text = "Score: " + score;
-            foreach (Control x in this.WorldFrame.Controls)
+            foreach (PictureBox x in WorldNotBrick)
             {
-                if (x is PictureBox && (string)x.Tag == "player")
+                if (x.Tag != null &&(string)x.Tag == "player")
                 {
                     x.BringToFront();
                 }
-                if (x is PictureBox && (string)x.Tag == "coin")
+                if (x.Tag != null &&(string)x.Tag == "coin")
                 {
                     if (picPlayer.Bounds.IntersectsWith(x.Bounds) && x.Visible == true)
                     {
                         x.Visible = false;
                         score += 5;
-                        SoundPlayer pl = new SoundPlayer(@"D:\Subject\Desktop Application Development\project4\UEH_EVENT\sound\getCoin.wav");
-                        pl.Play();
+                        //SoundPlayer pl = new SoundPlayer(@"D:\Subject\Desktop Application Development\project4\UEH_EVENT\sound\getCoin.wav");
+                        //pl.Play();
                     }
                 }
-                if (x is PictureBox && (string)x.Tag == "shovel")
+                if (x.Tag != null &&(string)x.Tag == "shovel")
                 {
                     if (picPlayer.Bounds.IntersectsWith(x.Bounds) && x.Visible == true)
                     {
@@ -294,7 +286,7 @@ namespace UEH_EVENT.GUI.Mario
                         picShovel.Visible = false;
                     }
                 }
-                if (x is PictureBox && (string)x.Tag == "hole")
+                if (x.Tag != null &&(string)x.Tag == "hole")
                 {
                     if (picPlayer.Bounds.IntersectsWith(x.Bounds) && x.Visible == true)
                     {
@@ -307,29 +299,29 @@ namespace UEH_EVENT.GUI.Mario
                         HideHeart();
                     }
                 }
-                if (x is PictureBox && (string)x.Tag == "viruss")
+                if (x.Tag != null &&(string)x.Tag == "viruss")
                 {
                     if (picPlayer.Bounds.IntersectsWith(x.Bounds) && x.Visible == true)
                     {
-                        SoundPlayer pl = new SoundPlayer(@"D:\Subject\Desktop Application Development\project4\UEH_EVENT\sound\Aaaaaa.wav");
-                        pl.Play();
+                        //SoundPlayer pl = new SoundPlayer(@"D:\Subject\Desktop Application Development\project4\UEH_EVENT\sound\Aaaaaa.wav");
+                        //pl.Play();
                         Reload();
                         numberHeart -= 1;
                         HideHeart();
                     }
                 }
-                if (x is PictureBox && (string)x.Tag == "fire")
+                if (x.Tag != null &&(string)x.Tag == "fire")
                 {
                     if (picPlayer.Bounds.IntersectsWith(x.Bounds) && x.Visible == true)
                     {
-                        SoundPlayer pl = new SoundPlayer(@"D:\Subject\Desktop Application Development\project4\UEH_EVENT\sound\Aaaaaa.wav");
-                        pl.Play();
+                        // SoundPlayer pl = new SoundPlayer(@"D:\Subject\Desktop Application Development\project4\UEH_EVENT\sound\Aaaaaa.wav");
+                        //pl.Play();
                         Reload();
                         numberHeart -= 1;
                         HideHeart();
                     }
                 }
-                if (x is PictureBox && (string)x.Tag == "key")
+                if (x.Tag != null &&(string)x.Tag == "key")
                 {
                     if (picPlayer.Bounds.IntersectsWith(x.Bounds) && x.Visible == true)
                     {
@@ -337,12 +329,12 @@ namespace UEH_EVENT.GUI.Mario
                         hasKey = true;
                     }
                 }
-                if (x is PictureBox && (string)x.Tag == "door")
+                if (x.Tag != null &&(string)x.Tag == "door")
                 {
                     if (picPlayer.Bounds.IntersectsWith(x.Bounds) && x.Visible == true && hasKey)
                     {
-                        SoundPlayer pl = new SoundPlayer(@"D:\Subject\Desktop Application Development\project4\UEH_EVENT\sound\soundWin2.wav");
-                        pl.Play();
+                        //SoundPlayer pl = new SoundPlayer(@"D:\Subject\Desktop Application Development\project4\UEH_EVENT\sound\soundWin2.wav");
+                        //pl.Play();
                         x.Visible = false;
                         MessageBox.Show("Win roi nha");
                         this.Close();
@@ -353,36 +345,44 @@ namespace UEH_EVENT.GUI.Mario
             {
                 picGameOver.Visible = true;
                 GameOn = false;
-                SoundPlayer pl = new SoundPlayer(@"D:\Subject\Desktop Application Development\project4\UEH_EVENT\sound\soundLoss.wav");
-                pl.Play();
+                //SoundPlayer pl = new SoundPlayer(@"D:\Subject\Desktop Application Development\project4\UEH_EVENT\sound\soundLoss.wav");
+                //pl.Play();
             }
         }
         private void frmPlayMario_KeyDown(object sender, KeyEventArgs e)
         {
             switch (e.KeyCode)
             {
-                case Keys.Left:                 // On Left Keypress down
+                case Keys.Left:                 
                     if (GameOn)
                     {
-                        picPlayer.Image = Properties.Resources.MarioPlayLeft;    //Players image changes to stand
+                        if(LastDirRight)
+                        {
+
+                        picPlayer.Image = Properties.Resources.MarioPlayLeft;   
                         LastDirRight = false;
-                        Player_Left = true;     //Walk left
+                        }
+                        Player_Left = true;     
                     }
                     break;
-                case Keys.Right:                // On Right Keypress down
+                case Keys.Right:               
                     if (GameOn)
                     {
+                        if (!LastDirRight)
+                        {
+
                         picPlayer.Image = Properties.Resources.MarioPlay;
                         LastDirRight = true;
+                        }
                         Player_Right = true;
                     }
                     break;
-                case Keys.Space:    // On Space Keypress down
+                case Keys.Space:    
                     if (!Player_Jump && !InAirNoCollision(picPlayer))
                     {
-                        picPlayer.Top -= Speed_Jump;     //Player moves up a bit
-                        Force = Gravity;        //Force to be moved up changes
-                        Player_Jump = true;     //Sets a variable that player is jumping
+                        picPlayer.Top -= Speed_Jump;     
+                        Force = Gravity;        
+                        Player_Jump = true;    
                     }
                     break;
             }

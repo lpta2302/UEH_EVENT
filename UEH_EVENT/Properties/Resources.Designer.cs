@@ -73,9 +73,9 @@ namespace UEH_EVENT.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap backGroundPlayGame {
+        internal static System.Drawing.Bitmap backGroundPlaying {
             get {
-                object obj = ResourceManager.GetObject("backGroundPlayGame", resourceCulture);
+                object obj = ResourceManager.GetObject("backGroundPlaying", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -386,6 +386,16 @@ namespace UEH_EVENT.Properties {
         internal static System.Drawing.Bitmap miniMario {
             get {
                 object obj = ResourceManager.GetObject("miniMario", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap phone {
+            get {
+                object obj = ResourceManager.GetObject("phone", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
