@@ -52,19 +52,18 @@
             // lblSearch
             // 
             lblSearch.AutoSize = true;
-            lblSearch.Location = new Point(24, 18);
-            lblSearch.Margin = new Padding(5, 0, 5, 0);
+            lblSearch.Location = new Point(14, 9);
             lblSearch.Name = "lblSearch";
-            lblSearch.Size = new Size(164, 30);
+            lblSearch.Size = new Size(94, 15);
             lblSearch.TabIndex = 0;
             lblSearch.Text = "Chọn đối tượng:";
             // 
             // btnSearch
             // 
-            btnSearch.Location = new Point(855, 10);
-            btnSearch.Margin = new Padding(5, 6, 5, 6);
+            btnSearch.Anchor = AnchorStyles.Top | AnchorStyles.Right;
+            btnSearch.Location = new Point(499, 5);
             btnSearch.Name = "btnSearch";
-            btnSearch.Size = new Size(129, 46);
+            btnSearch.Size = new Size(75, 23);
             btnSearch.TabIndex = 1;
             btnSearch.Text = "Tìm";
             btnSearch.UseVisualStyleBackColor = true;
@@ -72,31 +71,31 @@
             // 
             // cboSearch
             // 
+            cboSearch.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
             cboSearch.FormattingEnabled = true;
-            cboSearch.Location = new Point(195, 10);
-            cboSearch.Margin = new Padding(5, 6, 5, 6);
+            cboSearch.Location = new Point(114, 5);
             cboSearch.Name = "cboSearch";
-            cboSearch.Size = new Size(229, 38);
+            cboSearch.Size = new Size(135, 23);
             cboSearch.TabIndex = 2;
             cboSearch.SelectedIndexChanged += cboSearch_SelectedIndexChanged;
             // 
             // dgvSearchResults
             // 
+            dgvSearchResults.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             dgvSearchResults.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dgvSearchResults.Location = new Point(21, 194);
-            dgvSearchResults.Margin = new Padding(5, 6, 5, 6);
+            dgvSearchResults.Location = new Point(12, 97);
             dgvSearchResults.Name = "dgvSearchResults";
             dgvSearchResults.RowHeadersWidth = 72;
             dgvSearchResults.RowTemplate.Height = 25;
-            dgvSearchResults.Size = new Size(962, 448);
+            dgvSearchResults.Size = new Size(561, 224);
             dgvSearchResults.TabIndex = 3;
             // 
             // btnExit
             // 
-            btnExit.Location = new Point(855, 654);
-            btnExit.Margin = new Padding(5, 6, 5, 6);
+            btnExit.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
+            btnExit.Location = new Point(499, 327);
             btnExit.Name = "btnExit";
-            btnExit.Size = new Size(129, 46);
+            btnExit.Size = new Size(75, 23);
             btnExit.TabIndex = 4;
             btnExit.Text = "Thoát";
             btnExit.UseVisualStyleBackColor = true;
@@ -105,30 +104,29 @@
             // lblSearchKeyword
             // 
             lblSearchKeyword.AutoSize = true;
-            lblSearchKeyword.Location = new Point(96, 76);
-            lblSearchKeyword.Margin = new Padding(5, 0, 5, 0);
+            lblSearchKeyword.Location = new Point(56, 38);
             lblSearchKeyword.Name = "lblSearchKeyword";
-            lblSearchKeyword.Size = new Size(92, 30);
+            lblSearchKeyword.Size = new Size(52, 15);
             lblSearchKeyword.TabIndex = 6;
             lblSearchKeyword.Text = "Từ khóa:";
             // 
             // txtSearchKeyword
             // 
+            txtSearchKeyword.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
             txtSearchKeyword.Enabled = false;
-            txtSearchKeyword.Location = new Point(195, 70);
-            txtSearchKeyword.Margin = new Padding(5, 6, 5, 6);
+            txtSearchKeyword.Location = new Point(114, 35);
             txtSearchKeyword.Name = "txtSearchKeyword";
-            txtSearchKeyword.Size = new Size(229, 35);
+            txtSearchKeyword.Size = new Size(135, 23);
             txtSearchKeyword.TabIndex = 7;
             // 
             // rdoSearchThreshold
             // 
+            rdoSearchThreshold.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             rdoSearchThreshold.AutoSize = true;
             rdoSearchThreshold.Enabled = false;
-            rdoSearchThreshold.Location = new Point(435, 72);
-            rdoSearchThreshold.Margin = new Padding(5, 6, 5, 6);
+            rdoSearchThreshold.Location = new Point(254, 36);
             rdoSearchThreshold.Name = "rdoSearchThreshold";
-            rdoSearchThreshold.Size = new Size(204, 34);
+            rdoSearchThreshold.Size = new Size(120, 19);
             rdoSearchThreshold.TabIndex = 8;
             rdoSearchThreshold.TabStop = true;
             rdoSearchThreshold.Text = "Tìm theo ngưỡng:";
@@ -136,31 +134,31 @@
             // 
             // cboFilter
             // 
+            cboFilter.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             cboFilter.Enabled = false;
             cboFilter.FormattingEnabled = true;
-            cboFilter.Location = new Point(651, 68);
-            cboFilter.Margin = new Padding(5, 6, 5, 6);
+            cboFilter.Location = new Point(380, 34);
             cboFilter.Name = "cboFilter";
-            cboFilter.Size = new Size(66, 38);
+            cboFilter.Size = new Size(40, 23);
             cboFilter.TabIndex = 9;
             // 
             // txtThreshold
             // 
+            txtThreshold.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             txtThreshold.Enabled = false;
-            txtThreshold.Location = new Point(730, 68);
-            txtThreshold.Margin = new Padding(5, 6, 5, 6);
+            txtThreshold.Location = new Point(426, 34);
             txtThreshold.Name = "txtThreshold";
-            txtThreshold.Size = new Size(110, 35);
+            txtThreshold.Size = new Size(66, 23);
             txtThreshold.TabIndex = 10;
             // 
             // rdoSearchRange
             // 
+            rdoSearchRange.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             rdoSearchRange.AutoSize = true;
             rdoSearchRange.Enabled = false;
-            rdoSearchRange.Location = new Point(435, 130);
-            rdoSearchRange.Margin = new Padding(5, 6, 5, 6);
+            rdoSearchRange.Location = new Point(254, 65);
             rdoSearchRange.Name = "rdoSearchRange";
-            rdoSearchRange.Size = new Size(200, 34);
+            rdoSearchRange.Size = new Size(118, 19);
             rdoSearchRange.TabIndex = 11;
             rdoSearchRange.TabStop = true;
             rdoSearchRange.Text = "Tìm theo khoảng:";
@@ -168,38 +166,38 @@
             // 
             // txtLowerBound
             // 
+            txtLowerBound.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             txtLowerBound.Enabled = false;
-            txtLowerBound.Location = new Point(651, 128);
-            txtLowerBound.Margin = new Padding(5, 6, 5, 6);
+            txtLowerBound.Location = new Point(380, 64);
             txtLowerBound.Name = "txtLowerBound";
-            txtLowerBound.Size = new Size(66, 35);
+            txtLowerBound.Size = new Size(40, 23);
             txtLowerBound.TabIndex = 12;
             // 
             // txtUpperBound
             // 
+            txtUpperBound.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             txtUpperBound.Enabled = false;
-            txtUpperBound.Location = new Point(775, 128);
-            txtUpperBound.Margin = new Padding(5, 6, 5, 6);
+            txtUpperBound.Location = new Point(452, 64);
             txtUpperBound.Name = "txtUpperBound";
-            txtUpperBound.Size = new Size(66, 35);
+            txtUpperBound.Size = new Size(40, 23);
             txtUpperBound.TabIndex = 13;
             // 
             // lblTo
             // 
+            lblTo.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             lblTo.AutoSize = true;
-            lblTo.Location = new Point(725, 136);
-            lblTo.Margin = new Padding(5, 0, 5, 0);
+            lblTo.Location = new Point(423, 68);
             lblTo.Name = "lblTo";
-            lblTo.Size = new Size(48, 30);
+            lblTo.Size = new Size(27, 15);
             lblTo.TabIndex = 14;
             lblTo.Text = "đến";
             // 
             // btnStats
             // 
-            btnStats.Location = new Point(854, 70);
-            btnStats.Margin = new Padding(5, 6, 5, 6);
+            btnStats.Anchor = AnchorStyles.Top | AnchorStyles.Right;
+            btnStats.Location = new Point(498, 35);
             btnStats.Name = "btnStats";
-            btnStats.Size = new Size(129, 46);
+            btnStats.Size = new Size(75, 23);
             btnStats.TabIndex = 16;
             btnStats.Text = "Thống kê";
             btnStats.UseVisualStyleBackColor = true;
@@ -207,29 +205,31 @@
             // 
             // lblProperty
             // 
+            lblProperty.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             lblProperty.AutoSize = true;
-            lblProperty.Location = new Point(435, 18);
-            lblProperty.Margin = new Padding(5, 0, 5, 0);
+            lblProperty.Location = new Point(254, 9);
             lblProperty.Name = "lblProperty";
-            lblProperty.Size = new Size(117, 30);
+            lblProperty.Size = new Size(67, 15);
             lblProperty.TabIndex = 17;
             lblProperty.Text = "Thuộc tính:";
             // 
             // cboProperties
             // 
+            cboProperties.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             cboProperties.FormattingEnabled = true;
-            cboProperties.Location = new Point(561, 10);
-            cboProperties.Margin = new Padding(5, 6, 5, 6);
+            cboProperties.Location = new Point(327, 5);
             cboProperties.Name = "cboProperties";
-            cboProperties.Size = new Size(280, 38);
+            cboProperties.Size = new Size(165, 23);
             cboProperties.TabIndex = 18;
             cboProperties.SelectedIndexChanged += cboProperties_SelectedIndexChanged;
             // 
             // chkSearchExact
             // 
+            chkSearchExact.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             chkSearchExact.AutoSize = true;
             chkSearchExact.Enabled = false;
-            chkSearchExact.Location = new Point(158, 66);
+            chkSearchExact.Location = new Point(159, 66);
+            chkSearchExact.Margin = new Padding(2);
             chkSearchExact.Name = "chkSearchExact";
             chkSearchExact.Size = new Size(90, 19);
             chkSearchExact.TabIndex = 19;
@@ -238,9 +238,9 @@
             // 
             // FormSearch
             // 
-            AutoScaleDimensions = new SizeF(12F, 30F);
+            AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(586, 362);
+            ClientSize = new Size(584, 361);
             Controls.Add(chkSearchExact);
             Controls.Add(cboProperties);
             Controls.Add(lblProperty);
@@ -259,7 +259,7 @@
             Controls.Add(cboSearch);
             Controls.Add(btnSearch);
             Controls.Add(lblSearch);
-            Margin = new Padding(5, 6, 5, 6);
+            MinimumSize = new Size(600, 400);
             Name = "FormSearch";
             Text = "Tìm kiếm";
             Load += FormSearch_Load;

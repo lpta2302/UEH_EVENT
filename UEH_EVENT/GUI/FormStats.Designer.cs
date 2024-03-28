@@ -28,12 +28,12 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea3 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend3 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series3 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea4 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend4 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series4 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea2 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend2 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series2 = new System.Windows.Forms.DataVisualization.Charting.Series();
             lblSightHis = new Label();
             lblSightHisCount = new Label();
             lblSightHisTier1 = new Label();
@@ -106,6 +106,7 @@
             // 
             // lblSightHis
             // 
+            lblSightHis.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left;
             lblSightHis.AutoSize = true;
             lblSightHis.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
             lblSightHis.Location = new Point(41, 50);
@@ -117,6 +118,7 @@
             // 
             // lblSightHisCount
             // 
+            lblSightHisCount.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Right;
             lblSightHisCount.AutoSize = true;
             lblSightHisCount.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
             lblSightHisCount.Location = new Point(243, 50);
@@ -128,6 +130,7 @@
             // 
             // lblSightHisTier1
             // 
+            lblSightHisTier1.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left;
             lblSightHisTier1.AutoSize = true;
             lblSightHisTier1.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
             lblSightHisTier1.Location = new Point(41, 80);
@@ -139,6 +142,7 @@
             // 
             // lblSightHisTier1Count
             // 
+            lblSightHisTier1Count.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Right;
             lblSightHisTier1Count.AutoSize = true;
             lblSightHisTier1Count.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
             lblSightHisTier1Count.Location = new Point(243, 80);
@@ -150,6 +154,7 @@
             // 
             // lblStudentsCount
             // 
+            lblStudentsCount.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Right;
             lblStudentsCount.AutoSize = true;
             lblStudentsCount.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
             lblStudentsCount.Location = new Point(243, 49);
@@ -161,6 +166,7 @@
             // 
             // lblStudents
             // 
+            lblStudents.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left;
             lblStudents.AutoSize = true;
             lblStudents.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
             lblStudents.Location = new Point(39, 49);
@@ -172,6 +178,7 @@
             // 
             // lblTPointOver50Count
             // 
+            lblTPointOver50Count.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Right;
             lblTPointOver50Count.AutoSize = true;
             lblTPointOver50Count.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
             lblTPointOver50Count.Location = new Point(243, 79);
@@ -183,6 +190,7 @@
             // 
             // lblTPointOver50
             // 
+            lblTPointOver50.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left;
             lblTPointOver50.AutoSize = true;
             lblTPointOver50.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
             lblTPointOver50.Location = new Point(39, 79);
@@ -194,6 +202,7 @@
             // 
             // lblTPointTier1Count
             // 
+            lblTPointTier1Count.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Right;
             lblTPointTier1Count.AutoSize = true;
             lblTPointTier1Count.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
             lblTPointTier1Count.Location = new Point(243, 109);
@@ -205,6 +214,7 @@
             // 
             // lblTPointTier1
             // 
+            lblTPointTier1.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left;
             lblTPointTier1.AutoSize = true;
             lblTPointTier1.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
             lblTPointTier1.Location = new Point(39, 109);
@@ -216,6 +226,7 @@
             // 
             // lblTPointTier2Count
             // 
+            lblTPointTier2Count.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Right;
             lblTPointTier2Count.AutoSize = true;
             lblTPointTier2Count.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
             lblTPointTier2Count.Location = new Point(243, 139);
@@ -227,6 +238,7 @@
             // 
             // lblTPointTier2
             // 
+            lblTPointTier2.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left;
             lblTPointTier2.AutoSize = true;
             lblTPointTier2.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
             lblTPointTier2.Location = new Point(39, 139);
@@ -238,6 +250,7 @@
             // 
             // lblTPointTier3Count
             // 
+            lblTPointTier3Count.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Right;
             lblTPointTier3Count.AutoSize = true;
             lblTPointTier3Count.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
             lblTPointTier3Count.Location = new Point(243, 169);
@@ -249,6 +262,7 @@
             // 
             // lblTPointTier3
             // 
+            lblTPointTier3.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left;
             lblTPointTier3.AutoSize = true;
             lblTPointTier3.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
             lblTPointTier3.Location = new Point(39, 169);
@@ -260,6 +274,7 @@
             // 
             // lblTPointTier4Count
             // 
+            lblTPointTier4Count.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Right;
             lblTPointTier4Count.AutoSize = true;
             lblTPointTier4Count.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
             lblTPointTier4Count.Location = new Point(243, 199);
@@ -271,6 +286,7 @@
             // 
             // lblTPointTier4
             // 
+            lblTPointTier4.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left;
             lblTPointTier4.AutoSize = true;
             lblTPointTier4.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
             lblTPointTier4.Location = new Point(39, 199);
@@ -282,6 +298,7 @@
             // 
             // lblPlayHisCount
             // 
+            lblPlayHisCount.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Right;
             lblPlayHisCount.AutoSize = true;
             lblPlayHisCount.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
             lblPlayHisCount.Location = new Point(243, 50);
@@ -293,6 +310,7 @@
             // 
             // lblPlayHis
             // 
+            lblPlayHis.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left;
             lblPlayHis.AutoSize = true;
             lblPlayHis.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
             lblPlayHis.Location = new Point(39, 50);
@@ -304,6 +322,7 @@
             // 
             // lblStudentAccountsCount
             // 
+            lblStudentAccountsCount.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Right;
             lblStudentAccountsCount.AutoSize = true;
             lblStudentAccountsCount.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
             lblStudentAccountsCount.Location = new Point(243, 125);
@@ -315,6 +334,7 @@
             // 
             // lblStudentAccounts
             // 
+            lblStudentAccounts.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left;
             lblStudentAccounts.AutoSize = true;
             lblStudentAccounts.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
             lblStudentAccounts.Location = new Point(39, 125);
@@ -326,6 +346,7 @@
             // 
             // lblAccountsCount
             // 
+            lblAccountsCount.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Right;
             lblAccountsCount.AutoSize = true;
             lblAccountsCount.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
             lblAccountsCount.Location = new Point(243, 94);
@@ -337,6 +358,7 @@
             // 
             // lblAccounts
             // 
+            lblAccounts.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left;
             lblAccounts.AutoSize = true;
             lblAccounts.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
             lblAccounts.Location = new Point(39, 94);
@@ -348,6 +370,7 @@
             // 
             // lblClubAccountsCount
             // 
+            lblClubAccountsCount.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Right;
             lblClubAccountsCount.AutoSize = true;
             lblClubAccountsCount.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
             lblClubAccountsCount.Location = new Point(243, 156);
@@ -359,6 +382,7 @@
             // 
             // lblClubAccounts
             // 
+            lblClubAccounts.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left;
             lblClubAccounts.AutoSize = true;
             lblClubAccounts.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
             lblClubAccounts.Location = new Point(39, 156);
@@ -370,6 +394,7 @@
             // 
             // btnClose
             // 
+            btnClose.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
             btnClose.Location = new Point(576, 318);
             btnClose.Name = "btnClose";
             btnClose.Size = new Size(75, 23);
@@ -380,6 +405,7 @@
             // 
             // tabStats
             // 
+            tabStats.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             tabStats.Controls.Add(tabPageStatsSearch);
             tabStats.Controls.Add(tabPageStatsOther);
             tabStats.Location = new Point(12, 12);
@@ -406,6 +432,7 @@
             // 
             // lblMatchCount
             // 
+            lblMatchCount.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Right;
             lblMatchCount.AutoSize = true;
             lblMatchCount.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
             lblMatchCount.Location = new Point(243, 141);
@@ -417,23 +444,25 @@
             // 
             // chartStatsSearch
             // 
-            chartArea3.Name = "StatsChartArea";
-            chartStatsSearch.ChartAreas.Add(chartArea3);
-            legend3.Name = "StatsChartLegend";
-            chartStatsSearch.Legends.Add(legend3);
+            chartStatsSearch.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Right;
+            chartArea1.Name = "StatsChartArea";
+            chartStatsSearch.ChartAreas.Add(chartArea1);
+            legend1.Name = "StatsChartLegend";
+            chartStatsSearch.Legends.Add(legend1);
             chartStatsSearch.Location = new Point(298, 6);
             chartStatsSearch.Name = "chartStatsSearch";
-            series3.ChartArea = "StatsChartArea";
-            series3.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Doughnut;
-            series3.Legend = "StatsChartLegend";
-            series3.Name = "StatsSeries";
-            chartStatsSearch.Series.Add(series3);
+            series1.ChartArea = "StatsChartArea";
+            series1.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Doughnut;
+            series1.Legend = "StatsChartLegend";
+            series1.Name = "StatsSeries";
+            chartStatsSearch.Series.Add(series1);
             chartStatsSearch.Size = new Size(330, 260);
             chartStatsSearch.TabIndex = 0;
             chartStatsSearch.Text = "Biểu đồ";
             // 
             // lblMatch
             // 
+            lblMatch.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left;
             lblMatch.AutoSize = true;
             lblMatch.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
             lblMatch.Location = new Point(39, 141);
@@ -445,6 +474,7 @@
             // 
             // lblTotal
             // 
+            lblTotal.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left;
             lblTotal.AutoSize = true;
             lblTotal.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
             lblTotal.Location = new Point(39, 110);
@@ -456,6 +486,7 @@
             // 
             // lblTotalCount
             // 
+            lblTotalCount.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Right;
             lblTotalCount.AutoSize = true;
             lblTotalCount.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
             lblTotalCount.Location = new Point(243, 110);
@@ -530,6 +561,7 @@
             // 
             // lblTPointHisCount
             // 
+            lblTPointHisCount.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Right;
             lblTPointHisCount.AutoSize = true;
             lblTPointHisCount.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
             lblTPointHisCount.Location = new Point(243, 96);
@@ -541,6 +573,7 @@
             // 
             // lblTPointHis
             // 
+            lblTPointHis.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left;
             lblTPointHis.AutoSize = true;
             lblTPointHis.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
             lblTPointHis.Location = new Point(39, 96);
@@ -552,6 +585,7 @@
             // 
             // lblTPointPlusOneCount
             // 
+            lblTPointPlusOneCount.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Right;
             lblTPointPlusOneCount.AutoSize = true;
             lblTPointPlusOneCount.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
             lblTPointPlusOneCount.Location = new Point(243, 155);
@@ -563,6 +597,7 @@
             // 
             // lblTPointPlusOne
             // 
+            lblTPointPlusOne.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left;
             lblTPointPlusOne.AutoSize = true;
             lblTPointPlusOne.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
             lblTPointPlusOne.Location = new Point(39, 155);
@@ -574,6 +609,7 @@
             // 
             // lblTPointPlusTwoCount
             // 
+            lblTPointPlusTwoCount.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Right;
             lblTPointPlusTwoCount.AutoSize = true;
             lblTPointPlusTwoCount.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
             lblTPointPlusTwoCount.Location = new Point(243, 125);
@@ -585,6 +621,7 @@
             // 
             // lblTPointPlusTwo
             // 
+            lblTPointPlusTwo.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left;
             lblTPointPlusTwo.AutoSize = true;
             lblTPointPlusTwo.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
             lblTPointPlusTwo.Location = new Point(39, 125);
@@ -596,6 +633,7 @@
             // 
             // lblPlayHisTier5Count
             // 
+            lblPlayHisTier5Count.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Right;
             lblPlayHisTier5Count.AutoSize = true;
             lblPlayHisTier5Count.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
             lblPlayHisTier5Count.Location = new Point(243, 199);
@@ -607,6 +645,7 @@
             // 
             // lblPlayHisTier5
             // 
+            lblPlayHisTier5.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left;
             lblPlayHisTier5.AutoSize = true;
             lblPlayHisTier5.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
             lblPlayHisTier5.Location = new Point(39, 199);
@@ -618,6 +657,7 @@
             // 
             // lblPlayHisTier4Count
             // 
+            lblPlayHisTier4Count.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Right;
             lblPlayHisTier4Count.AutoSize = true;
             lblPlayHisTier4Count.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
             lblPlayHisTier4Count.Location = new Point(243, 169);
@@ -629,6 +669,7 @@
             // 
             // lblPlayHisTier4
             // 
+            lblPlayHisTier4.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left;
             lblPlayHisTier4.AutoSize = true;
             lblPlayHisTier4.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
             lblPlayHisTier4.Location = new Point(39, 169);
@@ -640,6 +681,7 @@
             // 
             // lblPlayHisTier3Count
             // 
+            lblPlayHisTier3Count.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Right;
             lblPlayHisTier3Count.AutoSize = true;
             lblPlayHisTier3Count.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
             lblPlayHisTier3Count.Location = new Point(243, 139);
@@ -651,6 +693,7 @@
             // 
             // lblPlayHisTier3
             // 
+            lblPlayHisTier3.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left;
             lblPlayHisTier3.AutoSize = true;
             lblPlayHisTier3.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
             lblPlayHisTier3.Location = new Point(39, 139);
@@ -662,6 +705,7 @@
             // 
             // lblPlayHisTier2Count
             // 
+            lblPlayHisTier2Count.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Right;
             lblPlayHisTier2Count.AutoSize = true;
             lblPlayHisTier2Count.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
             lblPlayHisTier2Count.Location = new Point(243, 109);
@@ -673,6 +717,7 @@
             // 
             // lblPlayHisTier2
             // 
+            lblPlayHisTier2.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left;
             lblPlayHisTier2.AutoSize = true;
             lblPlayHisTier2.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
             lblPlayHisTier2.Location = new Point(39, 109);
@@ -684,6 +729,7 @@
             // 
             // lblPlayHisTier1Count
             // 
+            lblPlayHisTier1Count.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Right;
             lblPlayHisTier1Count.AutoSize = true;
             lblPlayHisTier1Count.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
             lblPlayHisTier1Count.Location = new Point(243, 79);
@@ -695,6 +741,7 @@
             // 
             // lblPlayHisTier1
             // 
+            lblPlayHisTier1.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left;
             lblPlayHisTier1.AutoSize = true;
             lblPlayHisTier1.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
             lblPlayHisTier1.Location = new Point(39, 79);
@@ -706,6 +753,7 @@
             // 
             // lblSightHisTier5Count
             // 
+            lblSightHisTier5Count.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Right;
             lblSightHisTier5Count.AutoSize = true;
             lblSightHisTier5Count.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
             lblSightHisTier5Count.Location = new Point(243, 200);
@@ -717,6 +765,7 @@
             // 
             // lblSightHisTier5
             // 
+            lblSightHisTier5.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left;
             lblSightHisTier5.AutoSize = true;
             lblSightHisTier5.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
             lblSightHisTier5.Location = new Point(41, 200);
@@ -728,6 +777,7 @@
             // 
             // lblSightHisTier4Count
             // 
+            lblSightHisTier4Count.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Right;
             lblSightHisTier4Count.AutoSize = true;
             lblSightHisTier4Count.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
             lblSightHisTier4Count.Location = new Point(243, 170);
@@ -739,6 +789,7 @@
             // 
             // lblSightHisTier4
             // 
+            lblSightHisTier4.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left;
             lblSightHisTier4.AutoSize = true;
             lblSightHisTier4.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
             lblSightHisTier4.Location = new Point(41, 170);
@@ -750,6 +801,7 @@
             // 
             // lblSightHisTier3Count
             // 
+            lblSightHisTier3Count.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Right;
             lblSightHisTier3Count.AutoSize = true;
             lblSightHisTier3Count.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
             lblSightHisTier3Count.Location = new Point(243, 140);
@@ -761,6 +813,7 @@
             // 
             // lblSightHisTier3
             // 
+            lblSightHisTier3.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left;
             lblSightHisTier3.AutoSize = true;
             lblSightHisTier3.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
             lblSightHisTier3.Location = new Point(41, 140);
@@ -772,6 +825,7 @@
             // 
             // lblSightHisTier2Count
             // 
+            lblSightHisTier2Count.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Right;
             lblSightHisTier2Count.AutoSize = true;
             lblSightHisTier2Count.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
             lblSightHisTier2Count.Location = new Point(243, 110);
@@ -783,6 +837,7 @@
             // 
             // lblSightHisTier2
             // 
+            lblSightHisTier2.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left;
             lblSightHisTier2.AutoSize = true;
             lblSightHisTier2.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
             lblSightHisTier2.Location = new Point(41, 110);
@@ -794,6 +849,7 @@
             // 
             // lblSightHisCountClone
             // 
+            lblSightHisCountClone.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Right;
             lblSightHisCountClone.AutoSize = true;
             lblSightHisCountClone.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
             lblSightHisCountClone.Location = new Point(243, 139);
@@ -805,6 +861,7 @@
             // 
             // lblSightHisClone
             // 
+            lblSightHisClone.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left;
             lblSightHisClone.AutoSize = true;
             lblSightHisClone.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
             lblSightHisClone.Location = new Point(39, 139);
@@ -816,6 +873,7 @@
             // 
             // lblSightCount
             // 
+            lblSightCount.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Right;
             lblSightCount.AutoSize = true;
             lblSightCount.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
             lblSightCount.Location = new Point(243, 109);
@@ -827,6 +885,7 @@
             // 
             // lblSight
             // 
+            lblSight.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left;
             lblSight.AutoSize = true;
             lblSight.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
             lblSight.Location = new Point(39, 109);
@@ -838,23 +897,25 @@
             // 
             // chartStatsOther
             // 
-            chartArea4.Name = "StatsChartArea";
-            chartStatsOther.ChartAreas.Add(chartArea4);
-            legend4.Name = "StatsChartLegend";
-            chartStatsOther.Legends.Add(legend4);
+            chartStatsOther.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Right;
+            chartArea2.Name = "StatsChartArea";
+            chartStatsOther.ChartAreas.Add(chartArea2);
+            legend2.Name = "StatsChartLegend";
+            chartStatsOther.Legends.Add(legend2);
             chartStatsOther.Location = new Point(298, 6);
             chartStatsOther.Name = "chartStatsOther";
-            series4.ChartArea = "StatsChartArea";
-            series4.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Doughnut;
-            series4.Legend = "StatsChartLegend";
-            series4.Name = "StatsSeries";
-            chartStatsOther.Series.Add(series4);
+            series2.ChartArea = "StatsChartArea";
+            series2.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Doughnut;
+            series2.Legend = "StatsChartLegend";
+            series2.Name = "StatsSeries";
+            chartStatsOther.Series.Add(series2);
             chartStatsOther.Size = new Size(330, 260);
             chartStatsOther.TabIndex = 1;
             chartStatsOther.Text = "Biểu đồ";
             // 
             // cboSelect
             // 
+            cboSelect.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
             cboSelect.FormattingEnabled = true;
             cboSelect.Location = new Point(16, 318);
             cboSelect.Name = "cboSelect";
@@ -870,6 +931,7 @@
             Controls.Add(cboSelect);
             Controls.Add(tabStats);
             Controls.Add(btnClose);
+            MinimumSize = new Size(681, 391);
             Name = "FormStats";
             Text = "Thống kê";
             Load += FormStats_Load;

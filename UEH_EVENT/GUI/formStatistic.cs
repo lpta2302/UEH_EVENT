@@ -22,10 +22,5 @@ namespace UEH_EVENT.GUI
         {
 
         }
-
-        private void lblTo_Click(object sender, EventArgs e)
-        {
-
-        }
     }
 }
