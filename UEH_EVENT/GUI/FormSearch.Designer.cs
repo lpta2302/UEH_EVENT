@@ -45,6 +45,7 @@
             btnStats = new Button();
             lblProperty = new Label();
             cboProperties = new ComboBox();
+            chkSearchExact = new CheckBox();
             ((System.ComponentModel.ISupportInitialize)dgvSearchResults).BeginInit();
             SuspendLayout();
             // 
@@ -206,11 +207,23 @@
             cboProperties.TabIndex = 18;
             cboProperties.SelectedIndexChanged += cboProperties_SelectedIndexChanged;
             // 
+            // chkSearchExact
+            // 
+            chkSearchExact.AutoSize = true;
+            chkSearchExact.Enabled = false;
+            chkSearchExact.Location = new Point(158, 66);
+            chkSearchExact.Name = "chkSearchExact";
+            chkSearchExact.Size = new Size(90, 19);
+            chkSearchExact.TabIndex = 19;
+            chkSearchExact.Text = "Nguyên văn";
+            chkSearchExact.UseVisualStyleBackColor = true;
+            // 
             // FormSearch
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(586, 362);
+            Controls.Add(chkSearchExact);
             Controls.Add(cboProperties);
             Controls.Add(lblProperty);
             Controls.Add(btnStats);
@@ -255,5 +268,6 @@
         private Button btnStats;
         private Label lblProperty;
         private ComboBox cboProperties;
+        private CheckBox chkSearchExact;
     }
 }

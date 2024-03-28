@@ -5,6 +5,7 @@
         public string? SelectedClassValue { get; set; }
         public string? SelectedPropertyValue { get; set; }
         public string? SearchKeyword { get; set; }
+        public bool IsExactSearch { get; set; }
         public string? ThresholdFilter { get; set; }
         public int Threshold { get; set; }
         public int IntLowerBound { get; set; }
@@ -18,7 +19,7 @@
 
         private void ToggleTextSearch(bool isOn)
         {
-            txtSearchKeyword.Enabled = isOn;
+            txtSearchKeyword.Enabled = chkSearchExact.Enabled = isOn;
         }
 
         private void ToggleStatsButton()
@@ -56,6 +57,10 @@
             else
             {
                 SearchKeyword = null;
+            }
+            if (chkSearchExact.Enabled)
+            {
+                IsExactSearch = chkSearchExact.Checked;
             }
             if (rdoSearchThreshold.Enabled && rdoSearchThreshold.Checked)
             {
@@ -136,7 +141,7 @@
             {
                 if (txtSearchKeyword.Enabled)
                 {
-                    dgvSearchResults.DataSource = Search.SearchString(selectedClass, selectedProperty, txtSearchKeyword.Text.Trim());
+                    dgvSearchResults.DataSource = Search.SearchString(selectedClass, selectedProperty, txtSearchKeyword.Text.Trim(), chkSearchExact.Checked);
                 }
                 else
                 {

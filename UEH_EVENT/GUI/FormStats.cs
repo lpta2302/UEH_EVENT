@@ -232,6 +232,7 @@
         {
             LoadStats();
             string? selClass = form.SelectedClassValue, selProperty = form.SelectedPropertyValue, keyword = form.SearchKeyword, filter = form.ThresholdFilter;
+            bool isExactSearch = form.IsExactSearch;
             int threshold = form.Threshold, lowerBound = form.IntLowerBound, upperBound = form.IntUpperBound;
             int countOfAll = 0, countMatchKeyword = 0, countMetThreshold = 0, countInRange = 0;
             if (selClass != null && selProperty != null)
@@ -239,10 +240,19 @@
                 countOfAll = (int)SearchUtil.StaticCallGenericVarType(nameof(Stats), selClass, nameof(Stats.CountAll), null, null)!;
                 if (keyword != null)
                 {
-                    countMatchKeyword = (int)SearchUtil.StaticCallGenericVarType(nameof(Stats), selClass, nameof(Stats.CountFilterString), new[] { typeof(string), typeof(string) }, new[] { selProperty, keyword })!;
-                    xSearch[0] = $"\"{keyword}\""; xSearch[1] = "Còn lại";
+                    if (isExactSearch)
+                    {
+                        countMatchKeyword = (int)SearchUtil.StaticCallGenericVarType(nameof(Stats), selClass, nameof(Stats.CountFilterString), new[] { typeof(string), typeof(string) }, new[] { selProperty, keyword })!;
+                        xSearch[0] = $"Trùng \"{keyword}\""; xSearch[1] = "Còn lại";
+                        lblMatch.Text = $"Trùng từ khóa \"{keyword}\":";
+                    }
+                    else
+                    {
+                        countMatchKeyword = Stats.CountFilterContainsString(selClass, selProperty, keyword);
+                        xSearch[0] = $"Chứa \"{keyword}\""; xSearch[1] = "Còn lại";
+                        lblMatch.Text = $"Chứa từ khóa \"{keyword}\":";
+                    }
                     ySearch[0] = countMatchKeyword; ySearch[1] = countOfAll - countMatchKeyword;
-                    lblMatch.Text = $"Trùng từ khóa \"{keyword}\":";
                     lblMatchCount.Text = countMatchKeyword.ToString();
                 }
                 else if (filter != null && threshold != int.MinValue)
