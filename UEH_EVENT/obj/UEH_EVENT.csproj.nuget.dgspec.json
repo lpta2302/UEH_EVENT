@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "D:\\sang 2803\\UEH_EVENT\\UEH_EVENT\\UEH_EVENT.csproj": {}
+    "D:\\Subject\\Desktop Application Development\\project4\\UEH_EVENT\\UEH_EVENT\\UEH_EVENT.csproj": {}
   },
   "projects": {
-    "D:\\sang 2803\\UEH_EVENT\\UEH_EVENT\\UEH_EVENT.csproj": {
+    "D:\\Subject\\Desktop Application Development\\project4\\UEH_EVENT\\UEH_EVENT\\UEH_EVENT.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\sang 2803\\UEH_EVENT\\UEH_EVENT\\UEH_EVENT.csproj",
+        "projectUniqueName": "D:\\Subject\\Desktop Application Development\\project4\\UEH_EVENT\\UEH_EVENT\\UEH_EVENT.csproj",
         "projectName": "UEH_EVENT",
-        "projectPath": "D:\\sang 2803\\UEH_EVENT\\UEH_EVENT\\UEH_EVENT.csproj",
-        "packagesPath": "C:\\Users\\84942\\.nuget\\packages\\",
-        "outputPath": "D:\\sang 2803\\UEH_EVENT\\UEH_EVENT\\obj\\",
+        "projectPath": "D:\\Subject\\Desktop Application Development\\project4\\UEH_EVENT\\UEH_EVENT\\UEH_EVENT.csproj",
+        "packagesPath": "C:\\Users\\LENOVO\\.nuget\\packages\\",
+        "outputPath": "D:\\Subject\\Desktop Application Development\\project4\\UEH_EVENT\\UEH_EVENT\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\84942\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\LENOVO\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -82,7 +82,7 @@
               "privateAssets": "none"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.202\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.306\\RuntimeIdentifierGraph.json"
         }
       }
     }

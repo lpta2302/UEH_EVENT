@@ -23,6 +23,7 @@ namespace UEH_EVENT.GUI.Mario
         bool virussGoLeft = false;
         bool virussGoRight = true;
         int numberHeart = 3;
+        int numberShovel = 0;
         #endregion
 
         #region Player movement
@@ -39,11 +40,11 @@ namespace UEH_EVENT.GUI.Mario
         #endregion
 
         #region Player valuable
-        bool goLeft, goRight, hasKey, hasEnoughCoin;
-        bool hasShovel;
-        int numberCoin = 0;
-        int timeDownMinute = 1;
-        int timeDownSecond = 60;
+        bool goLeft, goRight, hasKey;
+        bool hasEnoughShovel;
+        int score = 0;
+        int timeUpMinute = 0;
+        int timeUpSecond = 0;
         #endregion
         #region Boolean Functions, "Check Collision"
 
@@ -151,36 +152,23 @@ namespace UEH_EVENT.GUI.Mario
         #endregion
         public void VirussGo()
         {
-            foreach (Control v in this.Controls)
+            if (virussGoRight == true)
             {
-                if ((string)v.Tag == "viruss")
-                {
-                    PictureBox viruss = (PictureBox)v;
-                    if (virussGoLeft)
-                    {
-                        viruss.Left -= 1;
-                    }
-                    else if (virussGoRight)
-                    {
-                        viruss.Left += 1;
-                    }
-                    foreach (Control others in this.Controls)
-                    {
-                        if (viruss.Bounds.IntersectsWith(others.Bounds))
-                        {
-                            if (others.Tag == "flatform")
-                            {
-                                virussGoRight = false;
-                                virussGoLeft = true;
-                            }
-                            else if (others.Tag == "coin")
-                            {
-                                virussGoLeft = false;
-                                virussGoRight = true;
-                            }
-                        }
-                    }
-                }
+                picViruss2.Left += 2;
+            }
+            if (virussGoLeft == true)
+            {
+                picViruss2.Left -= 2;
+            }
+            if (picViruss2.Location.X >= 286)
+            {
+                virussGoRight = false;
+                virussGoLeft = true;
+            }
+            if (picViruss2.Location.X <= 102)
+            {
+                virussGoRight = true;
+                virussGoLeft = false;
             }
         }
         public frmPlayMario()
@@ -189,7 +177,7 @@ namespace UEH_EVENT.GUI.Mario
         }
         public void Reload()
         {
-            picPlayer.Location = new System.Drawing.Point(410, 35);
+            picPlayer.Location = new System.Drawing.Point(22, 775);
         }
         public void HideHeart()
         {
@@ -267,7 +255,8 @@ namespace UEH_EVENT.GUI.Mario
         private void tmrGameLoad_Tick(object sender, EventArgs e)
         {
             VirussGo();
-            foreach (Control x in this.Controls)
+            lblScore.Text = "Score: " + score;
+            foreach (Control x in this.WorldFrame.Controls)
             {
                 if (x is PictureBox && (string)x.Tag == "player")
                 {
@@ -278,56 +267,42 @@ namespace UEH_EVENT.GUI.Mario
                     if (picPlayer.Bounds.IntersectsWith(x.Bounds) && x.Visible == true)
                     {
                         x.Visible = false;
-                        numberCoin += 1;
+                        score += 5;
                     }
-                }
-                if (numberCoin == 6)
-                {
-                    hasEnoughCoin = true;
                 }
                 if (x is PictureBox && (string)x.Tag == "shovel")
                 {
                     if (picPlayer.Bounds.IntersectsWith(x.Bounds) && x.Visible == true)
                     {
-                        hasShovel = true;
+                        numberShovel += 1;
                         picShovel.Visible = false;
                     }
-
                 }
                 if (x is PictureBox && (string)x.Tag == "hole")
                 {
-                    if (picPlayer.Bounds.IntersectsWith(x.Bounds) && x.Visible == true && hasShovel)
+                    if (picPlayer.Bounds.IntersectsWith(x.Bounds) && x.Visible == true)
                     {
                         picHole.Visible = false;
                     }
-                    if (picPlayer.Bounds.IntersectsWith(x.Bounds) && x.Visible == true && hasShovel == false)
+                    if (picPlayer.Bounds.IntersectsWith(x.Bounds) && x.Visible == true)
                     {
                         Reload();
                         numberHeart -= 1;
                         HideHeart();
                     }
                 }
-                /* if (x is PictureBox && (string)x.Tag == "viruss")
-                 {
-                     if (picPlayer.Bounds.IntersectsWith(x.Bounds) && x.Visible == true)
-                     {
-                         picViruss.Visible = false;
-                     }
-                     if (picPlayer.Bounds.IntersectsWith(x.Bounds) && x.Visible == true && hasShovel == false)
-                     {
-                         Reload();
-                         numberHeart -= 1;
-                         HideHeart();
-                         picViruss.Visible = true;
-                     }
-                 }*/
+                if (x is PictureBox && (string)x.Tag == "viruss")
+                {
+                    if (picPlayer.Bounds.IntersectsWith(x.Bounds) && x.Visible == true)
+                    {
+                        Reload();
+                        numberHeart -= 1;
+                        HideHeart();
+                    }
+                }
                 if (x is PictureBox && (string)x.Tag == "fire")
                 {
-                    if (picPlayer.Bounds.IntersectsWith(x.Bounds) && x.Visible == true && hasShovel)
-                    {
-                        x.Visible = false;
-                    }
-                    else if (picPlayer.Bounds.IntersectsWith(x.Bounds) && x.Visible == true && hasShovel == false)
+                    if (picPlayer.Bounds.IntersectsWith(x.Bounds) && x.Visible == true)
                     {
                         Reload();
                         numberHeart -= 1;
@@ -336,7 +311,7 @@ namespace UEH_EVENT.GUI.Mario
                 }
                 if (x is PictureBox && (string)x.Tag == "key")
                 {
-                    if (picPlayer.Bounds.IntersectsWith(x.Bounds) && x.Visible == true && hasEnoughCoin)
+                    if (picPlayer.Bounds.IntersectsWith(x.Bounds) && x.Visible == true)
                     {
                         x.Visible = false;
                         hasKey = true;
@@ -351,11 +326,12 @@ namespace UEH_EVENT.GUI.Mario
                         this.Close();
                     }
                 }
-
             }
             if (numberHeart == 0)
             {
                 picGameOver.Visible = true;
+                GameOn = false;
+
             }
         }
         private void frmPlayMario_KeyDown(object sender, KeyEventArgs e)
@@ -411,36 +387,25 @@ namespace UEH_EVENT.GUI.Mario
         {
 
         }
-        private void SecondDown(int second)
-        {
-            second -= 1;
-        }
         private void tmrLock_Tick(object sender, EventArgs e)
         {
-            if (timeDownMinute >= 0)
+            timeUpSecond += 1;
+            if (timeUpSecond == 60)
             {
-                if (timeDownSecond > 0)
-                {
-                    timeDownSecond -= 1;
-                }
+                timeUpMinute += 1;
+                timeUpSecond = 0;
             }
-            if (timeDownSecond == 0 && timeDownMinute > 0)
+            if (timeUpMinute < 10 && timeUpSecond < 10)
             {
-                timeDownMinute -= 1;
-                timeDownSecond = 59;
+                lblLock.Text = "0" + timeUpMinute + " : " + "0" + timeUpSecond;
             }
-            if (timeDownSecond == 0 && timeDownMinute == 0)
+            else if (timeUpMinute >= 10 && timeUpSecond < 10)
             {
-                picGameOver.Visible = true;
-                tmrLock.Stop();
-            }
-            if (timeDownSecond < 10)
-            {
-                lblLock.Text = "0" + timeDownMinute.ToString() + " : " + "0" + timeDownSecond.ToString();
+                lblLock.Text = timeUpMinute + " : " + "0" + timeUpSecond;
             }
             else
             {
-                lblLock.Text = "0" + timeDownMinute.ToString() + " : " + timeDownSecond.ToString();
+                lblLock.Text = "0" + timeUpMinute + " : " + timeUpSecond;
             }
         }
 
@@ -450,6 +415,11 @@ namespace UEH_EVENT.GUI.Mario
         }
 
         private void WorldFrame_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void pictureBox10_Click(object sender, EventArgs e)
         {
 
         }
