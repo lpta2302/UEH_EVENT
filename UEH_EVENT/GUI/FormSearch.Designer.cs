@@ -123,7 +123,7 @@
             rdoSearchThreshold.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             rdoSearchThreshold.AutoSize = true;
             rdoSearchThreshold.Enabled = false;
-            rdoSearchThreshold.Location = new Point(264, 36);
+            rdoSearchThreshold.Location = new Point(255, 37);
             rdoSearchThreshold.Name = "rdoSearchThreshold";
             rdoSearchThreshold.Size = new Size(120, 19);
             rdoSearchThreshold.TabIndex = 8;
@@ -155,7 +155,7 @@
             rdoSearchRange.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             rdoSearchRange.AutoSize = true;
             rdoSearchRange.Enabled = false;
-            rdoSearchRange.Location = new Point(263, 65);
+            rdoSearchRange.Location = new Point(255, 64);
             rdoSearchRange.Name = "rdoSearchRange";
             rdoSearchRange.Size = new Size(118, 19);
             rdoSearchRange.TabIndex = 11;
