@@ -19,6 +19,9 @@ public class Sight
     public Account CreatedBy { get; set; }
     public Sight()
     {
+        Questions = new List<Question>();
+        Name = "";
+        Preview = "";
         CreatedAt = DateTime.Now;
     }
 

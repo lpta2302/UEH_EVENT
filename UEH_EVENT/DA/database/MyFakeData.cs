@@ -26,7 +26,6 @@
     }
     private static void FakeSight()
     {
-<<<<<<< HEAD
         Answer a1 = new() { Content = "Đây là đáp án 1(đúng)", IsKeyAnswer = true };
         Answer a2 = new() { Content = "Đây là đáp án 2(sai)" };
         Answer a3 = new() { Content = "Đây là đáp án 3(sai)" };

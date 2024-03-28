@@ -169,4 +169,22 @@
   <data name="Background_Game" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Background Game.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="iconSight" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\iconSight.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="iconHistory" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\iconHistory.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="iconUpdateSight" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\iconUpdateSight.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Background_Guiz3" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Background Guiz3.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Logo_Update_27_3" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Logo Update 27.3.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="iconLogOut" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\iconLogOut.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
 </root>

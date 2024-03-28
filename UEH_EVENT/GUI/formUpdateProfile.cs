@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using UEH_EVENT.Utils;
+using static Constants;
 
 namespace UEH_EVENT.GUI
 {
@@ -18,6 +19,7 @@ namespace UEH_EVENT.GUI
         {
             InitializeComponent();
             currentAccount = GlobalData.CurrentAccount;
+            Constants.INavbar.CreateNavbar(this, Navbar);
         }
         public formUpdateProfile(Account account)
         {

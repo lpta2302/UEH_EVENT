@@ -37,8 +37,10 @@ namespace UEH_EVENT.GUI
         public formCreateSight()
         {
             InitializeComponent();
-            txtTenTN.Text=CurrentSight.Name;
-            txtMoTa.Text=CurrentSight.Preview;
+           
+                GlobalData.CurrentSight = new Sight() {
+                CreatedById = GlobalData.CurrentAccount.Id};
+                return;
         }
         public formCreateSight(Sight CurrentSight)
         {
@@ -56,9 +58,9 @@ namespace UEH_EVENT.GUI
         private void formCreateSight_Load(object sender, EventArgs e)
         {
             if (CurrentSight == null) return;
-            txtTenTN.Text = CurrentSight.Name;
-            txtMoTa.Text = CurrentSight.Preview;
-            for (int i = 0; i < CurrentSight.Questions.Count; i++)
+            txtTenTN.Text = CurrentSight?.Name;
+            txtMoTa.Text = CurrentSight?.Preview;
+            for (int i = 0; i < CurrentSight.Questions?.Count; i++)
             {
                 string[] row = new string[] { "" + (i + 1), CurrentSight.Questions[i].Content };
                 ListViewItem listViewItem = new ListViewItem(row);
@@ -83,13 +85,15 @@ namespace UEH_EVENT.GUI
 
         private void btnTao_Click(object sender, EventArgs e)
         {
-            if(txtTenTN.Text != "")
+            if(txtTenTN.Text == "")
             {
                 MessageBox.Show("Tên bài trắc nghiệm không được để trống!","Thêm thất bại",MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
             }
             if (CurrentSight.Questions.Count > 0)
             {
                 MessageBox.Show("Bài trắc nghiệm phải có ít nhất 1 câu hỏi", "Thêm thất bại", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
             }
             CurrentSight.Name = txtTenTN.Text;
             CurrentSight.Preview = txtMoTa.Text;
@@ -117,7 +121,7 @@ namespace UEH_EVENT.GUI
             if (MessageBox.Show("Bài trắc nghiệm chưa được lưu, bạn có muốn lưu phiên làm việc không?", "Thông báo", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
             {
                 string json = JsonConvert.SerializeObject(CurrentSight, Formatting.Indented);
-                GlobalData.CurrentAccount.SightHis = json;
+                GlobalData.CurrentAccount.SightSession = json;
             }
             else
             {

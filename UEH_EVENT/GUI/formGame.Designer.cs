@@ -33,80 +33,20 @@ namespace UEH_EVENT.GUI
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(formGame));
-            Navbar = new Panel();
-            panelLogo = new Panel();
-            panel2 = new Panel();
-            Home = new Panel();
-            btnHomee = new Button();
             label1 = new Label();
             panel3 = new Panel();
             panelGame = new Panel();
             panelPlay = new Panel();
             btnPlay = new Button();
-            Navbar.SuspendLayout();
-            Home.SuspendLayout();
+            Navbar = new Panel();
+            pictureBoxLogo = new PictureBox();
+            panelTitle = new Panel();
             panel3.SuspendLayout();
             panelGame.SuspendLayout();
             panelPlay.SuspendLayout();
+            Navbar.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)pictureBoxLogo).BeginInit();
             SuspendLayout();
-            // 
-            // Navbar
-            // 
-            Constants.INavbar.CreateNavbar(this, resources);
-            Navbar.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left;
-            Navbar.BackColor = Color.FromArgb(34, 34, 34);
-            Navbar.Controls.Add(panelLogo);
-            Navbar.Controls.Add(panel2);
-            Navbar.Controls.Add(Home);
-            Navbar.Location = new Point(3, 1);
-            Navbar.Name = "Navbar";
-            Navbar.Size = new Size(400, 981);
-            Navbar.TabIndex = 1;
-            Navbar.Paint += Navbar_Paint;
-            // 
-            // panelLogo
-            // 
-            panelLogo.AutoSizeMode = AutoSizeMode.GrowAndShrink;
-            panelLogo.BackgroundImage = Resources.Logo_396x163;
-            panelLogo.Location = new Point(0, 0);
-            panelLogo.Name = "panelLogo";
-            panelLogo.Size = new Size(396, 163);
-            panelLogo.TabIndex = 4;
-            // 
-            // panel2
-            // 
-            panel2.Location = new Point(402, 3);
-            panel2.Name = "panel2";
-            panel2.Size = new Size(1314, 163);
-            panel2.TabIndex = 2;
-            // 
-            // Home
-            // 
-            Home.Controls.Add(btnHomee);
-            Home.Location = new Point(0, 185);
-            Home.Name = "Home";
-            Home.Size = new Size(400, 75);
-            Home.TabIndex = 7;
-            // 
-            // btnHomee
-            // 
-            btnHomee.BackColor = Color.FromArgb(34, 34, 34);
-            btnHomee.BackgroundImageLayout = ImageLayout.None;
-            btnHomee.FlatStyle = FlatStyle.Flat;
-            btnHomee.Font = new Font("Helvetica", 9F, FontStyle.Bold, GraphicsUnit.Point);
-            btnHomee.ForeColor = Color.White;
-            btnHomee.Image = (Image)resources.GetObject("btnHomee.Image");
-            btnHomee.ImageAlign = ContentAlignment.MiddleLeft;
-            btnHomee.Location = new Point(-2, -9);
-            btnHomee.Name = "btnHomee";
-            btnHomee.Padding = new Padding(20, 0, 0, 0);
-            btnHomee.Size = new Size(402, 92);
-            btnHomee.TabIndex = 10;
-            btnHomee.Text = "  HOME";
-            btnHomee.TextAlign = ContentAlignment.MiddleLeft;
-            btnHomee.TextImageRelation = TextImageRelation.ImageBeforeText;
-            btnHomee.UseVisualStyleBackColor = false;
             // 
             // label1
             // 
@@ -158,6 +98,36 @@ namespace UEH_EVENT.GUI
             btnPlay.Text = "Play";
             btnPlay.UseVisualStyleBackColor = true;
             // 
+            // Navbar
+            // 
+            Navbar.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left;
+            Navbar.BackColor = Color.FromArgb(34, 34, 34);
+            Navbar.Controls.Add(pictureBoxLogo);
+            Navbar.Controls.Add(panelTitle);
+            Navbar.Location = new Point(-4, 1);
+            Navbar.Name = "Navbar";
+            Navbar.Size = new Size(407, 979);
+            Navbar.TabIndex = 45;
+            // 
+            // pictureBoxLogo
+            // 
+            pictureBoxLogo.Image = Resources.Logo_Update_27_3;
+            pictureBoxLogo.Location = new Point(3, 4);
+            pictureBoxLogo.Name = "pictureBoxLogo";
+            pictureBoxLogo.Size = new Size(404, 159);
+            pictureBoxLogo.SizeMode = PictureBoxSizeMode.Zoom;
+            pictureBoxLogo.TabIndex = 4;
+            pictureBoxLogo.TabStop = false;
+            // 
+            // panelTitle
+            // 
+            panelTitle.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Right;
+            panelTitle.CausesValidation = false;
+            panelTitle.Location = new Point(1009, 3);
+            panelTitle.Name = "panelTitle";
+            panelTitle.Size = new Size(1314, 2800);
+            panelTitle.TabIndex = 3;
+            // 
             // formGame
             // 
             AutoScaleDimensions = new SizeF(12F, 30F);
@@ -165,35 +135,32 @@ namespace UEH_EVENT.GUI
             AutoSize = true;
             BackColor = Color.White;
             ClientSize = new Size(1718, 983);
+            Controls.Add(Navbar);
             Controls.Add(panelGame);
             Controls.Add(panel3);
-            Controls.Add(Navbar);
             Margin = new Padding(3, 4, 3, 4);
             Name = "formGame";
             StartPosition = FormStartPosition.CenterParent;
             Text = "formGame";
             TopMost = true;
             WindowState = FormWindowState.Maximized;
-            Navbar.ResumeLayout(false);
-            Home.ResumeLayout(false);
             panel3.ResumeLayout(false);
             panel3.PerformLayout();
             panelGame.ResumeLayout(false);
             panelPlay.ResumeLayout(false);
+            Navbar.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)pictureBoxLogo).EndInit();
             ResumeLayout(false);
         }
 
         #endregion
-
-        private Panel Navbar;
-        private Panel panel2;
-        private Panel Home;
-        private Button btnHomee;
         private Label label1;
         private Panel panel3;
-        private Panel panelLogo;
         private Panel panelGame;
         private Button btnPlay;
         private Panel panelPlay;
+        private Panel Navbar;
+        private PictureBox pictureBoxLogo;
+        private Panel panelTitle;
     }
 }

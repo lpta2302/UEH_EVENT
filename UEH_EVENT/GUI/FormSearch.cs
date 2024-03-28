@@ -37,6 +37,7 @@
         public FormSearch()
         {
             InitializeComponent();
+
         }
 
         private void FormSearch_Load(object sender, EventArgs e)

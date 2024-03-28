@@ -4,13 +4,14 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using static Constants;
-=======
->>>>>>> origin/tienphi
+
 
 namespace UEH_EVENT.Utils
 {
     internal class GlobalData
     {
+      
+        public static Sight CurrentSight { get; set; }
         public static Account CurrentAccount {  get; set; }
 
         public static INavbar Navbar { get; set; }
@@ -19,10 +20,15 @@ namespace UEH_EVENT.Utils
         {
             if (CurrentAccount == null) return;
             //string type = CurrentAccount.AccType;
-            string type = Constants.STUDENT_ACC;
+            string type = Constants.CLB_ACC;
             if (type.Equals(STUDENT_ACC)) Navbar = new StudentNavbar();
             if (type.Equals(ADMIN_ACC)) Navbar = new AdminNavbar();
             if (type.Equals(CLB_ACC)) Navbar = new ClbNavbar();
+        }
+        public static void reset()
+        {
+            CurrentAccount = null;
+            CurrentSight = null;
         }
     }
 }

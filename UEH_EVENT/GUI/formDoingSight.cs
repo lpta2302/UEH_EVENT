@@ -21,6 +21,11 @@ namespace UEH_EVENT.GUI
         {
             InitializeComponent();
         }
+        public formDoingSight(int id)
+        {
+            InitializeComponent();
+            sight = Query.GetSpecificSight(id);
+        }
         private void loadQuestion()
         {
             Question curQuestion = questions[iCurrentQuestion];
@@ -52,8 +57,6 @@ namespace UEH_EVENT.GUI
         }
         private void ManHinhThi_Load(object sender, EventArgs e)
         {
-            sight = Query.GetSpecificSight(1);
-
             if (sight == null)
             {
                 Console.WriteLine("Not Sight Found!");

@@ -31,24 +31,26 @@ public class Constants
         public string[] Name { get; }
         public Type[] Forms { get; }
         public Image[] Icons { get; }
-        public static void CreateNavbar(Form form, ComponentResourceManager resources)
+        public static void CreateNavbar(Form form, Panel Navbar)
         {
             INavbar navbar = GlobalData.Navbar;
             for (int i = 0; i < navbar.Name.Length; i++)
             {
+                System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(form.GetType());
                 // Home
                 // 
                 Panel panel = new Panel();
                 Button btn = new Button();
 
                 panel.Controls.Add(btn);
-                panel.Location = new Point(0, 93 + 75 * (i + 1));
+                panel.Location = new Point(0,120 + 60 * (i));
                 panel.Name = "panel" + navbar.Name[i];
-                panel.Size = new Size(400, 75);
+                panel.Size = new Size(400, 68);
                 panel.TabIndex = 7;
-                // 
-                // btnHomee
-                // 
+                panel.BackColor = Color.FromArgb(34, 34, 34);
+                panel.BorderStyle = BorderStyle.None;
+
+
                 btn.BackColor = Color.FromArgb(34, 34, 34);
                 btn.BackgroundImageLayout = ImageLayout.None;
                 btn.FlatStyle = FlatStyle.Flat;
@@ -56,16 +58,18 @@ public class Constants
                 btn.ForeColor = Color.White;
                 btn.Image = (Image)resources.GetObject($"btn{navbar.Name}.Image");
                 btn.ImageAlign = ContentAlignment.MiddleLeft;
-                btn.Location = new Point(0, -9);
+                //btn.Location = new Point(0, -17);
                 btn.Name = "btn" + navbar.Name[i];
                 btn.Padding = new Padding(20, 0, 0, 0);
-                btn.Size = new Size(419, 92);
+                btn.Size = new Size(419, 68);
                 btn.TabIndex = 10;
                 btn.Text = "  " + navbar.Name[i];
                 btn.TextAlign = ContentAlignment.MiddleLeft;
                 btn.TextImageRelation = TextImageRelation.ImageBeforeText;
                 btn.UseVisualStyleBackColor = false;
                 btn.Image = navbar.Icons[i];
+                
+
                 btn.Click += (object sender, EventArgs e) =>
                 {
                     int index = Array.FindIndex(navbar.Name, item => item.Equals(((Control)sender).Text.Trim()));
@@ -74,7 +78,7 @@ public class Constants
                     form.Close();
                 };
 
-                form.Controls.Add(panel);
+                Navbar.Controls.Add(panel);
             }
         }
     }
@@ -83,61 +87,69 @@ public class Constants
     {
         public string[] Name { get; } = new string[]
         {
-            "Bài trắc nghiệm",
+            "Sight",
             "Game",
-            "Thống kê"
+            "History",
+            "Log Out"
         };
         public Type[] Forms { get; } = new Type[] {
             typeof(formSight),
             typeof(formGame),
-            typeof(formStatistic),
+            typeof(formHistory),
+            typeof(LoginForm),  
         };
         public Image[] Icons { get; } = new Image[]
         {
-            UEH_EVENT.Properties.Resources.iconHome,
+            UEH_EVENT.Properties.Resources.iconSight,
             UEH_EVENT.Properties.Resources.iconGame,
-            UEH_EVENT.Properties.Resources.iconPoint
+            UEH_EVENT.Properties.Resources.iconHistory,
+            UEH_EVENT.Properties.Resources.iconLogOut
         };
     }
     public class AdminNavbar : INavbar
     {
         public string[] Name { get; } = new string[]
         {
-            "Tài Khoản",
-            "Game",
-            "Thống kê"
+            "Manage Account",
+            "Manage Sight",
+            "Statistic",
+            "Log Out"
         };
         public Type[] Forms { get; } = new Type[] {
-            typeof(formManageAccount
-            ),
-            typeof(formGame),
+            typeof(formManageAccount),
+            typeof(formManageSight),
             typeof(formStatistic),
+            typeof(LoginForm)
         };
         public Image[] Icons { get; } = new Image[]
         {
-            UEH_EVENT.Properties.Resources.iconHome,
-            UEH_EVENT.Properties.Resources.iconGame,
-            UEH_EVENT.Properties.Resources.iconPoint
+            UEH_EVENT.Properties.Resources.iconManage,
+            UEH_EVENT.Properties.Resources.iconUpdate,
+            UEH_EVENT.Properties.Resources.iconPoint,
+            UEH_EVENT.Properties.Resources.iconLogOut
         };
     }
     public class ClbNavbar : INavbar
     {
         public string[] Name { get; } = new string[]
         {
-            "Cập nhật ĐRL",
-            "Tạo trắc nghiệm",
-            "Thống kê"
+            "Update points",
+            "Create Sight",
+            "Statistic",
+            "Log Out"
         };
         public Type[] Forms { get; } = new Type[] {
             typeof(formUpdateTPoint),
-            typeof(formSight),
+            typeof(formLobbySight),
             typeof(formStatistic),
+            typeof(LoginForm)
         };
         public Image[] Icons { get; } = new Image[]
         {
             UEH_EVENT.Properties.Resources.iconUpdate,
-            UEH_EVENT.Properties.Resources.iconHome,
-            UEH_EVENT.Properties.Resources.iconPoint
+            UEH_EVENT.Properties.Resources.iconUpdateSight,
+            UEH_EVENT.Properties.Resources.iconPoint,
+            UEH_EVENT.Properties.Resources.iconLogOut
         };
     }
 

@@ -34,6 +34,7 @@ namespace UEH_EVENT.GUI
         public formManageSight()
         {
             InitializeComponent();
+            Constants.INavbar.CreateNavbar(this, Navbar);
         }
 
         private void gotFocus(object sender, EventArgs e)
