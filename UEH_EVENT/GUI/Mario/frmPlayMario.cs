@@ -307,20 +307,20 @@ namespace UEH_EVENT.GUI.Mario
                         HideHeart();
                     }
                 }
-                if (x is PictureBox && (string)x.Tag == "viruss")
-                {
-                    if (picPlayer.Bounds.IntersectsWith(x.Bounds) && x.Visible == true)
-                    {
-                        picViruss.Visible = false;
-                    }
-                    if (picPlayer.Bounds.IntersectsWith(x.Bounds) && x.Visible == true && hasShovel == false)
-                    {
-                        Reload();
-                        numberHeart -= 1;
-                        HideHeart();
-                        picViruss.Visible = true;
-                    }
-                }
+                /* if (x is PictureBox && (string)x.Tag == "viruss")
+                 {
+                     if (picPlayer.Bounds.IntersectsWith(x.Bounds) && x.Visible == true)
+                     {
+                         picViruss.Visible = false;
+                     }
+                     if (picPlayer.Bounds.IntersectsWith(x.Bounds) && x.Visible == true && hasShovel == false)
+                     {
+                         Reload();
+                         numberHeart -= 1;
+                         HideHeart();
+                         picViruss.Visible = true;
+                     }
+                 }*/
                 if (x is PictureBox && (string)x.Tag == "fire")
                 {
                     if (picPlayer.Bounds.IntersectsWith(x.Bounds) && x.Visible == true && hasShovel)
@@ -445,6 +445,11 @@ namespace UEH_EVENT.GUI.Mario
         }
 
         private void pictureBox13_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void WorldFrame_Paint(object sender, PaintEventArgs e)
         {
 
         }
