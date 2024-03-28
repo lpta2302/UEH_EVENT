@@ -133,6 +133,7 @@
             ((System.ComponentModel.ISupportInitialize)picShovel).BeginInit();
             ((System.ComponentModel.ISupportInitialize)picFire).BeginInit();
             ((System.ComponentModel.ISupportInitialize)picGameOver).BeginInit();
+            WorldFrame.SuspendLayout();
             SuspendLayout();
             // 
             // picPlayer
@@ -140,7 +141,7 @@
             picPlayer.BackColor = Color.Transparent;
             picPlayer.BackgroundImageLayout = ImageLayout.Stretch;
             picPlayer.Image = Properties.Resources.MarioPlay;
-            picPlayer.Location = new Point(413, 35);
+            picPlayer.Location = new Point(540, 172);
             picPlayer.Margin = new Padding(2);
             picPlayer.Name = "picPlayer";
             picPlayer.Size = new Size(26, 50);
@@ -357,7 +358,7 @@
             picFlatform9.BackgroundImageLayout = ImageLayout.Stretch;
             picFlatform9.BorderStyle = BorderStyle.FixedSingle;
             picFlatform9.Image = Properties.Resources.brickFlatform;
-            picFlatform9.Location = new Point(354, 302);
+            picFlatform9.Location = new Point(355, 306);
             picFlatform9.Margin = new Padding(2);
             picFlatform9.Name = "picFlatform9";
             picFlatform9.Size = new Size(86, 30);
@@ -594,7 +595,7 @@
             pictureBox13.BackgroundImageLayout = ImageLayout.Stretch;
             pictureBox13.BorderStyle = BorderStyle.FixedSingle;
             pictureBox13.Image = Properties.Resources.brickFlatform;
-            pictureBox13.Location = new Point(413, 168);
+            pictureBox13.Location = new Point(416, 157);
             pictureBox13.Margin = new Padding(2);
             pictureBox13.Name = "pictureBox13";
             pictureBox13.Size = new Size(120, 30);
@@ -602,6 +603,7 @@
             pictureBox13.TabIndex = 5;
             pictureBox13.TabStop = false;
             pictureBox13.Tag = "flatform";
+            pictureBox13.Click += pictureBox13_Click;
             // 
             // picViruss2
             // 
@@ -793,7 +795,7 @@
             pictureBox28.BackgroundImageLayout = ImageLayout.Stretch;
             pictureBox28.BorderStyle = BorderStyle.FixedSingle;
             pictureBox28.Image = Properties.Resources.brickFlatform;
-            pictureBox28.Location = new Point(270, 327);
+            pictureBox28.Location = new Point(270, 326);
             pictureBox28.Margin = new Padding(2);
             pictureBox28.Name = "pictureBox28";
             pictureBox28.Size = new Size(86, 30);
@@ -821,10 +823,10 @@
             picFire.BackColor = Color.Transparent;
             picFire.BackgroundImageLayout = ImageLayout.Stretch;
             picFire.Image = Properties.Resources.firePlayGame;
-            picFire.Location = new Point(457, 124);
+            picFire.Location = new Point(416, 109);
             picFire.Margin = new Padding(2);
             picFire.Name = "picFire";
-            picFire.Size = new Size(40, 39);
+            picFire.Size = new Size(46, 39);
             picFire.SizeMode = PictureBoxSizeMode.StretchImage;
             picFire.TabIndex = 15;
             picFire.TabStop = false;
@@ -841,7 +843,7 @@
             picGameOver.BackColor = Color.Transparent;
             picGameOver.BackgroundImageLayout = ImageLayout.Stretch;
             picGameOver.Image = Properties.Resources.GameOver;
-            picGameOver.Location = new Point(127, 110);
+            picGameOver.Location = new Point(125, -179);
             picGameOver.Margin = new Padding(2);
             picGameOver.Name = "picGameOver";
             picGameOver.Size = new Size(538, 232);
@@ -869,8 +871,13 @@
             // 
             // WorldFrame
             // 
-            WorldFrame.BackgroundImage = Properties.Resources.ForestBackground;
+            WorldFrame.BackgroundImage = Properties.Resources.backGroundPlayGame;
             WorldFrame.BackgroundImageLayout = ImageLayout.Stretch;
+            WorldFrame.Controls.Add(picGameOver);
+            WorldFrame.Controls.Add(picFlatform9);
+            WorldFrame.Controls.Add(pictureBox13);
+            WorldFrame.Controls.Add(picFire);
+            WorldFrame.Controls.Add(picPlayer);
             WorldFrame.Location = new Point(-1, -4);
             WorldFrame.Name = "WorldFrame";
             WorldFrame.Size = new Size(766, 459);
@@ -892,16 +899,14 @@
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            BackgroundImage = Properties.Resources.ForestBackground;
+            BackgroundImage = Properties.Resources.backGroundPlayGame;
             BackgroundImageLayout = ImageLayout.Stretch;
             ClientSize = new Size(765, 454);
             Controls.Add(lblLock);
-            Controls.Add(picGameOver);
             Controls.Add(picFlatform1);
             Controls.Add(pictureBox4);
             Controls.Add(pictureBox2);
             Controls.Add(picShovel);
-            Controls.Add(picFire);
             Controls.Add(picFire2);
             Controls.Add(picKey);
             Controls.Add(pictureBox19);
@@ -914,7 +919,6 @@
             Controls.Add(pictureBox1);
             Controls.Add(pictureBox14);
             Controls.Add(pictureBox7);
-            Controls.Add(pictureBox13);
             Controls.Add(pictureBox5);
             Controls.Add(pictureBox8);
             Controls.Add(pictureBox16);
@@ -933,7 +937,6 @@
             Controls.Add(picWallUpShort1);
             Controls.Add(picFlatform10);
             Controls.Add(pictureBox28);
-            Controls.Add(picFlatform9);
             Controls.Add(picFlatform7);
             Controls.Add(picFlatform6);
             Controls.Add(picFlatform5);
@@ -944,7 +947,6 @@
             Controls.Add(picHeart2);
             Controls.Add(picHeart1);
             Controls.Add(picTime);
-            Controls.Add(picPlayer);
             Controls.Add(WorldFrame);
             DoubleBuffered = true;
             Margin = new Padding(2);
@@ -1004,6 +1006,7 @@
             ((System.ComponentModel.ISupportInitialize)picShovel).EndInit();
             ((System.ComponentModel.ISupportInitialize)picFire).EndInit();
             ((System.ComponentModel.ISupportInitialize)picGameOver).EndInit();
+            WorldFrame.ResumeLayout(false);
             ResumeLayout(false);
         }
 

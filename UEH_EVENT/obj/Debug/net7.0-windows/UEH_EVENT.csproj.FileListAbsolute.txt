@@ -1,83 +1,82 @@
-D:\Phát triển Dekstop\tét\UEH_EVENT\UEH_EVENT\bin\Debug\net7.0-windows\UEH_EVENT.exe
-D:\Phát triển Dekstop\tét\UEH_EVENT\UEH_EVENT\bin\Debug\net7.0-windows\UEH_EVENT.deps.json
-D:\Phát triển Dekstop\tét\UEH_EVENT\UEH_EVENT\bin\Debug\net7.0-windows\UEH_EVENT.runtimeconfig.json
-D:\Phát triển Dekstop\tét\UEH_EVENT\UEH_EVENT\bin\Debug\net7.0-windows\UEH_EVENT.dll
-D:\Phát triển Dekstop\tét\UEH_EVENT\UEH_EVENT\bin\Debug\net7.0-windows\UEH_EVENT.pdb
-D:\Phát triển Dekstop\tét\UEH_EVENT\UEH_EVENT\bin\Debug\net7.0-windows\Azure.Core.dll
-D:\Phát triển Dekstop\tét\UEH_EVENT\UEH_EVENT\bin\Debug\net7.0-windows\Azure.Identity.dll
-D:\Phát triển Dekstop\tét\UEH_EVENT\UEH_EVENT\bin\Debug\net7.0-windows\Humanizer.dll
-D:\Phát triển Dekstop\tét\UEH_EVENT\UEH_EVENT\bin\Debug\net7.0-windows\Microsoft.Bcl.AsyncInterfaces.dll
-D:\Phát triển Dekstop\tét\UEH_EVENT\UEH_EVENT\bin\Debug\net7.0-windows\Microsoft.Data.SqlClient.dll
-D:\Phát triển Dekstop\tét\UEH_EVENT\UEH_EVENT\bin\Debug\net7.0-windows\Microsoft.EntityFrameworkCore.dll
-D:\Phát triển Dekstop\tét\UEH_EVENT\UEH_EVENT\bin\Debug\net7.0-windows\Microsoft.EntityFrameworkCore.Abstractions.dll
-D:\Phát triển Dekstop\tét\UEH_EVENT\UEH_EVENT\bin\Debug\net7.0-windows\Microsoft.EntityFrameworkCore.Design.dll
-D:\Phát triển Dekstop\tét\UEH_EVENT\UEH_EVENT\bin\Debug\net7.0-windows\Microsoft.EntityFrameworkCore.Relational.dll
-D:\Phát triển Dekstop\tét\UEH_EVENT\UEH_EVENT\bin\Debug\net7.0-windows\Microsoft.EntityFrameworkCore.SqlServer.dll
-D:\Phát triển Dekstop\tét\UEH_EVENT\UEH_EVENT\bin\Debug\net7.0-windows\Microsoft.Extensions.Caching.Abstractions.dll
-D:\Phát triển Dekstop\tét\UEH_EVENT\UEH_EVENT\bin\Debug\net7.0-windows\Microsoft.Extensions.Caching.Memory.dll
-D:\Phát triển Dekstop\tét\UEH_EVENT\UEH_EVENT\bin\Debug\net7.0-windows\Microsoft.Extensions.Configuration.Abstractions.dll
-D:\Phát triển Dekstop\tét\UEH_EVENT\UEH_EVENT\bin\Debug\net7.0-windows\Microsoft.Extensions.DependencyInjection.dll
-D:\Phát triển Dekstop\tét\UEH_EVENT\UEH_EVENT\bin\Debug\net7.0-windows\Microsoft.Extensions.DependencyInjection.Abstractions.dll
-D:\Phát triển Dekstop\tét\UEH_EVENT\UEH_EVENT\bin\Debug\net7.0-windows\Microsoft.Extensions.DependencyModel.dll
-D:\Phát triển Dekstop\tét\UEH_EVENT\UEH_EVENT\bin\Debug\net7.0-windows\Microsoft.Extensions.Logging.dll
-D:\Phát triển Dekstop\tét\UEH_EVENT\UEH_EVENT\bin\Debug\net7.0-windows\Microsoft.Extensions.Logging.Abstractions.dll
-D:\Phát triển Dekstop\tét\UEH_EVENT\UEH_EVENT\bin\Debug\net7.0-windows\Microsoft.Extensions.Options.dll
-D:\Phát triển Dekstop\tét\UEH_EVENT\UEH_EVENT\bin\Debug\net7.0-windows\Microsoft.Extensions.Primitives.dll
-D:\Phát triển Dekstop\tét\UEH_EVENT\UEH_EVENT\bin\Debug\net7.0-windows\Microsoft.Identity.Client.dll
-D:\Phát triển Dekstop\tét\UEH_EVENT\UEH_EVENT\bin\Debug\net7.0-windows\Microsoft.Identity.Client.Extensions.Msal.dll
-D:\Phát triển Dekstop\tét\UEH_EVENT\UEH_EVENT\bin\Debug\net7.0-windows\Microsoft.Identity.Client.NativeInterop.dll
-D:\Phát triển Dekstop\tét\UEH_EVENT\UEH_EVENT\bin\Debug\net7.0-windows\Microsoft.IdentityModel.Abstractions.dll
-D:\Phát triển Dekstop\tét\UEH_EVENT\UEH_EVENT\bin\Debug\net7.0-windows\Microsoft.IdentityModel.JsonWebTokens.dll
-D:\Phát triển Dekstop\tét\UEH_EVENT\UEH_EVENT\bin\Debug\net7.0-windows\Microsoft.IdentityModel.Logging.dll
-D:\Phát triển Dekstop\tét\UEH_EVENT\UEH_EVENT\bin\Debug\net7.0-windows\Microsoft.IdentityModel.Protocols.dll
-D:\Phát triển Dekstop\tét\UEH_EVENT\UEH_EVENT\bin\Debug\net7.0-windows\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
-D:\Phát triển Dekstop\tét\UEH_EVENT\UEH_EVENT\bin\Debug\net7.0-windows\Microsoft.IdentityModel.Tokens.dll
-D:\Phát triển Dekstop\tét\UEH_EVENT\UEH_EVENT\bin\Debug\net7.0-windows\Microsoft.SqlServer.Server.dll
-D:\Phát triển Dekstop\tét\UEH_EVENT\UEH_EVENT\bin\Debug\net7.0-windows\Microsoft.Web.WebView2.Core.dll
-D:\Phát triển Dekstop\tét\UEH_EVENT\UEH_EVENT\bin\Debug\net7.0-windows\Microsoft.Web.WebView2.WinForms.dll
-D:\Phát triển Dekstop\tét\UEH_EVENT\UEH_EVENT\bin\Debug\net7.0-windows\Microsoft.Web.WebView2.Wpf.dll
-D:\Phát triển Dekstop\tét\UEH_EVENT\UEH_EVENT\bin\Debug\net7.0-windows\Mono.TextTemplating.dll
-D:\Phát triển Dekstop\tét\UEH_EVENT\UEH_EVENT\bin\Debug\net7.0-windows\System.IdentityModel.Tokens.Jwt.dll
-D:\Phát triển Dekstop\tét\UEH_EVENT\UEH_EVENT\bin\Debug\net7.0-windows\System.Memory.Data.dll
-D:\Phát triển Dekstop\tét\UEH_EVENT\UEH_EVENT\bin\Debug\net7.0-windows\System.Runtime.Caching.dll
-D:\Phát triển Dekstop\tét\UEH_EVENT\UEH_EVENT\bin\Debug\net7.0-windows\de\Microsoft.Data.SqlClient.resources.dll
-D:\Phát triển Dekstop\tét\UEH_EVENT\UEH_EVENT\bin\Debug\net7.0-windows\es\Microsoft.Data.SqlClient.resources.dll
-D:\Phát triển Dekstop\tét\UEH_EVENT\UEH_EVENT\bin\Debug\net7.0-windows\fr\Microsoft.Data.SqlClient.resources.dll
-D:\Phát triển Dekstop\tét\UEH_EVENT\UEH_EVENT\bin\Debug\net7.0-windows\it\Microsoft.Data.SqlClient.resources.dll
-D:\Phát triển Dekstop\tét\UEH_EVENT\UEH_EVENT\bin\Debug\net7.0-windows\ja\Microsoft.Data.SqlClient.resources.dll
-D:\Phát triển Dekstop\tét\UEH_EVENT\UEH_EVENT\bin\Debug\net7.0-windows\ko\Microsoft.Data.SqlClient.resources.dll
-D:\Phát triển Dekstop\tét\UEH_EVENT\UEH_EVENT\bin\Debug\net7.0-windows\pt-BR\Microsoft.Data.SqlClient.resources.dll
-D:\Phát triển Dekstop\tét\UEH_EVENT\UEH_EVENT\bin\Debug\net7.0-windows\ru\Microsoft.Data.SqlClient.resources.dll
-D:\Phát triển Dekstop\tét\UEH_EVENT\UEH_EVENT\bin\Debug\net7.0-windows\zh-Hans\Microsoft.Data.SqlClient.resources.dll
-D:\Phát triển Dekstop\tét\UEH_EVENT\UEH_EVENT\bin\Debug\net7.0-windows\zh-Hant\Microsoft.Data.SqlClient.resources.dll
-D:\Phát triển Dekstop\tét\UEH_EVENT\UEH_EVENT\bin\Debug\net7.0-windows\runtimes\unix\lib\net6.0\Microsoft.Data.SqlClient.dll
-D:\Phát triển Dekstop\tét\UEH_EVENT\UEH_EVENT\bin\Debug\net7.0-windows\runtimes\win\lib\net6.0\Microsoft.Data.SqlClient.dll
-D:\Phát triển Dekstop\tét\UEH_EVENT\UEH_EVENT\bin\Debug\net7.0-windows\runtimes\win-arm\native\Microsoft.Data.SqlClient.SNI.dll
-D:\Phát triển Dekstop\tét\UEH_EVENT\UEH_EVENT\bin\Debug\net7.0-windows\runtimes\win-arm64\native\Microsoft.Data.SqlClient.SNI.dll
-D:\Phát triển Dekstop\tét\UEH_EVENT\UEH_EVENT\bin\Debug\net7.0-windows\runtimes\win-x64\native\Microsoft.Data.SqlClient.SNI.dll
-D:\Phát triển Dekstop\tét\UEH_EVENT\UEH_EVENT\bin\Debug\net7.0-windows\runtimes\win-x86\native\Microsoft.Data.SqlClient.SNI.dll
-D:\Phát triển Dekstop\tét\UEH_EVENT\UEH_EVENT\bin\Debug\net7.0-windows\runtimes\win-arm64\native\msalruntime_arm64.dll
-D:\Phát triển Dekstop\tét\UEH_EVENT\UEH_EVENT\bin\Debug\net7.0-windows\runtimes\win-x64\native\msalruntime.dll
-D:\Phát triển Dekstop\tét\UEH_EVENT\UEH_EVENT\bin\Debug\net7.0-windows\runtimes\win-x86\native\msalruntime_x86.dll
-D:\Phát triển Dekstop\tét\UEH_EVENT\UEH_EVENT\bin\Debug\net7.0-windows\runtimes\win-arm64\native\WebView2Loader.dll
-D:\Phát triển Dekstop\tét\UEH_EVENT\UEH_EVENT\bin\Debug\net7.0-windows\runtimes\win-x64\native\WebView2Loader.dll
-D:\Phát triển Dekstop\tét\UEH_EVENT\UEH_EVENT\bin\Debug\net7.0-windows\runtimes\win-x86\native\WebView2Loader.dll
-D:\Phát triển Dekstop\tét\UEH_EVENT\UEH_EVENT\bin\Debug\net7.0-windows\runtimes\win\lib\net6.0\System.Runtime.Caching.dll
-D:\Phát triển Dekstop\tét\UEH_EVENT\UEH_EVENT\obj\Debug\net7.0-windows\UEH_EVENT.csproj.AssemblyReference.cache
-D:\Phát triển Dekstop\tét\UEH_EVENT\UEH_EVENT\obj\Debug\net7.0-windows\UEH_EVENT.Form1.resources
-D:\Phát triển Dekstop\tét\UEH_EVENT\UEH_EVENT\obj\Debug\net7.0-windows\UEH_EVENT.GUI.Mario.Form1.resources
-D:\Phát triển Dekstop\tét\UEH_EVENT\UEH_EVENT\obj\Debug\net7.0-windows\UEH_EVENT.GUI.Mario.frmPlayMario.resources
-D:\Phát triển Dekstop\tét\UEH_EVENT\UEH_EVENT\obj\Debug\net7.0-windows\UEH_EVENT.GUI.Mario.frmStartMario.resources
-D:\Phát triển Dekstop\tét\UEH_EVENT\UEH_EVENT\obj\Debug\net7.0-windows\UEH_EVENT.Properties.Resources.resources
-D:\Phát triển Dekstop\tét\UEH_EVENT\UEH_EVENT\obj\Debug\net7.0-windows\UEH_EVENT.csproj.GenerateResource.cache
-D:\Phát triển Dekstop\tét\UEH_EVENT\UEH_EVENT\obj\Debug\net7.0-windows\UEH_EVENT.GeneratedMSBuildEditorConfig.editorconfig
-D:\Phát triển Dekstop\tét\UEH_EVENT\UEH_EVENT\obj\Debug\net7.0-windows\UEH_EVENT.AssemblyInfoInputs.cache
-D:\Phát triển Dekstop\tét\UEH_EVENT\UEH_EVENT\obj\Debug\net7.0-windows\UEH_EVENT.AssemblyInfo.cs
-D:\Phát triển Dekstop\tét\UEH_EVENT\UEH_EVENT\obj\Debug\net7.0-windows\UEH_EVENT.csproj.CoreCompileInputs.cache
-D:\Phát triển Dekstop\tét\UEH_EVENT\UEH_EVENT\obj\Debug\net7.0-windows\UEH_EVENT.sourcelink.json
-D:\Phát triển Dekstop\tét\UEH_EVENT\UEH_EVENT\obj\Debug\net7.0-windows\UEH_EVENT.csproj.CopyComplete
-D:\Phát triển Dekstop\tét\UEH_EVENT\UEH_EVENT\obj\Debug\net7.0-windows\UEH_EVENT.dll
-D:\Phát triển Dekstop\tét\UEH_EVENT\UEH_EVENT\obj\Debug\net7.0-windows\refint\UEH_EVENT.dll
-D:\Phát triển Dekstop\tét\UEH_EVENT\UEH_EVENT\obj\Debug\net7.0-windows\UEH_EVENT.pdb
-D:\Phát triển Dekstop\tét\UEH_EVENT\UEH_EVENT\obj\Debug\net7.0-windows\UEH_EVENT.genruntimeconfig.cache
-D:\Phát triển Dekstop\tét\UEH_EVENT\UEH_EVENT\obj\Debug\net7.0-windows\ref\UEH_EVENT.dll
+D:\sang 2803\UEH_EVENT\UEH_EVENT\bin\Debug\net7.0-windows\UEH_EVENT.exe
+D:\sang 2803\UEH_EVENT\UEH_EVENT\bin\Debug\net7.0-windows\UEH_EVENT.deps.json
+D:\sang 2803\UEH_EVENT\UEH_EVENT\bin\Debug\net7.0-windows\UEH_EVENT.runtimeconfig.json
+D:\sang 2803\UEH_EVENT\UEH_EVENT\bin\Debug\net7.0-windows\UEH_EVENT.dll
+D:\sang 2803\UEH_EVENT\UEH_EVENT\bin\Debug\net7.0-windows\UEH_EVENT.pdb
+D:\sang 2803\UEH_EVENT\UEH_EVENT\bin\Debug\net7.0-windows\Azure.Core.dll
+D:\sang 2803\UEH_EVENT\UEH_EVENT\bin\Debug\net7.0-windows\Azure.Identity.dll
+D:\sang 2803\UEH_EVENT\UEH_EVENT\bin\Debug\net7.0-windows\Humanizer.dll
+D:\sang 2803\UEH_EVENT\UEH_EVENT\bin\Debug\net7.0-windows\Microsoft.Bcl.AsyncInterfaces.dll
+D:\sang 2803\UEH_EVENT\UEH_EVENT\bin\Debug\net7.0-windows\Microsoft.Data.SqlClient.dll
+D:\sang 2803\UEH_EVENT\UEH_EVENT\bin\Debug\net7.0-windows\Microsoft.EntityFrameworkCore.dll
+D:\sang 2803\UEH_EVENT\UEH_EVENT\bin\Debug\net7.0-windows\Microsoft.EntityFrameworkCore.Abstractions.dll
+D:\sang 2803\UEH_EVENT\UEH_EVENT\bin\Debug\net7.0-windows\Microsoft.EntityFrameworkCore.Design.dll
+D:\sang 2803\UEH_EVENT\UEH_EVENT\bin\Debug\net7.0-windows\Microsoft.EntityFrameworkCore.Relational.dll
+D:\sang 2803\UEH_EVENT\UEH_EVENT\bin\Debug\net7.0-windows\Microsoft.EntityFrameworkCore.SqlServer.dll
+D:\sang 2803\UEH_EVENT\UEH_EVENT\bin\Debug\net7.0-windows\Microsoft.Extensions.Caching.Abstractions.dll
+D:\sang 2803\UEH_EVENT\UEH_EVENT\bin\Debug\net7.0-windows\Microsoft.Extensions.Caching.Memory.dll
+D:\sang 2803\UEH_EVENT\UEH_EVENT\bin\Debug\net7.0-windows\Microsoft.Extensions.Configuration.Abstractions.dll
+D:\sang 2803\UEH_EVENT\UEH_EVENT\bin\Debug\net7.0-windows\Microsoft.Extensions.DependencyInjection.dll
+D:\sang 2803\UEH_EVENT\UEH_EVENT\bin\Debug\net7.0-windows\Microsoft.Extensions.DependencyInjection.Abstractions.dll
+D:\sang 2803\UEH_EVENT\UEH_EVENT\bin\Debug\net7.0-windows\Microsoft.Extensions.DependencyModel.dll
+D:\sang 2803\UEH_EVENT\UEH_EVENT\bin\Debug\net7.0-windows\Microsoft.Extensions.Logging.dll
+D:\sang 2803\UEH_EVENT\UEH_EVENT\bin\Debug\net7.0-windows\Microsoft.Extensions.Logging.Abstractions.dll
+D:\sang 2803\UEH_EVENT\UEH_EVENT\bin\Debug\net7.0-windows\Microsoft.Extensions.Options.dll
+D:\sang 2803\UEH_EVENT\UEH_EVENT\bin\Debug\net7.0-windows\Microsoft.Extensions.Primitives.dll
+D:\sang 2803\UEH_EVENT\UEH_EVENT\bin\Debug\net7.0-windows\Microsoft.Identity.Client.dll
+D:\sang 2803\UEH_EVENT\UEH_EVENT\bin\Debug\net7.0-windows\Microsoft.Identity.Client.Extensions.Msal.dll
+D:\sang 2803\UEH_EVENT\UEH_EVENT\bin\Debug\net7.0-windows\Microsoft.Identity.Client.NativeInterop.dll
+D:\sang 2803\UEH_EVENT\UEH_EVENT\bin\Debug\net7.0-windows\Microsoft.IdentityModel.Abstractions.dll
+D:\sang 2803\UEH_EVENT\UEH_EVENT\bin\Debug\net7.0-windows\Microsoft.IdentityModel.JsonWebTokens.dll
+D:\sang 2803\UEH_EVENT\UEH_EVENT\bin\Debug\net7.0-windows\Microsoft.IdentityModel.Logging.dll
+D:\sang 2803\UEH_EVENT\UEH_EVENT\bin\Debug\net7.0-windows\Microsoft.IdentityModel.Protocols.dll
+D:\sang 2803\UEH_EVENT\UEH_EVENT\bin\Debug\net7.0-windows\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+D:\sang 2803\UEH_EVENT\UEH_EVENT\bin\Debug\net7.0-windows\Microsoft.IdentityModel.Tokens.dll
+D:\sang 2803\UEH_EVENT\UEH_EVENT\bin\Debug\net7.0-windows\Microsoft.SqlServer.Server.dll
+D:\sang 2803\UEH_EVENT\UEH_EVENT\bin\Debug\net7.0-windows\Microsoft.Web.WebView2.Core.dll
+D:\sang 2803\UEH_EVENT\UEH_EVENT\bin\Debug\net7.0-windows\Microsoft.Web.WebView2.WinForms.dll
+D:\sang 2803\UEH_EVENT\UEH_EVENT\bin\Debug\net7.0-windows\Microsoft.Web.WebView2.Wpf.dll
+D:\sang 2803\UEH_EVENT\UEH_EVENT\bin\Debug\net7.0-windows\Mono.TextTemplating.dll
+D:\sang 2803\UEH_EVENT\UEH_EVENT\bin\Debug\net7.0-windows\System.IdentityModel.Tokens.Jwt.dll
+D:\sang 2803\UEH_EVENT\UEH_EVENT\bin\Debug\net7.0-windows\System.Memory.Data.dll
+D:\sang 2803\UEH_EVENT\UEH_EVENT\bin\Debug\net7.0-windows\System.Runtime.Caching.dll
+D:\sang 2803\UEH_EVENT\UEH_EVENT\bin\Debug\net7.0-windows\de\Microsoft.Data.SqlClient.resources.dll
+D:\sang 2803\UEH_EVENT\UEH_EVENT\bin\Debug\net7.0-windows\es\Microsoft.Data.SqlClient.resources.dll
+D:\sang 2803\UEH_EVENT\UEH_EVENT\bin\Debug\net7.0-windows\fr\Microsoft.Data.SqlClient.resources.dll
+D:\sang 2803\UEH_EVENT\UEH_EVENT\bin\Debug\net7.0-windows\it\Microsoft.Data.SqlClient.resources.dll
+D:\sang 2803\UEH_EVENT\UEH_EVENT\bin\Debug\net7.0-windows\ja\Microsoft.Data.SqlClient.resources.dll
+D:\sang 2803\UEH_EVENT\UEH_EVENT\bin\Debug\net7.0-windows\ko\Microsoft.Data.SqlClient.resources.dll
+D:\sang 2803\UEH_EVENT\UEH_EVENT\bin\Debug\net7.0-windows\pt-BR\Microsoft.Data.SqlClient.resources.dll
+D:\sang 2803\UEH_EVENT\UEH_EVENT\bin\Debug\net7.0-windows\ru\Microsoft.Data.SqlClient.resources.dll
+D:\sang 2803\UEH_EVENT\UEH_EVENT\bin\Debug\net7.0-windows\zh-Hans\Microsoft.Data.SqlClient.resources.dll
+D:\sang 2803\UEH_EVENT\UEH_EVENT\bin\Debug\net7.0-windows\zh-Hant\Microsoft.Data.SqlClient.resources.dll
+D:\sang 2803\UEH_EVENT\UEH_EVENT\bin\Debug\net7.0-windows\runtimes\unix\lib\net6.0\Microsoft.Data.SqlClient.dll
+D:\sang 2803\UEH_EVENT\UEH_EVENT\bin\Debug\net7.0-windows\runtimes\win\lib\net6.0\Microsoft.Data.SqlClient.dll
+D:\sang 2803\UEH_EVENT\UEH_EVENT\bin\Debug\net7.0-windows\runtimes\win-arm\native\Microsoft.Data.SqlClient.SNI.dll
+D:\sang 2803\UEH_EVENT\UEH_EVENT\bin\Debug\net7.0-windows\runtimes\win-arm64\native\Microsoft.Data.SqlClient.SNI.dll
+D:\sang 2803\UEH_EVENT\UEH_EVENT\bin\Debug\net7.0-windows\runtimes\win-x64\native\Microsoft.Data.SqlClient.SNI.dll
+D:\sang 2803\UEH_EVENT\UEH_EVENT\bin\Debug\net7.0-windows\runtimes\win-x86\native\Microsoft.Data.SqlClient.SNI.dll
+D:\sang 2803\UEH_EVENT\UEH_EVENT\bin\Debug\net7.0-windows\runtimes\win-arm64\native\msalruntime_arm64.dll
+D:\sang 2803\UEH_EVENT\UEH_EVENT\bin\Debug\net7.0-windows\runtimes\win-x64\native\msalruntime.dll
+D:\sang 2803\UEH_EVENT\UEH_EVENT\bin\Debug\net7.0-windows\runtimes\win-x86\native\msalruntime_x86.dll
+D:\sang 2803\UEH_EVENT\UEH_EVENT\bin\Debug\net7.0-windows\runtimes\win-arm64\native\WebView2Loader.dll
+D:\sang 2803\UEH_EVENT\UEH_EVENT\bin\Debug\net7.0-windows\runtimes\win-x64\native\WebView2Loader.dll
+D:\sang 2803\UEH_EVENT\UEH_EVENT\bin\Debug\net7.0-windows\runtimes\win-x86\native\WebView2Loader.dll
+D:\sang 2803\UEH_EVENT\UEH_EVENT\bin\Debug\net7.0-windows\runtimes\win\lib\net6.0\System.Runtime.Caching.dll
+D:\sang 2803\UEH_EVENT\UEH_EVENT\obj\Debug\net7.0-windows\UEH_EVENT.csproj.AssemblyReference.cache
+D:\sang 2803\UEH_EVENT\UEH_EVENT\obj\Debug\net7.0-windows\UEH_EVENT.Form1.resources
+D:\sang 2803\UEH_EVENT\UEH_EVENT\obj\Debug\net7.0-windows\UEH_EVENT.GUI.Mario.Form1.resources
+D:\sang 2803\UEH_EVENT\UEH_EVENT\obj\Debug\net7.0-windows\UEH_EVENT.GUI.Mario.frmPlayMario.resources
+D:\sang 2803\UEH_EVENT\UEH_EVENT\obj\Debug\net7.0-windows\UEH_EVENT.GUI.Mario.frmStartMario.resources
+D:\sang 2803\UEH_EVENT\UEH_EVENT\obj\Debug\net7.0-windows\UEH_EVENT.Properties.Resources.resources
+D:\sang 2803\UEH_EVENT\UEH_EVENT\obj\Debug\net7.0-windows\UEH_EVENT.csproj.GenerateResource.cache
+D:\sang 2803\UEH_EVENT\UEH_EVENT\obj\Debug\net7.0-windows\UEH_EVENT.GeneratedMSBuildEditorConfig.editorconfig
+D:\sang 2803\UEH_EVENT\UEH_EVENT\obj\Debug\net7.0-windows\UEH_EVENT.AssemblyInfoInputs.cache
+D:\sang 2803\UEH_EVENT\UEH_EVENT\obj\Debug\net7.0-windows\UEH_EVENT.AssemblyInfo.cs
+D:\sang 2803\UEH_EVENT\UEH_EVENT\obj\Debug\net7.0-windows\UEH_EVENT.csproj.CoreCompileInputs.cache
+D:\sang 2803\UEH_EVENT\UEH_EVENT\obj\Debug\net7.0-windows\UEH_EVENT.csproj.CopyComplete
+D:\sang 2803\UEH_EVENT\UEH_EVENT\obj\Debug\net7.0-windows\UEH_EVENT.dll
+D:\sang 2803\UEH_EVENT\UEH_EVENT\obj\Debug\net7.0-windows\refint\UEH_EVENT.dll
+D:\sang 2803\UEH_EVENT\UEH_EVENT\obj\Debug\net7.0-windows\UEH_EVENT.pdb
+D:\sang 2803\UEH_EVENT\UEH_EVENT\obj\Debug\net7.0-windows\UEH_EVENT.genruntimeconfig.cache
+D:\sang 2803\UEH_EVENT\UEH_EVENT\obj\Debug\net7.0-windows\ref\UEH_EVENT.dll

@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "D:\\Phát triển Dekstop\\tét\\UEH_EVENT\\UEH_EVENT\\UEH_EVENT.csproj": {}
+    "D:\\sang 2803\\UEH_EVENT\\UEH_EVENT\\UEH_EVENT.csproj": {}
   },
   "projects": {
-    "D:\\Phát triển Dekstop\\tét\\UEH_EVENT\\UEH_EVENT\\UEH_EVENT.csproj": {
+    "D:\\sang 2803\\UEH_EVENT\\UEH_EVENT\\UEH_EVENT.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Phát triển Dekstop\\tét\\UEH_EVENT\\UEH_EVENT\\UEH_EVENT.csproj",
+        "projectUniqueName": "D:\\sang 2803\\UEH_EVENT\\UEH_EVENT\\UEH_EVENT.csproj",
         "projectName": "UEH_EVENT",
-        "projectPath": "D:\\Phát triển Dekstop\\tét\\UEH_EVENT\\UEH_EVENT\\UEH_EVENT.csproj",
-        "packagesPath": "C:\\Users\\ACER\\.nuget\\packages\\",
-        "outputPath": "D:\\Phát triển Dekstop\\tét\\UEH_EVENT\\UEH_EVENT\\obj\\",
+        "projectPath": "D:\\sang 2803\\UEH_EVENT\\UEH_EVENT\\UEH_EVENT.csproj",
+        "packagesPath": "C:\\Users\\84942\\.nuget\\packages\\",
+        "outputPath": "D:\\sang 2803\\UEH_EVENT\\UEH_EVENT\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\ACER\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\84942\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -82,7 +82,7 @@
               "privateAssets": "none"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.100\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.202\\RuntimeIdentifierGraph.json"
         }
       }
     }

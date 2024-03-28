@@ -14,6 +14,4 @@ build_property.PlatformNeutralAssembly =
 build_property.EnforceExtendedAnalyzerRules = 
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = UEH_EVENT
-build_property.ProjectDir = D:\Phát triển Dekstop\tét\UEH_EVENT\UEH_EVENT\
-build_property.EnableComHosting = 
-build_property.EnableGeneratedComInterfaceComImportInterop = 
+build_property.ProjectDir = D:\sang 2803\UEH_EVENT\UEH_EVENT\

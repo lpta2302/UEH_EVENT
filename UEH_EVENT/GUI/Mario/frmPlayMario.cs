@@ -31,7 +31,7 @@ namespace UEH_EVENT.GUI.Mario
         Boolean Player_Right = false;   //.. moving to the right
         Boolean LastDirRight = true;    // Whats the last dir facing
         Boolean GameOn = true;         //Is the game on?
-        int Gravity = 10;
+        int Gravity = 20;
         int Force = 0;
         int Speed_Movement = 5;
         int Speed_Jump = 5;
@@ -329,9 +329,9 @@ namespace UEH_EVENT.GUI.Mario
                     }
                     else if (picPlayer.Bounds.IntersectsWith(x.Bounds) && x.Visible == true && hasShovel == false)
                     {
-                        /*Reload();
+                        Reload();
                         numberHeart -= 1;
-                        HideHeart();*/
+                        HideHeart();
                     }
                 }
                 if (x is PictureBox && (string)x.Tag == "key")
@@ -442,6 +442,11 @@ namespace UEH_EVENT.GUI.Mario
             {
                 lblLock.Text = "0" + timeDownMinute.ToString() + " : " + timeDownSecond.ToString();
             }
+        }
+
+        private void pictureBox13_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

@@ -12,12 +12,11 @@
       }
     ],
     "additionalProbingPaths": [
-      "C:\\Users\\ACER\\.dotnet\\store\\|arch|\\|tfm|",
-      "C:\\Users\\ACER\\.nuget\\packages"
+      "C:\\Users\\84942\\.dotnet\\store\\|arch|\\|tfm|",
+      "C:\\Users\\84942\\.nuget\\packages"
     ],
     "configProperties": {
       "System.Reflection.NullabilityInfoContext.IsSupported": true,
-      "System.Runtime.Serialization.EnableUnsafeBinaryFormatterSerialization": true,
       "Microsoft.NETCore.DotNetHostPolicy.SetAppPaths": true
     }
   }
