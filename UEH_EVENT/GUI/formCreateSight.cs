@@ -112,7 +112,13 @@ namespace UEH_EVENT.GUI
             CurrentSight.Name = txtTenTN.Text;
             CurrentSight.Preview = txtMoTa.Text;
             Database.Insert<Sight>(CurrentSight);
+            GlobalData.CurrentSight = null;
+            GlobalData.CurrentAccount.SightSession = null;
+            Database.Update<Account>(GlobalData.CurrentAccount);
             MessageBox.Show("Thêm thành công", "Thông báo");
+            Hide();
+            new formCreateSight().Show();
+            Close();
         }
 
         private void btnXoa_Click(object sender, EventArgs e)
@@ -132,6 +138,7 @@ namespace UEH_EVENT.GUI
 
         private void btnThoat_Click(object sender, EventArgs e)
         {
+            //Nếu là tài khoản chỉ được xem
             if(GlobalData.CurrentAccount.AccType == Constants.ADMIN_ACC)
             {
                 Hide();
@@ -139,8 +146,12 @@ namespace UEH_EVENT.GUI
                 Close();
                 return;
             }
+
+            //Nếu CurrentSight không có và đảm bảo là đang thêm mới
             if (GlobalData.CurrentSight == null || GlobalData.CurrentSight.Id != CurrentSight.Id) return;
-            if (MessageBox.Show("Bài trắc nghiệm chưa được lưu, bạn có muốn lưu phiên làm việc không?", "Thông báo", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+
+            if (MessageBox.Show("Bài trắc nghiệm chưa được lưu, bạn có muốn lưu phiên làm việc không?", "Thông báo", 
+                MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
             {
                 //string json = JsonConvert.SerializeObject(CurrentSight, Formatting.Indented);
                 string json = JsonConvert.SerializeObject(CurrentSight, Formatting.None,

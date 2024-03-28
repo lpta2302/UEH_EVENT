@@ -77,6 +77,8 @@ namespace UEH_EVENT.GUI
 
         private void btnUpdate_Click(object sender, EventArgs e)
         {
+            if (lstAccount.SelectedIndices.Count == 0)
+                MessageBox.Show("Chưa chọn tài khoản nào");
             Hide();
             new formUpdateProfile(accounts[lstAccount.SelectedIndices[0]]).ShowDialog();
             Close();
@@ -92,8 +94,8 @@ namespace UEH_EVENT.GUI
         private void btnDelete_Click(object sender, EventArgs e)
         {
             Database.Delete<Account>(accounts[lstAccount.SelectedIndices[0]]);
-            lstAccount.Items.RemoveAt(lstAccount.SelectedIndices[0]);
             accounts.RemoveAt(lstAccount.SelectedIndices[0]);
+            lstAccount.Items.RemoveAt(lstAccount.SelectedIndices[0]);
         }
     }
 }

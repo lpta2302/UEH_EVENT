@@ -33,6 +33,7 @@ namespace UEH_EVENT.GUI
         {
             InitializeComponent();
             this.CurrentSight = CurrentSight;
+            //Load câu hỏi number
             lblQuestionNum.Text = $" Câu hỏi {CurrentSight.Questions.Count + 1}:";
         }
         public formCreateQuestion(Sight CurrentSight, int i, bool disable = false)

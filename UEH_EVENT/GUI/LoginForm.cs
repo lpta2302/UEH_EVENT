@@ -30,6 +30,7 @@ namespace UEH_EVENT.GUI
             string email = txtUsername.Text;
             string password = txtPassword.Text;
 
+            //thực hiện tìm account tương ứng
             Account? currentAccount = Query.SignIn(email, password);
 
             if (currentAccount == null)
