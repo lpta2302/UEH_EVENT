@@ -96,6 +96,10 @@
             .Where(st => st.TPoint >= minimum && st.TPoint <= maximum).Count();
     }
     // Thống kê game
+    public static int CountAllGames()
+    {
+        return Query.GetAllGame().Count;
+    }
     public static int CountAllPlayHis(int gameId = 0)
     {
         if (gameId == 0)

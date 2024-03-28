@@ -22,7 +22,7 @@
             foreach (var sight in Query.GetAllSight())
             {
                 xStatsList.Add($"ID {sight.Id}");
-                yStatsList.Add(Stats.CountSightsByPlayTimes(sight.Id));
+                yStatsList.Add(Stats.CountAllSightHis(sight.Id));
             }
             xStats = xStatsList.ToArray();
             yStats = yStatsList.ToArray();
@@ -74,6 +74,25 @@
             lblTPointTier4Count.Text = tPointTier4Count.ToString();
             xStats = new string[5] { "Xuất sắc", "Tốt", "Khá", "Trung bình", "Còn lại" };
             yStats = new int[5] { tPointTier1Count, tPointTier2Count, tPointTier3Count, tPointTier4Count, studentsCount - tPointOver50Count };
+        }
+
+        private void LoadGameStats()
+        {
+            int gameCount = Stats.CountAllGames();
+            int playHisCount = Stats.CountAllPlayHis();
+            lblGame.Visible = lblGameCount.Visible = true;
+            lblGameCount.Text = gameCount.ToString();
+            lblPlayHisClone.Visible = lblPlayHisCountClone.Visible = true;
+            lblPlayHisCountClone.Text = playHisCount.ToString();
+            List<string> xStatsList = new();
+            List<int> yStatsList = new();
+            foreach (var game in Query.GetAllGame())
+            {
+                xStatsList.Add($"ID {game.Id}");
+                yStatsList.Add(Stats.CountAllPlayHis(game.Id));
+            }
+            xStats = xStatsList.ToArray();
+            yStats = yStatsList.ToArray();
         }
 
         private void LoadPlayHisStats(int gameId = 0)
@@ -155,6 +174,9 @@
                     break;
                 case nameof(Student):
                     LoadStudentStats();
+                    break;
+                case nameof(Game):
+                    LoadGameStats();
                     break;
                 case nameof(PlayHis):
                     cboSelect.Visible = true;

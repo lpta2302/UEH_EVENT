@@ -97,6 +97,10 @@
             lblSight = new Label();
             chartStatsOther = new System.Windows.Forms.DataVisualization.Charting.Chart();
             cboSelect = new ComboBox();
+            lblGameCount = new Label();
+            lblGame = new Label();
+            lblPlayHisCountClone = new Label();
+            lblPlayHisClone = new Label();
             tabStats.SuspendLayout();
             tabPageStatsSearch.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)chartStatsSearch).BeginInit();
@@ -498,6 +502,10 @@
             // 
             // tabPageStatsOther
             // 
+            tabPageStatsOther.Controls.Add(lblPlayHisCountClone);
+            tabPageStatsOther.Controls.Add(lblPlayHisClone);
+            tabPageStatsOther.Controls.Add(lblGameCount);
+            tabPageStatsOther.Controls.Add(lblGame);
             tabPageStatsOther.Controls.Add(lblTPointHisCount);
             tabPageStatsOther.Controls.Add(lblTPointHis);
             tabPageStatsOther.Controls.Add(lblTPointPlusOneCount);
@@ -923,6 +931,54 @@
             cboSelect.TabIndex = 30;
             cboSelect.SelectedIndexChanged += cboSelect_SelectedIndexChanged;
             // 
+            // lblGameCount
+            // 
+            lblGameCount.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Right;
+            lblGameCount.AutoSize = true;
+            lblGameCount.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            lblGameCount.Location = new Point(243, 109);
+            lblGameCount.Name = "lblGameCount";
+            lblGameCount.Size = new Size(19, 21);
+            lblGameCount.TabIndex = 59;
+            lblGameCount.Text = "0";
+            lblGameCount.TextAlign = ContentAlignment.MiddleLeft;
+            // 
+            // lblGame
+            // 
+            lblGame.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left;
+            lblGame.AutoSize = true;
+            lblGame.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            lblGame.Location = new Point(39, 109);
+            lblGame.Name = "lblGame";
+            lblGame.Size = new Size(137, 21);
+            lblGame.TabIndex = 58;
+            lblGame.Text = "Tổng số trò chơi:";
+            lblGame.TextAlign = ContentAlignment.MiddleRight;
+            // 
+            // lblPlayHisCountClone
+            // 
+            lblPlayHisCountClone.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Right;
+            lblPlayHisCountClone.AutoSize = true;
+            lblPlayHisCountClone.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            lblPlayHisCountClone.Location = new Point(243, 139);
+            lblPlayHisCountClone.Name = "lblPlayHisCountClone";
+            lblPlayHisCountClone.Size = new Size(19, 21);
+            lblPlayHisCountClone.TabIndex = 61;
+            lblPlayHisCountClone.Text = "0";
+            lblPlayHisCountClone.TextAlign = ContentAlignment.MiddleLeft;
+            // 
+            // lblPlayHisClone
+            // 
+            lblPlayHisClone.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left;
+            lblPlayHisClone.AutoSize = true;
+            lblPlayHisClone.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            lblPlayHisClone.Location = new Point(39, 139);
+            lblPlayHisClone.Name = "lblPlayHisClone";
+            lblPlayHisClone.Size = new Size(147, 21);
+            lblPlayHisClone.TabIndex = 60;
+            lblPlayHisClone.Text = "Tổng số lượt chơi:";
+            lblPlayHisClone.TextAlign = ContentAlignment.MiddleRight;
+            // 
             // FormStats
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
@@ -1010,5 +1066,9 @@
         private Label lblTPointPlusOne;
         private Label lblTPointPlusTwoCount;
         private Label lblTPointPlusTwo;
+        private Label lblPlayHisCountClone;
+        private Label lblPlayHisClone;
+        private Label lblGameCount;
+        private Label lblGame;
     }
 }
