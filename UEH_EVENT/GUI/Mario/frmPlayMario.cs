@@ -5,6 +5,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Media;
 using System.Numerics;
 using System.Text;
 using System.Threading.Tasks;
@@ -192,6 +193,8 @@ namespace UEH_EVENT.GUI.Mario
         }
         private void frmPlayMario_Load(object sender, EventArgs e)
         {
+            SoundPlayer pl = new SoundPlayer(@"D:\Subject\Desktop Application Development\project4\UEH_EVENT\sound\soundTrackPlayGame.wav");
+            pl.Play();
             foreach (var control in this.Controls)
             {
                 if (control is PictureBox)
@@ -268,6 +271,8 @@ namespace UEH_EVENT.GUI.Mario
                     {
                         x.Visible = false;
                         score += 5;
+                        SoundPlayer pl = new SoundPlayer(@"D:\Subject\Desktop Application Development\project4\UEH_EVENT\sound\getCoin.wav");
+                        pl.Play();
                     }
                 }
                 if (x is PictureBox && (string)x.Tag == "shovel")
@@ -295,6 +300,8 @@ namespace UEH_EVENT.GUI.Mario
                 {
                     if (picPlayer.Bounds.IntersectsWith(x.Bounds) && x.Visible == true)
                     {
+                        SoundPlayer pl = new SoundPlayer(@"D:\Subject\Desktop Application Development\project4\UEH_EVENT\sound\Aaaaaa.wav");
+                        pl.Play();
                         Reload();
                         numberHeart -= 1;
                         HideHeart();
@@ -304,6 +311,8 @@ namespace UEH_EVENT.GUI.Mario
                 {
                     if (picPlayer.Bounds.IntersectsWith(x.Bounds) && x.Visible == true)
                     {
+                        SoundPlayer pl = new SoundPlayer(@"D:\Subject\Desktop Application Development\project4\UEH_EVENT\sound\Aaaaaa.wav");
+                        pl.Play();
                         Reload();
                         numberHeart -= 1;
                         HideHeart();
@@ -321,6 +330,8 @@ namespace UEH_EVENT.GUI.Mario
                 {
                     if (picPlayer.Bounds.IntersectsWith(x.Bounds) && x.Visible == true && hasKey)
                     {
+                        SoundPlayer pl = new SoundPlayer(@"D:\Subject\Desktop Application Development\project4\UEH_EVENT\sound\soundWin2.wav");
+                        pl.Play();
                         x.Visible = false;
                         MessageBox.Show("Win roi nha");
                         this.Close();
@@ -331,7 +342,8 @@ namespace UEH_EVENT.GUI.Mario
             {
                 picGameOver.Visible = true;
                 GameOn = false;
-
+                SoundPlayer pl = new SoundPlayer(@"D:\Subject\Desktop Application Development\project4\UEH_EVENT\sound\soundLoss.wav");
+                pl.Play();
             }
         }
         private void frmPlayMario_KeyDown(object sender, KeyEventArgs e)

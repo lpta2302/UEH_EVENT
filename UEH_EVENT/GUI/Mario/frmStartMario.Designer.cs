@@ -55,6 +55,7 @@
             picButtonStart.SizeMode = PictureBoxSizeMode.StretchImage;
             picButtonStart.TabIndex = 0;
             picButtonStart.TabStop = false;
+            picButtonStart.Click += picButtonStart_Click;
             // 
             // picButtonInstall
             // 
@@ -79,6 +80,15 @@
             picButtonDiscription.SizeMode = PictureBoxSizeMode.StretchImage;
             picButtonDiscription.TabIndex = 2;
             picButtonDiscription.TabStop = false;
+            picButtonDiscription.Click += picButtonDiscription_Click;
+            // 
+            // bgwProcess
+            // 
+            bgwProcess.WorkerReportsProgress = true;
+            bgwProcess.WorkerSupportsCancellation = true;
+            bgwProcess.DoWork += bgwProcess_DoWork;
+            bgwProcess.ProgressChanged += bgwProcess_ProgressChanged;
+            bgwProcess.RunWorkerCompleted += bgwProcess_RunWorkerCompleted;
             // 
             // pgbLoadMarioPlay
             // 
@@ -111,6 +121,7 @@
             picButtonCancel.TabIndex = 5;
             picButtonCancel.TabStop = false;
             picButtonCancel.Visible = false;
+            picButtonCancel.Click += picButtonCancel_Click;
             // 
             // picSuperMario
             // 
@@ -144,6 +155,7 @@
             Name = "frmStartMario";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "MARIO ";
+            Load += frmStartMario_Load;
             ((System.ComponentModel.ISupportInitialize)picButtonStart).EndInit();
             ((System.ComponentModel.ISupportInitialize)picButtonInstall).EndInit();
             ((System.ComponentModel.ISupportInitialize)picButtonDiscription).EndInit();
