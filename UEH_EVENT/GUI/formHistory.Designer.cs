@@ -34,6 +34,7 @@
             clhMssv = new ColumnHeader();
             clhTen = new ColumnHeader();
             clhBaiTN = new ColumnHeader();
+            clnTotalQuestion = new ColumnHeader();
             clhDiem = new ColumnHeader();
             lstLscndrl = new ListView();
             clhMssv1 = new ColumnHeader();
@@ -43,6 +44,7 @@
             label1 = new Label();
             label2 = new Label();
             label3 = new Label();
+            clnReason = new ColumnHeader();
             Navbar.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBoxLogo).BeginInit();
             SuspendLayout();
@@ -71,11 +73,11 @@
             // 
             // lstLslbtn
             // 
-            lstLslbtn.Columns.AddRange(new ColumnHeader[] { clhMssv, clhTen, clhBaiTN, clhDiem });
+            lstLslbtn.Columns.AddRange(new ColumnHeader[] { clhMssv, clhTen, clhBaiTN, clnTotalQuestion, clhDiem });
             lstLslbtn.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
             lstLslbtn.Location = new Point(328, 163);
             lstLslbtn.Name = "lstLslbtn";
-            lstLslbtn.Size = new Size(855, 392);
+            lstLslbtn.Size = new Size(926, 392);
             lstLslbtn.TabIndex = 47;
             lstLslbtn.UseCompatibleStateImageBehavior = false;
             lstLslbtn.View = View.Details;
@@ -96,18 +98,25 @@
             clhBaiTN.Text = "Tên Bài TN";
             clhBaiTN.Width = 200;
             // 
+            // clnTotalQuestion
+            // 
+            clnTotalQuestion.Text = "Tổng số câu";
+            clnTotalQuestion.TextAlign = HorizontalAlignment.Center;
+            clnTotalQuestion.Width = 150;
+            // 
             // clhDiem
             // 
-            clhDiem.Text = "Điểm";
+            clhDiem.Text = "Số câu đúng";
+            clhDiem.TextAlign = HorizontalAlignment.Center;
             clhDiem.Width = 150;
             // 
             // lstLscndrl
             // 
-            lstLscndrl.Columns.AddRange(new ColumnHeader[] { clhMssv1, clhName, clhPoint, clhTime });
+            lstLscndrl.Columns.AddRange(new ColumnHeader[] { clhMssv1, clhName, clhPoint, clhTime, clnReason });
             lstLscndrl.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
             lstLscndrl.Location = new Point(329, 641);
             lstLscndrl.Name = "lstLscndrl";
-            lstLscndrl.Size = new Size(862, 392);
+            lstLscndrl.Size = new Size(925, 392);
             lstLscndrl.TabIndex = 48;
             lstLscndrl.UseCompatibleStateImageBehavior = false;
             lstLscndrl.View = View.Details;
@@ -115,7 +124,7 @@
             // clhMssv1
             // 
             clhMssv1.Text = "MSSV";
-            clhMssv1.Width = 200;
+            clhMssv1.Width = 150;
             // 
             // clhName
             // 
@@ -125,7 +134,8 @@
             // clhPoint
             // 
             clhPoint.Text = "Điểm";
-            clhPoint.Width = 200;
+            clhPoint.TextAlign = HorizontalAlignment.Center;
+            clhPoint.Width = 120;
             // 
             // clhTime
             // 
@@ -149,9 +159,9 @@
             label2.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
             label2.Location = new Point(328, 601);
             label2.Name = "label2";
-            label2.Size = new Size(315, 28);
+            label2.Size = new Size(370, 28);
             label2.TabIndex = 50;
-            label2.Text = "Lịch sử cập nhật điểm rèn luyện";
+            label2.Text = "Lịch sử được cập nhật điểm rèn luyện";
             label2.Click += label2_Click;
             // 
             // label3
@@ -163,6 +173,11 @@
             label3.Size = new Size(302, 38);
             label3.TabIndex = 51;
             label3.Text = "LỊCH SỬ HOẠT ĐỘNG";
+            // 
+            // clnReason
+            // 
+            clnReason.Text = "Lí do";
+            clnReason.Width = 300;
             // 
             // formHistory
             // 
@@ -204,5 +219,7 @@
         private ColumnHeader clhPoint;
         private ColumnHeader clhTime;
         private Label label3;
+        private ColumnHeader clnTotalQuestion;
+        private ColumnHeader clnReason;
     }
 }

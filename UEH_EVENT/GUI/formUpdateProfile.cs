@@ -30,7 +30,7 @@ namespace UEH_EVENT.GUI
 
         private void btnSave_Click(object sender, EventArgs e)
         {
-            Database.Update<Account>(currentAccount.Id, currentAccount);
+            Database.Update<Account>(currentAccount);
             MessageBox.Show("Cập nhật thông tin thành công", "Thành công",MessageBoxButtons.OK,MessageBoxIcon.Information);
         }
 

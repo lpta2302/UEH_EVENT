@@ -16,6 +16,7 @@ namespace UEH_EVENT.GUI
         private List<Sight>? sights;
         private void LoadSightsListView()
         {
+            lstSight.Items.Clear();
             int stt = 1;
             if (sights == null) return;
 
@@ -105,13 +106,25 @@ namespace UEH_EVENT.GUI
 
         private void btnTest_Click(object sender, EventArgs e)
         {
-            if(lstSight.SelectedIndices.Count == 0 || sights == null)
+            if (lstSight.SelectedIndices.Count == 0 || sights == null)
             {
-                MessageBox.Show("Chọn một bài trắc nghiệm để làm thử","Không tìm thấy bài trắc nghiệm",MessageBoxButtons.OK,MessageBoxIcon.Error);
+                MessageBox.Show("Chọn một bài trắc nghiệm để làm thử");
                 return;
             }
             Hide();
             new formDoingSight(sights[lstSight.SelectedIndices[0]].Id).ShowDialog();
+            Close();
+        }
+
+        private void btnPreview_Click(object sender, EventArgs e)
+        {
+            if (lstSight.SelectedIndices.Count == 0 || sights == null)
+            {
+                MessageBox.Show("Chọn một bài trắc nghiệm để xem");
+                return;
+            }
+            Hide();
+            new formCreateSight(sights[lstSight.SelectedIndices[0]],true).ShowDialog();
             Close();
         }
     }

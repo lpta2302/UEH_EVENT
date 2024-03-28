@@ -56,11 +56,12 @@
             // 
             // cbbCLB
             // 
+            cbbCLB.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
             cbbCLB.FormattingEnabled = true;
-            cbbCLB.Location = new Point(583, 215);
+            cbbCLB.Location = new Point(787, 215);
             cbbCLB.Margin = new Padding(2, 3, 2, 3);
             cbbCLB.Name = "cbbCLB";
-            cbbCLB.Size = new Size(119, 28);
+            cbbCLB.Size = new Size(119, 36);
             cbbCLB.TabIndex = 39;
             cbbCLB.SelectedIndexChanged += cbbCLB_SelectedIndexChanged;
             cbbCLB.SelectedValueChanged += cbbCLB_SelectedValueChanged;
@@ -117,7 +118,7 @@
             panelSearch.BorderStyle = BorderStyle.FixedSingle;
             panelSearch.Controls.Add(txtName);
             panelSearch.Controls.Add(pictureBox2);
-            panelSearch.Location = new Point(308, 127);
+            panelSearch.Location = new Point(308, 215);
             panelSearch.Margin = new Padding(2, 1, 2, 1);
             panelSearch.Name = "panelSearch";
             panelSearch.Size = new Size(324, 41);
@@ -152,7 +153,7 @@
             // label2
             // 
             label2.AutoSize = true;
-            label2.Location = new Point(615, 219);
+            label2.Location = new Point(808, 219);
             label2.Margin = new Padding(2, 0, 2, 0);
             label2.Name = "label2";
             label2.Size = new Size(0, 20);
@@ -178,7 +179,7 @@
             // 
             lblClb.AutoSize = true;
             lblClb.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            lblClb.Location = new Point(536, 215);
+            lblClb.Location = new Point(729, 215);
             lblClb.Margin = new Padding(2, 0, 2, 0);
             lblClb.Name = "lblClb";
             lblClb.Size = new Size(44, 28);
@@ -215,12 +216,13 @@
             btnPreview.TabIndex = 42;
             btnPreview.Text = "XEM";
             btnPreview.UseVisualStyleBackColor = false;
+            btnPreview.Click += btnPreview_Click;
             // 
             // label1
             // 
             label1.AutoSize = true;
             label1.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            label1.Location = new Point(302, 215);
+            label1.Location = new Point(308, 171);
             label1.Margin = new Padding(2, 0, 2, 0);
             label1.Name = "label1";
             label1.Size = new Size(186, 28);

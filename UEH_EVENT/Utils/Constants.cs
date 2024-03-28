@@ -34,8 +34,6 @@ public class Constants
         public static void CreateNavbar(Form form, Panel Navbar)
         {
             INavbar navbar = GlobalData.Navbar;
-            Navbar.Padding = new Padding(0);
-            Navbar.Margin = new Padding(0);
             for (int i = 0; i < navbar.Name.Length; i++)
             {
                 System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(form.GetType());

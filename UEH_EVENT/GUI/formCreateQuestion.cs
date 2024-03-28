@@ -14,22 +14,42 @@ namespace UEH_EVENT.GUI
     public partial class formCreateQuestion : Form
     {
         Question question;
-        public formCreateQuestion()
+        Sight CurrentSight;
+        bool disable;
+        private void disableAll()
         {
-            InitializeComponent();
-            lblQuestionNum.Text = $" Câu hỏi {(GlobalData.CurrentSight.Questions.Count + 1)}:";
+            btnAdd.Visible = false;
+            txtA.Enabled = false;
+            txtB.Enabled = false;
+            txtC.Enabled = false;
+            txtD.Enabled = false;
+            radD.Enabled = false;
+            radC.Enabled = false;
+            radB.Enabled = false;
+            radA.Enabled = false;
+            btnAdd.Visible = false;
         }
-        public formCreateQuestion(int i)
+        public formCreateQuestion(Sight CurrentSight)
         {
             InitializeComponent();
-            question = GlobalData.CurrentSight.Questions[i];
+            this.CurrentSight = CurrentSight;
+            lblQuestionNum.Text = $" Câu hỏi {CurrentSight.Questions.Count + 1}:";
+        }
+        public formCreateQuestion(Sight CurrentSight, int i, bool disable = false)
+        {
+            InitializeComponent();
+            this.CurrentSight = CurrentSight;
+            question = CurrentSight.Questions[i];
 
-            txtQuestion.Text = GlobalData.CurrentSight.Questions[i].Content;
+            txtQuestion.Text = question.Content;
             lblQuestionNum.Text = $"Câu hỏi {i+1}: ";
+            btnAdd.Text = "Sửa";
+
+            this.disable = disable;
+            if (disable) disableAll();
         }
         private void formCreateQuestion_Load(object sender, EventArgs e)
         {
-               
             if (question != null)
             {
                 for(int i = 0;i<question.Answers.Count;i++)
@@ -37,14 +57,13 @@ namespace UEH_EVENT.GUI
                     ((RadioButton)panel2.Controls[i]).Checked = question.Answers[i].IsKeyAnswer;
                     panel3.Controls[i].Text = question.Answers[i].Content;
                 }
-                btnAdd.Text = "Sửa";
             }
         }
 
         private void btnBack_Click(object sender, EventArgs e)
         {
             Hide();
-            new formCreateSight().ShowDialog();
+           (disable ? new formCreateSight(CurrentSight,disable) : new formCreateSight()).ShowDialog();
             Close();
         }
 
@@ -52,26 +71,27 @@ namespace UEH_EVENT.GUI
         {
             if (MessageBox.Show("Bạn muốn thêm câu hỏi này ?", "", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
                 //Add
-                if (question == null) {
-                List<Answer> answerList = new List<Answer>();
-                for (int i = 0; i < panel2.Controls.Count; i++)
+                if (question == null)
                 {
-                    answerList.Add(
-                    new Answer()
+                    List<Answer> answerList = new List<Answer>();
+                    for (int i = 0; i < panel2.Controls.Count; i++)
                     {
-                        IsKeyAnswer = ((RadioButton)panel2.Controls[i]).Checked,
-                        Content = panel3.Controls[i].Text
-                    });
-                }
-                GlobalData.CurrentSight.Questions.Add(
-                    new Question()
-                    {
-                        Content = txtQuestion.Text,
-                        Answers = answerList
+                        answerList.Add(
+                        new Answer()
+                        {
+                            IsKeyAnswer = ((RadioButton)panel2.Controls[i]).Checked,
+                            Content = panel3.Controls[i].Text
+                        });
                     }
-                );
-                lblQuestionNum.Text = $"Câu hỏi {GlobalData.CurrentSight.Questions.Count + 1}:";
-            }
+                    GlobalData.CurrentSight.Questions.Add(
+                        new Question()
+                        {
+                            Content = txtQuestion.Text,
+                            Answers = answerList
+                        }
+                    );
+                    lblQuestionNum.Text = $"Câu hỏi {GlobalData.CurrentSight.Questions.Count + 1}:";
+                }
             //Update
             else
             {

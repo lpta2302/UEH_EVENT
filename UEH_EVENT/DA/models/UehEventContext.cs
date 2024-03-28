@@ -39,6 +39,12 @@ public class UehEventContext : DbContext
             .HasForeignKey("QuestionId")
             .OnDelete(DeleteBehavior.Cascade);
 
+        modelBuilder.Entity<Sight>()
+            .HasMany(q => q.Questions)
+            .WithOne()
+            .HasForeignKey("SightId")
+            .OnDelete(DeleteBehavior.Cascade);
+
         modelBuilder.Entity<Account>()
             .HasOne(a => a.Student)
             .WithOne()

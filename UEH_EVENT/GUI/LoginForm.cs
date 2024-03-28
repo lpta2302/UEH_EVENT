@@ -16,27 +16,26 @@ namespace UEH_EVENT.GUI
     {
         public LoginForm()
         {
-            InitializeComponent();
             GlobalData.reset();
+            InitializeComponent();
         }
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            Account acc = Query.GetAllAccount()[0];
-            tboxEmail.Text = acc.Username;
-            tboxPassword.Text = acc.Password;
+            txtUsername.Focus();
         }
 
         private void btnLogin_Click(object sender, EventArgs e)
         {
-            string email = tboxEmail.Text;
-            string password = tboxPassword.Text;
+            string email = txtUsername.Text;
+            string password = txtPassword.Text;
 
             Account? currentAccount = Query.SignIn(email, password);
 
             if (currentAccount == null)
             {
                 MessageBox.Show("Tài khoản hoặc mật khẩu không đúng, vui lòng nhập lại", "Đăng nhập thất bại", MessageBoxButtons.OK);
+                return;
             }
 
             GlobalData.CurrentAccount = currentAccount;
@@ -45,6 +44,11 @@ namespace UEH_EVENT.GUI
             Hide();
             new formGame().ShowDialog();
             Close();
+        }
+
+        private void LoginForm_Shown(object sender, EventArgs e)
+        {
+            txtUsername.Focus();
         }
     }
 }

@@ -25,24 +25,26 @@ namespace UEH_EVENT.GUI
         {
             sightHises = Query.GetSightHisByStudentId(GlobalData.CurrentAccount.StudentId);
             tPointsHises = Query.GetTPointHisByStudentId(GlobalData.CurrentAccount.StudentId);
-            
+            Student st = GlobalData.CurrentAccount.Student;
+
             foreach (var sightHis in sightHises)
             {
-                Student st = Query.GetStudentById(sightHis.StudentId);
                 Sight s = Query.GetSpecificSight(sightHis.SightId);
+
                 ListViewItem item = new ListViewItem(sightHis.StudentId);
                 item.SubItems.Add(st.Name);
                 item.SubItems.Add(s.Name);
+                item.SubItems.Add(s.Questions.Count.ToString());
                 item.SubItems.Add(sightHis.Point.ToString());
                 lstLslbtn.Items.Add(item);
             }
             foreach (var tPointHis in tPointsHises)
             {
-                Student st = Query.GetStudentById(tPointHis.StudentId);
                 ListViewItem item = new ListViewItem(tPointHis.StudentId);
                 item.SubItems.Add(st.Name);
                 item.SubItems.Add(tPointHis.Point.ToString());
-                item.SubItems.Add(tPointHis.CreatedAt.ToString("dd/MM/yyyy")); // Định dạng ngày tháng
+                item.SubItems.Add(tPointHis.CreatedAt.ToString("dd/MM/yyyy"));
+                item.SubItems.Add(tPointHis.Content);
                 lstLscndrl.Items.Add(item);
             }
         }

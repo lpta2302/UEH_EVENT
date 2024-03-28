@@ -17,64 +17,71 @@ namespace UEH_EVENT.GUI
 {
     public partial class formCreateSight : Form
     {
-        Sight CurrentSight = GlobalData.CurrentSight;
-        private void initForm()
+        private Sight? CurrentSight;
+        bool disable = false;
+        private void disableAll()
         {
-
-            for (int i = 0; i < CurrentSight.Questions.Count; i++)
-            {
-                ListViewItem item1 = new ListViewItem((i+1).ToString());
-                item1.SubItems.Add($"{CurrentSight.Questions[i].Content}"); // Thêm giá trị cho cột thứ hai (Subitem)
-                listView1.Items.Add(item1);
-
-                /*ListViewItem item2 =new ListViewItem();
-                item2.SubItems.Add($"{CurrentSight.Questions[i].Content}");
-                listView1.Items.Add(item2);
-                */
-
-            }
+            txtMoTa.Enabled = false;
+            txtTenTN.Enabled = false;
+            btnSua.Visible = false;
+            btnThem.Visible = false;
+            btnXoa.Visible = false;
+            btnTao.Text = "Xem";
         }
         public formCreateSight()
         {
             InitializeComponent();
-           
-                GlobalData.CurrentSight = new Sight() {
-                CreatedById = GlobalData.CurrentAccount.Id};
-                return;
+            CurrentSight = GlobalData.CurrentSight;
         }
-        public formCreateSight(Sight CurrentSight)
+        public formCreateSight(Sight CurrentSight, bool disable = false)
         {
             InitializeComponent();
-            this.CurrentSight = Query.GetSpecificSight(CurrentSight.Id);
+
+            this.disable = disable;
+            this.CurrentSight = CurrentSight;
+
+            for(int i=0;i< CurrentSight.Questions.Count; i++)
+            {
+
+                CurrentSight.Questions[i] = Query.GetQuestion(CurrentSight.Questions[i].Id);
+            }
+            if (disable)
+            {
+                disableAll();
+            }
         }
 
         private void btnThem_Click(object sender, EventArgs e)
         {
             Hide();
-            new formCreateQuestion().ShowDialog();
+            new formCreateQuestion(CurrentSight).ShowDialog();
             Close();
         }
 
         private void formCreateSight_Load(object sender, EventArgs e)
         {
             if (CurrentSight == null) return;
-            txtTenTN.Text = CurrentSight?.Name;
-            txtMoTa.Text = CurrentSight?.Preview;
-            for (int i = 0; i < CurrentSight.Questions?.Count; i++)
+
+            txtTenTN.Text = CurrentSight.Name;
+            txtMoTa.Text = CurrentSight.Preview;
+
+            if (CurrentSight.Questions == null) return;
+
+            for (int i = 0; i < CurrentSight.Questions.Count; i++)
             {
-                string[] row = new string[] { "" + (i + 1), CurrentSight.Questions[i].Content };
-                ListViewItem listViewItem = new ListViewItem(row);
+                ListViewItem listViewItem = new ListViewItem($"{(i + 1)}");
+                listViewItem.SubItems.Add(CurrentSight.Questions[i].Content);
                 listView1.Items.Add(listViewItem);
             }
-
         }
         private void btnSua_Click(object sender, EventArgs e)
         {
 
-            if (listView1.SelectedIndices.Count != 0)
+            if (listView1.SelectedIndices.Count != 0 && CurrentSight.Questions != null)
             {
-                new formCreateQuestion(listView1.SelectedIndices[0]).ShowDialog();
-                return;
+                Hide();
+                new formCreateQuestion(CurrentSight,listView1.SelectedIndices[0]).ShowDialog();
+                Close();
             }
 
         }
@@ -85,12 +92,19 @@ namespace UEH_EVENT.GUI
 
         private void btnTao_Click(object sender, EventArgs e)
         {
+            if (disable)
+            {
+                Hide();
+                new formCreateQuestion(CurrentSight, listView1.SelectedIndices[0], disable).ShowDialog();
+                Close();
+                return;
+            }
             if(txtTenTN.Text == "")
             {
                 MessageBox.Show("Tên bài trắc nghiệm không được để trống!","Thêm thất bại",MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
-            if (CurrentSight.Questions.Count > 0)
+            if (CurrentSight!.Questions?.Count == 0)
             {
                 MessageBox.Show("Bài trắc nghiệm phải có ít nhất 1 câu hỏi", "Thêm thất bại", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
@@ -118,10 +132,24 @@ namespace UEH_EVENT.GUI
 
         private void btnThoat_Click(object sender, EventArgs e)
         {
+            if(GlobalData.CurrentAccount.AccType == Constants.ADMIN_ACC)
+            {
+                Hide();
+                new formManageSight().ShowDialog();
+                Close();
+                return;
+            }
+            if (GlobalData.CurrentSight == null || GlobalData.CurrentSight.Id != CurrentSight.Id) return;
             if (MessageBox.Show("Bài trắc nghiệm chưa được lưu, bạn có muốn lưu phiên làm việc không?", "Thông báo", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
             {
-                string json = JsonConvert.SerializeObject(CurrentSight, Formatting.Indented);
+                //string json = JsonConvert.SerializeObject(CurrentSight, Formatting.Indented);
+                string json = JsonConvert.SerializeObject(CurrentSight, Formatting.None,
+                        new JsonSerializerSettings()
+                        {
+                            ReferenceLoopHandling = ReferenceLoopHandling.Ignore
+                        });
                 GlobalData.CurrentAccount.SightSession = json;
+                Database.Update<Account>(GlobalData.CurrentAccount);
             }
             else
             {
@@ -129,7 +157,7 @@ namespace UEH_EVENT.GUI
             }
 
             Hide();
-            Form form = new formLobbySight();
+            Form form = GlobalData.CurrentAccount.AccType == Constants.CLB_ACC ? new formLobbySight() : new formManageSight();
             form.ShowDialog();
             Close();
         }

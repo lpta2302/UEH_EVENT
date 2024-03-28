@@ -32,8 +32,8 @@
             lblHeading = new Label();
             lblEmail = new Label();
             lblPassword = new Label();
-            tboxEmail = new TextBox();
-            tboxPassword = new TextBox();
+            txtUsername = new TextBox();
+            txtPassword = new TextBox();
             btnLogin = new Button();
             linklblForgot = new LinkLabel();
             panel8 = new Panel();
@@ -49,7 +49,7 @@
             lblTitle.Margin = new Padding(2, 0, 2, 0);
             lblTitle.Name = "lblTitle";
             lblTitle.Size = new Size(321, 52);
-            lblTitle.TabIndex = 0;
+            lblTitle.TabIndex = 10;
             lblTitle.Text = "Welcome back";
             // 
             // lblHeading
@@ -61,7 +61,7 @@
             lblHeading.Margin = new Padding(2, 0, 2, 0);
             lblHeading.Name = "lblHeading";
             lblHeading.Size = new Size(455, 29);
-            lblHeading.TabIndex = 1;
+            lblHeading.TabIndex = 15;
             lblHeading.Text = "Welcome back! Please enter your details.";
             // 
             // lblEmail
@@ -72,7 +72,7 @@
             lblEmail.Margin = new Padding(2, 0, 2, 0);
             lblEmail.Name = "lblEmail";
             lblEmail.Size = new Size(105, 24);
-            lblEmail.TabIndex = 2;
+            lblEmail.TabIndex = 14;
             lblEmail.Text = "Username";
             // 
             // lblPassword
@@ -83,32 +83,34 @@
             lblPassword.Margin = new Padding(2, 0, 2, 0);
             lblPassword.Name = "lblPassword";
             lblPassword.Size = new Size(100, 24);
-            lblPassword.TabIndex = 3;
+            lblPassword.TabIndex = 13;
             lblPassword.Text = "Password";
             // 
-            // tboxEmail
+            // txtUsername
             // 
-            tboxEmail.BackColor = Color.White;
-            tboxEmail.BorderStyle = BorderStyle.None;
-            tboxEmail.Font = new Font("Microsoft Sans Serif", 14.14286F, FontStyle.Regular, GraphicsUnit.Point);
-            tboxEmail.ForeColor = Color.Black;
-            tboxEmail.Location = new Point(8, 13);
-            tboxEmail.Margin = new Padding(10, 2, 2, 2);
-            tboxEmail.Name = "tboxEmail";
-            tboxEmail.Size = new Size(434, 27);
-            tboxEmail.TabIndex = 7;
+            txtUsername.BackColor = Color.White;
+            txtUsername.BorderStyle = BorderStyle.None;
+            txtUsername.Font = new Font("Microsoft Sans Serif", 14.14286F, FontStyle.Regular, GraphicsUnit.Point);
+            txtUsername.ForeColor = Color.Black;
+            txtUsername.Location = new Point(8, 13);
+            txtUsername.Margin = new Padding(10, 2, 2, 2);
+            txtUsername.Name = "txtUsername";
+            txtUsername.Size = new Size(434, 27);
+            txtUsername.TabIndex = 0;
+            txtUsername.Tag = "Username";
             // 
-            // tboxPassword
+            // txtPassword
             // 
-            tboxPassword.BackColor = Color.White;
-            tboxPassword.BorderStyle = BorderStyle.None;
-            tboxPassword.Font = new Font("Microsoft Sans Serif", 14.14286F, FontStyle.Regular, GraphicsUnit.Point);
-            tboxPassword.ForeColor = Color.Black;
-            tboxPassword.Location = new Point(106, 423);
-            tboxPassword.Margin = new Padding(10, 2, 2, 2);
-            tboxPassword.Name = "tboxPassword";
-            tboxPassword.Size = new Size(434, 27);
-            tboxPassword.TabIndex = 8;
+            txtPassword.BackColor = Color.White;
+            txtPassword.BorderStyle = BorderStyle.None;
+            txtPassword.Font = new Font("Microsoft Sans Serif", 14.14286F, FontStyle.Regular, GraphicsUnit.Point);
+            txtPassword.ForeColor = Color.Black;
+            txtPassword.Location = new Point(106, 423);
+            txtPassword.Margin = new Padding(10, 2, 2, 2);
+            txtPassword.Name = "txtPassword";
+            txtPassword.Size = new Size(434, 27);
+            txtPassword.TabIndex = 3;
+            txtPassword.Tag = "Password";
             // 
             // btnLogin
             // 
@@ -121,7 +123,7 @@
             btnLogin.Margin = new Padding(2);
             btnLogin.Name = "btnLogin";
             btnLogin.Size = new Size(433, 54);
-            btnLogin.TabIndex = 9;
+            btnLogin.TabIndex = 4;
             btnLogin.Text = "Login";
             btnLogin.UseVisualStyleBackColor = false;
             btnLogin.Click += btnLogin_Click;
@@ -144,7 +146,7 @@
             panel8.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
             panel8.BackColor = Color.White;
             panel8.BorderStyle = BorderStyle.FixedSingle;
-            panel8.Controls.Add(tboxEmail);
+            panel8.Controls.Add(txtUsername);
             panel8.Location = new Point(98, 274);
             panel8.Margin = new Padding(2);
             panel8.Name = "panel8";
@@ -170,7 +172,7 @@
             ClientSize = new Size(654, 687);
             Controls.Add(linklblForgot);
             Controls.Add(btnLogin);
-            Controls.Add(tboxPassword);
+            Controls.Add(txtPassword);
             Controls.Add(lblPassword);
             Controls.Add(lblEmail);
             Controls.Add(lblHeading);
@@ -181,6 +183,7 @@
             Name = "LoginForm";
             Text = "LoginForm";
             Load += Form1_Load;
+            Shown += LoginForm_Shown;
             panel8.ResumeLayout(false);
             panel8.PerformLayout();
             ResumeLayout(false);
@@ -193,8 +196,8 @@
         private System.Windows.Forms.Label lblHeading;
         private System.Windows.Forms.Label lblEmail;
         private System.Windows.Forms.Label lblPassword;
-        private System.Windows.Forms.TextBox tboxEmail;
-        private System.Windows.Forms.TextBox tboxPassword;
+        private System.Windows.Forms.TextBox txtUsername;
+        private System.Windows.Forms.TextBox txtPassword;
         private System.Windows.Forms.Button btnLogin;
         private System.Windows.Forms.LinkLabel linklblForgot;
         private Panel panel8;

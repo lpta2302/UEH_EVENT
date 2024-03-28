@@ -81,5 +81,19 @@ namespace UEH_EVENT.GUI
             new formUpdateProfile(accounts[lstAccount.SelectedIndices[0]]).ShowDialog();
             Close();
         }
+
+        private void btnCreate_Click(object sender, EventArgs e)
+        {
+            Hide();
+            new formCreateAccount().ShowDialog();
+            Close();
+        }
+
+        private void btnDelete_Click(object sender, EventArgs e)
+        {
+            Database.Delete<Account>(accounts[lstAccount.SelectedIndices[0]]);
+            lstAccount.Items.RemoveAt(lstAccount.SelectedIndices[0]);
+            accounts.RemoveAt(lstAccount.SelectedIndices[0]);
+        }
     }
 }

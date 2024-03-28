@@ -8,6 +8,9 @@
     <Compile Update="formHistory.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Update="GUI\formCreateAccount.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Update="GUI\formCreateQuestion.cs">
       <SubType>Form</SubType>
     </Compile>

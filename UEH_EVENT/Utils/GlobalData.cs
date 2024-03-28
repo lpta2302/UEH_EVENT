@@ -37,6 +37,13 @@ namespace UEH_EVENT.Utils
                     };
                 }
             }
+            else
+            {
+                CurrentSight = new Sight()
+                {
+                    CreatedById = CurrentAccount.Id
+                };
+            }
         }
         public static void reset()
         {

@@ -236,20 +236,10 @@ public class Database
             dbcontext.SaveChanges();
         }
     }
-    public static void Update<T>(object key, T item) where T : class
+    public static void Update<T>(T item) where T : class
     {
         using (var dbcontext = new UehEventContext())
         {
-            /*var entityType = dbcontext.Model.FindEntityType(typeof(T));
-            if (entityType == null) { return; }
-
-            var pkName = entityType.FindPrimaryKey()?.Properties?.FirstOrDefault()?.Name;
-            if (pkName == null) { return; }
-
-            var result = dbcontext.Set<T>().Find(key);
-            if (result == null) return;
-
-            Util.CoppyData<T>(item, result);*/
             dbcontext.Update(item);
             dbcontext.SaveChanges();
         }
