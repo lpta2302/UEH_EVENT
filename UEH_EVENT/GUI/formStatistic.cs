@@ -1,14 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
-
-namespace UEH_EVENT.GUI
+﻿namespace UEH_EVENT.GUI
 {
     public partial class formStatistic : Form
     {
@@ -34,7 +24,7 @@ namespace UEH_EVENT.GUI
 
         private void ToggleTextSearch(bool isOn)
         {
-            txtSearchKeyword.Enabled = isOn;
+            txtSearchKeyword.Enabled = chkSearchExact.Enabled = isOn;
         }
 
         private void ToggleStatsButton()
@@ -151,7 +141,7 @@ namespace UEH_EVENT.GUI
             {
                 if (txtSearchKeyword.Enabled)
                 {
-                    dgvSearchResults.DataSource = Search.SearchString(selectedClass, selectedProperty, txtSearchKeyword.Text.Trim());
+                    dgvSearchResults.DataSource = Search.SearchString(selectedClass, selectedProperty, txtSearchKeyword.Text.Trim(), chkSearchExact.Checked);
                 }
                 else
                 {
