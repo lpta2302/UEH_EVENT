@@ -68,6 +68,14 @@ class Query
     {
         return Query<SightHis>(true);
     }
+    public static List<SightHis>? GetSightHisByStudentId(object id)
+    {
+        return Query<SightHis>(new Filterer("StudentId", id, FilterType.Equal), false, true);
+    }
+    public static List<TPointHis>? GetTPointHisByStudentId(object id)
+    {
+        return Query<TPointHis>(new Filterer("StudentId", id, FilterType.Equal), false, true);
+    }
     public static List<PlayHis> GetAllPlayHis()
     {
         return Query<PlayHis>(true);

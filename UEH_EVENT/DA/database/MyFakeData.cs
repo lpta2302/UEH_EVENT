@@ -78,7 +78,9 @@
     private static void FakeTPointHis()
     {
         TPointHis pointHis = new("31221020027", 2, "test đây là một đoạn test dày vài chục trăm kí tự");
+        TPointHis pointHis1 = new("31221020084", 1, "test đây là một đoạn test dày vài chục trăm kí tự");
         Database.Insert(pointHis);
+        Database.Insert(pointHis1);
     }
     public static void Init()
     {

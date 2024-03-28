@@ -24,7 +24,7 @@ namespace UEH_EVENT.GUI
         {
             Account acc = Query.GetAllAccount()[0];
             tboxEmail.Text = acc.Username;
-            tboxPassword.Text = acc.Password;   
+            tboxPassword.Text = acc.Password;
         }
 
         private void btnLogin_Click(object sender, EventArgs e)
@@ -34,8 +34,9 @@ namespace UEH_EVENT.GUI
 
             Account? currentAccount = Query.SignIn(email, password);
 
-            if (currentAccount == null) {
-                MessageBox.Show("Tài khoản hoặc mật khẩu không đúng, vui lòng nhập lại","Đăng nhập thất bại",MessageBoxButtons.OK);
+            if (currentAccount == null)
+            {
+                MessageBox.Show("Tài khoản hoặc mật khẩu không đúng, vui lòng nhập lại", "Đăng nhập thất bại", MessageBoxButtons.OK);
             }
 
             GlobalData.CurrentAccount = currentAccount;
