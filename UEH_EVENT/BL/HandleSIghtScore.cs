@@ -6,12 +6,12 @@ using System.Threading.Tasks;
 
 namespace UEH_EVENT.BL
 {
-    internal class HandleSIghtScore
+    internal class HandleSightScore
     {
         public int NumWrong {  get; }
         public int NumTrue { get; }
         public int NumDone {  get; }
-        public HandleSIghtScore(List<Question> questions, int[] selected)
+        public HandleSightScore(List<Question> questions, int[] selected)
         {
             NumDone = questions.Count;
             for (int i = 0; i < questions.Count; i++)

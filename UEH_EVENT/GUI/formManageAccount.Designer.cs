@@ -53,10 +53,10 @@ namespace UEH_EVENT.GUI
             lblAccountType = new Label();
             label1 = new Label();
             label3 = new Label();
+            label4 = new Label();
             Navbar = new Panel();
             pictureBoxLogo = new PictureBox();
             panelTitle = new Panel();
-            label4 = new Label();
             panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
             panel2.SuspendLayout();
@@ -89,7 +89,7 @@ namespace UEH_EVENT.GUI
             // clnSTT
             // 
             clnSTT.Text = "STT";
-            clnSTT.Width = 240;
+            clnSTT.Width = 200;
             // 
             // clnUsername
             // 
@@ -131,10 +131,10 @@ namespace UEH_EVENT.GUI
             // 
             txtName.BorderStyle = BorderStyle.None;
             txtName.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
-            txtName.Location = new Point(28, 9);
+            txtName.Location = new Point(28, 16);
             txtName.Margin = new Padding(3, 2, 3, 2);
             txtName.Name = "txtName";
-            txtName.Size = new Size(211, 28);
+            txtName.Size = new Size(211, 20);
             txtName.TabIndex = 13;
             txtName.Text = "Tìm kiếm theo tên";
             txtName.GotFocus += gotFocus;
@@ -169,10 +169,10 @@ namespace UEH_EVENT.GUI
             txtUsername.BackColor = Color.White;
             txtUsername.BorderStyle = BorderStyle.None;
             txtUsername.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
-            txtUsername.Location = new Point(28, 9);
+            txtUsername.Location = new Point(28, 16);
             txtUsername.Margin = new Padding(3, 2, 3, 2);
             txtUsername.Name = "txtUsername";
-            txtUsername.Size = new Size(211, 28);
+            txtUsername.Size = new Size(211, 20);
             txtUsername.TabIndex = 13;
             txtUsername.Text = "Tìm kiếm theo username";
             txtUsername.GotFocus += gotFocus;
@@ -195,7 +195,7 @@ namespace UEH_EVENT.GUI
             label2.AutoSize = true;
             label2.Location = new Point(943, 389);
             label2.Name = "label2";
-            label2.Size = new Size(0, 30);
+            label2.Size = new Size(0, 20);
             label2.TabIndex = 19;
             // 
             // btnDelete
@@ -232,7 +232,7 @@ namespace UEH_EVENT.GUI
             cbbAccType.FormattingEnabled = true;
             cbbAccType.Location = new Point(864, 354);
             cbbAccType.Name = "cbbAccType";
-            cbbAccType.Size = new Size(189, 38);
+            cbbAccType.Size = new Size(189, 28);
             cbbAccType.TabIndex = 27;
             cbbAccType.SelectedIndexChanged += cbbAccType_SelectedIndexChanged;
             // 
@@ -256,7 +256,7 @@ namespace UEH_EVENT.GUI
             lblAccountType.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
             lblAccountType.Location = new Point(864, 306);
             lblAccountType.Name = "lblAccountType";
-            lblAccountType.Size = new Size(189, 38);
+            lblAccountType.Size = new Size(134, 28);
             lblAccountType.TabIndex = 29;
             lblAccountType.Text = "Loại tài khoản";
             // 
@@ -266,7 +266,7 @@ namespace UEH_EVENT.GUI
             label1.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
             label1.Location = new Point(450, 177);
             label1.Name = "label1";
-            label1.Size = new Size(142, 38);
+            label1.Size = new Size(99, 28);
             label1.TabIndex = 30;
             label1.Text = "Username";
             // 
@@ -276,27 +276,39 @@ namespace UEH_EVENT.GUI
             label3.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
             label3.Location = new Point(450, 298);
             label3.Name = "label3";
-            label3.Size = new Size(182, 38);
+            label3.Size = new Size(127, 28);
             label3.TabIndex = 31;
             label3.Text = "Tên tài khoản";
+            // 
+            // label4
+            // 
+            label4.AutoSize = true;
+            label4.Font = new Font("Arial", 20.1428585F, FontStyle.Bold, GraphicsUnit.Point);
+            label4.Location = new Point(450, 52);
+            label4.Name = "label4";
+            label4.Size = new Size(344, 40);
+            label4.TabIndex = 5;
+            label4.Text = "MANAGE ACCOUNT";
             // 
             // Navbar
             // 
             Navbar.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left;
             Navbar.BackColor = Color.FromArgb(34, 34, 34);
             Navbar.Controls.Add(pictureBoxLogo);
-            Navbar.Controls.Add(panelTitle);
-            Navbar.Location = new Point(1, 2);
+            Navbar.Location = new Point(-3, 1);
+            Navbar.Margin = new Padding(2);
             Navbar.Name = "Navbar";
-            Navbar.Size = new Size(400, 979);
-            Navbar.TabIndex = 32;
+            Navbar.Size = new Size(267, 984);
+            Navbar.TabIndex = 1;
             // 
             // pictureBoxLogo
             // 
             pictureBoxLogo.Image = Properties.Resources.Logo_Update_27_3;
-            pictureBoxLogo.Location = new Point(0, 4);
+            pictureBoxLogo.InitialImage = null;
+            pictureBoxLogo.Location = new Point(0, 3);
+            pictureBoxLogo.Margin = new Padding(2);
             pictureBoxLogo.Name = "pictureBoxLogo";
-            pictureBoxLogo.Size = new Size(400, 158);
+            pictureBoxLogo.Size = new Size(267, 105);
             pictureBoxLogo.SizeMode = PictureBoxSizeMode.Zoom;
             pictureBoxLogo.TabIndex = 4;
             pictureBoxLogo.TabStop = false;
@@ -305,29 +317,20 @@ namespace UEH_EVENT.GUI
             // 
             panelTitle.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Right;
             panelTitle.CausesValidation = false;
-            panelTitle.Location = new Point(602, 3);
+            panelTitle.Location = new Point(602, 2);
+            panelTitle.Margin = new Padding(2);
             panelTitle.Name = "panelTitle";
-            panelTitle.Size = new Size(1314, 1042);
+            panelTitle.Size = new Size(876, 1834);
             panelTitle.TabIndex = 3;
-            // 
-            // label4
-            // 
-            label4.AutoSize = true;
-            label4.Font = new Font("Helvetica", 20.1428585F, FontStyle.Bold, GraphicsUnit.Point);
-            label4.Location = new Point(450, 52);
-            label4.Name = "label4";
-            label4.Size = new Size(481, 57);
-            label4.TabIndex = 5;
-            label4.Text = "MANAGE ACCOUNT";
             // 
             // formManageAccount
             // 
-            AutoScaleDimensions = new SizeF(168F, 168F);
+            AutoScaleDimensions = new SizeF(120F, 120F);
             AutoScaleMode = AutoScaleMode.Dpi;
             BackColor = Color.White;
             ClientSize = new Size(1718, 983);
-            Controls.Add(label4);
             Controls.Add(Navbar);
+            Controls.Add(label4);
             Controls.Add(label3);
             Controls.Add(label1);
             Controls.Add(lblAccountType);
@@ -382,9 +385,9 @@ namespace UEH_EVENT.GUI
         private ColumnHeader clnAccType;
         private Label label1;
         private Label label3;
-        private Panel Navbar;
-        private Panel panelTitle;
-        private PictureBox pictureBoxLogo;
         private Label label4;
+        private Panel Navbar;
+        private PictureBox pictureBoxLogo;
+        private Panel panelTitle;
     }
 }

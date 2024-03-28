@@ -9,7 +9,7 @@
         public int Threshold { get; set; }
         public int IntLowerBound { get; set; }
         public int IntUpperBound { get; set; }
-        
+
         private void ToggleNumericSearch(bool isOn)
         {
             rdoSearchThreshold.Enabled = cboFilter.Enabled = txtThreshold.Enabled = isOn;
@@ -78,7 +78,7 @@
                 IntLowerBound = int.MinValue;
                 IntUpperBound = int.MaxValue;
             }
-            FormStats stats = new(this);
+            FormStats stats = new(new formStatistic());
             stats.Show();
         }
 
@@ -178,6 +178,11 @@
                     }
                 }
             }
+        }
+
+        private void txtSearchKeyword_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

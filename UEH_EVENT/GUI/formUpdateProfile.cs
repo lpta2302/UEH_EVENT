@@ -25,6 +25,7 @@ namespace UEH_EVENT.GUI
         {
             InitializeComponent();
             currentAccount = account;
+            Constants.INavbar.CreateNavbar(this, Navbar);
         }
 
         private void btnSave_Click(object sender, EventArgs e)

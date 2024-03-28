@@ -52,16 +52,16 @@ namespace UEH_EVENT.GUI
         {
             for (int i = 0; i < questions.Count; i++)
             {
-                lstCauHoi.Items.Add(i + 1);
+                lstCauHoi.Items.Add($"\t{i+1}");
             }
         }
         private void ManHinhThi_Load(object sender, EventArgs e)
         {
-            if (sight == null)
+            if (sight == null || sight.Questions == null || sight.Questions.Count == 0)
             {
-                Console.WriteLine("Not Sight Found!");
-                //later
+                Console.WriteLine("Not Sight Found! Something went wrong!");
             }
+
             questions = sight?.Questions;
             if (questions == null) return;
 
@@ -173,7 +173,7 @@ namespace UEH_EVENT.GUI
         {
             if (selectedAnswers[i] != -1)
             {
-                lstCauHoi.Items[i] = $"{i + 1} {ConfigAnswer(selectedAnswers[i])}";
+                lstCauHoi.Items[i] = $"\t{i + 1}. {ConfigAnswer(selectedAnswers[i])}";
                 // Đổi item trong listbox
             }
         }

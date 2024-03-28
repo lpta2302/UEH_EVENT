@@ -56,9 +56,10 @@
             // 
             lblUsername.AutoSize = true;
             lblUsername.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
-            lblUsername.Location = new Point(485, 189);
+            lblUsername.Location = new Point(402, 236);
+            lblUsername.Margin = new Padding(2, 0, 2, 0);
             lblUsername.Name = "lblUsername";
-            lblUsername.Size = new Size(148, 38);
+            lblUsername.Size = new Size(106, 28);
             lblUsername.TabIndex = 0;
             lblUsername.Text = "Username";
             // 
@@ -66,22 +67,24 @@
             // 
             txtUsername.BackColor = Color.White;
             txtUsername.BorderStyle = BorderStyle.FixedSingle;
+            txtUsername.Enabled = false;
             txtUsername.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            txtUsername.Location = new Point(485, 245);
-            txtUsername.Margin = new Padding(3, 4, 3, 4);
+            txtUsername.Location = new Point(402, 273);
+            txtUsername.Margin = new Padding(2, 3, 2, 3);
             txtUsername.MaxLength = 200;
             txtUsername.Name = "txtUsername";
             txtUsername.ReadOnly = true;
-            txtUsername.Size = new Size(381, 45);
+            txtUsername.Size = new Size(255, 34);
             txtUsername.TabIndex = 1;
             // 
             // lblPassword
             // 
             lblPassword.AutoSize = true;
             lblPassword.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
-            lblPassword.Location = new Point(481, 315);
+            lblPassword.Location = new Point(400, 320);
+            lblPassword.Margin = new Padding(2, 0, 2, 0);
             lblPassword.Name = "lblPassword";
-            lblPassword.Size = new Size(139, 38);
+            lblPassword.Size = new Size(101, 28);
             lblPassword.TabIndex = 2;
             lblPassword.Text = "Password";
             // 
@@ -89,29 +92,31 @@
             // 
             txtPassword.BorderStyle = BorderStyle.FixedSingle;
             txtPassword.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            txtPassword.Location = new Point(485, 371);
-            txtPassword.Margin = new Padding(3, 4, 3, 4);
+            txtPassword.Location = new Point(402, 357);
+            txtPassword.Margin = new Padding(2, 3, 2, 3);
             txtPassword.MaxLength = 200;
             txtPassword.Name = "txtPassword";
-            txtPassword.Size = new Size(383, 45);
+            txtPassword.Size = new Size(256, 34);
             txtPassword.TabIndex = 3;
             txtPassword.TextChanged += txtPassword_TextChanged;
             // 
             // lblName
             // 
             lblName.AutoSize = true;
-            lblName.Location = new Point(565, 317);
+            lblName.Location = new Point(456, 321);
+            lblName.Margin = new Padding(2, 0, 2, 0);
             lblName.Name = "lblName";
-            lblName.Size = new Size(0, 30);
+            lblName.Size = new Size(0, 20);
             lblName.TabIndex = 4;
             // 
             // lblnamer
             // 
             lblnamer.AutoSize = true;
             lblnamer.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
-            lblnamer.Location = new Point(485, 441);
+            lblnamer.Location = new Point(402, 404);
+            lblnamer.Margin = new Padding(2, 0, 2, 0);
             lblnamer.Name = "lblnamer";
-            lblnamer.Size = new Size(95, 38);
+            lblnamer.Size = new Size(68, 28);
             lblnamer.TabIndex = 5;
             lblnamer.Text = "Name";
             // 
@@ -122,10 +127,10 @@
             btnSave.FlatStyle = FlatStyle.Flat;
             btnSave.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
             btnSave.ForeColor = Color.White;
-            btnSave.Location = new Point(1417, 55);
-            btnSave.Margin = new Padding(3, 4, 3, 4);
+            btnSave.Location = new Point(945, 37);
+            btnSave.Margin = new Padding(2, 3, 2, 3);
             btnSave.Name = "btnSave";
-            btnSave.Size = new Size(254, 74);
+            btnSave.Size = new Size(169, 49);
             btnSave.TabIndex = 30;
             btnSave.Text = "LƯU";
             btnSave.UseVisualStyleBackColor = false;
@@ -135,11 +140,11 @@
             // 
             txtName.BorderStyle = BorderStyle.FixedSingle;
             txtName.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            txtName.Location = new Point(485, 497);
-            txtName.Margin = new Padding(3, 4, 3, 4);
+            txtName.Location = new Point(402, 441);
+            txtName.Margin = new Padding(2, 3, 2, 3);
             txtName.MaxLength = 200;
             txtName.Name = "txtName";
-            txtName.Size = new Size(383, 45);
+            txtName.Size = new Size(256, 34);
             txtName.TabIndex = 31;
             txtName.TextChanged += txtName_TextChanged;
             // 
@@ -148,9 +153,10 @@
             lblAccType.AutoSize = true;
             lblAccType.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
             lblAccType.ForeColor = Color.FromArgb(190, 0, 0);
-            lblAccType.Location = new Point(713, 593);
+            lblAccType.Location = new Point(554, 505);
+            lblAccType.Margin = new Padding(2, 0, 2, 0);
             lblAccType.Name = "lblAccType";
-            lblAccType.Size = new Size(95, 38);
+            lblAccType.Size = new Size(68, 28);
             lblAccType.TabIndex = 32;
             lblAccType.Text = "Name";
             // 
@@ -158,9 +164,10 @@
             // 
             label1.AutoSize = true;
             label1.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
-            label1.Location = new Point(487, 593);
+            label1.Location = new Point(404, 505);
+            label1.Margin = new Padding(2, 0, 2, 0);
             label1.Name = "label1";
-            label1.Size = new Size(203, 38);
+            label1.Size = new Size(146, 28);
             label1.TabIndex = 33;
             label1.Text = "Account Type:";
             // 
@@ -170,17 +177,19 @@
             Navbar.BackColor = Color.FromArgb(34, 34, 34);
             Navbar.Controls.Add(pictureBoxLogo);
             Navbar.Controls.Add(panelTitle);
-            Navbar.Location = new Point(2, 0);
+            Navbar.Location = new Point(1, 0);
+            Navbar.Margin = new Padding(2);
             Navbar.Name = "Navbar";
-            Navbar.Size = new Size(400, 979);
+            Navbar.Size = new Size(267, 653);
             Navbar.TabIndex = 34;
             // 
             // pictureBoxLogo
             // 
             pictureBoxLogo.Image = Properties.Resources.Logo_Update_27_3;
             pictureBoxLogo.Location = new Point(0, 0);
+            pictureBoxLogo.Margin = new Padding(2);
             pictureBoxLogo.Name = "pictureBoxLogo";
-            pictureBoxLogo.Size = new Size(400, 159);
+            pictureBoxLogo.Size = new Size(267, 106);
             pictureBoxLogo.SizeMode = PictureBoxSizeMode.Zoom;
             pictureBoxLogo.TabIndex = 48;
             pictureBoxLogo.TabStop = false;
@@ -189,27 +198,29 @@
             // 
             panelTitle.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Right;
             panelTitle.CausesValidation = false;
-            panelTitle.Location = new Point(602, 3);
+            panelTitle.Location = new Point(401, 2);
+            panelTitle.Margin = new Padding(2);
             panelTitle.Name = "panelTitle";
-            panelTitle.Size = new Size(1314, 1042);
+            panelTitle.Size = new Size(876, 695);
             panelTitle.TabIndex = 3;
             // 
             // label4
             // 
             label4.AutoSize = true;
-            label4.Font = new Font("Helvetica", 20.1428585F, FontStyle.Bold, GraphicsUnit.Point);
-            label4.Location = new Point(464, 59);
+            label4.Font = new Font("Arial", 20.1428585F, FontStyle.Bold, GraphicsUnit.Point);
+            label4.Location = new Point(309, 39);
+            label4.Margin = new Padding(2, 0, 2, 0);
             label4.Name = "label4";
-            label4.Size = new Size(433, 57);
+            label4.Size = new Size(311, 40);
             label4.TabIndex = 35;
             label4.Text = "UPDATE PROFILE";
             // 
             // formUpdateProfile
             // 
-            AutoScaleDimensions = new SizeF(12F, 30F);
+            AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.White;
-            ClientSize = new Size(1718, 979);
+            ClientSize = new Size(1145, 653);
             Controls.Add(label4);
             Controls.Add(Navbar);
             Controls.Add(label1);
@@ -222,7 +233,7 @@
             Controls.Add(lblPassword);
             Controls.Add(txtUsername);
             Controls.Add(lblUsername);
-            Margin = new Padding(3, 4, 3, 4);
+            Margin = new Padding(2, 3, 2, 3);
             Name = "formUpdateProfile";
             Text = "formUpdateProfile";
             WindowState = FormWindowState.Maximized;

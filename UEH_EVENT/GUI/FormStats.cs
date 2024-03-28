@@ -2,7 +2,7 @@
 {
     public partial class FormStats : Form
     {
-        private readonly FormSearch form;
+        private readonly formStatistic form;
         private readonly string[] xSearch;
         private readonly int[] ySearch;
         private string[] xStats;
@@ -220,7 +220,7 @@
             }
         }
 
-        public FormStats(FormSearch frm)
+        public FormStats(formStatistic frm)
         {
             form = frm;
             xSearch = xStats = new string[2];

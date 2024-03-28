@@ -34,6 +34,8 @@ public class Constants
         public static void CreateNavbar(Form form, Panel Navbar)
         {
             INavbar navbar = GlobalData.Navbar;
+            Navbar.Padding = new Padding(0);
+            Navbar.Margin = new Padding(0);
             for (int i = 0; i < navbar.Name.Length; i++)
             {
                 System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(form.GetType());
@@ -43,15 +45,22 @@ public class Constants
                 Button btn = new Button();
 
                 panel.Controls.Add(btn);
-                panel.Location = new Point(0,120 + 60 * (i));
+                if(i == 0)
+                {
+                    panel.Location = new Point(0, 113);
+                    panel.Margin = new Padding(0,2,0,0);
+                }
+                else
+                    panel.Location = new Point(0,120 + 63 * (i));
                 panel.Name = "panel" + navbar.Name[i];
                 panel.Size = new Size(400, 68);
                 panel.TabIndex = 7;
-                panel.BackColor = Color.FromArgb(34, 34, 34);
-                panel.BorderStyle = BorderStyle.None;
+                panel.BackColor = i == 0 ? Color.FromArgb(60,60,60) : Color.FromArgb(34, 34, 34);
+                panel.BorderStyle = BorderStyle.FixedSingle;
 
 
-                btn.BackColor = Color.FromArgb(34, 34, 34);
+                btn.BackColor = i == 0 ? Color.FromArgb(60, 60, 60) : Color.FromArgb(34, 34, 34);
+
                 btn.BackgroundImageLayout = ImageLayout.None;
                 btn.FlatStyle = FlatStyle.Flat;
                 btn.Font = new Font("Helvetica", 12F, FontStyle.Bold, GraphicsUnit.Point);
@@ -61,6 +70,7 @@ public class Constants
                 //btn.Location = new Point(0, -17);
                 btn.Name = "btn" + navbar.Name[i];
                 btn.Padding = new Padding(20, 0, 0, 0);
+                btn.Margin = new Padding(0);
                 btn.Size = new Size(419, 68);
                 btn.TabIndex = 10;
                 btn.Text = "  " + navbar.Name[i];
@@ -87,12 +97,14 @@ public class Constants
     {
         public string[] Name { get; } = new string[]
         {
+            GlobalData.CurrentAccount?.Name == null ? "Account" : GlobalData.CurrentAccount.Name,
             "Sight",
             "Game",
             "History",
             "Log Out"
         };
         public Type[] Forms { get; } = new Type[] {
+            typeof(formUpdateProfile),
             typeof(formSight),
             typeof(formGame),
             typeof(formHistory),
@@ -100,6 +112,7 @@ public class Constants
         };
         public Image[] Icons { get; } = new Image[]
         {
+            UEH_EVENT.Properties.Resources.iconAccount,
             UEH_EVENT.Properties.Resources.iconSight,
             UEH_EVENT.Properties.Resources.iconGame,
             UEH_EVENT.Properties.Resources.iconHistory,
@@ -110,12 +123,14 @@ public class Constants
     {
         public string[] Name { get; } = new string[]
         {
+            GlobalData.CurrentAccount?.Name == null ? "Account" : GlobalData.CurrentAccount.Name,
             "Manage Account",
             "Manage Sight",
             "Statistic",
             "Log Out"
         };
         public Type[] Forms { get; } = new Type[] {
+            typeof(formUpdateProfile),
             typeof(formManageAccount),
             typeof(formManageSight),
             typeof(formStatistic),
@@ -123,6 +138,7 @@ public class Constants
         };
         public Image[] Icons { get; } = new Image[]
         {
+            UEH_EVENT.Properties.Resources.iconAccount,
             UEH_EVENT.Properties.Resources.iconManage,
             UEH_EVENT.Properties.Resources.iconUpdate,
             UEH_EVENT.Properties.Resources.iconPoint,
@@ -133,12 +149,14 @@ public class Constants
     {
         public string[] Name { get; } = new string[]
         {
+            GlobalData.CurrentAccount?.Name == null ? "Account" : GlobalData.CurrentAccount.Name,
             "Update points",
             "Create Sight",
             "Statistic",
             "Log Out"
         };
         public Type[] Forms { get; } = new Type[] {
+            typeof(formUpdateProfile),
             typeof(formUpdateTPoint),
             typeof(formLobbySight),
             typeof(formStatistic),
@@ -146,6 +164,7 @@ public class Constants
         };
         public Image[] Icons { get; } = new Image[]
         {
+            UEH_EVENT.Properties.Resources.iconAccount,
             UEH_EVENT.Properties.Resources.iconUpdate,
             UEH_EVENT.Properties.Resources.iconUpdateSight,
             UEH_EVENT.Properties.Resources.iconPoint,
