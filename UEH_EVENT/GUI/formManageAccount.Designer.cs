@@ -257,6 +257,7 @@ namespace UEH_EVENT.GUI
             lblAccountType.Location = new Point(864, 306);
             lblAccountType.Name = "lblAccountType";
             lblAccountType.Size = new Size(134, 28);
+            lblAccountType.Size = new Size(134, 28);
             lblAccountType.TabIndex = 29;
             lblAccountType.Text = "Loại tài khoản";
             // 
@@ -267,6 +268,7 @@ namespace UEH_EVENT.GUI
             label1.Location = new Point(450, 177);
             label1.Name = "label1";
             label1.Size = new Size(99, 28);
+            label1.Size = new Size(99, 28);
             label1.TabIndex = 30;
             label1.Text = "Username";
             // 
@@ -276,6 +278,7 @@ namespace UEH_EVENT.GUI
             label3.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
             label3.Location = new Point(450, 298);
             label3.Name = "label3";
+            label3.Size = new Size(127, 28);
             label3.Size = new Size(127, 28);
             label3.TabIndex = 31;
             label3.Text = "Tên tài khoản";
@@ -325,6 +328,7 @@ namespace UEH_EVENT.GUI
             // 
             // formManageAccount
             // 
+            AutoScaleDimensions = new SizeF(120F, 120F);
             AutoScaleDimensions = new SizeF(120F, 120F);
             AutoScaleMode = AutoScaleMode.Dpi;
             BackColor = Color.White;
