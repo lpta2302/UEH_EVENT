@@ -60,7 +60,6 @@
             // 
             // btnSearch
             // 
-            btnSearch.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             btnSearch.Location = new Point(499, 5);
             btnSearch.Name = "btnSearch";
             btnSearch.Size = new Size(75, 23);
@@ -92,7 +91,6 @@
             // 
             // btnExit
             // 
-            btnExit.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
             btnExit.Location = new Point(499, 327);
             btnExit.Name = "btnExit";
             btnExit.Size = new Size(75, 23);
@@ -118,13 +116,14 @@
             txtSearchKeyword.Name = "txtSearchKeyword";
             txtSearchKeyword.Size = new Size(135, 23);
             txtSearchKeyword.TabIndex = 7;
+            txtSearchKeyword.TextChanged += txtSearchKeyword_TextChanged;
             // 
             // rdoSearchThreshold
             // 
             rdoSearchThreshold.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             rdoSearchThreshold.AutoSize = true;
             rdoSearchThreshold.Enabled = false;
-            rdoSearchThreshold.Location = new Point(254, 36);
+            rdoSearchThreshold.Location = new Point(264, 36);
             rdoSearchThreshold.Name = "rdoSearchThreshold";
             rdoSearchThreshold.Size = new Size(120, 19);
             rdoSearchThreshold.TabIndex = 8;
@@ -156,7 +155,7 @@
             rdoSearchRange.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             rdoSearchRange.AutoSize = true;
             rdoSearchRange.Enabled = false;
-            rdoSearchRange.Location = new Point(254, 65);
+            rdoSearchRange.Location = new Point(263, 65);
             rdoSearchRange.Name = "rdoSearchRange";
             rdoSearchRange.Size = new Size(118, 19);
             rdoSearchRange.TabIndex = 11;
@@ -194,7 +193,6 @@
             // 
             // btnStats
             // 
-            btnStats.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             btnStats.Location = new Point(498, 35);
             btnStats.Name = "btnStats";
             btnStats.Size = new Size(75, 23);
@@ -228,7 +226,7 @@
             chkSearchExact.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             chkSearchExact.AutoSize = true;
             chkSearchExact.Enabled = false;
-            chkSearchExact.Location = new Point(159, 66);
+            chkSearchExact.Location = new Point(159, 65);
             chkSearchExact.Margin = new Padding(2);
             chkSearchExact.Name = "chkSearchExact";
             chkSearchExact.Size = new Size(90, 19);
@@ -240,7 +238,7 @@
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(584, 361);
+            ClientSize = new Size(902, 525);
             Controls.Add(chkSearchExact);
             Controls.Add(cboProperties);
             Controls.Add(lblProperty);
@@ -259,7 +257,6 @@
             Controls.Add(cboSearch);
             Controls.Add(btnSearch);
             Controls.Add(lblSearch);
-            MinimumSize = new Size(600, 400);
             Name = "FormSearch";
             Text = "Tìm kiếm";
             Load += FormSearch_Load;

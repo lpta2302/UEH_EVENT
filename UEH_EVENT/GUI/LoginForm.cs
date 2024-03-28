@@ -35,15 +35,11 @@ namespace UEH_EVENT.GUI
             Account? currentAccount = Query.SignIn(email, password);
 
             if (currentAccount == null) {
-                Console.WriteLine("Not Found Account");
+                MessageBox.Show("Tài khoản hoặc mật khẩu không đúng, vui lòng nhập lại","Đăng nhập thất bại",MessageBoxButtons.OK);
             }
 
             GlobalData.CurrentAccount = currentAccount;
-            GlobalData.InitNavbar();
-            if (GlobalData.CurrentAccount?.SightSession != null)
-            {
-                GlobalData.CurrentSight = JsonConvert.DeserializeObject<Sight>(GlobalData.CurrentAccount?.SightSession);
-            }
+            GlobalData.Init();
 
             Hide();
             new formGame().ShowDialog();

@@ -58,12 +58,11 @@
             Navbar.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left;
             Navbar.BackColor = Color.FromArgb(34, 34, 34);
             Navbar.Controls.Add(pictureBoxLogo);
-            Navbar.Location = new Point(0, 1);
+            Navbar.Location = new Point(-3, 1);
             Navbar.Margin = new Padding(2);
             Navbar.Name = "Navbar";
-            Navbar.Size = new Size(233, 490);
+            Navbar.Size = new Size(234, 490);
             Navbar.TabIndex = 1;
-            Navbar.Paint += Navbar_Paint;
             // 
             // pictureBoxLogo
             // 
@@ -71,7 +70,7 @@
             pictureBoxLogo.Location = new Point(0, 0);
             pictureBoxLogo.Margin = new Padding(2);
             pictureBoxLogo.Name = "pictureBoxLogo";
-            pictureBoxLogo.Size = new Size(236, 79);
+            pictureBoxLogo.Size = new Size(235, 79);
             pictureBoxLogo.SizeMode = PictureBoxSizeMode.Zoom;
             pictureBoxLogo.TabIndex = 14;
             pictureBoxLogo.TabStop = false;
@@ -80,16 +79,17 @@
             // 
             cboProperties.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
             cboProperties.FormattingEnabled = true;
-            cboProperties.Location = new Point(371, 46);
+            cboProperties.Location = new Point(371, 70);
             cboProperties.Name = "cboProperties";
             cboProperties.Size = new Size(280, 23);
             cboProperties.TabIndex = 35;
+            cboProperties.SelectedIndexChanged += cboProperties_SelectedIndexChanged;
             // 
             // lblProperty
             // 
             lblProperty.AutoSize = true;
             lblProperty.Font = new Font("Arial", 9.857143F, FontStyle.Regular, GraphicsUnit.Point);
-            lblProperty.Location = new Point(257, 48);
+            lblProperty.Location = new Point(256, 72);
             lblProperty.Name = "lblProperty";
             lblProperty.Size = new Size(79, 16);
             lblProperty.TabIndex = 34;
@@ -108,12 +108,13 @@
             btnStats.TabIndex = 33;
             btnStats.Text = "THỐNG KÊ";
             btnStats.UseVisualStyleBackColor = false;
+            btnStats.Click += btnStats_Click;
             // 
             // lblTo
             // 
             lblTo.AutoSize = true;
             lblTo.Font = new Font("Arial", 9.857143F, FontStyle.Regular, GraphicsUnit.Point);
-            lblTo.Location = new Point(476, 138);
+            lblTo.Location = new Point(474, 136);
             lblTo.Name = "lblTo";
             lblTo.Size = new Size(31, 16);
             lblTo.TabIndex = 32;
@@ -142,7 +143,7 @@
             rdoSearchRange.AutoSize = true;
             rdoSearchRange.Enabled = false;
             rdoSearchRange.Font = new Font("Arial", 9.857143F, FontStyle.Regular, GraphicsUnit.Point);
-            rdoSearchRange.Location = new Point(257, 136);
+            rdoSearchRange.Location = new Point(256, 136);
             rdoSearchRange.Name = "rdoSearchRange";
             rdoSearchRange.Size = new Size(136, 20);
             rdoSearchRange.TabIndex = 29;
@@ -156,7 +157,7 @@
             txtThreshold.Location = new Point(457, 103);
             txtThreshold.Multiline = true;
             txtThreshold.Name = "txtThreshold";
-            txtThreshold.Size = new Size(128, 23);
+            txtThreshold.Size = new Size(127, 21);
             txtThreshold.TabIndex = 28;
             // 
             // cboFilter
@@ -173,7 +174,7 @@
             rdoSearchThreshold.AutoSize = true;
             rdoSearchThreshold.Enabled = false;
             rdoSearchThreshold.Font = new Font("Arial", 9.857143F, FontStyle.Regular, GraphicsUnit.Point);
-            rdoSearchThreshold.Location = new Point(257, 106);
+            rdoSearchThreshold.Location = new Point(256, 106);
             rdoSearchThreshold.Name = "rdoSearchThreshold";
             rdoSearchThreshold.Size = new Size(139, 20);
             rdoSearchThreshold.TabIndex = 26;
@@ -185,7 +186,7 @@
             // 
             txtSearchKeyword.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
             txtSearchKeyword.Enabled = false;
-            txtSearchKeyword.Location = new Point(371, 70);
+            txtSearchKeyword.Location = new Point(371, 46);
             txtSearchKeyword.Name = "txtSearchKeyword";
             txtSearchKeyword.Size = new Size(280, 23);
             txtSearchKeyword.TabIndex = 25;
@@ -194,7 +195,7 @@
             // 
             lblSearchKeyword.AutoSize = true;
             lblSearchKeyword.Font = new Font("Arial", 9.857143F, FontStyle.Regular, GraphicsUnit.Point);
-            lblSearchKeyword.Location = new Point(257, 72);
+            lblSearchKeyword.Location = new Point(256, 48);
             lblSearchKeyword.Name = "lblSearchKeyword";
             lblSearchKeyword.Size = new Size(64, 16);
             lblSearchKeyword.TabIndex = 24;
@@ -220,7 +221,7 @@
             dgvSearchResults.BackgroundColor = Color.FromArgb(224, 224, 224);
             dgvSearchResults.BorderStyle = BorderStyle.Fixed3D;
             dgvSearchResults.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dgvSearchResults.Location = new Point(257, 176);
+            dgvSearchResults.Location = new Point(256, 176);
             dgvSearchResults.Name = "dgvSearchResults";
             dgvSearchResults.RowHeadersWidth = 72;
             dgvSearchResults.RowTemplate.Height = 25;
@@ -235,6 +236,7 @@
             cboSearch.Name = "cboSearch";
             cboSearch.Size = new Size(280, 23);
             cboSearch.TabIndex = 21;
+            cboSearch.SelectedIndexChanged += cboSearch_SelectedIndexChanged;
             // 
             // btnSearch
             // 
@@ -249,12 +251,13 @@
             btnSearch.TabIndex = 20;
             btnSearch.Text = "TÌM";
             btnSearch.UseVisualStyleBackColor = false;
+            btnSearch.Click += btnSearch_Click;
             // 
             // lblSearch
             // 
             lblSearch.AutoSize = true;
             lblSearch.Font = new Font("Arial", 9.857143F, FontStyle.Regular, GraphicsUnit.Point);
-            lblSearch.Location = new Point(257, 24);
+            lblSearch.Location = new Point(256, 24);
             lblSearch.Name = "lblSearch";
             lblSearch.Size = new Size(110, 16);
             lblSearch.TabIndex = 19;
@@ -266,7 +269,7 @@
             chkSearchExact.AutoSize = true;
             chkSearchExact.Enabled = false;
             chkSearchExact.Font = new Font("Arial", 9.857143F, FontStyle.Regular, GraphicsUnit.Point);
-            chkSearchExact.Location = new Point(666, 72);
+            chkSearchExact.Location = new Point(666, 71);
             chkSearchExact.Margin = new Padding(2);
             chkSearchExact.Name = "chkSearchExact";
             chkSearchExact.Size = new Size(101, 20);
@@ -279,7 +282,7 @@
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.White;
-            ClientSize = new Size(842, 440);
+            ClientSize = new Size(1002, 491);
             Controls.Add(chkSearchExact);
             Controls.Add(cboProperties);
             Controls.Add(lblProperty);
@@ -303,6 +306,7 @@
             Name = "formStatistic";
             Text = "formStatistic";
             WindowState = FormWindowState.Maximized;
+            Load += formStatistic_Load;
             Navbar.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)pictureBoxLogo).EndInit();
             ((System.ComponentModel.ISupportInitialize)dgvSearchResults).EndInit();

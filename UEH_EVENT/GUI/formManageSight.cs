@@ -92,15 +92,27 @@ namespace UEH_EVENT.GUI
 
         private void btnDelete_Click(object sender, EventArgs e)
         {
-            if (lstSight.SelectedItems.Count == 0)
+            if (lstSight.SelectedItems.Count == 0 || sights == null)
             {
-                MessageBox.Show("Hãy chọn ít nhất một Sight để thực hiện xoá");
+                MessageBox.Show("Hãy chọn ít nhất một bài trắc nghiệm để thực hiện xoá", "Không tìm thấy bài trắc nghiệm", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
 
             sights.RemoveAt(lstSight.SelectedIndices[0]);
             LoadSightsListView();
             Database.Delete<Sight>(sights[lstSight.SelectedIndices[0]].Id);
+        }
+
+        private void btnTest_Click(object sender, EventArgs e)
+        {
+            if(lstSight.SelectedIndices.Count == 0 || sights == null)
+            {
+                MessageBox.Show("Chọn một bài trắc nghiệm để làm thử","Không tìm thấy bài trắc nghiệm",MessageBoxButtons.OK,MessageBoxIcon.Error);
+                return;
+            }
+            Hide();
+            new formDoingSight(sights[lstSight.SelectedIndices[0]].Id).ShowDialog();
+            Close();
         }
     }
 }
