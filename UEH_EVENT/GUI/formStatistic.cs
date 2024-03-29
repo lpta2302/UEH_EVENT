@@ -20,6 +20,7 @@ namespace UEH_EVENT.GUI
         public string? SelectedClassValue { get; set; }
         public string? SelectedPropertyValue { get; set; }
         public string? SearchKeyword { get; set; }
+        public bool IsExactSearch { get; set; }
         public string? ThresholdFilter { get; set; }
         public int Threshold { get; set; }
         public int IntLowerBound { get; set; }
@@ -33,7 +34,7 @@ namespace UEH_EVENT.GUI
 
         private void ToggleTextSearch(bool isOn)
         {
-            txtSearchKeyword.Enabled = isOn;
+            txtSearchKeyword.Enabled = chkSearchExact.Enabled = isOn;
         }
 
         private void ToggleStatsButton()
@@ -66,6 +67,10 @@ namespace UEH_EVENT.GUI
             else
             {
                 SearchKeyword = null;
+            }
+            if (chkSearchExact.Enabled)
+            {
+                IsExactSearch = chkSearchExact.Checked;
             }
             if (rdoSearchThreshold.Enabled && rdoSearchThreshold.Checked)
             {
@@ -146,7 +151,7 @@ namespace UEH_EVENT.GUI
             {
                 if (txtSearchKeyword.Enabled)
                 {
-                    dgvSearchResults.DataSource = Search.SearchString(selectedClass, selectedProperty, txtSearchKeyword.Text.Trim());
+                    dgvSearchResults.DataSource = Search.SearchString(selectedClass, selectedProperty, txtSearchKeyword.Text.Trim(), chkSearchExact.Checked);
                 }
                 else
                 {

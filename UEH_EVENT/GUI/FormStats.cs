@@ -22,7 +22,7 @@
             foreach (var sight in Query.GetAllSight())
             {
                 xStatsList.Add($"ID {sight.Id}");
-                yStatsList.Add(Stats.CountSightsByPlayTimes(sight.Id));
+                yStatsList.Add(Stats.CountAllSightHis(sight.Id));
             }
             xStats = xStatsList.ToArray();
             yStats = yStatsList.ToArray();
@@ -74,6 +74,25 @@
             lblTPointTier4Count.Text = tPointTier4Count.ToString();
             xStats = new string[5] { "Xuất sắc", "Tốt", "Khá", "Trung bình", "Còn lại" };
             yStats = new int[5] { tPointTier1Count, tPointTier2Count, tPointTier3Count, tPointTier4Count, studentsCount - tPointOver50Count };
+        }
+
+        private void LoadGameStats()
+        {
+            int gameCount = Stats.CountAllGames();
+            int playHisCount = Stats.CountAllPlayHis();
+            lblGame.Visible = lblGameCount.Visible = true;
+            lblGameCount.Text = gameCount.ToString();
+            lblPlayHisClone.Visible = lblPlayHisCountClone.Visible = true;
+            lblPlayHisCountClone.Text = playHisCount.ToString();
+            List<string> xStatsList = new();
+            List<int> yStatsList = new();
+            foreach (var game in Query.GetAllGame())
+            {
+                xStatsList.Add($"ID {game.Id}");
+                yStatsList.Add(Stats.CountAllPlayHis(game.Id));
+            }
+            xStats = xStatsList.ToArray();
+            yStats = yStatsList.ToArray();
         }
 
         private void LoadPlayHisStats(int gameId = 0)
@@ -156,6 +175,9 @@
                 case nameof(Student):
                     LoadStudentStats();
                     break;
+                case nameof(Game):
+                    LoadGameStats();
+                    break;
                 case nameof(PlayHis):
                     cboSelect.Visible = true;
                     cboSelect.Items.Add("All");
@@ -232,6 +254,7 @@
         {
             LoadStats();
             string? selClass = form.SelectedClassValue, selProperty = form.SelectedPropertyValue, keyword = form.SearchKeyword, filter = form.ThresholdFilter;
+            bool isExactSearch = form.IsExactSearch;
             int threshold = form.Threshold, lowerBound = form.IntLowerBound, upperBound = form.IntUpperBound;
             int countOfAll = 0, countMatchKeyword = 0, countMetThreshold = 0, countInRange = 0;
             if (selClass != null && selProperty != null)
@@ -239,10 +262,19 @@
                 countOfAll = (int)SearchUtil.StaticCallGenericVarType(nameof(Stats), selClass, nameof(Stats.CountAll), null, null)!;
                 if (keyword != null)
                 {
-                    countMatchKeyword = (int)SearchUtil.StaticCallGenericVarType(nameof(Stats), selClass, nameof(Stats.CountFilterString), new[] { typeof(string), typeof(string) }, new[] { selProperty, keyword })!;
-                    xSearch[0] = $"\"{keyword}\""; xSearch[1] = "Còn lại";
+                    if (isExactSearch)
+                    {
+                        countMatchKeyword = (int)SearchUtil.StaticCallGenericVarType(nameof(Stats), selClass, nameof(Stats.CountFilterString), new[] { typeof(string), typeof(string) }, new[] { selProperty, keyword })!;
+                        xSearch[0] = $"Trùng \"{keyword}\""; xSearch[1] = "Còn lại";
+                        lblMatch.Text = $"Trùng từ khóa \"{keyword}\":";
+                    }
+                    else
+                    {
+                        countMatchKeyword = Stats.CountFilterContainsString(selClass, selProperty, keyword);
+                        xSearch[0] = $"Chứa \"{keyword}\""; xSearch[1] = "Còn lại";
+                        lblMatch.Text = $"Chứa từ khóa \"{keyword}\":";
+                    }
                     ySearch[0] = countMatchKeyword; ySearch[1] = countOfAll - countMatchKeyword;
-                    lblMatch.Text = $"Trùng từ khóa \"{keyword}\":";
                     lblMatchCount.Text = countMatchKeyword.ToString();
                 }
                 else if (filter != null && threshold != int.MinValue)
@@ -327,6 +359,8 @@
                 default:
                     break;
             }
+            chartStatsOther.Series[0].Points.DataBindXY(xStats, yStats);
+            chartStatsOther.Series[0].IsValueShownAsLabel = true;
         }
     }
 }

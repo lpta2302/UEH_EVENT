@@ -15,6 +15,10 @@
     {
         return Database.Query<T>(new Filterer(propName, value, Filterer.FilterType.Equal))!.Count;
     }
+    public static int CountFilterContainsString(string className, string propName, string value)
+    {
+        return Search.SearchString(className, propName, value, false)!.Count;
+    }
     public static int CountFilterInt<T>(string propName, char filter, int threshold) where T : class
     {
         Dictionary<char, Func<Filterer>> filterCases = new()
@@ -71,11 +75,6 @@
                 .Where(sh => sh.SightId == sightId && sh.Point >= lowerBound && sh.Point <= upperBound).Count();
         }
     }
-    public static int CountSightsByPlayTimes(int sightId)
-    {
-        return Query.GetAllSightHis()
-            .Where(sh => sh.SightId == sightId).Count();
-    }
     // Thống kê điểm rèn luyện
     public static int CountAllStudents()
     {
@@ -92,6 +91,10 @@
             .Where(st => st.TPoint >= minimum && st.TPoint <= maximum).Count();
     }
     // Thống kê game
+    public static int CountAllGames()
+    {
+        return Query.GetAllGame().Count;
+    }
     public static int CountAllPlayHis(int gameId = 0)
     {
         if (gameId == 0)
