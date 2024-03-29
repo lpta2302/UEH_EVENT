@@ -28,14 +28,15 @@ namespace UEH_EVENT.GUI.Mario
         bool virussGoRight = true;
         int numberHeart = 3;
         int numberShovel = 0;
+        bool enoughShvel = false;
         #endregion
 
         #region Player movement
-        Boolean Player_Jump = false;    
-        Boolean Player_Left = false;    
-        Boolean Player_Right = false;   
-        Boolean LastDirRight = true;    
-        Boolean GameOn = true;        
+        Boolean Player_Jump = false;
+        Boolean Player_Left = false;
+        Boolean Player_Right = false;
+        Boolean LastDirRight = true;
+        Boolean GameOn = true;
         int Gravity = 20;
         int Force = 0;
         int Speed_Movement = 5;
@@ -75,9 +76,9 @@ namespace UEH_EVENT.GUI.Mario
             if (!OutsideWorldFrame(tar))
             {
                 foreach (PictureBox Obj in WorldBricks)
-                {   
+                {
                     //if (!tar.Bounds.IntersectsWith(Obj.Bounds))
-                    if(!Collision_Top(tar))
+                    if (!Collision_Top(tar))
                     {
                         if (tar.Location.Y < WorldFrame.Width)
                         {   //And it's not under ground for some reason
@@ -96,7 +97,7 @@ namespace UEH_EVENT.GUI.Mario
                 {
                     PictureBox temp1 = new PictureBox();
                     temp1.Bounds = ob.Bounds;
-                    temp1.SetBounds(temp1.Location.X, temp1.Location.Y - 1 , temp1.Width, 1);
+                    temp1.SetBounds(temp1.Location.X, temp1.Location.Y - 1, temp1.Width, 1);
                     if (tar.Bounds.IntersectsWith(temp1.Bounds))
                         return true;
                 }
@@ -128,7 +129,7 @@ namespace UEH_EVENT.GUI.Mario
                 {
                     PictureBox temp1 = new PictureBox();
                     temp1.Bounds = ob.Bounds;
-                    temp1.SetBounds(temp1.Location.X - 1, temp1.Location.Y+1, 1, temp1.Height - 1);
+                    temp1.SetBounds(temp1.Location.X - 1, temp1.Location.Y + 1, 1, temp1.Height - 1);
                     if (tar.Bounds.IntersectsWith(temp1.Bounds))
                         return true;
                 }
@@ -178,7 +179,7 @@ namespace UEH_EVENT.GUI.Mario
         }
         public void Reload()
         {
-            picPlayer.Location = new System.Drawing.Point(67, 560);
+            picPlayer.Location = new System.Drawing.Point(84, 700);
         }
         public void HideHeart()
         {
@@ -205,7 +206,7 @@ namespace UEH_EVENT.GUI.Mario
                     {
                         WorldBricks.Add(pictureBox);
                     }
-                    else 
+                    else
                         WorldNotBrick.Add(pictureBox);
                 }
             }
@@ -215,22 +216,22 @@ namespace UEH_EVENT.GUI.Mario
             if (GameOn)
             {
                 if (Player_Right && picPlayer.Right <= WorldFrame.Width - 3 && !Collision_Left(picPlayer))
-                { 
+                {
                     picPlayer.Left += Speed_Movement; //Moves right
                 }
                 if (Player_Left && picPlayer.Location.X >= 3 && !Collision_Right(picPlayer))
-                { 
+                {
                     picPlayer.Left -= Speed_Movement; //Moves left
                 }
             }
             else
-            {   
+            {
                 Player_Right = false;
                 Player_Left = false;
             }
 
             if (Force > 0)
-            {   
+            {
                 if (Collision_Bottom(picPlayer))
                 {   //ktr đập đầu
                     Force = 0;
@@ -242,14 +243,14 @@ namespace UEH_EVENT.GUI.Mario
                 }
             }
             else
-            {   
+            {
                 Player_Jump = false;
             }
         }
         private void timer_Gravity_Tick(object sender, EventArgs e)
         {
             if (!Player_Jump && picPlayer.Location.Y + picPlayer.Height < WorldFrame.Height - 2 && !Collision_Top(picPlayer))
-            { 
+            {
                 picPlayer.Top += Speed_Fall; //Player falls
             }
 
@@ -264,11 +265,11 @@ namespace UEH_EVENT.GUI.Mario
             lblScore.Text = "Score: " + score;
             foreach (PictureBox x in WorldNotBrick)
             {
-                if (x.Tag != null &&(string)x.Tag == "player")
+                if (x.Tag != null && (string)x.Tag == "player")
                 {
                     x.BringToFront();
                 }
-                if (x.Tag != null &&(string)x.Tag == "coin")
+                if (x.Tag != null && (string)x.Tag == "coin")
                 {
                     if (picPlayer.Bounds.IntersectsWith(x.Bounds) && x.Visible == true)
                     {
@@ -278,28 +279,33 @@ namespace UEH_EVENT.GUI.Mario
                         //pl.Play();
                     }
                 }
-                if (x.Tag != null &&(string)x.Tag == "shovel")
+                if (x.Tag != null && (string)x.Tag == "shovel")
                 {
                     if (picPlayer.Bounds.IntersectsWith(x.Bounds) && x.Visible == true)
                     {
                         numberShovel += 1;
-                        picShovel.Visible = false;
+                        x.Visible = false;
+                        break;
                     }
                 }
-                if (x.Tag != null &&(string)x.Tag == "hole")
+                if (numberShovel == 3)
                 {
-                    if (picPlayer.Bounds.IntersectsWith(x.Bounds) && x.Visible == true)
+                    hasEnoughShovel = true;
+                }
+                if (x.Tag != null && (string)x.Tag == "hole")
+                {
+                    if (picPlayer.Bounds.IntersectsWith(x.Bounds) && x.Visible == true && hasEnoughShovel == true)
                     {
                         picHole.Visible = false;
                     }
-                    if (picPlayer.Bounds.IntersectsWith(x.Bounds) && x.Visible == true)
+                    if (picPlayer.Bounds.IntersectsWith(x.Bounds) && x.Visible == true && hasEnoughShovel == false)
                     {
                         Reload();
                         numberHeart -= 1;
                         HideHeart();
                     }
                 }
-                if (x.Tag != null &&(string)x.Tag == "viruss")
+                if (x.Tag != null && (string)x.Tag == "viruss")
                 {
                     if (picPlayer.Bounds.IntersectsWith(x.Bounds) && x.Visible == true)
                     {
@@ -310,7 +316,7 @@ namespace UEH_EVENT.GUI.Mario
                         HideHeart();
                     }
                 }
-                if (x.Tag != null &&(string)x.Tag == "fire")
+                if (x.Tag != null && (string)x.Tag == "fire")
                 {
                     if (picPlayer.Bounds.IntersectsWith(x.Bounds) && x.Visible == true)
                     {
@@ -321,7 +327,7 @@ namespace UEH_EVENT.GUI.Mario
                         HideHeart();
                     }
                 }
-                if (x.Tag != null &&(string)x.Tag == "key")
+                if (x.Tag != null && (string)x.Tag == "key")
                 {
                     if (picPlayer.Bounds.IntersectsWith(x.Bounds) && x.Visible == true)
                     {
@@ -329,7 +335,7 @@ namespace UEH_EVENT.GUI.Mario
                         hasKey = true;
                     }
                 }
-                if (x.Tag != null &&(string)x.Tag == "door")
+                if (x.Tag != null && (string)x.Tag == "door")
                 {
                     if (picPlayer.Bounds.IntersectsWith(x.Bounds) && x.Visible == true && hasKey)
                     {
@@ -353,36 +359,36 @@ namespace UEH_EVENT.GUI.Mario
         {
             switch (e.KeyCode)
             {
-                case Keys.Left:                 
+                case Keys.Left:
                     if (GameOn)
                     {
-                        if(LastDirRight)
+                        if (LastDirRight)
                         {
 
-                        picPlayer.Image = Properties.Resources.MarioPlayLeft;   
-                        LastDirRight = false;
+                            picPlayer.Image = Properties.Resources.MarioPlayLeft;
+                            LastDirRight = false;
                         }
-                        Player_Left = true;     
+                        Player_Left = true;
                     }
                     break;
-                case Keys.Right:               
+                case Keys.Right:
                     if (GameOn)
                     {
                         if (!LastDirRight)
                         {
 
-                        picPlayer.Image = Properties.Resources.MarioPlay;
-                        LastDirRight = true;
+                            picPlayer.Image = Properties.Resources.MarioPlay;
+                            LastDirRight = true;
                         }
                         Player_Right = true;
                     }
                     break;
-                case Keys.Space:    
+                case Keys.Space:
                     if (!Player_Jump && !InAirNoCollision(picPlayer))
                     {
-                        picPlayer.Top -= Speed_Jump;     
-                        Force = Gravity;        
-                        Player_Jump = true;    
+                        picPlayer.Top -= Speed_Jump;
+                        Force = Gravity;
+                        Player_Jump = true;
                     }
                     break;
             }
@@ -420,15 +426,15 @@ namespace UEH_EVENT.GUI.Mario
             }
             if (timeUpMinute < 10 && timeUpSecond < 10)
             {
-                lblLock.Text = "0" + timeUpMinute + " : " + "0" + timeUpSecond;
+                lblLock2.Text = "0" + timeUpMinute + " : " + "0" + timeUpSecond;
             }
             else if (timeUpMinute >= 10 && timeUpSecond < 10)
             {
-                lblLock.Text = timeUpMinute + " : " + "0" + timeUpSecond;
+                lblLock2.Text = timeUpMinute + " : " + "0" + timeUpSecond;
             }
             else
             {
-                lblLock.Text = "0" + timeUpMinute + " : " + timeUpSecond;
+                lblLock2.Text = "0" + timeUpMinute + " : " + timeUpSecond;
             }
         }
     }

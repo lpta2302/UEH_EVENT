@@ -29,18 +29,12 @@
         private void InitializeComponent()
         {
             picButtonStart = new PictureBox();
-            picButtonInstall = new PictureBox();
-            picButtonDiscription = new PictureBox();
             bgwProcess = new System.ComponentModel.BackgroundWorker();
             pgbLoadMarioPlay = new ProgressBar();
             picMarioGif = new PictureBox();
-            picButtonCancel = new PictureBox();
             picSuperMario = new PictureBox();
             ((System.ComponentModel.ISupportInitialize)picButtonStart).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)picButtonInstall).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)picButtonDiscription).BeginInit();
             ((System.ComponentModel.ISupportInitialize)picMarioGif).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)picButtonCancel).BeginInit();
             ((System.ComponentModel.ISupportInitialize)picSuperMario).BeginInit();
             SuspendLayout();
             // 
@@ -56,31 +50,6 @@
             picButtonStart.TabIndex = 0;
             picButtonStart.TabStop = false;
             picButtonStart.Click += picButtonStart_Click;
-            // 
-            // picButtonInstall
-            // 
-            picButtonInstall.BackColor = Color.Transparent;
-            picButtonInstall.BackgroundImageLayout = ImageLayout.Stretch;
-            picButtonInstall.Image = Properties.Resources.buttoncaidatl;
-            picButtonInstall.Location = new Point(247, 358);
-            picButtonInstall.Name = "picButtonInstall";
-            picButtonInstall.Size = new Size(70, 52);
-            picButtonInstall.SizeMode = PictureBoxSizeMode.StretchImage;
-            picButtonInstall.TabIndex = 1;
-            picButtonInstall.TabStop = false;
-            // 
-            // picButtonDiscription
-            // 
-            picButtonDiscription.BackColor = Color.Transparent;
-            picButtonDiscription.BackgroundImageLayout = ImageLayout.Stretch;
-            picButtonDiscription.Image = Properties.Resources.button3gach;
-            picButtonDiscription.Location = new Point(500, 358);
-            picButtonDiscription.Name = "picButtonDiscription";
-            picButtonDiscription.Size = new Size(70, 52);
-            picButtonDiscription.SizeMode = PictureBoxSizeMode.StretchImage;
-            picButtonDiscription.TabIndex = 2;
-            picButtonDiscription.TabStop = false;
-            picButtonDiscription.Click += picButtonDiscription_Click;
             // 
             // bgwProcess
             // 
@@ -109,20 +78,6 @@
             picMarioGif.TabIndex = 4;
             picMarioGif.TabStop = false;
             // 
-            // picButtonCancel
-            // 
-            picButtonCancel.BackColor = Color.Transparent;
-            picButtonCancel.BackgroundImageLayout = ImageLayout.Stretch;
-            picButtonCancel.Image = Properties.Resources.buttonCancel;
-            picButtonCancel.Location = new Point(723, 403);
-            picButtonCancel.Name = "picButtonCancel";
-            picButtonCancel.Size = new Size(44, 35);
-            picButtonCancel.SizeMode = PictureBoxSizeMode.StretchImage;
-            picButtonCancel.TabIndex = 5;
-            picButtonCancel.TabStop = false;
-            picButtonCancel.Visible = false;
-            picButtonCancel.Click += picButtonCancel_Click;
-            // 
             // picSuperMario
             // 
             picSuperMario.BackColor = Color.Transparent;
@@ -143,11 +98,8 @@
             BackgroundImageLayout = ImageLayout.Stretch;
             ClientSize = new Size(800, 450);
             Controls.Add(picSuperMario);
-            Controls.Add(picButtonCancel);
             Controls.Add(picMarioGif);
             Controls.Add(pgbLoadMarioPlay);
-            Controls.Add(picButtonDiscription);
-            Controls.Add(picButtonInstall);
             Controls.Add(picButtonStart);
             FormBorderStyle = FormBorderStyle.FixedSingle;
             MaximizeBox = false;
@@ -156,10 +108,7 @@
             StartPosition = FormStartPosition.CenterScreen;
             Text = "MARIO ";
             ((System.ComponentModel.ISupportInitialize)picButtonStart).EndInit();
-            ((System.ComponentModel.ISupportInitialize)picButtonInstall).EndInit();
-            ((System.ComponentModel.ISupportInitialize)picButtonDiscription).EndInit();
             ((System.ComponentModel.ISupportInitialize)picMarioGif).EndInit();
-            ((System.ComponentModel.ISupportInitialize)picButtonCancel).EndInit();
             ((System.ComponentModel.ISupportInitialize)picSuperMario).EndInit();
             ResumeLayout(false);
         }
@@ -167,12 +116,9 @@
         #endregion
 
         private PictureBox picButtonStart;
-        private PictureBox picButtonInstall;
-        private PictureBox picButtonDiscription;
         private System.ComponentModel.BackgroundWorker bgwProcess;
         private ProgressBar pgbLoadMarioPlay;
         private PictureBox picMarioGif;
-        private PictureBox picButtonCancel;
         private PictureBox picSuperMario;
     }
 }
