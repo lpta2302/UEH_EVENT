@@ -59,5 +59,17 @@
     <Compile Update="GUI\LoginForm.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Update="GUI\Mario\Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="GUI\Mario\frmPlayMario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="GUI\Mario\frmQuestionForGame.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="GUI\Mario\frmStartMario.cs">
+      <SubType>Form</SubType>
+    </Compile>
   </ItemGroup>
 </Project>

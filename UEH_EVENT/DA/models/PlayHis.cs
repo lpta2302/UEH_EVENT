@@ -15,7 +15,7 @@ public class PlayHis
     public int Point { get; set; }
     [Required]
     public DateTime CreatedAt { get; set; }
-    public PlayHis() { 
+    public PlayHis() {
         CreatedAt = DateTime.Now;
     }
 
