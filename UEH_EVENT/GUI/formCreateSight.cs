@@ -117,7 +117,8 @@ namespace UEH_EVENT.GUI
             Database.Update<Account>(GlobalData.CurrentAccount);
             MessageBox.Show("Thêm thành công", "Thông báo");
             Hide();
-            new formCreateSight().Show();
+            Form form = GlobalData.CurrentAccount.AccType == Constants.CLB_ACC ? new formLobbySight() : new formManageSight();
+            form.ShowDialog();
             Close();
         }
 

@@ -1,12 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
+﻿using UEH_EVENT.Utils;
 
 namespace UEH_EVENT.GUI
 {
@@ -51,7 +43,24 @@ namespace UEH_EVENT.GUI
 
         private void formStatistic_Load(object sender, EventArgs e)
         {
-            cboSearch.Items.AddRange(SearchUtil.GetDisplayClassNames());
+            if (GlobalData.CurrentAccount?.AccType == Constants.ADMIN_ACC)
+            {
+                cboSearch.Items.AddRange(SearchUtil.GetDisplayClassNames());
+            }
+            if (GlobalData.CurrentAccount?.AccType == Constants.CLB_ACC)
+            {
+                foreach (var name in SearchUtil.GetDisplayClassNames())
+                {
+                    if (name == Constants.CLASS_NAMES[nameof(Account)])
+                    {
+                        continue;
+                    }
+                    else
+                    {
+                        cboSearch.Items.Add(name);
+                    }
+                }
+            }
             cboSearch.SelectedIndex = 0;
             ToggleStatsButton();
         }

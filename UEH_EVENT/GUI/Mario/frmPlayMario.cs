@@ -493,5 +493,12 @@ namespace UEH_EVENT.GUI.Mario
         {
 
         }
+
+        private void picEndGame_Click(object sender, EventArgs e)
+        {
+            Hide();
+            new formGame().ShowDialog();
+            Close();
+        }
     }
 }
