@@ -11,6 +11,7 @@ using System.Numerics;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using UEH_EVENT.Utils;
 using static System.Formats.Asn1.AsnWriter;
 using static System.Reflection.Metadata.BlobBuilder;
 
@@ -48,7 +49,7 @@ namespace UEH_EVENT.GUI.Mario
         #region Player valuable
         bool goLeft, goRight, hasKey;
         bool hasEnoughShovel;
-        int score = 0;
+        int score = 10000;
         int timeUpMinute = 0;
         int timeUpSecond = 0;
         #endregion
@@ -163,15 +164,25 @@ namespace UEH_EVENT.GUI.Mario
             {
                 picViruss2.Left -= 2;
             }
-            if (picViruss2.Location.X >= 286)
+            if (picViruss2.Location.X >= 427)
             {
                 virussGoRight = false;
                 virussGoLeft = true;
             }
-            if (picViruss2.Location.X <= 102)
+            if (picViruss2.Location.X <= 267)
             {
                 virussGoRight = true;
                 virussGoLeft = false;
+            }
+        }
+        public void PlaySound(Stream soundStream)
+        {
+            using (var stream = soundStream)
+            {
+                using (var player = new SoundPlayer(stream))
+                {
+                    player.Play();
+                }
             }
         }
         public void PlayAudio()
@@ -199,7 +210,7 @@ namespace UEH_EVENT.GUI.Mario
                             }
                         }
                         break;
-                    case "coin":
+                    case "phone":
                     case "key":
                         if (picPlayer.Bounds.IntersectsWith(x.Bounds) && x.Visible == true)
                         {
@@ -232,7 +243,7 @@ namespace UEH_EVENT.GUI.Mario
         }
         public void Reload()
         {
-            picPlayer.Location = new System.Drawing.Point(84, 700);
+            picPlayer.Location = new System.Drawing.Point(67, 560);
         }
         public void HideHeart()
         {
@@ -322,13 +333,13 @@ namespace UEH_EVENT.GUI.Mario
                 {
                     x.BringToFront();
                 }
-                if (x.Tag != null && (string)x.Tag == "coin")
+                if (x.Tag != null && (string)x.Tag == "phone")
                 {
                     if (picPlayer.Bounds.IntersectsWith(x.Bounds) && x.Visible == true)
                     {
                         x.Visible = false;
                         score += 5;
-                        //SoundPlayer pl = new SoundPlayer(@"D:\Subject\Desktop Application Development\project4\UEH_EVENT\sound\getCoin.wav");
+                        //SoundPlayer pl = new SoundPlayer(@"D:\Subject\Desktop Application Development\project4\UEH_EVENT\sound\getphone.wav");
                         //pl.Play();
                     }
                 }
@@ -392,21 +403,32 @@ namespace UEH_EVENT.GUI.Mario
                 {
                     if (picPlayer.Bounds.IntersectsWith(x.Bounds) && x.Visible == true && hasKey)
                     {
-                        //SoundPlayer pl = new SoundPlayer(@"D:\Subject\Desktop Application Development\project4\UEH_EVENT\sound\soundWin2.wav");
-                        //pl.Play();
+                        using (var stream = Properties.Resources.soundWin2)
+                        {
+                            using (var player = new SoundPlayer(stream))
+                            {
+                                player.Play();
+                            }
+                        }
                         x.Visible = false;
                         MessageBox.Show("Win roi nha");
                         StopTimer();
+                        Database.Insert<PlayHis>(new PlayHis()
+                        {
+                            StudentId = Query.GetStudentById(GlobalData.CurrentAccount.StudentId).Mssv,
+                            GameId = 1,
+                            Point = score
+                        });
                     }
                 }
             }
             if (numberHeart == 0)
             {
                 picGameOver.Visible = true;
+                picGameOver.Location = new Point(280,120);
                 GameOn = false;
                 StopTimer();
-                //SoundPlayer pl = new SoundPlayer(@"D:\Subject\Desktop Application Development\project4\UEH_EVENT\sound\soundLoss.wav");
-                //pl.Play();                                                            
+                PlaySound(Properties.Resources.soundLoss);                                                            
             }
         }
         private void frmPlayMario_KeyDown(object sender, KeyEventArgs e)
@@ -473,6 +495,7 @@ namespace UEH_EVENT.GUI.Mario
         private void tmrLock_Tick(object sender, EventArgs e)
         {
             timeUpSecond += 1;
+            score--;
             if (timeUpSecond == 60)
             {
                 timeUpMinute += 1;
