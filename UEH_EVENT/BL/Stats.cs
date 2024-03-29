@@ -75,11 +75,6 @@
                 .Where(sh => sh.SightId == sightId && sh.Point >= lowerBound && sh.Point <= upperBound).Count();
         }
     }
-    public static int CountSightsByPlayTimes(int sightId)
-    {
-        return Query.GetAllSightHis()
-            .Where(sh => sh.SightId == sightId).Count();
-    }
     // Thống kê điểm rèn luyện
     public static int CountAllStudents()
     {

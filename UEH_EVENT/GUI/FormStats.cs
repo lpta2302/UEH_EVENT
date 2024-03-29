@@ -22,7 +22,7 @@
             foreach (var sight in Query.GetAllSight())
             {
                 xStatsList.Add($"ID {sight.Id}");
-                yStatsList.Add(Stats.CountSightsByPlayTimes(sight.Id));
+                yStatsList.Add(Stats.CountAllSightHis(sight.Id));
             }
             xStats = xStatsList.ToArray();
             yStats = yStatsList.ToArray();
