@@ -14,18 +14,24 @@ public class Sight
     [Column(TypeName = "Date")]
     public DateTime CreatedAt { get; set; }
     public List<Question>? Questions { get; set; }
+    public int CreatedById { get; set; }
+    [ForeignKey("CreatedById")]
+    public Account CreatedBy { get; set; }
     public Sight()
     {
+        Questions = new List<Question>();
         Name = "";
         Preview = "";
+        CreatedAt = DateTime.Now;
     }
 
-    public Sight(string name = "", string? preview = "", int time = 0, List<Question>? questions = null)
+    public Sight(string name, string? preview, int time, List<Question> questions, int accId)
     {
         Name = name;
         Preview = preview;
         CreatedAt = DateTime.Now;
         Questions = questions;
         Time = time;
+        CreatedById = accId;
     }
 }

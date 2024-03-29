@@ -10,6 +10,7 @@ public class Account
     [Required]
     [StringLength(20)]
     public string Username { get; set; }
+    [StringLength(20)]
     public string? StudentId { get; set; }
     public Student? Student { get; set; }
     [Required]
@@ -19,7 +20,9 @@ public class Account
     [StringLength(100)]
     public string Name { get; set; }
     public string AccType { get; set; }
-    public Account(){}
+    public string? GameSession { get; set; } = null;
+    public string? SightSession { get; set; } = null;
+    public Account() { }
     public Account(string username, string password, string name, string accType)
     {
         Username = username;
@@ -28,7 +31,7 @@ public class Account
         AccType = accType;
         Student = null;
     }
-    public Account(string username, string password, string name, string accType,string? studentId)
+    public Account(string username, string password, string name, string accType, string? studentId)
     {
         Username = studentId;
         Password = password;

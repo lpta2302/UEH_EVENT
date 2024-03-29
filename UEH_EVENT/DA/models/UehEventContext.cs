@@ -1,5 +1,5 @@
-﻿
-using Microsoft.EntityFrameworkCore;
+﻿using Microsoft.EntityFrameworkCore;
+using Microsoft.EntityFrameworkCore.Metadata.Internal;
 using Microsoft.Extensions.Logging;
 
 public class UehEventContext : DbContext
@@ -15,6 +15,13 @@ public class UehEventContext : DbContext
     public DbSet<TPointHis> TPointHises { get; set; }
 
     private string connectionString = Constants.connectionString;
+    /*private ILoggerFactory loggerFactory = LoggerFactory.Create(builder =>
+    {
+        builder
+            // .AddFilter(DbLoggerCategory.Database.Command.Name, LogLevel.Information)
+            // .AddFilter(DbLoggerCategory.Query.Name, LogLevel.Information)
+            .AddConsole();
+    });*/
     protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
     {
         base.OnConfiguring(optionsBuilder);
@@ -22,6 +29,7 @@ public class UehEventContext : DbContext
             // .UseLoggerFactory(loggerFactory)
             // .UseLazyLoadingProxies()
             .UseSqlServer(connectionString);
+            //.UseSqlite ("Data Source = database.db");
     }
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
@@ -29,6 +37,12 @@ public class UehEventContext : DbContext
             .HasMany(q => q.Answers)
             .WithOne()
             .HasForeignKey("QuestionId")
+            .OnDelete(DeleteBehavior.Cascade);
+
+        modelBuilder.Entity<Sight>()
+            .HasMany(q => q.Questions)
+            .WithOne()
+            .HasForeignKey("SightId")
             .OnDelete(DeleteBehavior.Cascade);
 
         modelBuilder.Entity<Account>()
@@ -41,7 +55,7 @@ public class UehEventContext : DbContext
             .HasOne(s => s.Student)
             .WithMany()
             .HasForeignKey(s => s.StudentId)
-            .OnDelete(DeleteBehavior.Cascade);
+            .OnDelete(DeleteBehavior.NoAction);
 
         modelBuilder.Entity<SightHis>()
             .HasOne(s => s.Sight)

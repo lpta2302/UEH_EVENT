@@ -1,5 +1,4 @@
-﻿using System;
-using System.ComponentModel.DataAnnotations;
+﻿using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
 [Table("TPointHis")]
@@ -22,6 +21,10 @@ public class TPointHis
         StudentId = studentId;
         Point = point;
         Content = content;
+        CreatedAt = DateTime.Now;
+    }
+    public TPointHis()
+    {
         CreatedAt = DateTime.Now;
     }
 }

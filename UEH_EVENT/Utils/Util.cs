@@ -11,7 +11,6 @@ class Util
         {
             object? value = propertyInfo.GetValue(obj);
 
-
             if (value != null)
             {
                 return value is T typedValue ? typedValue : default;
@@ -29,6 +28,5 @@ class Util
         {
             propertyInfos[i].SetValue(target,propertyInfos[i].GetValue(ori));
         }
-
     }
 }

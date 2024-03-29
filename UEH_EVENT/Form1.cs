@@ -1,3 +1,5 @@
+using UEH_EVENT.GUI;
+
 namespace UEH_EVENT
 {
     public partial class Form1 : Form
@@ -11,6 +13,12 @@ namespace UEH_EVENT
         {
             MyFakeData.Init();
             dataGridView1.DataSource = Query.GetAllAccount();
+        }
+
+        private void btnSearch_Click(object sender, EventArgs e)
+        {
+            FormSearch search = new();
+            search.Show();
         }
     }
 }

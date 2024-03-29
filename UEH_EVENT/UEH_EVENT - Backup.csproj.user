@@ -1,0 +1,57 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="Current" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Compile Update="Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="formHistory.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="GUI\formGame.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="GUI\formHistory.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="GUI\formManageAccount.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="GUI\formManageSight.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="GUI\formSight.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="GUI\formStatistic.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="GUI\formUpdateProfile.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="GUI\formUpdateTPoint.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="GUI\LoginForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="GUI\FormSearch.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="GUI\FormStats.cs">
+    <Compile Update="GUI\formCreateQuestion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="GUI\formCreateSight.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="GUI\formDoingSight.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="GUI\formLobbySight.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="GUI\formScore.cs">
+      <SubType>Form</SubType>
+    </Compile>
+  </ItemGroup>
+</Project>

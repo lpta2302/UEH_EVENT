@@ -1,11 +1,5 @@
 ﻿using System.Linq.Expressions;
-using System.Reflection;
-using System.Security.AccessControl;
-using System.Security.Cryptography.X509Certificates;
 using Microsoft.EntityFrameworkCore;
-using Microsoft.EntityFrameworkCore.ChangeTracking;
-using Microsoft.Extensions.Logging;
-using Microsoft.Identity.Client;
 
 public class Database
 {
@@ -127,7 +121,7 @@ public class Database
 
             var result = query.SingleOrDefault(lambda);
 
-            if (result != null && navigationProps != null)
+            if (result != null && navigationProps != null && isLoadNav == true)
             {
                 foreach (var item in navigationProps)
                 {
@@ -138,30 +132,43 @@ public class Database
             return result == null ? default : result;
         }
     }
-    public static T? Query<T>(string[] filterers, string[] props, bool isLoadNav = false) where T : class
+    public static List<T>? Query<T>(Filterer filterer, bool multiSearch = false, bool isLoadNav = false) where T : class
     {
         using (var dbcontext = new UehEventContext())
         {
             var entityType = dbcontext.Model.FindEntityType(typeof(T));
             if (entityType == null) { return null; }
 
-            Expression conditions = null;
+            Expression conditions = null!;
             var parameter = Expression.Parameter(typeof(T), "x");
             //(x)=>
-            for (int i = 0; i < filterers.Length; i++)
+            for (int i = 0; i < filterer.Count(); i++)
             {
-                var property = Expression.Property(parameter, props[i]);
+                var property = Expression.Property(parameter, filterer.GetProp(i));
                 //(x)=> x.type[i]  filterer
-                var constant = Expression.Constant(filterers[i]);
+                var constant = Expression.Constant(filterer.GetValue(i));
                 //(x)=> x.type[i] == filterer
-                var equals = Expression.Equal(property, constant);
+                Expression condition = null!;
+                switch (filterer.GetFilterType(i))
+                {
+                    case Filterer.FilterType.Equal:
+                        condition = Expression.Equal(property, constant);
+                        break;
+                    case Filterer.FilterType.GreaterThan:
+                        condition = Expression.GreaterThan(property, constant);
+                        break;
+                    case Filterer.FilterType.LessThan:
+                        condition = Expression.LessThan(property, constant);
+                        break;
+                }
+
                 if (conditions == null)
                 {
-                    conditions = equals;
+                    conditions = condition;
                 }
                 else
                 {
-                    conditions = Expression.AndAlso(conditions, equals);
+                    conditions = Expression.AndAlso(conditions, condition);
                 }
             }
             if (conditions == null) return null;
@@ -170,17 +177,18 @@ public class Database
             var navigationProps = entityType?.GetNavigations();
             var query = dbcontext.Set<T>().AsQueryable();
 
-            var result = query.SingleOrDefault(lambda);
-
+            var result = query.Where(lambda).ToList();
             if (result != null && navigationProps != null && !isLoadNav)
             {
-                foreach (var item in navigationProps)
+                foreach (var item in result)
                 {
-                    dbcontext.Entry(result).Navigation(item.Name).Load();
+                    foreach (var prop in navigationProps)
+                    {
+                        dbcontext.Entry(item).Navigation(prop.Name).Load();
+                    }
                 }
             }
-
-            return result == null ? default : result;
+            return result;
         }
     }
     public static void Insert<T>(T item) where T : class
@@ -228,30 +236,11 @@ public class Database
             dbcontext.SaveChanges();
         }
     }
-    public static void Update<T>(object key, T item) where T : class
+    public static void Update<T>(T item) where T : class
     {
         using (var dbcontext = new UehEventContext())
         {
-            var entityType = dbcontext.Model.FindEntityType(typeof(T));
-            if (entityType == null) { return; }
-
-            var pkName = entityType.FindPrimaryKey()?.Properties?.FirstOrDefault()?.Name;
-            if (pkName == null) { return; }
-
-            //Create Expresion Lamda
-            var parameter = Expression.Parameter(typeof(T), "x");
-            var property = Expression.Property(parameter, pkName);
-            var constant = Expression.Constant(key);
-            var equals = Expression.Equal(property, constant);
-            var lambda = Expression.Lambda<Func<T, bool>>(equals, parameter);
-
-            var query = dbcontext.Set<T>().AsQueryable();
-
-            var result = query.SingleOrDefault(lambda);
-            if (result == null) return;
-
-            Util.CoppyData<T>(item,result);
-            dbcontext.Update(result);
+            dbcontext.Update(item);
             dbcontext.SaveChanges();
         }
     }
