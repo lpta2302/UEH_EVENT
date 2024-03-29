@@ -10,7 +10,6 @@ namespace UEH_EVENT.GUI.Mario
 {
     public partial class frmStartMario : Form
     {
-        //public SoundPlayer sPlayer = new SoundPlayer(@"D:\Subject\Desktop Application Development\project4\UEH_EVENT\sound\soundTrackStartGame.wav");
         public frmStartMario()
         {
             InitializeComponent();
@@ -91,6 +90,13 @@ namespace UEH_EVENT.GUI.Mario
                     Application.DoEvents();
                 }
             }
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+            Hide();
+            new formGame().ShowDialog();
+            Close();
         }
     }
 }

@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using UEH_EVENT.GUI.Mario;
 
 namespace UEH_EVENT.GUI
 {
@@ -55,6 +56,13 @@ namespace UEH_EVENT.GUI
         private void panelGame_Paint(object sender, PaintEventArgs e)
         {
 
+        }
+
+        private void btnPlay_Click(object sender, EventArgs e)
+        {
+            Hide();
+            new frmStartMario().ShowDialog();
+            Close();
         }
     }
 }

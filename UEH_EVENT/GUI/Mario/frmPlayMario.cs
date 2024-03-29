@@ -47,7 +47,7 @@ namespace UEH_EVENT.GUI.Mario
         #endregion
 
         #region Player valuable
-        bool goLeft, goRight, hasKey;
+        bool hasKey;
         bool hasEnoughShovel;
         int score = 10000;
         int timeUpMinute = 0;
@@ -185,48 +185,6 @@ namespace UEH_EVENT.GUI.Mario
                 }
             }
         }
-        public void PlayAudio()
-        {
-            foreach (Control x in WorldNotBrick)
-            {
-                switch ((string)x.Tag)
-                {
-                    case "hole":
-                        if (picPlayer.Bounds.IntersectsWith(x.Bounds) && x.Visible == true && hasEnoughShovel == false)
-                        {
-                            goto case "fire";
-                        }
-                        break;
-                    case "fire":
-                    case "viruss":
-                        if (picPlayer.Bounds.IntersectsWith(x.Bounds) && x.Visible == true)
-                        {
-                            using (var stream = Properties.Resources.Aaaaaa)
-                            {
-                                using (var player = new SoundPlayer(stream))
-                                {
-                                    player.Play();
-                                }
-                            }
-                        }
-                        break;
-                    case "phone":
-                    case "key":
-                        if (picPlayer.Bounds.IntersectsWith(x.Bounds) && x.Visible == true)
-                        {
-                            using (var stream = Properties.Resources.getCoin)
-                            {
-                                using (var player = new SoundPlayer(stream))
-                                {
-                                    player.Play();
-                                }
-                            }
-
-                        }
-                        break;
-                }
-            }
-        }
         public void StopTimer()
         {
             tmrGameLoad.Stop();
@@ -325,7 +283,7 @@ namespace UEH_EVENT.GUI.Mario
         private void tmrGameLoad_Tick(object sender, EventArgs e)
         {
             VirussGo();
-            PlayAudio();
+            //PlayAudio();
             lblScore.Text = "Score: " + score;
             foreach (PictureBox x in WorldNotBrick)
             {
@@ -339,8 +297,6 @@ namespace UEH_EVENT.GUI.Mario
                     {
                         x.Visible = false;
                         score += 5;
-                        //SoundPlayer pl = new SoundPlayer(@"D:\Subject\Desktop Application Development\project4\UEH_EVENT\sound\getphone.wav");
-                        //pl.Play();
                     }
                 }
                 if (x.Tag != null && (string)x.Tag == "shovel")
@@ -349,6 +305,7 @@ namespace UEH_EVENT.GUI.Mario
                     {
                         numberShovel += 1;
                         x.Visible = false;
+                        PlaySound(Properties.Resources.getCoin);
                         break;
                     }
                 }
@@ -364,6 +321,7 @@ namespace UEH_EVENT.GUI.Mario
                     }
                     if (picPlayer.Bounds.IntersectsWith(x.Bounds) && x.Visible == true && hasEnoughShovel == false)
                     {
+                        PlaySound(Properties.Resources.Aaaaaa);
                         Reload();
                         numberHeart -= 1;
                         HideHeart();
@@ -373,8 +331,7 @@ namespace UEH_EVENT.GUI.Mario
                 {
                     if (picPlayer.Bounds.IntersectsWith(x.Bounds) && x.Visible == true)
                     {
-                        //SoundPlayer pl = new SoundPlayer(@"D:\Subject\Desktop Application Development\project4\UEH_EVENT\sound\Aaaaaa.wav");
-                        //pl.Play();
+                        PlaySound(Properties.Resources.Aaaaaa);
                         Reload();
                         numberHeart -= 1;
                         HideHeart();
@@ -384,8 +341,7 @@ namespace UEH_EVENT.GUI.Mario
                 {
                     if (picPlayer.Bounds.IntersectsWith(x.Bounds) && x.Visible == true)
                     {
-                        // SoundPlayer pl = new SoundPlayer(@"D:\Subject\Desktop Application Development\project4\UEH_EVENT\sound\Aaaaaa.wav");
-                        //pl.Play();
+                        PlaySound(Properties.Resources.Aaaaaa);
                         Reload();
                         numberHeart -= 1;
                         HideHeart();
@@ -395,6 +351,7 @@ namespace UEH_EVENT.GUI.Mario
                 {
                     if (picPlayer.Bounds.IntersectsWith(x.Bounds) && x.Visible == true)
                     {
+                        PlaySound(Properties.Resources.getCoin);
                         x.Visible = false;
                         hasKey = true;
                     }
@@ -403,13 +360,8 @@ namespace UEH_EVENT.GUI.Mario
                 {
                     if (picPlayer.Bounds.IntersectsWith(x.Bounds) && x.Visible == true && hasKey)
                     {
-                        using (var stream = Properties.Resources.soundWin2)
-                        {
-                            using (var player = new SoundPlayer(stream))
-                            {
-                                player.Play();
-                            }
-                        }
+                        PlaySound(Properties.Resources.soundWin2);
+
                         x.Visible = false;
                         MessageBox.Show("Win roi nha");
                         StopTimer();
@@ -419,6 +371,9 @@ namespace UEH_EVENT.GUI.Mario
                             GameId = 1,
                             Point = score
                         });
+                        Hide();
+                        new formGame().ShowDialog();
+                        Close();
                     }
                 }
             }
@@ -428,7 +383,11 @@ namespace UEH_EVENT.GUI.Mario
                 picGameOver.Location = new Point(280,120);
                 GameOn = false;
                 StopTimer();
-                PlaySound(Properties.Resources.soundLoss);                                                            
+                PlaySound(Properties.Resources.soundLoss);
+                Thread.Sleep(3000);
+                Hide();
+                new formGame().ShowDialog();
+                Close();
             }
         }
         private void frmPlayMario_KeyDown(object sender, KeyEventArgs e)

@@ -65,8 +65,7 @@
     private static void FakeGame()
     {
         List<Game> games = new(){
-            new Game("game 1"),
-            new Game("game 2")
+            new Game("Mario")
         };
         Database.Insert(games);
     }

@@ -46,7 +46,6 @@
             pictureBox20 = new PictureBox();
             picViruss2 = new PictureBox();
             picHole = new PictureBox();
-            pictureBox23 = new PictureBox();
             pictureBox7 = new PictureBox();
             pictureBox11 = new PictureBox();
             pictureBox24 = new PictureBox();
@@ -124,7 +123,6 @@
             ((System.ComponentModel.ISupportInitialize)pictureBox20).BeginInit();
             ((System.ComponentModel.ISupportInitialize)picViruss2).BeginInit();
             ((System.ComponentModel.ISupportInitialize)picHole).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox23).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox7).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox11).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox24).BeginInit();
@@ -395,20 +393,6 @@
             picHole.TabStop = false;
             picHole.Tag = "hole";
             // 
-            // pictureBox23
-            // 
-            pictureBox23.BackColor = Color.Transparent;
-            pictureBox23.BackgroundImageLayout = ImageLayout.Stretch;
-            pictureBox23.Image = Properties.Resources.coinPlayGame;
-            pictureBox23.Location = new Point(595, 256);
-            pictureBox23.Margin = new Padding(2);
-            pictureBox23.Name = "pictureBox23";
-            pictureBox23.Size = new Size(34, 33);
-            pictureBox23.SizeMode = PictureBoxSizeMode.StretchImage;
-            pictureBox23.TabIndex = 13;
-            pictureBox23.TabStop = false;
-            pictureBox23.Tag = "coin";
-            // 
             // pictureBox7
             // 
             pictureBox7.BackColor = Color.Transparent;
@@ -626,7 +610,7 @@
             picGameOver.BackColor = Color.Transparent;
             picGameOver.BackgroundImageLayout = ImageLayout.Stretch;
             picGameOver.Image = Properties.Resources.GameOver;
-            picGameOver.Location = new Point(12, -340);
+            picGameOver.Location = new Point(281, 54);
             picGameOver.Margin = new Padding(2);
             picGameOver.Name = "picGameOver";
             picGameOver.Size = new Size(920, 500);
@@ -1260,7 +1244,6 @@
             WorldFrame.Controls.Add(pictureBox24);
             WorldFrame.Controls.Add(pictureBox11);
             WorldFrame.Controls.Add(pictureBox7);
-            WorldFrame.Controls.Add(pictureBox23);
             WorldFrame.Controls.Add(picHole);
             WorldFrame.Controls.Add(picViruss2);
             WorldFrame.Controls.Add(pictureBox20);
@@ -1413,7 +1396,7 @@
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            BackgroundImageLayout = ImageLayout.Stretch;
+            BackgroundImageLayout = ImageLayout.None;
             ClientSize = new Size(1402, 713);
             Controls.Add(picTime);
             Controls.Add(lblLock);
@@ -1445,7 +1428,6 @@
             ((System.ComponentModel.ISupportInitialize)pictureBox20).EndInit();
             ((System.ComponentModel.ISupportInitialize)picViruss2).EndInit();
             ((System.ComponentModel.ISupportInitialize)picHole).EndInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox23).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox7).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox11).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox24).EndInit();
@@ -1530,7 +1512,6 @@
         private PictureBox pictureBox20;
         private PictureBox picViruss2;
         private PictureBox picHole;
-        private PictureBox pictureBox23;
         private PictureBox pictureBox7;
         private PictureBox pictureBox11;
         private PictureBox pictureBox24;
