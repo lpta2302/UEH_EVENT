@@ -241,4 +241,25 @@
   <data name="backGroundPlaying" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\backGroundPlaying.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="Aaaaaa" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Aaaaaa.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="getCoin" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\getCoin.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="soundIntoPlayGame" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\soundIntoPlayGame.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="soundLoss" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\soundLoss.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="soundTrackPlayGame" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\soundTrackPlayGame.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="soundTrackStartGame" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\soundTrackStartGame.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="soundWin2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\soundWin2.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
 </root>

@@ -1300,6 +1300,7 @@
             WorldFrame.Name = "WorldFrame";
             WorldFrame.Size = new Size(1758, 896);
             WorldFrame.TabIndex = 20;
+            WorldFrame.Paint += WorldFrame_Paint;
             // 
             // lblLock2
             // 

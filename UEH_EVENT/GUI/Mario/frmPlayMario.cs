@@ -1,4 +1,5 @@
-﻿using Microsoft.Identity.Client.NativeInterop;
+﻿using Microsoft.EntityFrameworkCore.Query.Internal;
+using Microsoft.Identity.Client.NativeInterop;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -173,9 +174,61 @@ namespace UEH_EVENT.GUI.Mario
                 virussGoLeft = false;
             }
         }
+        public void PlayAudio()
+        {
+            foreach (Control x in WorldNotBrick)
+            {
+                switch ((string)x.Tag)
+                {
+                    case "hole":
+                        if (picPlayer.Bounds.IntersectsWith(x.Bounds) && x.Visible == true && hasEnoughShovel == false)
+                        {
+                            goto case "fire";
+                        }
+                        break;
+                    case "fire":
+                    case "viruss":
+                        if (picPlayer.Bounds.IntersectsWith(x.Bounds) && x.Visible == true)
+                        {
+                            using (var stream = Properties.Resources.Aaaaaa)
+                            {
+                                using (var player = new SoundPlayer(stream))
+                                {
+                                    player.Play();
+                                }
+                            }
+                        }
+                        break;
+                    case "coin":
+                    case "key":
+                        if (picPlayer.Bounds.IntersectsWith(x.Bounds) && x.Visible == true)
+                        {
+                            using (var stream = Properties.Resources.getCoin)
+                            {
+                                using (var player = new SoundPlayer(stream))
+                                {
+                                    player.Play();
+                                }
+                            }
+
+                        }
+                        break;
+                }
+            }
+        }
+        public void StopTimer()
+        {
+            tmrGameLoad.Stop();
+            //tmrGameLoad_Tick.Stop();
+            tmrGravity.Stop();
+            tmrJump.Stop();
+            tmrLock.Stop();
+            //tmrLock_Tick.Stop();
+        }
         public frmPlayMario()
         {
             InitializeComponent();
+            //PlaySOundTrackPlayGame();
         }
         public void Reload()
         {
@@ -194,8 +247,6 @@ namespace UEH_EVENT.GUI.Mario
         }
         private void frmPlayMario_Load(object sender, EventArgs e)
         {
-            //SoundPlayer pl = new SoundPlayer(@"D:\Subject\Desktop Application Development\project4\UEH_EVENT\sound\soundTrackPlayGame.wav");
-            //pl.Play();
             foreach (var control in this.WorldFrame.Controls)
             {
                 if (control is PictureBox)
@@ -210,6 +261,7 @@ namespace UEH_EVENT.GUI.Mario
                         WorldNotBrick.Add(pictureBox);
                 }
             }
+
         }
         private void timer_Jump_Tick(object sender, EventArgs e)
         {
@@ -262,6 +314,7 @@ namespace UEH_EVENT.GUI.Mario
         private void tmrGameLoad_Tick(object sender, EventArgs e)
         {
             VirussGo();
+            PlayAudio();
             lblScore.Text = "Score: " + score;
             foreach (PictureBox x in WorldNotBrick)
             {
@@ -343,7 +396,7 @@ namespace UEH_EVENT.GUI.Mario
                         //pl.Play();
                         x.Visible = false;
                         MessageBox.Show("Win roi nha");
-                        this.Close();
+                        StopTimer();
                     }
                 }
             }
@@ -351,8 +404,9 @@ namespace UEH_EVENT.GUI.Mario
             {
                 picGameOver.Visible = true;
                 GameOn = false;
+                StopTimer();
                 //SoundPlayer pl = new SoundPlayer(@"D:\Subject\Desktop Application Development\project4\UEH_EVENT\sound\soundLoss.wav");
-                //pl.Play();
+                //pl.Play();                                                            
             }
         }
         private void frmPlayMario_KeyDown(object sender, KeyEventArgs e)
@@ -436,6 +490,25 @@ namespace UEH_EVENT.GUI.Mario
             {
                 lblLock2.Text = "0" + timeUpMinute + " : " + timeUpSecond;
             }
+        }
+        public void PlaySOundTrackPlayGame()
+        {
+            using (var stream = Properties.Resources.soundTrackPlayGame)
+            {
+                using (var player = new SoundPlayer(stream))
+                {
+                    player.PlayLooping();
+                }
+            }
+        }
+        private void tmrSoundTrack_Tick(object sender, EventArgs e)
+        {
+
+        }
+
+        private void WorldFrame_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
 }
