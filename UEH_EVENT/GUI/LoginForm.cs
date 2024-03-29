@@ -51,5 +51,7 @@ namespace UEH_EVENT.GUI
         {
             txtUsername.Focus();
         }
+
+ 
     }
 }

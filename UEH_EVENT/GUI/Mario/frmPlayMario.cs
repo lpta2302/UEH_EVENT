@@ -380,7 +380,8 @@ namespace UEH_EVENT.GUI.Mario
             if (numberHeart == 0)
             {
                 picGameOver.Visible = true;
-                picGameOver.Location = new Point(280,120);
+                picGameOver.Location = new System.Drawing.Point(280, 120);
+
                 GameOn = false;
                 StopTimer();
                 PlaySound(Properties.Resources.soundLoss);

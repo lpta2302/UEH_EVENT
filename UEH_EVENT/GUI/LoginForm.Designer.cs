@@ -111,6 +111,7 @@
             txtPassword.Size = new Size(434, 27);
             txtPassword.TabIndex = 3;
             txtPassword.Tag = "Password";
+            txtPassword.PasswordChar = '*';
             // 
             // btnLogin
             // 

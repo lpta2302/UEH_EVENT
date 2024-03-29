@@ -37,10 +37,10 @@ namespace UEH_EVENT.GUI
             panel3 = new Panel();
             panelGame = new Panel();
             panelPlay = new Panel();
+            btnPlay = new Button();
             Navbar = new Panel();
             pictureBoxLogo = new PictureBox();
             panelTitle = new Panel();
-            btnPlay = new Button();
             panel3.SuspendLayout();
             panelGame.SuspendLayout();
             panelPlay.SuspendLayout();
@@ -63,7 +63,7 @@ namespace UEH_EVENT.GUI
             // 
             panel3.Controls.Add(label1);
             panel3.Location = new Point(268, 1);
-            panel3.Margin = new Padding(2, 2, 2, 2);
+            panel3.Margin = new Padding(2);
             panel3.Name = "panel3";
             panel3.Size = new Size(876, 111);
             panel3.TabIndex = 3;
@@ -74,7 +74,7 @@ namespace UEH_EVENT.GUI
             panelGame.BackgroundImage = Resources.Background_Game;
             panelGame.Controls.Add(panelPlay);
             panelGame.Location = new Point(268, 109);
-            panelGame.Margin = new Padding(2, 2, 2, 2);
+            panelGame.Margin = new Padding(2);
             panelGame.Name = "panelGame";
             panelGame.Size = new Size(876, 545);
             panelGame.TabIndex = 5;
@@ -84,11 +84,25 @@ namespace UEH_EVENT.GUI
             // 
             panelPlay.Anchor = AnchorStyles.Left;
             panelPlay.Controls.Add(btnPlay);
-            panelPlay.Location = new Point(364, 285);
-            panelPlay.Margin = new Padding(2, 2, 2, 2);
+            panelPlay.Location = new Point(372, 209);
+            panelPlay.Margin = new Padding(2);
             panelPlay.Name = "panelPlay";
             panelPlay.Size = new Size(158, 53);
             panelPlay.TabIndex = 1;
+            // 
+            // btnPlay
+            // 
+            btnPlay.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
+            btnPlay.FlatStyle = FlatStyle.Flat;
+            btnPlay.Font = new Font("Arial", 9.857143F, FontStyle.Bold, GraphicsUnit.Point);
+            btnPlay.Location = new Point(1, 1);
+            btnPlay.Margin = new Padding(2);
+            btnPlay.Name = "btnPlay";
+            btnPlay.Size = new Size(154, 51);
+            btnPlay.TabIndex = 0;
+            btnPlay.Text = "Play";
+            btnPlay.UseVisualStyleBackColor = true;
+            btnPlay.Click += btnPlay_Click;
             // 
             // Navbar
             // 
@@ -97,7 +111,7 @@ namespace UEH_EVENT.GUI
             Navbar.Controls.Add(pictureBoxLogo);
             Navbar.Controls.Add(panelTitle);
             Navbar.Location = new Point(-3, 1);
-            Navbar.Margin = new Padding(2, 2, 2, 2);
+            Navbar.Margin = new Padding(2);
             Navbar.Name = "Navbar";
             Navbar.Size = new Size(271, 653);
             Navbar.TabIndex = 45;
@@ -106,7 +120,7 @@ namespace UEH_EVENT.GUI
             // 
             pictureBoxLogo.Image = Resources.Logo_Update_27_3;
             pictureBoxLogo.Location = new Point(2, 3);
-            pictureBoxLogo.Margin = new Padding(2, 2, 2, 2);
+            pictureBoxLogo.Margin = new Padding(2);
             pictureBoxLogo.Name = "pictureBoxLogo";
             pictureBoxLogo.Size = new Size(269, 106);
             pictureBoxLogo.SizeMode = PictureBoxSizeMode.Zoom;
@@ -118,24 +132,10 @@ namespace UEH_EVENT.GUI
             panelTitle.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Right;
             panelTitle.CausesValidation = false;
             panelTitle.Location = new Point(673, 2);
-            panelTitle.Margin = new Padding(2, 2, 2, 2);
+            panelTitle.Margin = new Padding(2);
             panelTitle.Name = "panelTitle";
             panelTitle.Size = new Size(876, 1867);
             panelTitle.TabIndex = 3;
-            // 
-            // btnPlay
-            // 
-            btnPlay.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
-            btnPlay.FlatStyle = FlatStyle.Flat;
-            btnPlay.Font = new Font("Arial", 9.857143F, FontStyle.Bold, GraphicsUnit.Point);
-            btnPlay.Location = new Point(2, 0);
-            btnPlay.Margin = new Padding(2);
-            btnPlay.Name = "btnPlay";
-            btnPlay.Size = new Size(130, 67);
-            btnPlay.TabIndex = 0;
-            btnPlay.Text = "Play";
-            btnPlay.UseVisualStyleBackColor = true;
-            btnPlay.Click += btnPlay_Click;
             // 
             // formGame
             // 
