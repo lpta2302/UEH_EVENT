@@ -45,6 +45,7 @@ namespace UEH_EVENT.GUI
         }
         private void search(object sender)
         {
+            SearchWildcard searcher = new SearchWildcard();
             if (sender is TextBox)
             {
                 TextBox textbox = (TextBox)sender;

@@ -30,8 +30,16 @@ namespace UEH_EVENT.GUI
 
         private void btnSave_Click(object sender, EventArgs e)
         {
+            if (txtPassword.Text != txtConfirmPassword.Text)
+            {
+                MessageBox.Show("Xác nhận lại password");
+                return;
+            }
+
+            if (txtConfirmPassword.Text.Length > 0)
+                MessageBox.Show($"Tài khoản đã cập nhật", "Cập nhật tài khoản thành công", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            else return;
             Database.Update<Account>(currentAccount);
-            MessageBox.Show("Cập nhật thông tin thành công", "Thành công",MessageBoxButtons.OK,MessageBoxIcon.Information);
         }
 
         private void txtPassword_TextChanged(object sender, EventArgs e)

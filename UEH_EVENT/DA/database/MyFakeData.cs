@@ -59,7 +59,7 @@
     {
         var st = Query.GetStudentById("31221020084");
         var s = Query.GetSpecificSight(1);
-        SightHis sightHis = new(st!.Mssv, s!.Id, 100);
+        SightHis sightHis = new(st!.Mssv, s!.Id, 2);
         Database.Insert(sightHis);
     }
     private static void FakeGame()

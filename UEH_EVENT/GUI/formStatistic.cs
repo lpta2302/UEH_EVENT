@@ -160,7 +160,7 @@ namespace UEH_EVENT.GUI
             {
                 if (txtSearchKeyword.Enabled)
                 {
-                    dgvSearchResults.DataSource = Search.SearchString(selectedClass, selectedProperty, txtSearchKeyword.Text.Trim(), chkSearchExact.Checked);
+                    dgvSearchResults.DataSource = SearchWildcard.SearchWithWildcard(selectedClass, selectedProperty, txtSearchKeyword.Text.Trim(), chkSearchExact.Checked);
                 }
                 else
                 {

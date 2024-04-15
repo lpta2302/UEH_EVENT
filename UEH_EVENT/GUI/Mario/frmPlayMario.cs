@@ -1,5 +1,6 @@
 ﻿using Microsoft.EntityFrameworkCore.Query.Internal;
 using Microsoft.Identity.Client.NativeInterop;
+using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -19,6 +20,31 @@ namespace UEH_EVENT.GUI.Mario
 {
     public partial class frmPlayMario : Form
     {
+        private class Data
+        {
+            public Boolean Player_Jump {get;set;}
+            public Boolean Player_Left  {get;set;}
+            public Boolean Player_Right {get;set;}
+            public Boolean LastDirRight {get;set;}
+            public int Force {get;set;}
+            public Point Location { get; set; }
+            public int NumberHeart { get;set;}
+            public int NumberShovel { get;set;}
+            public List<bool> Visibles { get;set;}
+            public Data(bool player_Jump, bool player_Left, bool player_Right, bool lastDirRight, int force, Point location, int numberHeart, int numberShovel
+                , List<bool> visibles)
+            {
+                Player_Jump = player_Jump;
+                Player_Left = player_Left;
+                Player_Right = player_Right;
+                LastDirRight = lastDirRight;
+                Force = force;
+                Location = location;
+                NumberHeart = numberHeart;
+                NumberShovel = numberShovel;
+                Visibles = visibles;
+            }
+        }
         #region var
         public List<PictureBox> WorldBricks { get; set; } = new List<PictureBox>();
         public List<PictureBox> WorldNotBrick { get; set; } = new List<PictureBox>();
@@ -28,6 +54,7 @@ namespace UEH_EVENT.GUI.Mario
         #region Item valuable
         bool virussGoLeft = false;
         bool virussGoRight = true;
+        public List<PictureBox> hearts = new List<PictureBox>();
         int numberHeart = 3;
         int numberShovel = 0;
         bool enoughShvel = false;
@@ -115,7 +142,7 @@ namespace UEH_EVENT.GUI.Mario
                 {
                     PictureBox temp1 = new PictureBox();
                     temp1.Bounds = ob.Bounds;
-                    temp1.SetBounds(temp1.Location.X, temp1.Location.Y + temp1.Height, temp1.Width, 1);
+                    temp1.SetBounds(temp1.Location.X, temp1.Location.Y + temp1.Height + 1, temp1.Width, 1);
                     if (tar.Bounds.IntersectsWith(temp1.Bounds))
                         return true;
                 }
@@ -131,7 +158,7 @@ namespace UEH_EVENT.GUI.Mario
                 {
                     PictureBox temp1 = new PictureBox();
                     temp1.Bounds = ob.Bounds;
-                    temp1.SetBounds(temp1.Location.X - 1, temp1.Location.Y + 1, 1, temp1.Height - 1);
+                    temp1.SetBounds(temp1.Location.X - 1, temp1.Location.Y + 2, 1, temp1.Height - 1);
                     if (tar.Bounds.IntersectsWith(temp1.Bounds))
                         return true;
                 }
@@ -201,7 +228,7 @@ namespace UEH_EVENT.GUI.Mario
         }
         public void Reload()
         {
-            picPlayer.Location = new System.Drawing.Point(67, 560);
+            picPlayer.Location = new Point(67, 558);
         }
         public void HideHeart()
         {
@@ -216,7 +243,7 @@ namespace UEH_EVENT.GUI.Mario
         }
         private void frmPlayMario_Load(object sender, EventArgs e)
         {
-            foreach (var control in this.WorldFrame.Controls)
+            foreach (Control control in this.WorldFrame.Controls)
             {
                 if (control is PictureBox)
                 {
@@ -226,8 +253,29 @@ namespace UEH_EVENT.GUI.Mario
                     {
                         WorldBricks.Add(pictureBox);
                     }
+                    else if((string)pictureBox.Tag == "heart")
+                    {
+                        hearts.Add(pictureBox);
+                        WorldNotBrick.Add(pictureBox);
+                    }
                     else
                         WorldNotBrick.Add(pictureBox);
+                }
+            }
+            if (GlobalData.CurrentAccount.GameSession != null)
+            {
+                Data data = JsonConvert.DeserializeObject<Data>(GlobalData.CurrentAccount.GameSession);
+                Player_Jump = data.Player_Jump;
+                Player_Left = data.Player_Left;
+                Player_Right = data.Player_Right;
+                LastDirRight = data.LastDirRight;
+                Force = data.Force;
+                picPlayer.Location = data.Location;
+                numberHeart = data.NumberHeart;
+                numberShovel = data.NumberShovel;
+                for (int i=0;i<WorldNotBrick.Count;i++)
+                {
+                    WorldNotBrick[i].Visible = data.Visibles[i];
                 }
             }
 
@@ -324,6 +372,8 @@ namespace UEH_EVENT.GUI.Mario
                         PlaySound(Properties.Resources.Aaaaaa);
                         Reload();
                         numberHeart -= 1;
+                        hearts[numberHeart].Visible = false;
+                        
                         HideHeart();
                     }
                 }
@@ -334,6 +384,8 @@ namespace UEH_EVENT.GUI.Mario
                         PlaySound(Properties.Resources.Aaaaaa);
                         Reload();
                         numberHeart -= 1;
+                        hearts[numberHeart].Visible = false;
+                        
                         HideHeart();
                     }
                 }
@@ -344,6 +396,8 @@ namespace UEH_EVENT.GUI.Mario
                         PlaySound(Properties.Resources.Aaaaaa);
                         Reload();
                         numberHeart -= 1;
+                        hearts[numberHeart].Visible = false;
+                        
                         HideHeart();
                     }
                 }
@@ -496,6 +550,29 @@ namespace UEH_EVENT.GUI.Mario
 
         private void picEndGame_Click(object sender, EventArgs e)
         {
+            List<bool> visibles = new List<bool>();
+            foreach (Control item in WorldNotBrick)
+            {
+                visibles.Add(item.Visible);
+            }
+            Data data = new Data(
+                Player_Jump,
+                Player_Left,
+                Player_Right,
+                LastDirRight,
+                Force,
+                picPlayer.Location,
+                numberHeart,
+                numberShovel,
+                visibles
+            );
+            string json = JsonConvert.SerializeObject(data, Formatting.None,
+                        new JsonSerializerSettings()
+                        {
+                            ReferenceLoopHandling = ReferenceLoopHandling.Ignore
+                        });
+            GlobalData.CurrentAccount.GameSession = json;
+            Database.Update<Account>(GlobalData.CurrentAccount);
             Hide();
             new formGame().ShowDialog();
             Close();
