@@ -139,6 +139,10 @@ namespace UEH_EVENT.GUI
                 HienThiGio();
                 this.timer1.Enabled = false;
                 MessageBox.Show("Hết giờ.");
+                Form form = new formScore(questions, selectedAnswers, sight.Id);
+                Hide();
+                form.ShowDialog();
+                Close();
             }
             else if (lblThoiGian.Text=="01:00")
             {

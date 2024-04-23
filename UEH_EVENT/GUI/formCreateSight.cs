@@ -112,8 +112,8 @@ namespace UEH_EVENT.GUI
             CurrentSight.Name = txtTenTN.Text;
             CurrentSight.Preview = txtMoTa.Text;
             Database.Insert<Sight>(CurrentSight);
-            GlobalData.CurrentSight = null;
-            GlobalData.CurrentAccount.SightSession = null;
+            GlobalData.CurrentSight = new Sight();
+            GlobalData.CurrentAccount.SightSession = "";
             Database.Update<Account>(GlobalData.CurrentAccount);
             MessageBox.Show("Thêm thành công", "Thông báo");
             Hide();
@@ -176,7 +176,7 @@ namespace UEH_EVENT.GUI
 
         private void txtTenTN_TextChanged(object sender, EventArgs e)
         {
-            CurrentSight.Name = txtTenTN.Text;
+                CurrentSight.Name = txtTenTN.Text;
         }
 
         private void txtMoTa_TextChanged(object sender, EventArgs e)
